@@ -34,12 +34,18 @@ namespace WorkhubForWindows
         {
             public static class Applications
             {
+                /// <summary>
+                /// デシリアライズして読み込み
+                /// Load with Deserializing
+                /// </summary>
+                /// <returns></returns>
+
                 public static List<Executable> Load()
                 {
                     List<Executable> exes = new List<Executable>();
                     if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config\\Applications.xml"))
                     {
-                        return null;
+                        return exes;
                     }
                     XmlSerializer serializer = new XmlSerializer(typeof(List<Executable>));
                     
@@ -55,7 +61,11 @@ namespace WorkhubForWindows
 
                     return exes;
                 }
-
+                /// <summary>
+                /// シリアライズしてセーブ 
+                /// save with Serializing
+                /// </summary>
+                /// <returns></returns>
                 public static void Save(List<Executable> executables)
                 {
                     XmlSerializer Serialize = new XmlSerializer(typeof(List<Executable>));
