@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WorkhubForWindows.Forms
 {
-    public partial class 項目の追加 : Form
+    public partial class AddItemForm : Form
     {
-        public 項目の追加()
+        public AddItemForm()
         {
             InitializeComponent();
         }

@@ -65,8 +65,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddItem.ja.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainwindow.is.resx">
+      <DependentUpon>Mainwindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainwindow.ja.resx">
+      <DependentUpon>Mainwindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mainwindow.resx">
       <DependentUpon>Mainwindow.cs</DependentUpon>
