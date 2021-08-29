@@ -34,10 +34,11 @@ namespace WorkhubForWindows
             // 
             // Mainwindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 389);
+            this.ClientSize = new System.Drawing.Size(555, 486);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Mainwindow";
             this.Text = "WorkHub";
             this.ResumeLayout(false);

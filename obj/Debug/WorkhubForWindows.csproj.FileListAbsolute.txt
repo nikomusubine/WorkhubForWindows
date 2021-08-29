@@ -1,0 +1,5 @@
+D:\Program DATA\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.csprojAssemblyReference.cache
+D:\Program DATA\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.Mainwindow.resources
+D:\Program DATA\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.Properties.Resources.resources
+D:\Program DATA\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.csproj.GenerateResource.cache
+D:\Program DATA\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.csproj.CoreCompileInputs.cache

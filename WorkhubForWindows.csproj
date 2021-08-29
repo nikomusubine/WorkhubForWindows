@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Definition.cs" />
+    <Compile Include="Functions\Functions.cs" />
     <Compile Include="Mainwindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,7 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Forms\" />
-    <Folder Include="Function\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ICO_4Niko.ico" />
