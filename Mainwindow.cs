@@ -24,7 +24,7 @@ namespace WorkhubForWindows
         /// すべてを構成する
         /// Make up everything 
         /// </summary>
-        void initalizeListview()
+        void initalize()
         {
             StaticClasses.Executables = Functions.Config.Applications.Load();
 
@@ -38,6 +38,7 @@ namespace WorkhubForWindows
 
 
         }
+
 
         private void Additem(object sender, EventArgs e)
         {

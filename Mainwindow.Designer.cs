@@ -64,17 +64,16 @@ namespace WorkhubForWindows
             this.RibbonFiles});
             this.Ribbon.Location = new System.Drawing.Point(0, 0);
             this.Ribbon.Name = "Ribbon";
-            this.Ribbon.Size = new System.Drawing.Size(555, 30);
+            this.Ribbon.Size = new System.Drawing.Size(555, 28);
             this.Ribbon.TabIndex = 1;
             this.Ribbon.Text = "menuStrip1";
-            this.Ribbon.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Ribbon_ItemClicked);
             // 
             // RibbonFiles
             // 
             this.RibbonFiles.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddItem});
             this.RibbonFiles.Name = "RibbonFiles";
-            this.RibbonFiles.Size = new System.Drawing.Size(82, 26);
+            this.RibbonFiles.Size = new System.Drawing.Size(82, 24);
             this.RibbonFiles.Text = "ファイル(&F)";
             // 
             // AddItem
