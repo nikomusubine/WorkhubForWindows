@@ -34,10 +34,11 @@
             this.FilePathBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ButtonReference = new System.Windows.Forms.Button();
-            this.CmdArgs = new System.Windows.Forms.TextBox();
+            this.CmdArgsBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ButtonApply = new System.Windows.Forms.Button();
             this.ButtonCancel = new System.Windows.Forms.Button();
+            this.RefDiag = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -65,11 +66,12 @@
             resources.ApplyResources(this.ButtonReference, "ButtonReference");
             this.ButtonReference.Name = "ButtonReference";
             this.ButtonReference.UseVisualStyleBackColor = true;
+            this.ButtonReference.Click += new System.EventHandler(this.ReferenceButton);
             // 
-            // CmdArgs
+            // CmdArgsBox
             // 
-            resources.ApplyResources(this.CmdArgs, "CmdArgs");
-            this.CmdArgs.Name = "CmdArgs";
+            resources.ApplyResources(this.CmdArgsBox, "CmdArgsBox");
+            this.CmdArgsBox.Name = "CmdArgsBox";
             // 
             // label3
             // 
@@ -81,20 +83,30 @@
             resources.ApplyResources(this.ButtonApply, "ButtonApply");
             this.ButtonApply.Name = "ButtonApply";
             this.ButtonApply.UseVisualStyleBackColor = true;
+            this.ButtonApply.Click += new System.EventHandler(this.ApplyClick);
             // 
             // ButtonCancel
             // 
+            this.ButtonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.ButtonCancel, "ButtonCancel");
             this.ButtonCancel.Name = "ButtonCancel";
             this.ButtonCancel.UseVisualStyleBackColor = true;
+            this.ButtonCancel.Click += new System.EventHandler(this.CancelClick);
+            // 
+            // RefDiag
+            // 
+            this.RefDiag.FileName = "RefrenceFile";
+            resources.ApplyResources(this.RefDiag, "RefDiag");
             // 
             // AddItemForm
             // 
+            this.AcceptButton = this.ButtonApply;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.ButtonCancel;
             this.Controls.Add(this.ButtonCancel);
             this.Controls.Add(this.ButtonApply);
-            this.Controls.Add(this.CmdArgs);
+            this.Controls.Add(this.CmdArgsBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ButtonReference);
             this.Controls.Add(this.FilePathBox);
@@ -114,9 +126,10 @@
         private System.Windows.Forms.TextBox FilePathBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ButtonReference;
-        private System.Windows.Forms.TextBox CmdArgs;
+        private System.Windows.Forms.TextBox CmdArgsBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button ButtonApply;
         private System.Windows.Forms.Button ButtonCancel;
+        private System.Windows.Forms.OpenFileDialog RefDiag;
     }
 }

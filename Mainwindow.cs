@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WorkhubForWindows.Forms;
 
 namespace WorkhubForWindows
 {
@@ -15,19 +16,34 @@ namespace WorkhubForWindows
         public Mainwindow()
         {
             InitializeComponent();
+            initalizeApps();
             Apps.View = View.LargeIcon;
 
         }
 
 
+        private void Additem(object sender, EventArgs e)
+        {
+            AddItemForm additemform = new AddItemForm();
+            if (additemform.ShowDialog() == DialogResult.OK)
+            {
+                initalizeApps();
+            }
+        }
+
+
+
+
+
         /// <summary>
-        /// すべてを構成する
-        /// Make up everything 
+        /// アプリケーションの読み込み
+        /// Load Applications
         /// </summary>
-        void initalize()
+        void initalizeApps()
         {
             StaticClasses.Executables = Functions.Config.Applications.Load();
 
+            IconList.Images.Clear();
             foreach(Executable exe in StaticClasses.Executables)
             {
                 Bitmap bmp = Icon.ExtractAssociatedIcon(exe.Path).ToBitmap();
@@ -36,12 +52,6 @@ namespace WorkhubForWindows
                 Apps.Items[Apps.Items.Count - 1].ImageIndex = Apps.Items.Count - 1;
             }
 
-
-        }
-
-
-        private void Additem(object sender, EventArgs e)
-        {
 
         }
     }

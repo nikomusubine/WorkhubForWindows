@@ -8,3 +8,11 @@ D:\Program DATA\Github\Nikochan\WorkhubForWindows\bin\Debug\WorkhubForWindows.ex
 D:\Program DATA\Github\Nikochan\WorkhubForWindows\bin\Debug\WorkhubForWindows.pdb
 D:\Program DATA\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.exe
 D:\Program DATA\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.pdb
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\bin\Debug\ja\WorkhubForWindows.resources.dll
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\bin\Debug\is\WorkhubForWindows.resources.dll
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.Forms.AddItemForm.resources
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.Forms.AddItemForm.ja.resources
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.Mainwindow.is.resources
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.Mainwindow.ja.resources
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\ja\WorkhubForWindows.resources.dll
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\is\WorkhubForWindows.resources.dll

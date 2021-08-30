@@ -41,11 +41,12 @@ namespace WorkhubForWindows
             // 
             // Apps
             // 
-            resources.ApplyResources(this.Apps, "Apps");
             this.Apps.BackColor = System.Drawing.SystemColors.Window;
             this.Apps.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Apps.HideSelection = false;
             this.Apps.LargeImageList = this.IconList;
+            resources.ApplyResources(this.Apps, "Apps");
+            this.Apps.MultiSelect = false;
             this.Apps.Name = "Apps";
             this.Apps.UseCompatibleStateImageBehavior = false;
             // 
@@ -57,23 +58,23 @@ namespace WorkhubForWindows
             // 
             // Ribbon
             // 
-            resources.ApplyResources(this.Ribbon, "Ribbon");
             this.Ribbon.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Ribbon.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.RibbonFiles});
+            resources.ApplyResources(this.Ribbon, "Ribbon");
             this.Ribbon.Name = "Ribbon";
             // 
             // RibbonFiles
             // 
-            resources.ApplyResources(this.RibbonFiles, "RibbonFiles");
             this.RibbonFiles.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.AddItem});
             this.RibbonFiles.Name = "RibbonFiles";
+            resources.ApplyResources(this.RibbonFiles, "RibbonFiles");
             // 
             // AddItem
             // 
-            resources.ApplyResources(this.AddItem, "AddItem");
             this.AddItem.Name = "AddItem";
+            resources.ApplyResources(this.AddItem, "AddItem");
             this.AddItem.Click += new System.EventHandler(this.Additem);
             // 
             // Mainwindow

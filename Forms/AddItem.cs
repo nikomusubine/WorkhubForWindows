@@ -16,5 +16,37 @@ namespace WorkhubForWindows.Forms
         {
             InitializeComponent();
         }
+
+        private void ReferenceButton(object sender,EventArgs e)
+        {
+            RefDiag.FileName = FilePathBox.Text;
+            if (RefDiag.ShowDialog() == DialogResult.OK)
+            {
+                FilePathBox.Text = RefDiag.FileName;
+            }
+        }
+
+        private void ApplyClick(object sender,EventArgs e)
+        {
+            StaticClasses.Executables.Add
+                (
+                new Executable
+                {
+                    Name = ItemNameBox.Text,
+                    Path = FilePathBox.Text,
+                    Argments=CmdArgsBox.Text
+                }
+                );
+
+            Functions.Config.Applications.Save(StaticClasses.Executables);
+
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void CancelClick(object sender,EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
     }
 }

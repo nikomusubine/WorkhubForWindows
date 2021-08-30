@@ -43,6 +43,10 @@ namespace WorkhubForWindows
                 public static List<Executable> Load()
                 {
                     List<Executable> exes = new List<Executable>();
+                    if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config"))
+                    {
+                        Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "Config");
+                    }
                     if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config\\Applications.xml"))
                     {
                         return exes;
@@ -69,7 +73,10 @@ namespace WorkhubForWindows
                 public static void Save(List<Executable> executables)
                 {
                     XmlSerializer Serialize = new XmlSerializer(typeof(List<Executable>));
-                    
+                    if(!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config\\"))
+                    {
+                        Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "Config");
+                    }
                     using (var Streamwriter = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "Config\\Applications.xml", false, new System.Text.UTF8Encoding(false)))
                     {
                         Serialize.Serialize(Streamwriter, executables);
