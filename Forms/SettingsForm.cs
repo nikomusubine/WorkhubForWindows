@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WorkhubForWindows
+namespace WorkhubForWindows.Forms
 {
-    public partial class Mainwindow : Form
+    public partial class SettingsForm : Form
     {
-        public Mainwindow()
+        public SettingsForm()
         {
             InitializeComponent();
         }

@@ -50,6 +50,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Definition.cs" />
+    <Compile Include="Forms\AddItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddItem.Designer.cs">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions\Functions.cs" />
     <Compile Include="Mainwindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +71,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddItem.is.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddItem.ja.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddItem.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainwindow.is.resx">
+      <DependentUpon>Mainwindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mainwindow.ja.resx">
+      <DependentUpon>Mainwindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mainwindow.resx">
       <DependentUpon>Mainwindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,10 +114,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\" />
-    <Folder Include="Function\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="ICO_4Niko.ico" />
   </ItemGroup>
