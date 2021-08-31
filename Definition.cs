@@ -19,5 +19,10 @@ namespace WorkhubForWindows
     {
         public static List<Executable> Executables = new List<Executable>();
         public static string ConfigFoldor;
+
+        public static class Config
+        {
+
+        }
     }
 }

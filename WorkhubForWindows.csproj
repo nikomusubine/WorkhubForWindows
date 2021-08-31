@@ -56,6 +56,12 @@
     <Compile Include="Forms\AddItem.Designer.cs">
       <DependentUpon>AddItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Functions\Functions.cs" />
     <Compile Include="Mainwindow.cs">
       <SubType>Form</SubType>
@@ -65,11 +71,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddItem.is.resx">
+      <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddItem.ja.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mainwindow.is.resx">
       <DependentUpon>Mainwindow.cs</DependentUpon>

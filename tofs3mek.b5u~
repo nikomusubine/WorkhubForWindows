@@ -39,12 +39,6 @@ namespace WorkhubForWindows
             }
         }
 
-        private void SettingsPushed(object sender, EventArgs e)
-        {
-            SettingsForm sform = new SettingsForm();
-
-        }
-
 
 
 
