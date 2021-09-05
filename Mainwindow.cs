@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WorkhubForWindows.Forms;
+using System.IO;
 
 namespace WorkhubForWindows
 {
@@ -18,7 +19,6 @@ namespace WorkhubForWindows
             InitializeComponent();
             initalizeApps();
             Apps.View = View.LargeIcon;
-
         }
 
 
@@ -39,10 +39,15 @@ namespace WorkhubForWindows
             }
         }
 
+        private void EditPushed(object sender, EventArgs e)
+        {
+
+        }
+
         private void SettingsPushed(object sender, EventArgs e)
         {
             SettingsForm sform = new SettingsForm();
-
+            sform.Show();
         }
 
 
@@ -55,14 +60,22 @@ namespace WorkhubForWindows
         /// </summary>
         void initalizeApps()
         {
+            Apps.Clear();
+            IconList.Images.Clear();
             StaticClasses.Executables = Functions.Config.Applications.Load();
 
-            IconList.Images.Clear();
-            foreach(Executable exe in StaticClasses.Executables)
+            for (int i = 0; i != StaticClasses.Executables.Count; i++)
             {
-                Bitmap bmp = Icon.ExtractAssociatedIcon(exe.Path).ToBitmap();
-                IconList.Images.Add(exe.Name, bmp);
-                Apps.Items.Add(exe.Name);
+                if (!File.Exists(StaticClasses.Executables[i].Path))
+                {
+                    MessageBox.Show("A File was not found! \nThe file will be removed from the list. ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    StaticClasses.Executables.RemoveAt(i);
+                    continue;
+                }
+                Bitmap bmp = Icon.ExtractAssociatedIcon(StaticClasses.Executables[i].Path).ToBitmap();
+
+                IconList.Images.Add(StaticClasses.Executables[i].Name, bmp);
+                Apps.Items.Add(StaticClasses.Executables[i].Name/*.Replace(' ','\n')*/);
                 Apps.Items[Apps.Items.Count - 1].ImageIndex = Apps.Items.Count - 1;
             }
 

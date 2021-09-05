@@ -15,6 +15,32 @@ namespace WorkhubForWindows.Forms
         public SettingsForm()
         {
             InitializeComponent();
+
+            foreach (FontFamily item in FontFamily.Families)
+            {
+                if (item.IsStyleAvailable(FontStyle.Regular))
+                {
+                    FontNames.Items.Add(item.Name);
+                }
+                FontNames.Text = StaticClasses.Config.font.Name;
+                FontSizeBox.Text = StaticClasses.Config.font.Size.ToString();
+            }
         }
+
+        private void FontSizeKeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void ApplyClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CancelClicked(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

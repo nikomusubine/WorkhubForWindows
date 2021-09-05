@@ -39,16 +39,20 @@ namespace WorkhubForWindows
             this.StartButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             this.AddItemButton = new System.Windows.Forms.Button();
+            this.ButtonsPunel = new System.Windows.Forms.TableLayoutPanel();
+            this.ListViewPanel = new System.Windows.Forms.TableLayoutPanel();
             this.Ribbon.SuspendLayout();
+            this.ButtonsPunel.SuspendLayout();
+            this.ListViewPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Apps
             // 
+            resources.ApplyResources(this.Apps, "Apps");
             this.Apps.BackColor = System.Drawing.SystemColors.Window;
             this.Apps.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Apps.HideSelection = false;
             this.Apps.LargeImageList = this.IconList;
-            resources.ApplyResources(this.Apps, "Apps");
             this.Apps.MultiSelect = false;
             this.Apps.Name = "Apps";
             this.Apps.UseCompatibleStateImageBehavior = false;
@@ -92,6 +96,7 @@ namespace WorkhubForWindows
             resources.ApplyResources(this.EditButton, "EditButton");
             this.EditButton.Name = "EditButton";
             this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.EditPushed);
             // 
             // AddItemButton
             // 
@@ -100,19 +105,34 @@ namespace WorkhubForWindows
             this.AddItemButton.UseVisualStyleBackColor = true;
             this.AddItemButton.Click += new System.EventHandler(this.Additem);
             // 
+            // ButtonsPunel
+            // 
+            resources.ApplyResources(this.ButtonsPunel, "ButtonsPunel");
+            this.ButtonsPunel.Controls.Add(this.AddItemButton, 0, 0);
+            this.ButtonsPunel.Controls.Add(this.StartButton, 2, 0);
+            this.ButtonsPunel.Controls.Add(this.EditButton, 1, 0);
+            this.ButtonsPunel.Name = "ButtonsPunel";
+            // 
+            // ListViewPanel
+            // 
+            resources.ApplyResources(this.ListViewPanel, "ListViewPanel");
+            this.ListViewPanel.BackColor = System.Drawing.Color.Transparent;
+            this.ListViewPanel.Controls.Add(this.Apps, 1, 0);
+            this.ListViewPanel.Controls.Add(this.ButtonsPunel, 1, 1);
+            this.ListViewPanel.Name = "ListViewPanel";
+            // 
             // Mainwindow
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.AddItemButton);
-            this.Controls.Add(this.EditButton);
-            this.Controls.Add(this.StartButton);
-            this.Controls.Add(this.Apps);
+            this.Controls.Add(this.ListViewPanel);
             this.Controls.Add(this.Ribbon);
             this.MainMenuStrip = this.Ribbon;
             this.Name = "Mainwindow";
             this.Ribbon.ResumeLayout(false);
             this.Ribbon.PerformLayout();
+            this.ButtonsPunel.ResumeLayout(false);
+            this.ListViewPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,6 +148,8 @@ namespace WorkhubForWindows
         private System.Windows.Forms.ToolStripMenuItem Ribbon_Settings;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button AddItemButton;
+        private System.Windows.Forms.TableLayoutPanel ButtonsPunel;
+        private System.Windows.Forms.TableLayoutPanel ListViewPanel;
     }
 }
 

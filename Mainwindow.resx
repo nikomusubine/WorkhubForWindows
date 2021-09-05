@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Apps.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <metadata name="IconList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>122, 17</value>
   </metadata>
@@ -125,10 +129,13 @@
     <value>32, 32</value>
   </data>
   <data name="Apps.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 31</value>
+    <value>232, 2</value>
+  </data>
+  <data name="Apps.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="Apps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 419</value>
+    <value>227, 384</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Apps.TabIndex" type="System.Int32, mscorlib">
@@ -141,22 +148,22 @@
     <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Apps.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>ListViewPanel</value>
   </data>
   <data name="&gt;&gt;Apps.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>0</value>
   </data>
   <metadata name="Ribbon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <data name="Ribbon_Settings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 26</value>
+    <value>180, 22</value>
   </data>
   <data name="Ribbon_Settings.Text" xml:space="preserve">
     <value>Settings(&amp;S)</value>
   </data>
   <data name="RibbonFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 26</value>
+    <value>56, 20</value>
   </data>
   <data name="RibbonFiles.Text" xml:space="preserve">
     <value>Files(&amp;F)</value>
@@ -164,8 +171,11 @@
   <data name="Ribbon.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="Ribbon.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 2, 0, 2</value>
+  </data>
   <data name="Ribbon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>555, 30</value>
+    <value>484, 24</value>
   </data>
   <data name="Ribbon.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -183,13 +193,19 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Ribbon.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>1</value>
+  </data>
+  <data name="StartButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="StartButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>468, 456</value>
+    <value>159, 2</value>
+  </data>
+  <data name="StartButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="StartButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
+    <value>56, 19</value>
   </data>
   <data name="StartButton.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -204,20 +220,25 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;StartButton.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>ButtonsPunel</value>
   </data>
   <data name="&gt;&gt;StartButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="EditButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="EditButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="EditButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>376, 456</value>
+    <value>84, 2</value>
+  </data>
+  <data name="EditButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="EditButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
+    <value>56, 19</value>
   </data>
   <data name="EditButton.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -232,19 +253,25 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;EditButton.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>ButtonsPunel</value>
   </data>
   <data name="&gt;&gt;EditButton.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="AddItemButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="AddItemButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="AddItemButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 456</value>
+    <value>9, 2</value>
+  </data>
+  <data name="AddItemButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="AddItemButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
+    <value>56, 19</value>
   </data>
   <data name="AddItemButton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -259,22 +286,88 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;AddItemButton.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>ButtonsPunel</value>
   </data>
   <data name="&gt;&gt;AddItemButton.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="ButtonsPunel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="ButtonsPunel.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ButtonsPunel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>233, 391</value>
+  </data>
+  <data name="ButtonsPunel.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ButtonsPunel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 23</value>
+  </data>
+  <data name="ButtonsPunel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;ButtonsPunel.Name" xml:space="preserve">
+    <value>ButtonsPunel</value>
+  </data>
+  <data name="&gt;&gt;ButtonsPunel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonsPunel.Parent" xml:space="preserve">
+    <value>ListViewPanel</value>
+  </data>
+  <data name="&gt;&gt;ButtonsPunel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ButtonsPunel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="AddItemButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="StartButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="EditButton" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="ListViewPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="ListViewPanel.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ListViewPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
+  </data>
+  <data name="ListViewPanel.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ListViewPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>461, 417</value>
+  </data>
+  <data name="ListViewPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;ListViewPanel.Name" xml:space="preserve">
+    <value>ListViewPanel</value>
+  </data>
+  <data name="&gt;&gt;ListViewPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ListViewPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ListViewPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListViewPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="Apps" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ButtonsPunel" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,100,Absolute,29" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 15</value>
+    <value>6, 12</value>
   </data>
   <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>555, 486</value>
+    <value>484, 456</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -562,9 +655,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>WorkHub</value>

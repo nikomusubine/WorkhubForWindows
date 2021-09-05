@@ -16,3 +16,23 @@ D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.Ma
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.Mainwindow.ja.resources
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\ja\WorkhubForWindows.resources.dll
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\is\WorkhubForWindows.resources.dll
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\bin\Debug\WorkhubForWindows.exe.config
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\bin\Debug\WorkhubForWindows.exe
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\bin\Debug\WorkhubForWindows.pdb
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\bin\Debug\is\WorkhubForWindows.resources.dll
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\bin\Debug\ja\WorkhubForWindows.resources.dll
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.csproj.AssemblyReference.cache
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.Forms.AddItemForm.resources
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.Forms.SettingsForm.resources
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.Mainwindow.resources
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.Properties.Resources.resources
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.Forms.AddItemForm.is.resources
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.Forms.AddItemForm.ja.resources
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.Mainwindow.is.resources
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.Mainwindow.ja.resources
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.csproj.GenerateResource.cache
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.csproj.CoreCompileInputs.cache
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\is\WorkhubForWindows.resources.dll
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\ja\WorkhubForWindows.resources.dll
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.exe
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.pdb
