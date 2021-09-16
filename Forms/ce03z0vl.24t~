@@ -36,25 +36,17 @@ namespace WorkhubForWindows.Forms
         {
             OpenFileDialog ofdiag = new OpenFileDialog();
 
-            ofdiag.Filter = "Image File(*.bmp;*.png;*.jpg;*.jpeg) |*.bmp;*.png;*.jpg;*.jpeg"; 
-
-            if (ofdiag.ShowDialog() == DialogResult.OK)
-            {
-                StaticClasses.Config.backimgpath = ofdiag.FileName;
-            }
-
+            ofdiag.Filter = "Image File|*.png,*.jpg,*.jpeg,*.bmg|";
         }
 
         private void ApplyClicked(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+
         }
 
         private void CancelClicked(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
+
         }
 
     }

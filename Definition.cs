@@ -23,6 +23,7 @@ namespace WorkhubForWindows
         public static class Config
         {
             public static Font font = new Font("MS UI Gothic", 9);
+            public static string backimgpath;
         }
     }
 }

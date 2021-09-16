@@ -36,3 +36,5 @@ E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\is\WorkhubForWindows.res
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\ja\WorkhubForWindows.resources.dll
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.exe
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.pdb
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.Forms.SettingsForm.resources
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.Forms.AddItemForm.is.resources

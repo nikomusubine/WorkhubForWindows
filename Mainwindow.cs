@@ -47,7 +47,10 @@ namespace WorkhubForWindows
         private void SettingsPushed(object sender, EventArgs e)
         {
             SettingsForm sform = new SettingsForm();
-            sform.Show();
+            if (sform.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
 
 
@@ -70,6 +73,7 @@ namespace WorkhubForWindows
                 {
                     MessageBox.Show("A File was not found! \nThe file will be removed from the list. ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     StaticClasses.Executables.RemoveAt(i);
+                    i--;
                     continue;
                 }
                 Bitmap bmp = Icon.ExtractAssociatedIcon(StaticClasses.Executables[i].Path).ToBitmap();
