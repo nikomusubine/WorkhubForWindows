@@ -54,7 +54,7 @@
             // 
             this.FontNames.FormattingEnabled = true;
             this.FontNames.Location = new System.Drawing.Point(92, 12);
-            this.FontNames.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FontNames.Margin = new System.Windows.Forms.Padding(4);
             this.FontNames.Name = "FontNames";
             this.FontNames.Size = new System.Drawing.Size(160, 23);
             this.FontNames.TabIndex = 1;
@@ -62,17 +62,18 @@
             // ApplyButton
             // 
             this.ApplyButton.Location = new System.Drawing.Point(684, 406);
-            this.ApplyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ApplyButton.Margin = new System.Windows.Forms.Padding(4);
             this.ApplyButton.Name = "ApplyButton";
             this.ApplyButton.Size = new System.Drawing.Size(100, 31);
             this.ApplyButton.TabIndex = 3;
             this.ApplyButton.Text = "Apply";
             this.ApplyButton.UseVisualStyleBackColor = true;
+            this.ApplyButton.Click += new System.EventHandler(this.ApplyClicked);
             // 
             // CancelButton
             // 
             this.CancelButton.Location = new System.Drawing.Point(576, 406);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(100, 31);
             this.CancelButton.TabIndex = 4;
@@ -83,7 +84,7 @@
             // FontSizeBox
             // 
             this.FontSizeBox.Location = new System.Drawing.Point(261, 14);
-            this.FontSizeBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FontSizeBox.Margin = new System.Windows.Forms.Padding(4);
             this.FontSizeBox.Name = "FontSizeBox";
             this.FontSizeBox.Size = new System.Drawing.Size(67, 22);
             this.FontSizeBox.TabIndex = 5;

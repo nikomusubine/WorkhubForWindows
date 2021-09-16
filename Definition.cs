@@ -17,13 +17,13 @@ namespace WorkhubForWindows
 
     public static class StaticClasses
     {
-        public static List<Executable> Executables = new List<Executable>();
-        public static string ConfigFoldor;
+        public static List<Executable> Executables { get; set; } = new List<Executable>();
+        public static string ConfigFoldor { get; set; }
 
         public static class Config
         {
-            public static Font font = new Font("MS UI Gothic", 9);
-            public static string backimgpath;
+            public static Font font { get; set; } = new Font("MS UI Gothic", 9);
+            public static string backimgpath { get; set; }
         }
     }
 }

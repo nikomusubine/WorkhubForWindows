@@ -49,6 +49,7 @@ namespace WorkhubForWindows
             SettingsForm sform = new SettingsForm();
             if (sform.ShowDialog() == DialogResult.OK)
             {
+                this.Font = StaticClasses.Config.font;
 
             }
         }

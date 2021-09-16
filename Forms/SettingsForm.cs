@@ -47,6 +47,9 @@ namespace WorkhubForWindows.Forms
 
         private void ApplyClicked(object sender, EventArgs e)
         {
+            Font ftmp = new Font(FontNames.Text, Convert.ToSingle(FontSizeBox.Text));
+            StaticClasses.Config.font = ftmp;
+
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -56,6 +59,5 @@ namespace WorkhubForWindows.Forms
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
-
     }
 }
