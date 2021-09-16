@@ -38,6 +38,9 @@
             this.backimglabel = new System.Windows.Forms.Label();
             this.backimgpath = new System.Windows.Forms.TextBox();
             this.backimgref = new System.Windows.Forms.Button();
+            this.widgetbackimgref = new System.Windows.Forms.Button();
+            this.widgetbackimgpath = new System.Windows.Forms.TextBox();
+            this.widgetbackimg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // FontName
@@ -95,20 +98,20 @@
             this.backimglabel.AutoSize = true;
             this.backimglabel.Location = new System.Drawing.Point(17, 50);
             this.backimglabel.Name = "backimglabel";
-            this.backimglabel.Size = new System.Drawing.Size(127, 15);
+            this.backimglabel.Size = new System.Drawing.Size(208, 15);
             this.backimglabel.TabIndex = 6;
-            this.backimglabel.Text = "BackGround Image";
+            this.backimglabel.Text = "MainWindow BackGround Image";
             // 
             // backimgpath
             // 
-            this.backimgpath.Location = new System.Drawing.Point(150, 47);
+            this.backimgpath.Location = new System.Drawing.Point(231, 46);
             this.backimgpath.Name = "backimgpath";
             this.backimgpath.Size = new System.Drawing.Size(174, 22);
             this.backimgpath.TabIndex = 7;
             // 
             // backimgref
             // 
-            this.backimgref.Location = new System.Drawing.Point(330, 46);
+            this.backimgref.Location = new System.Drawing.Point(411, 45);
             this.backimgref.Name = "backimgref";
             this.backimgref.Size = new System.Drawing.Size(25, 25);
             this.backimgref.TabIndex = 8;
@@ -116,12 +119,40 @@
             this.backimgref.UseVisualStyleBackColor = true;
             this.backimgref.Click += new System.EventHandler(this.BackImgRefClick);
             // 
+            // widgetbackimgref
+            // 
+            this.widgetbackimgref.Location = new System.Drawing.Point(411, 77);
+            this.widgetbackimgref.Name = "widgetbackimgref";
+            this.widgetbackimgref.Size = new System.Drawing.Size(25, 25);
+            this.widgetbackimgref.TabIndex = 11;
+            this.widgetbackimgref.Text = "...";
+            this.widgetbackimgref.UseVisualStyleBackColor = true;
+            // 
+            // widgetbackimgpath
+            // 
+            this.widgetbackimgpath.Location = new System.Drawing.Point(231, 78);
+            this.widgetbackimgpath.Name = "widgetbackimgpath";
+            this.widgetbackimgpath.Size = new System.Drawing.Size(174, 22);
+            this.widgetbackimgpath.TabIndex = 10;
+            // 
+            // widgetbackimg
+            // 
+            this.widgetbackimg.AutoSize = true;
+            this.widgetbackimg.Location = new System.Drawing.Point(17, 78);
+            this.widgetbackimg.Name = "widgetbackimg";
+            this.widgetbackimg.Size = new System.Drawing.Size(173, 15);
+            this.widgetbackimg.TabIndex = 9;
+            this.widgetbackimg.Text = "Widget BackGround Image";
+            // 
             // SettingsForm
             // 
             this.AcceptButton = this.ApplyButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.widgetbackimgref);
+            this.Controls.Add(this.widgetbackimgpath);
+            this.Controls.Add(this.widgetbackimg);
             this.Controls.Add(this.backimgref);
             this.Controls.Add(this.backimgpath);
             this.Controls.Add(this.backimglabel);
@@ -151,5 +182,8 @@
         private System.Windows.Forms.Label backimglabel;
         private System.Windows.Forms.TextBox backimgpath;
         private System.Windows.Forms.Button backimgref;
+        private System.Windows.Forms.Button widgetbackimgref;
+        private System.Windows.Forms.TextBox widgetbackimgpath;
+        private System.Windows.Forms.Label widgetbackimg;
     }
 }

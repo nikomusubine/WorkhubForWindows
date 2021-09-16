@@ -24,6 +24,8 @@ namespace WorkhubForWindows
         {
             public static Font font { get; set; } = new Font("MS UI Gothic", 9);
             public static string backimgpath { get; set; }
+            public static bool LockWidget { get; set; }
+            public static string Widgetbackimg { get; set; }
         }
     }
 }
