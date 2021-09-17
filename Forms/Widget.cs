@@ -18,12 +18,15 @@ namespace WorkhubForWindows
         {
             InitializeComponent();
             initalizeapplistview();
+
+            Button appcall = new Button();
+            this.AcceptButton = appcall;
+            appcall.Click += appstartcall;
         }
 
-
-        private void ListViewPanel_Paint(object sender, PaintEventArgs e)
+        private void appstartcall(object sender,EventArgs e)
         {
-
+            Functions.Application.StartProcess(StaticClasses.Executables[applistview.SelectedIndices[0]]);
         }
 
         #region Functions
