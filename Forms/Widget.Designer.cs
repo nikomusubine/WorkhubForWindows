@@ -48,6 +48,7 @@
             this.applistview.Size = new System.Drawing.Size(350, 350);
             this.applistview.TabIndex = 0;
             this.applistview.UseCompatibleStateImageBehavior = false;
+            this.applistview.DoubleClick += new System.EventHandler(this.appstartcall);
             this.applistview.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Down);
             this.applistview.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Mouse_Move);
             // 

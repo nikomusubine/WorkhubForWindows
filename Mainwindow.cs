@@ -19,9 +19,6 @@ namespace WorkhubForWindows
             InitializeComponent();
             initalizeApps();
             Apps.View = View.LargeIcon;
-
-            Widget wid =new Widget();
-            wid.Show();
         }
 
 
