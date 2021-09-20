@@ -40,6 +40,7 @@ namespace WorkhubForWindows
             this.EditButton = new System.Windows.Forms.Button();
             this.AddItemButton = new System.Windows.Forms.Button();
             this.ButtonsPunel = new System.Windows.Forms.TableLayoutPanel();
+            this.TrayIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.ListViewPanel = new System.Windows.Forms.TableLayoutPanel();
             this.Ribbon.SuspendLayout();
             this.ButtonsPunel.SuspendLayout();
@@ -113,6 +114,10 @@ namespace WorkhubForWindows
             this.ButtonsPunel.Controls.Add(this.EditButton, 1, 0);
             this.ButtonsPunel.Name = "ButtonsPunel";
             // 
+            // TrayIcon
+            // 
+            resources.ApplyResources(this.TrayIcon, "TrayIcon");
+            // 
             // ListViewPanel
             // 
             resources.ApplyResources(this.ListViewPanel, "ListViewPanel");
@@ -149,6 +154,7 @@ namespace WorkhubForWindows
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button AddItemButton;
         private System.Windows.Forms.TableLayoutPanel ButtonsPunel;
+        private System.Windows.Forms.NotifyIcon TrayIcon;
         private System.Windows.Forms.TableLayoutPanel ListViewPanel;
     }
 }

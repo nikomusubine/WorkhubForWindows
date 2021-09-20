@@ -22,9 +22,9 @@ namespace WorkhubForWindows.Forms
                 {
                     FontNames.Items.Add(item.Name);
                 }
-                FontNames.Text = StaticClasses.Config.font.Name;
-                FontSizeBox.Text = StaticClasses.Config.font.Size.ToString();
+                
             }
+            initalizeform();
         }
 
         private void FontSizeKeyPress(object sender, KeyPressEventArgs e)
@@ -40,16 +40,18 @@ namespace WorkhubForWindows.Forms
 
             if (ofdiag.ShowDialog() == DialogResult.OK)
             {
-                StaticClasses.Config.backimgpath = ofdiag.FileName;
+                backimgpath.Text = ofdiag.FileName;
             }
 
         }
 
         private void ApplyClicked(object sender, EventArgs e)
         {
+            #region Change Config
             Font ftmp = new Font(FontNames.Text, Convert.ToSingle(FontSizeBox.Text));
             StaticClasses.Config.font = ftmp;
-
+            StaticClasses.Config.backimgpath = backimgpath.Text;
+            #endregion
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
@@ -59,5 +61,18 @@ namespace WorkhubForWindows.Forms
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
+
+
+        #region Functions
+        void initalizeform()
+        {
+            FontNames.Text = StaticClasses.Config.font.Name;
+            FontSizeBox.Text = StaticClasses.Config.font.Size.ToString();
+
+            backimgpath.Text = StaticClasses.Config.backimgpath;
+
+
+        }
+        #endregion
     }
 }
