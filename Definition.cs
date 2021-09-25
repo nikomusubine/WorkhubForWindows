@@ -39,6 +39,7 @@ namespace WorkhubForWindows
     public enum HomeMode
     {
         FullScreen=0,
+
     }
 
     public class Configure

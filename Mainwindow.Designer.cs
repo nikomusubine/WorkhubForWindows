@@ -42,9 +42,16 @@ namespace WorkhubForWindows
             this.ButtonsPunel = new System.Windows.Forms.TableLayoutPanel();
             this.TrayIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.ListViewPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.TrayRClick = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showMainWindowSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.quitQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.quitQToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Ribbon.SuspendLayout();
             this.ButtonsPunel.SuspendLayout();
             this.ListViewPanel.SuspendLayout();
+            this.TrayRClick.SuspendLayout();
             this.SuspendLayout();
             // 
             // Apps
@@ -75,7 +82,9 @@ namespace WorkhubForWindows
             // RibbonFiles
             // 
             this.RibbonFiles.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Ribbon_Settings});
+            this.Ribbon_Settings,
+            this.toolStripMenuItem2,
+            this.quitQToolStripMenuItem1});
             this.RibbonFiles.Name = "RibbonFiles";
             resources.ApplyResources(this.RibbonFiles, "RibbonFiles");
             // 
@@ -116,7 +125,9 @@ namespace WorkhubForWindows
             // 
             // TrayIcon
             // 
+            this.TrayIcon.ContextMenuStrip = this.TrayRClick;
             resources.ApplyResources(this.TrayIcon, "TrayIcon");
+            this.TrayIcon.DoubleClick += new System.EventHandler(this.ShowMainWindow);
             // 
             // ListViewPanel
             // 
@@ -125,6 +136,44 @@ namespace WorkhubForWindows
             this.ListViewPanel.Controls.Add(this.Apps, 1, 0);
             this.ListViewPanel.Controls.Add(this.ButtonsPunel, 1, 1);
             this.ListViewPanel.Name = "ListViewPanel";
+            // 
+            // TrayRClick
+            // 
+            this.TrayRClick.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.TrayRClick.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showMainWindowSToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.quitQToolStripMenuItem});
+            this.TrayRClick.Name = "TrayRClick";
+            resources.ApplyResources(this.TrayRClick, "TrayRClick");
+            // 
+            // showMainWindowSToolStripMenuItem
+            // 
+            this.showMainWindowSToolStripMenuItem.Name = "showMainWindowSToolStripMenuItem";
+            resources.ApplyResources(this.showMainWindowSToolStripMenuItem, "showMainWindowSToolStripMenuItem");
+            this.showMainWindowSToolStripMenuItem.Click += new System.EventHandler(this.ShowMainWindow);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            // 
+            // quitQToolStripMenuItem
+            // 
+            this.quitQToolStripMenuItem.Name = "quitQToolStripMenuItem";
+            resources.ApplyResources(this.quitQToolStripMenuItem, "quitQToolStripMenuItem");
+            this.quitQToolStripMenuItem.Click += new System.EventHandler(this.Quit);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            // 
+            // quitQToolStripMenuItem1
+            // 
+            this.quitQToolStripMenuItem1.Name = "quitQToolStripMenuItem1";
+            resources.ApplyResources(this.quitQToolStripMenuItem1, "quitQToolStripMenuItem1");
+            this.quitQToolStripMenuItem1.Click += new System.EventHandler(this.Quit);
             // 
             // Mainwindow
             // 
@@ -138,6 +187,7 @@ namespace WorkhubForWindows
             this.Ribbon.PerformLayout();
             this.ButtonsPunel.ResumeLayout(false);
             this.ListViewPanel.ResumeLayout(false);
+            this.TrayRClick.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,6 +206,12 @@ namespace WorkhubForWindows
         private System.Windows.Forms.TableLayoutPanel ButtonsPunel;
         private System.Windows.Forms.NotifyIcon TrayIcon;
         private System.Windows.Forms.TableLayoutPanel ListViewPanel;
+        private System.Windows.Forms.ContextMenuStrip TrayRClick;
+        private System.Windows.Forms.ToolStripMenuItem showMainWindowSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem quitQToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem quitQToolStripMenuItem1;
     }
 }
 

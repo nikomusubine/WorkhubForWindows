@@ -14,6 +14,7 @@ namespace WorkhubForWindows
 {
     public partial class Mainwindow : Form
     {
+        private bool Quiting = false;
         public Mainwindow()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace WorkhubForWindows
             StaticClasses.Config = StaticClasses.Config.LoadConfig();
             this.Font=new Font(StaticClasses.Config.font.Name,StaticClasses.Config.font.Size);
             Apps.View = View.LargeIcon;
+            this.FormClosing += Form_Closing;
         }
 
 
@@ -70,8 +72,36 @@ namespace WorkhubForWindows
         }
 
 
+        #region TrayRClick
+                
+        private void ShowMainWindow(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            this.TopMost = true;
+            this.TopMost = false;
+        }
 
+        private void Quit(object sender,EventArgs e)
+        {
+            DialogResult diagres = MessageBox.Show("Quit Application?", "infomation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (diagres == DialogResult.Yes)
+            {
+                Quiting = true;
+                Environment.Exit(0);
+            }
+        }
+        #endregion
 
+        #region QuitCancel
+        private void Form_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (!Quiting)
+            {
+                e.Cancel = true;
+                this.WindowState = FormWindowState.Minimized;
+            }
+        }
+        #endregion
 
         /// <summary>
         /// アプリケーションの読み込み
