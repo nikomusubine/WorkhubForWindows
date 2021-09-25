@@ -669,7 +669,7 @@
     <value>True</value>
   </data>
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
+    <value>Zoom</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>645, 570</value>
@@ -965,7 +965,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>WorkHub</value>
+    <value>WorkhubForWindows</value>
   </data>
   <data name="&gt;&gt;IconList.Name" xml:space="preserve">
     <value>IconList</value>

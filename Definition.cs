@@ -19,17 +19,28 @@ namespace WorkhubForWindows
         public string Argments;
         public Point point;
     }
-    class OwnFont
+    public class OwnFont
     {
         public OwnFont(string name, float size)
         {
-            Fontname = name;
-            Fontsize = size;
+            Name = name;
+            Size = size;
         }
 
-        public string Fontname { get; set; }
-        public float Fontsize { get; set; }
+        public OwnFont()
+        {
+
+        }
+
+        public string Name { get; set; }
+        public float Size { get; set; }
     }
+    
+    public enum HomeMode
+    {
+        FullScreen=0,
+    }
+
     public class Configure
     {
         
@@ -37,6 +48,8 @@ namespace WorkhubForWindows
         public string backimgpath { get; set; }
         public bool LockWidget { get; set; }
         public string Widgetbackimg { get; set; }
+        public bool ShowWidget { get; set; }
+        public HomeMode Homemode { get; set; }
 
 
         
@@ -53,6 +66,7 @@ namespace WorkhubForWindows
                 Serialize.Serialize(Streamwriter, cfg);
                 Streamwriter.Flush();
             }
+            return;
         }
 
         public Configure LoadConfig()
@@ -72,7 +86,7 @@ namespace WorkhubForWindows
             {
                 CheckCharacters = false,
             };
-            using (var streamReader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "Config\\Applications.xml", Encoding.UTF8))
+            using (var streamReader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "Config\\Config.xml", Encoding.UTF8))
             using (var xmlReader = System.Xml.XmlReader.Create(streamReader, xmlSettings))
             {
                 cfg = (Configure)serializer.Deserialize(xmlReader);

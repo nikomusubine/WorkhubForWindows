@@ -48,7 +48,7 @@ namespace WorkhubForWindows.Forms
         private void ApplyClicked(object sender, EventArgs e)
         {
             #region Change Config
-            Font ftmp = new Font(FontNames.Text, Convert.ToSingle(FontSizeBox.Text));
+            OwnFont ftmp = new OwnFont(FontNames.Text, Convert.ToSingle(FontSizeBox.Text));
             StaticClasses.Config.font = ftmp;
             StaticClasses.Config.backimgpath = backimgpath.Text;
             #endregion

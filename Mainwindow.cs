@@ -19,6 +19,7 @@ namespace WorkhubForWindows
             InitializeComponent();
             initalizeApps();
             StaticClasses.Config = StaticClasses.Config.LoadConfig();
+            this.Font=new Font(StaticClasses.Config.font.Name,StaticClasses.Config.font.Size);
             Apps.View = View.LargeIcon;
         }
 
@@ -50,12 +51,19 @@ namespace WorkhubForWindows
             SettingsForm sform = new SettingsForm();
             if (sform.ShowDialog() == DialogResult.OK)
             {
-                StaticClasses.Config.font
-                this.Font = new Font();
+                this.Font = new Font(StaticClasses.Config.font.Name,StaticClasses.Config.font.Size);
                 
-                if (StaticClasses.Config.backimgpath != null)
+                if (StaticClasses.Config.backimgpath != "")
                 {
-                    this.BackgroundImage = Image.FromFile(StaticClasses.Config.backimgpath);
+                    if (File.Exists(StaticClasses.Config.backimgpath))
+                    {
+                        this.BackgroundImage = Image.FromFile(StaticClasses.Config.backimgpath);
+                    }
+                    else
+                    {
+                        StaticClasses.Config.backimgpath = "";
+
+                    }
                 }
                 StaticClasses.Config.SaveConfig(StaticClasses.Config);
             }
