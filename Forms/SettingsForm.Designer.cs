@@ -41,6 +41,12 @@
             this.widgetbackimgref = new System.Windows.Forms.Button();
             this.widgetbackimgpath = new System.Windows.Forms.TextBox();
             this.widgetbackimg = new System.Windows.Forms.Label();
+            this.LogoffSoundbutton = new System.Windows.Forms.Button();
+            this.LogoffsoundBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Shutdownsoundbutton = new System.Windows.Forms.Button();
+            this.Shutdownsoundbox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // FontName
@@ -144,12 +150,70 @@
             this.widgetbackimg.TabIndex = 9;
             this.widgetbackimg.Text = "Widget BackGround Image";
             // 
+            // LogoffSoundbutton
+            // 
+            this.LogoffSoundbutton.Location = new System.Drawing.Point(411, 137);
+            this.LogoffSoundbutton.Name = "LogoffSoundbutton";
+            this.LogoffSoundbutton.Size = new System.Drawing.Size(25, 25);
+            this.LogoffSoundbutton.TabIndex = 17;
+            this.LogoffSoundbutton.Text = "...";
+            this.LogoffSoundbutton.UseVisualStyleBackColor = true;
+            this.LogoffSoundbutton.Click += new System.EventHandler(this.LogoffsoundrefClick);
+            // 
+            // LogoffsoundBox
+            // 
+            this.LogoffsoundBox.Location = new System.Drawing.Point(231, 138);
+            this.LogoffsoundBox.Name = "LogoffsoundBox";
+            this.LogoffsoundBox.Size = new System.Drawing.Size(174, 22);
+            this.LogoffsoundBox.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(17, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 15);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "LogoffSound";
+            // 
+            // Shutdownsoundbutton
+            // 
+            this.Shutdownsoundbutton.Location = new System.Drawing.Point(411, 105);
+            this.Shutdownsoundbutton.Name = "Shutdownsoundbutton";
+            this.Shutdownsoundbutton.Size = new System.Drawing.Size(25, 25);
+            this.Shutdownsoundbutton.TabIndex = 14;
+            this.Shutdownsoundbutton.Text = "...";
+            this.Shutdownsoundbutton.UseVisualStyleBackColor = true;
+            this.Shutdownsoundbutton.Click += new System.EventHandler(this.ShutdownrefClick);
+            // 
+            // Shutdownsoundbox
+            // 
+            this.Shutdownsoundbox.Location = new System.Drawing.Point(231, 106);
+            this.Shutdownsoundbox.Name = "Shutdownsoundbox";
+            this.Shutdownsoundbox.Size = new System.Drawing.Size(174, 22);
+            this.Shutdownsoundbox.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(17, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 15);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Shutdown Sound";
+            // 
             // SettingsForm
             // 
             this.AcceptButton = this.ApplyButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LogoffSoundbutton);
+            this.Controls.Add(this.LogoffsoundBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Shutdownsoundbutton);
+            this.Controls.Add(this.Shutdownsoundbox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.widgetbackimgref);
             this.Controls.Add(this.widgetbackimgpath);
             this.Controls.Add(this.widgetbackimg);
@@ -185,5 +249,11 @@
         private System.Windows.Forms.Button widgetbackimgref;
         private System.Windows.Forms.TextBox widgetbackimgpath;
         private System.Windows.Forms.Label widgetbackimg;
+        private System.Windows.Forms.Button LogoffSoundbutton;
+        private System.Windows.Forms.TextBox LogoffsoundBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button Shutdownsoundbutton;
+        private System.Windows.Forms.TextBox Shutdownsoundbox;
+        private System.Windows.Forms.Label label2;
     }
 }

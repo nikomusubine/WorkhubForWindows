@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WorkhubForWindows.Forms;
 using System.IO;
+using Microsoft.Win32;
+using System.Xml.Serialization;
 
 namespace WorkhubForWindows
 {
@@ -45,6 +47,8 @@ namespace WorkhubForWindows
 
         private void EditPushed(object sender, EventArgs e)
         {
+            EditItem ei = new EditItem();
+            DialogResult diagres = ei.ShowDialog();
 
         }
 
@@ -71,6 +75,11 @@ namespace WorkhubForWindows
             }
         }
 
+        private void ShowWidget(object sender,EventArgs e)
+        {
+
+        }
+
 
         #region TrayRClick
                 
@@ -92,13 +101,27 @@ namespace WorkhubForWindows
         }
         #endregion
 
-        #region QuitCancel
+        #region Quit
         private void Form_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (!Quiting)
             {
                 e.Cancel = true;
                 this.WindowState = FormWindowState.Minimized;
+            }
+        }
+
+        private void SystemEvents_SessionEnding(object sender, SessionEndingEventArgs e)
+        {
+            if (e.Reason == SessionEndReasons.Logoff)
+            {
+                Quiting = true;
+                Environment.Exit(0);
+            }
+            else if (e.Reason == SessionEndReasons.SystemShutdown)
+            {
+                Quiting = true;
+                Environment.Exit(0);
             }
         }
         #endregion
@@ -129,7 +152,7 @@ namespace WorkhubForWindows
                 Apps.Items[Apps.Items.Count - 1].ImageIndex = Apps.Items.Count - 1;
             }
 
-
+            Functions.Config.Applications.Save(StaticClasses.Executables);
         }
     }
 }

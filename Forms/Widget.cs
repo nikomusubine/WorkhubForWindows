@@ -22,6 +22,8 @@ namespace WorkhubForWindows
             Button appcall = new Button();
             this.AcceptButton = appcall;
             appcall.Click += appstartcall;
+
+            Backgroundset();
         }
 
         private void appstartcall(object sender,EventArgs e)
@@ -57,6 +59,22 @@ namespace WorkhubForWindows
             }
 
 
+        }
+
+        void Backgroundset()
+        {
+            if (StaticClasses.Config.Widgetbackimg != "")
+            {
+                if (File.Exists(StaticClasses.Config.Widgetbackimg))
+                {
+                    this.applistview.BackgroundImage = Image.FromFile(StaticClasses.Config.Widgetbackimg);
+                }
+                else
+                {
+                    StaticClasses.Config.Widgetbackimg = "";
+
+                }
+            }
         }
         #endregion
 

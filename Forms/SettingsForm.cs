@@ -45,14 +45,44 @@ namespace WorkhubForWindows.Forms
 
         }
 
+        private void ShutdownrefClick(object sender,EventArgs e)
+        {
+            OpenFileDialog ofdiag = new OpenFileDialog();
+            ofdiag.FileName = Shutdownsoundbox.Text;
+            ofdiag.Filter = "Sound File(*.wav) |*.wav";
+
+            if (ofdiag.ShowDialog() == DialogResult.OK)
+            {
+                Shutdownsoundbox.Text = ofdiag.FileName;
+            }
+
+        }
+
+        private void LogoffsoundrefClick(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdiag = new OpenFileDialog();
+            ofdiag.FileName = LogoffsoundBox.Text;
+            ofdiag.Filter = "Sound File(*.wav) |*.wav";
+
+            if (ofdiag.ShowDialog() == DialogResult.OK)
+            {
+                LogoffsoundBox.Text = ofdiag.FileName;
+            }
+
+        }
+
+        #region Apply or Cancel
         private void ApplyClicked(object sender, EventArgs e)
         {
             #region Change Config
             OwnFont ftmp = new OwnFont(FontNames.Text, Convert.ToSingle(FontSizeBox.Text));
             StaticClasses.Config.font = ftmp;
             StaticClasses.Config.backimgpath = backimgpath.Text;
+            StaticClasses.Config.LogoffSound = LogoffsoundBox.Text;
+            StaticClasses.Config.ShutdownSound = Shutdownsoundbox.Text;
             #endregion
             this.DialogResult = DialogResult.OK;
+
             this.Close();
         }
 
@@ -61,7 +91,7 @@ namespace WorkhubForWindows.Forms
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
-
+        #endregion
 
         #region Functions
         void initalizeform()

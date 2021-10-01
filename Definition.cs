@@ -51,6 +51,9 @@ namespace WorkhubForWindows
         public string Widgetbackimg { get; set; }
         public bool ShowWidget { get; set; }
         public HomeMode Homemode { get; set; }
+        public string LogoffSound;
+        public string ShutdownSound;
+
 
 
         
