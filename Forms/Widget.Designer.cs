@@ -50,6 +50,7 @@
             this.applistview.TabIndex = 0;
             this.applistview.UseCompatibleStateImageBehavior = false;
             this.applistview.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Down);
+            this.applistview.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mouse_Down);
             this.applistview.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Mouse_Move);
             // 
             // IconList

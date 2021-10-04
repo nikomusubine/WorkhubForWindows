@@ -21,10 +21,17 @@ namespace WorkhubForWindows
         {
             InitializeComponent();
             initalizeApps();
+
+            Widget wg = new Widget();
+            wg.Show();
+            //AddWindowHandler
+            StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle,"MainForm"));
             StaticClasses.Config = StaticClasses.Config.LoadConfig();
-            this.Font=new Font(StaticClasses.Config.font.Name,StaticClasses.Config.font.Size);
+            this.LoadConfig();
             Apps.View = View.LargeIcon;
             this.FormClosing += Form_Closing;
+
+            StaticClasses.AppStatus.Started = true;
         }
 
 
@@ -57,27 +64,26 @@ namespace WorkhubForWindows
             SettingsForm sform = new SettingsForm();
             if (sform.ShowDialog() == DialogResult.OK)
             {
-                this.Font = new Font(StaticClasses.Config.font.Name,StaticClasses.Config.font.Size);
                 
-                if (StaticClasses.Config.backimgpath != "")
-                {
-                    if (File.Exists(StaticClasses.Config.backimgpath))
-                    {
-                        this.BackgroundImage = Image.FromFile(StaticClasses.Config.backimgpath);
-                    }
-                    else
-                    {
-                        StaticClasses.Config.backimgpath = "";
-
-                    }
-                }
                 StaticClasses.Config.SaveConfig(StaticClasses.Config);
             }
         }
 
         private void ShowWidget(object sender,EventArgs e)
         {
-
+            if (StaticClasses.Config.ShowWidget)
+            {
+                StaticClasses.Config.ShowWidget = false;
+            }else
+            {
+                StaticClasses.Config.ShowWidget = true;
+            }
+            foreach (var i in StaticClasses.WindowHandler.WindowHandlers)
+            {
+                if (i.Name == "Widget") {
+                    Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.WidgetConfigChanged, 0, 0);
+                 }
+            }
         }
 
 
@@ -153,6 +159,27 @@ namespace WorkhubForWindows
             }
 
             Functions.Config.Applications.Save(StaticClasses.Executables);
+        }
+
+        void LoadConfig()
+        {
+            this.Font = new Font(StaticClasses.Config.font.Name, StaticClasses.Config.font.Size);
+
+            if (StaticClasses.Config.backimgpath != "")
+            {
+                if (File.Exists(StaticClasses.Config.backimgpath))
+                {
+                    this.BackgroundImage = Image.FromFile(StaticClasses.Config.backimgpath);
+                }
+                else
+                {
+                    StaticClasses.Config.backimgpath = "";
+
+                }
+            }
+
+            this.TrayRC_ShowWidget.Checked = StaticClasses.Config.ShowWidget;
+            this.ToolStripShowWidget.Checked = StaticClasses.Config.ShowWidget;
         }
     }
 }

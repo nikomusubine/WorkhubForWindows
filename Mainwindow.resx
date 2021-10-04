@@ -136,10 +136,10 @@
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 6</value>
   </data>
-  <data name="showWidgetWToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ToolStripShowWidget.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 26</value>
   </data>
-  <data name="showWidgetWToolStripMenuItem.Text" xml:space="preserve">
+  <data name="ToolStripShowWidget.Text" xml:space="preserve">
     <value>Show Widget(&amp;W)</value>
   </data>
   <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
@@ -192,6 +192,30 @@
   <metadata name="TrayRClick.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>344, 17</value>
   </metadata>
+  <data name="showMainWindowSToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="showMainWindowSToolStripMenuItem.Text" xml:space="preserve">
+    <value>ShowMainWindow(&amp;S)</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 6</value>
+  </data>
+  <data name="TrayRC_ShowWidget.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="TrayRC_ShowWidget.Text" xml:space="preserve">
+    <value>Show Widget(&amp;W)</value>
+  </data>
+  <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 6</value>
+  </data>
+  <data name="quitQToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="quitQToolStripMenuItem.Text" xml:space="preserve">
+    <value>Quit(&amp;Q)</value>
+  </data>
   <data name="TrayRClick.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 88</value>
   </data>
@@ -494,30 +518,6 @@
   <data name="TrayIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="showMainWindowSToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="showMainWindowSToolStripMenuItem.Text" xml:space="preserve">
-    <value>ShowMainWindow(&amp;S)</value>
-  </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 6</value>
-  </data>
-  <data name="showWidgetWToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="showWidgetWToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Show Widget(&amp;W)</value>
-  </data>
-  <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 6</value>
-  </data>
-  <data name="quitQToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="quitQToolStripMenuItem.Text" xml:space="preserve">
-    <value>Quit(&amp;Q)</value>
-  </data>
   <data name="ButtonsPunel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
   </data>
@@ -728,6 +728,24 @@
   <data name="&gt;&gt;Apps.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="addAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 24</value>
+  </data>
+  <data name="addAToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add(&amp;A)</value>
+  </data>
+  <data name="editEToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 24</value>
+  </data>
+  <data name="editEToolStripMenuItem.Text" xml:space="preserve">
+    <value>Edit(&amp;E)</value>
+  </data>
+  <data name="deleteDToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 24</value>
+  </data>
+  <data name="deleteDToolStripMenuItem.Text" xml:space="preserve">
+    <value>Delete(&amp;D)</value>
+  </data>
   <data name="ListViewPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -763,24 +781,6 @@
   </data>
   <data name="ListViewPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="Apps" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ButtonsPunel" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,100,Absolute,36" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="editEToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 24</value>
-  </data>
-  <data name="editEToolStripMenuItem.Text" xml:space="preserve">
-    <value>Edit(&amp;E)</value>
-  </data>
-  <data name="addAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 24</value>
-  </data>
-  <data name="addAToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add(&amp;A)</value>
-  </data>
-  <data name="deleteDToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 24</value>
-  </data>
-  <data name="deleteDToolStripMenuItem.Text" xml:space="preserve">
-    <value>Delete(&amp;D)</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1114,10 +1114,10 @@
   <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;showWidgetWToolStripMenuItem.Name" xml:space="preserve">
-    <value>showWidgetWToolStripMenuItem</value>
+  <data name="&gt;&gt;ToolStripShowWidget.Name" xml:space="preserve">
+    <value>ToolStripShowWidget</value>
   </data>
-  <data name="&gt;&gt;showWidgetWToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;ToolStripShowWidget.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem3.Name" xml:space="preserve">
@@ -1150,10 +1150,10 @@
   <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;showWidgetWToolStripMenuItem1.Name" xml:space="preserve">
-    <value>showWidgetWToolStripMenuItem1</value>
+  <data name="&gt;&gt;TrayRC_ShowWidget.Name" xml:space="preserve">
+    <value>TrayRC_ShowWidget</value>
   </data>
-  <data name="&gt;&gt;showWidgetWToolStripMenuItem1.Type" xml:space="preserve">
+  <data name="&gt;&gt;TrayRC_ShowWidget.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem4.Name" xml:space="preserve">
@@ -1168,16 +1168,16 @@
   <data name="&gt;&gt;quitQToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;editEToolStripMenuItem.Name" xml:space="preserve">
-    <value>editEToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;editEToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;addAToolStripMenuItem.Name" xml:space="preserve">
     <value>addAToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;addAToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;editEToolStripMenuItem.Name" xml:space="preserve">
+    <value>editEToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;editEToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;deleteDToolStripMenuItem.Name" xml:space="preserve">

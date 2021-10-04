@@ -9,6 +9,7 @@ using System.Xml.Linq;
 using System.IO;
 using System.Xml.Serialization;
 using WorkhubForWindows.Functions;
+using System.Runtime.InteropServices;
 
 namespace WorkhubForWindows
 {
@@ -19,6 +20,18 @@ namespace WorkhubForWindows
         public string Argments;
         public Point point;
     }
+
+    public struct WorkhubWindowHandler
+    {
+        public WorkhubWindowHandler(int HWnd, string name)
+        {
+            hWnd = HWnd;
+            Name = name;
+        }
+        public int hWnd { get; }
+        public string Name { get; }
+    }
+
     public class OwnFont
     {
         public OwnFont(string name, float size)
@@ -39,24 +52,132 @@ namespace WorkhubForWindows
     public enum HomeMode
     {
         FullScreen=0,
-
+        HalfHome=1,
     }
 
     public class Configure
     {
         
-        public OwnFont font = new OwnFont("MS UI Gothic", 9); 
-        public string backimgpath { get; set; }
-        public bool LockWidget { get; set; }
-        public string Widgetbackimg { get; set; }
-        public bool ShowWidget { get; set; }
-        public HomeMode Homemode { get; set; }
+        public OwnFont font = new OwnFont("MS UI Gothic", 9);
+
+        private string __backimgpath;
+        public string backimgpath
+        {
+            get
+            {
+                return this.__backimgpath;
+            }
+            set
+            {
+                if (StaticClasses.AppStatus.Started)
+                {
+                    SendConfigChanged();
+                }
+                this.__backimgpath = value;
+            }
+        }
+        private bool __LockWidget;
+        public bool LockWidget
+        {
+            get
+            {
+                return this.__LockWidget;
+            }
+            set
+            {
+                if (StaticClasses.AppStatus.Started)
+                {
+                    SendWidgetConfigChanged();
+                }
+                this.__LockWidget = value;
+            }
+        }
+        private string __Widgetbackimg;
+        public string Widgetbackimg
+        {
+            get
+            {
+                return this.__Widgetbackimg;
+            }
+            set
+            {
+                if (StaticClasses.AppStatus.Started)
+                    SendWidgetConfigChanged();
+                this.__Widgetbackimg = value;
+            }
+        }
+        private bool __ShowWidget;
+        public bool ShowWidget
+        {
+            get
+            {
+                return this.__ShowWidget;
+            }
+            set
+            {
+                if (StaticClasses.AppStatus.Started)
+                {
+                    SendWidgetConfigChanged();
+                }
+                this.__ShowWidget = value;
+            }
+        }
+        private double __WidgetOpacity = 1;
+        public double WidgetOpacity
+        {
+            get
+            {
+                return __WidgetOpacity;
+            }
+            set
+            {
+                __WidgetOpacity = value;
+                SendWidgetConfigChanged();
+            }
+        }
+        private HomeMode __Homemode;
+        public HomeMode Homemode
+        {
+            get
+            {
+                return this.__Homemode;
+            }
+            set
+            {
+                if (StaticClasses.AppStatus.Started)
+                {
+                    SendConfigChanged();
+                }
+                this.__Homemode = value;
+            }
+        }
         public string LogoffSound;
         public string ShutdownSound;
 
 
 
-        
+        [DllImport("User32.dll", EntryPoint = "PostMessage")]
+        extern static Int32 PostMessage(Int32 hwnd, Int32 msg, Int32 wParam, Int32 lParam);
+
+        private void SendConfigChanged()
+        {
+            foreach (WorkhubWindowHandler i in StaticClasses.WindowHandler.WindowHandlers)
+            {
+                PostMessage(i.hWnd, StaticClasses.WorkHubMessages.ConfigChanged, 0, 0);
+            }
+        }
+
+        private void SendWidgetConfigChanged()
+        {
+            foreach (WorkhubWindowHandler i in StaticClasses.WindowHandler.WindowHandlers)
+            {
+                if (i.Name == "Widget")
+                {
+                    PostMessage(i.hWnd, StaticClasses.WorkHubMessages.ConfigChanged, 0, 0);
+                }
+            }
+        }
+
 
         public void SaveConfig(Configure cfg)
         {
@@ -104,7 +225,24 @@ namespace WorkhubForWindows
         public static List<Executable> Executables { get; set; } = new List<Executable>();
         public static string ConfigFoldor { get; set; }
         public static Configure Config { get; set; } = new Configure();
+        public static class WorkHubMessages
+        {
+            public const int ConfigChanged = 0x00;
+            public const int AppListChanged = 0x01;
+            public const int WidgetConfigChanged = 0x02;
+        }
 
-        
+        public static class WindowHandler
+        {
+            public static List<WorkhubWindowHandler> WindowHandlers = new List<WorkhubWindowHandler>();
+        }
+
+
+
+        public static class AppStatus
+        {
+            public static bool Started = false;
+        }
+
     }
 }

@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Xml.Linq;
 using System.IO;
 using System.Xml.Serialization;
+using System.Runtime.InteropServices;
 
 namespace WorkhubForWindows
 {
@@ -93,5 +94,12 @@ namespace WorkhubForWindows
                 }
             }
         }
+        
+        public static class WinAPIFuncs
+        {
+            [DllImport("User32.dll", EntryPoint = "PostMessage")]
+            public extern static Int32 PostMessage(Int32 hwnd, Int32 msg, Int32 wParam, Int32 lParam);
+        }
+        
     }
 }

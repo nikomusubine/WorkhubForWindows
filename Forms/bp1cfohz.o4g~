@@ -83,31 +83,19 @@ namespace WorkhubForWindows
                 }
             }
         }
-        
+
+        void LoadConfig()
+        {
+
+            this.Font = new Font(StaticClasses.Config.font.Name, StaticClasses.Config.font.Size);
+        }
+        #endregion
+
         private void Widget_Closing(object sender, EventArgs e)
         {
 
             End_WorkHubWndProc((int)this.Handle);
         }
-
-        void LoadConfig()
-        {
-            this.Font = new Font(StaticClasses.Config.font.Name, StaticClasses.Config.font.Size);
-            this.Opacity = StaticClasses.Config.WidgetOpacity;
-            if (StaticClasses.Config.ShowWidget)
-            {
-                this.WindowState = FormWindowState.Normal;
-                this.ShowInTaskbar = true;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Minimized;
-                this.ShowInTaskbar = false;
-            }
-        }
-        #endregion
-
-        
 
         #region Move Window
         private Point mousePoint;
