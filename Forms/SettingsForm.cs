@@ -22,7 +22,7 @@ namespace WorkhubForWindows.Forms
                 {
                     FontNames.Items.Add(item.Name);
                 }
-                
+
             }
             initalizeform();
         }
@@ -32,11 +32,11 @@ namespace WorkhubForWindows.Forms
 
         }
 
-        private void BackImgRefClick(object sender,EventArgs e)
+        private void BackImgRefClick(object sender, EventArgs e)
         {
             OpenFileDialog ofdiag = new OpenFileDialog();
 
-            ofdiag.Filter = "Image File(*.bmp;*.png;*.jpg;*.jpeg) |*.bmp;*.png;*.jpg;*.jpeg"; 
+            ofdiag.Filter = "Image File(*.bmp;*.png;*.jpg;*.jpeg) |*.bmp;*.png;*.jpg;*.jpeg";
 
             if (ofdiag.ShowDialog() == DialogResult.OK)
             {
@@ -45,7 +45,20 @@ namespace WorkhubForWindows.Forms
 
         }
 
-        private void ShutdownrefClick(object sender,EventArgs e)
+        private void WidgetBackImgRefClick(object sender, EventArgs e)
+        {
+            OpenFileDialog ofdiag = new OpenFileDialog();
+
+            ofdiag.Filter = "Image File(*.bmp;*.png;*.jpg;*.jpeg) |*.bmp;*.png;*.jpg;*.jpeg";
+
+            if (ofdiag.ShowDialog() == DialogResult.OK)
+            {
+                widgetbackimgpath.Text = ofdiag.FileName;
+            }
+
+        }
+
+        private void ShutdownrefClick(object sender, EventArgs e)
         {
             OpenFileDialog ofdiag = new OpenFileDialog();
             ofdiag.FileName = Shutdownsoundbox.Text;
@@ -71,6 +84,11 @@ namespace WorkhubForWindows.Forms
 
         }
 
+        private void OpacityChanged(object sender, EventArgs e)
+        {
+
+        }
+
         #region Apply or Cancel
         private void ApplyClicked(object sender, EventArgs e)
         {
@@ -78,11 +96,12 @@ namespace WorkhubForWindows.Forms
             OwnFont ftmp = new OwnFont(FontNames.Text, Convert.ToSingle(FontSizeBox.Text));
             StaticClasses.Config.font = ftmp;
             StaticClasses.Config.backimgpath = backimgpath.Text;
+            StaticClasses.Config.Widgetbackimg = widgetbackimgpath.Text;
             StaticClasses.Config.LogoffSound = LogoffsoundBox.Text;
             StaticClasses.Config.ShutdownSound = Shutdownsoundbox.Text;
             #endregion
-            this.DialogResult = DialogResult.OK;
-
+            StaticClasses.Config.SaveConfig(StaticClasses.Config);
+            StaticClasses.Config.ApplyConfig();
             this.Close();
         }
 
@@ -91,7 +110,7 @@ namespace WorkhubForWindows.Forms
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
-        #endregion
+        #endregion  
 
         #region Functions
         void initalizeform()
@@ -99,6 +118,7 @@ namespace WorkhubForWindows.Forms
             FontNames.Text = StaticClasses.Config.font.Name;
             FontSizeBox.Text = StaticClasses.Config.font.Size.ToString();
 
+            widgetbackimgpath.Text = StaticClasses.Config.Widgetbackimg;
             backimgpath.Text = StaticClasses.Config.backimgpath;
 
 

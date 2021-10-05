@@ -33,7 +33,7 @@
             this.FontName = new System.Windows.Forms.Label();
             this.FontNames = new System.Windows.Forms.ComboBox();
             this.ApplyButton = new System.Windows.Forms.Button();
-            this.CancelButton = new System.Windows.Forms.Button();
+            this.Cancel_Button = new System.Windows.Forms.Button();
             this.FontSizeBox = new System.Windows.Forms.TextBox();
             this.backimglabel = new System.Windows.Forms.Label();
             this.backimgpath = new System.Windows.Forms.TextBox();
@@ -47,6 +47,12 @@
             this.Shutdownsoundbutton = new System.Windows.Forms.Button();
             this.Shutdownsoundbox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.WidgetsSettingsLabel = new System.Windows.Forms.Label();
+            this.OpacityBar = new System.Windows.Forms.TrackBar();
+            this.OpacityLabel = new System.Windows.Forms.Label();
+            this.OpacityBox = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.OpacityBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OpacityBox)).BeginInit();
             this.SuspendLayout();
             // 
             // FontName
@@ -79,16 +85,16 @@
             this.ApplyButton.UseVisualStyleBackColor = true;
             this.ApplyButton.Click += new System.EventHandler(this.ApplyClicked);
             // 
-            // CancelButton
+            // Cancel_Button
             // 
-            this.CancelButton.Location = new System.Drawing.Point(576, 406);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(4);
-            this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(100, 31);
-            this.CancelButton.TabIndex = 4;
-            this.CancelButton.Text = "Cancel";
-            this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelClicked);
+            this.Cancel_Button.Location = new System.Drawing.Point(576, 406);
+            this.Cancel_Button.Margin = new System.Windows.Forms.Padding(4);
+            this.Cancel_Button.Name = "Cancel_Button";
+            this.Cancel_Button.Size = new System.Drawing.Size(100, 31);
+            this.Cancel_Button.TabIndex = 4;
+            this.Cancel_Button.Text = "Cancel";
+            this.Cancel_Button.UseVisualStyleBackColor = true;
+            this.Cancel_Button.Click += new System.EventHandler(this.CancelClicked);
             // 
             // FontSizeBox
             // 
@@ -102,7 +108,7 @@
             // backimglabel
             // 
             this.backimglabel.AutoSize = true;
-            this.backimglabel.Location = new System.Drawing.Point(17, 50);
+            this.backimglabel.Location = new System.Drawing.Point(16, 46);
             this.backimglabel.Name = "backimglabel";
             this.backimglabel.Size = new System.Drawing.Size(208, 15);
             this.backimglabel.TabIndex = 6;
@@ -110,14 +116,14 @@
             // 
             // backimgpath
             // 
-            this.backimgpath.Location = new System.Drawing.Point(231, 46);
+            this.backimgpath.Location = new System.Drawing.Point(230, 42);
             this.backimgpath.Name = "backimgpath";
             this.backimgpath.Size = new System.Drawing.Size(174, 22);
             this.backimgpath.TabIndex = 7;
             // 
             // backimgref
             // 
-            this.backimgref.Location = new System.Drawing.Point(411, 45);
+            this.backimgref.Location = new System.Drawing.Point(410, 41);
             this.backimgref.Name = "backimgref";
             this.backimgref.Size = new System.Drawing.Size(25, 25);
             this.backimgref.TabIndex = 8;
@@ -127,16 +133,17 @@
             // 
             // widgetbackimgref
             // 
-            this.widgetbackimgref.Location = new System.Drawing.Point(411, 77);
+            this.widgetbackimgref.Location = new System.Drawing.Point(410, 73);
             this.widgetbackimgref.Name = "widgetbackimgref";
             this.widgetbackimgref.Size = new System.Drawing.Size(25, 25);
             this.widgetbackimgref.TabIndex = 11;
             this.widgetbackimgref.Text = "...";
             this.widgetbackimgref.UseVisualStyleBackColor = true;
+            this.widgetbackimgref.Click += new System.EventHandler(this.WidgetBackImgRefClick);
             // 
             // widgetbackimgpath
             // 
-            this.widgetbackimgpath.Location = new System.Drawing.Point(231, 78);
+            this.widgetbackimgpath.Location = new System.Drawing.Point(230, 74);
             this.widgetbackimgpath.Name = "widgetbackimgpath";
             this.widgetbackimgpath.Size = new System.Drawing.Size(174, 22);
             this.widgetbackimgpath.TabIndex = 10;
@@ -144,7 +151,7 @@
             // widgetbackimg
             // 
             this.widgetbackimg.AutoSize = true;
-            this.widgetbackimg.Location = new System.Drawing.Point(17, 78);
+            this.widgetbackimg.Location = new System.Drawing.Point(16, 74);
             this.widgetbackimg.Name = "widgetbackimg";
             this.widgetbackimg.Size = new System.Drawing.Size(173, 15);
             this.widgetbackimg.TabIndex = 9;
@@ -152,7 +159,7 @@
             // 
             // LogoffSoundbutton
             // 
-            this.LogoffSoundbutton.Location = new System.Drawing.Point(411, 137);
+            this.LogoffSoundbutton.Location = new System.Drawing.Point(410, 133);
             this.LogoffSoundbutton.Name = "LogoffSoundbutton";
             this.LogoffSoundbutton.Size = new System.Drawing.Size(25, 25);
             this.LogoffSoundbutton.TabIndex = 17;
@@ -162,7 +169,7 @@
             // 
             // LogoffsoundBox
             // 
-            this.LogoffsoundBox.Location = new System.Drawing.Point(231, 138);
+            this.LogoffsoundBox.Location = new System.Drawing.Point(230, 134);
             this.LogoffsoundBox.Name = "LogoffsoundBox";
             this.LogoffsoundBox.Size = new System.Drawing.Size(174, 22);
             this.LogoffsoundBox.TabIndex = 16;
@@ -170,7 +177,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 138);
+            this.label1.Location = new System.Drawing.Point(16, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 15);
             this.label1.TabIndex = 15;
@@ -178,7 +185,7 @@
             // 
             // Shutdownsoundbutton
             // 
-            this.Shutdownsoundbutton.Location = new System.Drawing.Point(411, 105);
+            this.Shutdownsoundbutton.Location = new System.Drawing.Point(410, 101);
             this.Shutdownsoundbutton.Name = "Shutdownsoundbutton";
             this.Shutdownsoundbutton.Size = new System.Drawing.Size(25, 25);
             this.Shutdownsoundbutton.TabIndex = 14;
@@ -188,7 +195,7 @@
             // 
             // Shutdownsoundbox
             // 
-            this.Shutdownsoundbox.Location = new System.Drawing.Point(231, 106);
+            this.Shutdownsoundbox.Location = new System.Drawing.Point(230, 102);
             this.Shutdownsoundbox.Name = "Shutdownsoundbox";
             this.Shutdownsoundbox.Size = new System.Drawing.Size(174, 22);
             this.Shutdownsoundbox.TabIndex = 13;
@@ -196,11 +203,47 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 110);
+            this.label2.Location = new System.Drawing.Point(16, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(115, 15);
             this.label2.TabIndex = 12;
             this.label2.Text = "Shutdown Sound";
+            // 
+            // WidgetsSettingsLabel
+            // 
+            this.WidgetsSettingsLabel.AutoSize = true;
+            this.WidgetsSettingsLabel.Font = new System.Drawing.Font("MS UI Gothic", 10F);
+            this.WidgetsSettingsLabel.Location = new System.Drawing.Point(13, 160);
+            this.WidgetsSettingsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.WidgetsSettingsLabel.Name = "WidgetsSettingsLabel";
+            this.WidgetsSettingsLabel.Size = new System.Drawing.Size(116, 17);
+            this.WidgetsSettingsLabel.TabIndex = 18;
+            this.WidgetsSettingsLabel.Text = "WidgetSettings";
+            // 
+            // OpacityBar
+            // 
+            this.OpacityBar.Location = new System.Drawing.Point(230, 188);
+            this.OpacityBar.Maximum = 100;
+            this.OpacityBar.Name = "OpacityBar";
+            this.OpacityBar.Size = new System.Drawing.Size(174, 56);
+            this.OpacityBar.TabIndex = 19;
+            this.OpacityBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            // 
+            // OpacityLabel
+            // 
+            this.OpacityLabel.AutoSize = true;
+            this.OpacityLabel.Location = new System.Drawing.Point(17, 188);
+            this.OpacityLabel.Name = "OpacityLabel";
+            this.OpacityLabel.Size = new System.Drawing.Size(55, 15);
+            this.OpacityLabel.TabIndex = 20;
+            this.OpacityLabel.Text = "Opacity";
+            // 
+            // OpacityBox
+            // 
+            this.OpacityBox.Location = new System.Drawing.Point(92, 188);
+            this.OpacityBox.Name = "OpacityBox";
+            this.OpacityBox.Size = new System.Drawing.Size(132, 22);
+            this.OpacityBox.TabIndex = 21;
             // 
             // SettingsForm
             // 
@@ -208,6 +251,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.OpacityBox);
+            this.Controls.Add(this.OpacityLabel);
+            this.Controls.Add(this.OpacityBar);
+            this.Controls.Add(this.WidgetsSettingsLabel);
             this.Controls.Add(this.LogoffSoundbutton);
             this.Controls.Add(this.LogoffsoundBox);
             this.Controls.Add(this.label1);
@@ -221,7 +268,7 @@
             this.Controls.Add(this.backimgpath);
             this.Controls.Add(this.backimglabel);
             this.Controls.Add(this.FontSizeBox);
-            this.Controls.Add(this.CancelButton);
+            this.Controls.Add(this.Cancel_Button);
             this.Controls.Add(this.ApplyButton);
             this.Controls.Add(this.FontNames);
             this.Controls.Add(this.FontName);
@@ -230,6 +277,8 @@
             this.Name = "SettingsForm";
             this.Text = "Settings";
             this.Click += new System.EventHandler(this.ApplyClicked);
+            ((System.ComponentModel.ISupportInitialize)(this.OpacityBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OpacityBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,7 +290,7 @@
         private System.Windows.Forms.Label FontName;
         private System.Windows.Forms.ComboBox FontNames;
         private System.Windows.Forms.Button ApplyButton;
-        private System.Windows.Forms.Button CancelButton;
+        private System.Windows.Forms.Button Cancel_Button;
         private System.Windows.Forms.TextBox FontSizeBox;
         private System.Windows.Forms.Label backimglabel;
         private System.Windows.Forms.TextBox backimgpath;
@@ -255,5 +304,9 @@
         private System.Windows.Forms.Button Shutdownsoundbutton;
         private System.Windows.Forms.TextBox Shutdownsoundbox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label WidgetsSettingsLabel;
+        private System.Windows.Forms.TrackBar OpacityBar;
+        private System.Windows.Forms.Label OpacityLabel;
+        private System.Windows.Forms.NumericUpDown OpacityBox;
     }
 }

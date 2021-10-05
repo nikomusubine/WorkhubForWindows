@@ -13,6 +13,8 @@ namespace WorkhubForWindows
 {
     public partial class Widget : Form
     {
+
+        private static int lngWnP;
         public Widget()
         {
             InitializeComponent();
@@ -26,9 +28,15 @@ namespace WorkhubForWindows
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle,"Widget"));
 
+            this.FormClosing += Widget_Closing;
+
+        }
+
+        private void ShowWidget(object sender,EventArgs e)
+        {
+            this.LoadConfig();
             // Start WndProc
             Start_WorkHubWndProc((int)this.Handle);
-            this.FormClosing += Widget_Closing;
         }
 
 
@@ -67,33 +75,39 @@ namespace WorkhubForWindows
 
 
         }
-
-        void Backgroundset()
-        {
-            if (StaticClasses.Config.Widgetbackimg != "")
-            {
-                if (File.Exists(StaticClasses.Config.Widgetbackimg))
-                {
-                    this.applistview.BackgroundImage = Image.FromFile(StaticClasses.Config.Widgetbackimg);
-                }
-                else
-                {
-                    StaticClasses.Config.Widgetbackimg = "";
-
-                }
-            }
-        }
         
         private void Widget_Closing(object sender, EventArgs e)
         {
-
             End_WorkHubWndProc((int)this.Handle);
         }
 
+
+
+
+        void Backgroundset()
+        {
+           /* if (StaticClasses.Config.Widgetbackimg != "")
+            {
+                if (File.Exists(StaticClasses.Config.Widgetbackimg))
+                {
+                    if (this.applistview.BackgroundImage != null)
+                    {
+                        this.applistview.BackgroundImage.Dispose();
+                    }
+                    this.applistview.BackgroundImage = Image.FromFile(StaticClasses.Config.Widgetbackimg);
+                }
+                else if (StaticClasses.Config.Widgetbackimg != "")
+                {
+                    StaticClasses.Config.Widgetbackimg = "";
+                }
+            }*/
+        }
+       
         void LoadConfig()
         {
             this.Font = new Font(StaticClasses.Config.font.Name, StaticClasses.Config.font.Size);
             this.Opacity = StaticClasses.Config.WidgetOpacity;
+            Backgroundset();
             if (StaticClasses.Config.ShowWidget)
             {
                 this.WindowState = FormWindowState.Normal;
@@ -228,7 +242,7 @@ namespace WorkhubForWindows
 
         #region WinMsg
 
-        private delegate int D_MyWndProc(int hwnd, int msg, int wParam, int lParam);
+        private delegate int D_WHWndProc(int hwnd, int msg, int wParam, int lParam);
 
         // ウィンドウをサブクラス化するAPI
         private static int GWL_WNDPROC = -4;
@@ -237,12 +251,11 @@ namespace WorkhubForWindows
         [System.Runtime.InteropServices.DllImport("user32.dll", EntryPoint = "SetWindowLongA")]
         extern static int SetWindowLong(int hwnd, int nIndex, int dwNewLong);
         [System.Runtime.InteropServices.DllImport("user32.dll", EntryPoint = "SetWindowLongA")]
-        extern static int SetWindowLong(int hwnd, int nIndex, D_MyWndProc dwNewLong);
+        extern static int SetWindowLong(int hwnd, int nIndex, D_WHWndProc dwNewLong);
         [System.Runtime.InteropServices.DllImport("user32.dll", EntryPoint = "CallWindowProcA")]
         extern static int CallWindowProc(int lpPrevWndFunc, int hwnd, int msg, int wParam, int lParam);
 
         // デフォルトのメッセージ処理関数
-        private static int lngWnP;
 
         // 独自メッセージの処理を開始
         public void Start_WorkHubWndProc(int hwnd)

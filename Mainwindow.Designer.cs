@@ -101,6 +101,7 @@ namespace WorkhubForWindows
             // 
             // ToolStripShowWidget
             // 
+            this.ToolStripShowWidget.CheckOnClick = true;
             this.ToolStripShowWidget.Name = "ToolStripShowWidget";
             resources.ApplyResources(this.ToolStripShowWidget, "ToolStripShowWidget");
             this.ToolStripShowWidget.Click += new System.EventHandler(this.ShowWidget);
@@ -147,6 +148,7 @@ namespace WorkhubForWindows
             // 
             // TrayRC_ShowWidget
             // 
+            this.TrayRC_ShowWidget.CheckOnClick = true;
             this.TrayRC_ShowWidget.Name = "TrayRC_ShowWidget";
             resources.ApplyResources(this.TrayRC_ShowWidget, "TrayRC_ShowWidget");
             this.TrayRC_ShowWidget.Click += new System.EventHandler(this.ShowWidget);
@@ -245,6 +247,7 @@ namespace WorkhubForWindows
             this.Controls.Add(this.Ribbon);
             this.MainMenuStrip = this.Ribbon;
             this.Name = "Mainwindow";
+            this.Shown += new System.EventHandler(this.MainWindowShown);
             this.Ribbon.ResumeLayout(false);
             this.Ribbon.PerformLayout();
             this.TrayRClick.ResumeLayout(false);

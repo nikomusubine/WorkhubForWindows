@@ -39,7 +39,6 @@
             this.applistview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.applistview.BackgroundImageTiled = true;
             this.applistview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.applistview.HideSelection = false;
             this.applistview.LargeImageList = this.IconList;
@@ -56,7 +55,7 @@
             // IconList
             // 
             this.IconList.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.IconList.ImageSize = new System.Drawing.Size(16, 16);
+            this.IconList.ImageSize = new System.Drawing.Size(28, 28);
             this.IconList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Widget
@@ -69,6 +68,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Widget";
             this.Text = "Widget";
+            this.Shown += new System.EventHandler(this.ShowWidget);
             this.ResumeLayout(false);
 
         }

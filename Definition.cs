@@ -57,7 +57,7 @@ namespace WorkhubForWindows
 
     public class Configure
     {
-        
+
         public OwnFont font = new OwnFont("MS UI Gothic", 9);
 
         private string __backimgpath;
@@ -69,10 +69,6 @@ namespace WorkhubForWindows
             }
             set
             {
-                if (StaticClasses.AppStatus.Started)
-                {
-                    SendConfigChanged();
-                }
                 this.__backimgpath = value;
             }
         }
@@ -85,11 +81,11 @@ namespace WorkhubForWindows
             }
             set
             {
+                this.__LockWidget = value;
                 if (StaticClasses.AppStatus.Started)
                 {
                     SendWidgetConfigChanged();
                 }
-                this.__LockWidget = value;
             }
         }
         private string __Widgetbackimg;
@@ -101,8 +97,6 @@ namespace WorkhubForWindows
             }
             set
             {
-                if (StaticClasses.AppStatus.Started)
-                    SendWidgetConfigChanged();
                 this.__Widgetbackimg = value;
             }
         }
@@ -115,11 +109,9 @@ namespace WorkhubForWindows
             }
             set
             {
-                if (StaticClasses.AppStatus.Started)
-                {
-                    SendWidgetConfigChanged();
-                }
                 this.__ShowWidget = value;
+
+                SendWidgetConfigChanged();
             }
         }
         private double __WidgetOpacity = 1;
@@ -127,12 +119,23 @@ namespace WorkhubForWindows
         {
             get
             {
-                return __WidgetOpacity;
+                return this.__WidgetOpacity;
             }
             set
             {
                 __WidgetOpacity = value;
-                SendWidgetConfigChanged();
+            }
+        }
+        private Point __WidgetSize = new Point(350, 350);
+        public Point WidgetSize
+        {
+            get
+            {
+                return this.__WidgetSize;
+            }
+            set
+            {
+                __WidgetSize = value;
             }
         }
         private HomeMode __Homemode;
@@ -144,10 +147,6 @@ namespace WorkhubForWindows
             }
             set
             {
-                if (StaticClasses.AppStatus.Started)
-                {
-                    SendConfigChanged();
-                }
                 this.__Homemode = value;
             }
         }
@@ -167,17 +166,21 @@ namespace WorkhubForWindows
             }
         }
 
-        private void SendWidgetConfigChanged()
+        public void ApplyConfig()
+        {
+            this.SendConfigChanged();
+        }
+
+        public void SendWidgetConfigChanged()
         {
             foreach (WorkhubWindowHandler i in StaticClasses.WindowHandler.WindowHandlers)
             {
                 if (i.Name == "Widget")
                 {
-                    PostMessage(i.hWnd, StaticClasses.WorkHubMessages.ConfigChanged, 0, 0);
+                    PostMessage(i.hWnd, StaticClasses.WorkHubMessages.WidgetConfigChanged, 0, 0);
                 }
             }
         }
-
 
         public void SaveConfig(Configure cfg)
         {
@@ -227,9 +230,9 @@ namespace WorkhubForWindows
         public static Configure Config { get; set; } = new Configure();
         public static class WorkHubMessages
         {
-            public const int ConfigChanged = 0x00;
-            public const int AppListChanged = 0x01;
-            public const int WidgetConfigChanged = 0x02;
+            public const int ConfigChanged = 0x2500;
+            public const int AppListChanged = 0x2501;
+            public const int WidgetConfigChanged = 0x2502;
         }
 
         public static class WindowHandler

@@ -17,21 +17,27 @@ namespace WorkhubForWindows
     public partial class Mainwindow : Form
     {
         private bool Quiting = false;
+
+        public static Widget wg = new Widget();
         public Mainwindow()
         {
             InitializeComponent();
             initalizeApps();
 
-            Widget wg = new Widget();
-            wg.Show();
+            
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle,"MainForm"));
             StaticClasses.Config = StaticClasses.Config.LoadConfig();
             this.LoadConfig();
             Apps.View = View.LargeIcon;
             this.FormClosing += Form_Closing;
-
             StaticClasses.AppStatus.Started = true;
+
+        }
+
+        private void MainWindowShown(object sender,EventArgs e)
+        {
+            wg.Show();
         }
 
 
@@ -62,11 +68,7 @@ namespace WorkhubForWindows
         private void SettingsPushed(object sender, EventArgs e)
         {
             SettingsForm sform = new SettingsForm();
-            if (sform.ShowDialog() == DialogResult.OK)
-            {
-                
-                StaticClasses.Config.SaveConfig(StaticClasses.Config);
-            }
+            sform.ShowDialog();
         }
 
         private void ShowWidget(object sender,EventArgs e)
@@ -74,15 +76,15 @@ namespace WorkhubForWindows
             if (StaticClasses.Config.ShowWidget)
             {
                 StaticClasses.Config.ShowWidget = false;
+                TrayRC_ShowWidget.Checked = false;
+                ToolStripShowWidget.Checked = false;
             }else
             {
                 StaticClasses.Config.ShowWidget = true;
-            }
-            foreach (var i in StaticClasses.WindowHandler.WindowHandlers)
-            {
-                if (i.Name == "Widget") {
-                    Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.WidgetConfigChanged, 0, 0);
-                 }
+                TrayRC_ShowWidget.Checked = true;
+                ToolStripShowWidget.Checked = true;
+                wg.WindowState = FormWindowState.Normal;
+                wg.ShowInTaskbar = true;
             }
         }
 
@@ -169,9 +171,13 @@ namespace WorkhubForWindows
             {
                 if (File.Exists(StaticClasses.Config.backimgpath))
                 {
+                    if (this.BackgroundImage != null)
+                    {
+                        this.BackgroundImage.Dispose();
+                    }
                     this.BackgroundImage = Image.FromFile(StaticClasses.Config.backimgpath);
                 }
-                else
+                else if(StaticClasses.Config.backimgpath != "")
                 {
                     StaticClasses.Config.backimgpath = "";
 

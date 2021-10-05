@@ -128,13 +128,13 @@
     <value>17, 17</value>
   </metadata>
   <data name="Ribbon_Settings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>205, 26</value>
   </data>
   <data name="Ribbon_Settings.Text" xml:space="preserve">
     <value>Settings(&amp;S)</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 6</value>
+    <value>202, 6</value>
   </data>
   <data name="ToolStripShowWidget.Size" type="System.Drawing.Size, System.Drawing">
     <value>224, 26</value>
@@ -143,10 +143,10 @@
     <value>Show Widget(&amp;W)</value>
   </data>
   <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 6</value>
+    <value>202, 6</value>
   </data>
   <data name="quitQToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>205, 26</value>
   </data>
   <data name="quitQToolStripMenuItem1.Text" xml:space="preserve">
     <value>Quit(&amp;Q)</value>
@@ -217,7 +217,7 @@
     <value>Quit(&amp;Q)</value>
   </data>
   <data name="TrayRClick.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 88</value>
+    <value>221, 116</value>
   </data>
   <data name="&gt;&gt;TrayRClick.Name" xml:space="preserve">
     <value>TrayRClick</value>
