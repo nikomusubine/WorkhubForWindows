@@ -101,5 +101,15 @@ namespace WorkhubForWindows
             public extern static Int32 PostMessage(Int32 hwnd, Int32 msg, Int32 wParam, Int32 lParam);
         }
         
+        public static class WinMsgFuncs
+        {
+            public static void AppClose()
+            {
+                foreach (var i in StaticClasses.WindowHandler.WindowHandlers)
+                {
+                    WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.ApplicationQuit, 0, 0);
+                }
+            }
+        }
     }
 }

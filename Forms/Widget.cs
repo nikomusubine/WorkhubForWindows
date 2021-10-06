@@ -28,7 +28,6 @@ namespace WorkhubForWindows
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle,"Widget"));
 
-            this.FormClosing += Widget_Closing;
 
         }
 
@@ -39,6 +38,10 @@ namespace WorkhubForWindows
             Start_WorkHubWndProc((int)this.Handle);
         }
 
+        private void App_Closing()
+        {
+            End_WorkHubWndProc((int)this.Handle);
+        }
 
 
         private void appstartcall(object sender, EventArgs e)
@@ -75,18 +78,12 @@ namespace WorkhubForWindows
 
 
         }
-        
-        private void Widget_Closing(object sender, EventArgs e)
-        {
-            End_WorkHubWndProc((int)this.Handle);
-        }
-
 
 
 
         void Backgroundset()
         {
-           /* if (StaticClasses.Config.Widgetbackimg != "")
+            if (StaticClasses.Config.Widgetbackimg != "")
             {
                 if (File.Exists(StaticClasses.Config.Widgetbackimg))
                 {
@@ -100,7 +97,7 @@ namespace WorkhubForWindows
                 {
                     StaticClasses.Config.Widgetbackimg = "";
                 }
-            }*/
+            }
         }
        
         void LoadConfig()
@@ -283,6 +280,10 @@ namespace WorkhubForWindows
                     break;
                 case StaticClasses.WorkHubMessages.WidgetConfigChanged:
                     this.LoadConfig();
+                    break;
+
+                case StaticClasses.WorkHubMessages.ApplicationQuit:
+                    App_Closing();
                     break;
                 default:
                     return CallWindowProc(lngWnP, hwnd, msg, wParam, lParam);

@@ -233,6 +233,7 @@ namespace WorkhubForWindows
             public const int ConfigChanged = 0x2500;
             public const int AppListChanged = 0x2501;
             public const int WidgetConfigChanged = 0x2502;
+            public const int ApplicationQuit = 0x2510;
         }
 
         public static class WindowHandler
