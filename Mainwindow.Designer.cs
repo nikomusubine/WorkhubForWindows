@@ -55,12 +55,16 @@ namespace WorkhubForWindows
             this.addAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.HomePanel = new System.Windows.Forms.TableLayoutPanel();
             this.ListViewPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.HalfModebackimg = new System.Windows.Forms.PictureBox();
             this.Ribbon.SuspendLayout();
             this.TrayRClick.SuspendLayout();
             this.ButtonsPunel.SuspendLayout();
             this.ApplistRClick.SuspendLayout();
+            this.HomePanel.SuspendLayout();
             this.ListViewPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HalfModebackimg)).BeginInit();
             this.SuspendLayout();
             // 
             // IconList
@@ -220,30 +224,45 @@ namespace WorkhubForWindows
             // 
             this.addAToolStripMenuItem.Name = "addAToolStripMenuItem";
             resources.ApplyResources(this.addAToolStripMenuItem, "addAToolStripMenuItem");
+            this.addAToolStripMenuItem.Click += new System.EventHandler(this.Additem);
             // 
             // editEToolStripMenuItem
             // 
             this.editEToolStripMenuItem.Name = "editEToolStripMenuItem";
             resources.ApplyResources(this.editEToolStripMenuItem, "editEToolStripMenuItem");
+            this.editEToolStripMenuItem.Click += new System.EventHandler(this.EditPushed);
             // 
             // deleteDToolStripMenuItem
             // 
             this.deleteDToolStripMenuItem.Name = "deleteDToolStripMenuItem";
             resources.ApplyResources(this.deleteDToolStripMenuItem, "deleteDToolStripMenuItem");
             // 
+            // HomePanel
+            // 
+            resources.ApplyResources(this.HomePanel, "HomePanel");
+            this.HomePanel.BackColor = System.Drawing.Color.Transparent;
+            this.HomePanel.Controls.Add(this.ListViewPanel, 1, 0);
+            this.HomePanel.Controls.Add(this.HalfModebackimg, 0, 0);
+            this.HomePanel.Name = "HomePanel";
+            // 
             // ListViewPanel
             // 
             resources.ApplyResources(this.ListViewPanel, "ListViewPanel");
-            this.ListViewPanel.BackColor = System.Drawing.Color.Transparent;
-            this.ListViewPanel.Controls.Add(this.Apps, 1, 0);
-            this.ListViewPanel.Controls.Add(this.ButtonsPunel, 1, 1);
+            this.ListViewPanel.Controls.Add(this.ButtonsPunel, 0, 1);
+            this.ListViewPanel.Controls.Add(this.Apps, 0, 0);
             this.ListViewPanel.Name = "ListViewPanel";
+            // 
+            // HalfModebackimg
+            // 
+            resources.ApplyResources(this.HalfModebackimg, "HalfModebackimg");
+            this.HalfModebackimg.Name = "HalfModebackimg";
+            this.HalfModebackimg.TabStop = false;
             // 
             // Mainwindow
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ListViewPanel);
+            this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.Ribbon);
             this.MainMenuStrip = this.Ribbon;
             this.Name = "Mainwindow";
@@ -253,7 +272,9 @@ namespace WorkhubForWindows
             this.TrayRClick.ResumeLayout(false);
             this.ButtonsPunel.ResumeLayout(false);
             this.ApplistRClick.ResumeLayout(false);
+            this.HomePanel.ResumeLayout(false);
             this.ListViewPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HalfModebackimg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,7 +297,7 @@ namespace WorkhubForWindows
         private System.Windows.Forms.Button StartButton;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.ListView Apps;
-        private System.Windows.Forms.TableLayoutPanel ListViewPanel;
+        private System.Windows.Forms.TableLayoutPanel HomePanel;
         private System.Windows.Forms.ToolStripMenuItem ToolStripShowWidget;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem TrayRC_ShowWidget;
@@ -285,6 +306,8 @@ namespace WorkhubForWindows
         private System.Windows.Forms.ToolStripMenuItem addAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteDToolStripMenuItem;
+        private System.Windows.Forms.TableLayoutPanel ListViewPanel;
+        private System.Windows.Forms.PictureBox HalfModebackimg;
     }
 }
 

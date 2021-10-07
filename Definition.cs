@@ -127,16 +127,16 @@ namespace WorkhubForWindows
                 SendWidgetConfigChanged();
             }
         }
-        private Color __WidgetForeColor = Color.FromArgb(0, 0, 0);
+        public int __WidgetForeColor = Color.FromArgb(0, 0, 0).ToArgb();
         public Color WidgetForeColor
         {
             get
             {
-                return __WidgetForeColor;
+                return Color.FromArgb(__WidgetForeColor);
             }
             set
             {
-                __WidgetForeColor = value;
+                __WidgetForeColor = value.ToArgb();
                 this.SendWidgetConfigChanged();
             }
         }
@@ -152,7 +152,7 @@ namespace WorkhubForWindows
                 __WidgetSize = value;
             }
         }
-        private HomeMode __Homemode;
+        private HomeMode __Homemode = HomeMode.HalfHome;
         public HomeMode Homemode
         {
             get

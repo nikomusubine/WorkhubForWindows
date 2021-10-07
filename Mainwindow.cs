@@ -24,9 +24,9 @@ namespace WorkhubForWindows
             InitializeComponent();
             initalizeApps();
 
-            
+
             //AddWindowHandler
-            StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle,"MainForm"));
+            StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle, "MainForm"));
             StaticClasses.Config = StaticClasses.Config.LoadConfig();
             this.LoadConfig();
             Apps.View = View.LargeIcon;
@@ -35,7 +35,7 @@ namespace WorkhubForWindows
 
         }
 
-        private void MainWindowShown(object sender,EventArgs e)
+        private void MainWindowShown(object sender, EventArgs e)
         {
             wg.Show();
         }
@@ -71,17 +71,18 @@ namespace WorkhubForWindows
             sform.ShowDialog();
         }
 
-        private void ShowWidget(object sender,EventArgs e)
+        private void ShowWidget(object sender, EventArgs e)
         {
             if (StaticClasses.Config.ShowWidget)
             {
-               // MessageBox.Show("I'm sorry, but you can't use it now.\nPlease wait the future update...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // MessageBox.Show("I'm sorry, but you can't use it now.\nPlease wait the future update...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 StaticClasses.Config.ShowWidget = false;
                 TrayRC_ShowWidget.Checked = false;
                 ToolStripShowWidget.Checked = false;
-            }else
+            }
+            else
             {
-               // MessageBox.Show("I'm sorry, but you can't use it now.\nPlease wait the future update...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // MessageBox.Show("I'm sorry, but you can't use it now.\nPlease wait the future update...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 StaticClasses.Config.ShowWidget = true;
                 TrayRC_ShowWidget.Checked = true;
                 ToolStripShowWidget.Checked = true;
@@ -91,7 +92,7 @@ namespace WorkhubForWindows
 
 
         #region TrayRClick
-                
+
         private void ShowMainWindow(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
@@ -99,13 +100,14 @@ namespace WorkhubForWindows
             this.TopMost = false;
         }
 
-        private void Quit(object sender,EventArgs e)
+        private void Quit(object sender, EventArgs e)
         {
             DialogResult diagres = MessageBox.Show("Quit Application?", "infomation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (diagres == DialogResult.Yes)
             {
                 Quiting = true;
-                Environment.Exit(0);
+                this.Close();
+                //Environment.Exit(0);
             }
         }
         #endregion
@@ -178,21 +180,50 @@ namespace WorkhubForWindows
             {
                 if (File.Exists(StaticClasses.Config.backimgpath))
                 {
-                    if (this.BackgroundImage != null)
+                    if (StaticClasses.Config.Homemode == HomeMode.HalfHome)
                     {
-                        this.BackgroundImage.Dispose();
+                        this.HalfModebackimg.BackgroundImage = Image.FromFile(StaticClasses.Config.backimgpath);
                     }
-                    this.BackgroundImage = Image.FromFile(StaticClasses.Config.backimgpath);
                 }
-                else if(StaticClasses.Config.backimgpath != "")
+                else if (StaticClasses.Config.backimgpath != "")
                 {
                     StaticClasses.Config.backimgpath = "";
 
                 }
+
+                this.TrayRC_ShowWidget.Checked = StaticClasses.Config.ShowWidget;
+                this.ToolStripShowWidget.Checked = StaticClasses.Config.ShowWidget;
+            }
+        }
+
+
+        #region WinMsg
+
+        //COPYDATASTRUCT構造体 
+        public struct COPYDATASTRUCT
+        {
+            public Int32 dwData;  //送信する32ビット値
+            public Int32 cbData;  //lpDataのバイト数
+            public string lpData;  //送信するデータへのポインタ(0も可能)
+        }
+        public const int WM_COPYDATA = 0x4A;
+        public const int WM_USER = 0x400;
+
+        // ウィンドウに来たメッセージを振り分ける関数
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case StaticClasses.WorkHubMessages.ConfigChanged:
+                    this.LoadConfig();
+                    break;
+                default:
+                    break;
             }
 
-            this.TrayRC_ShowWidget.Checked = StaticClasses.Config.ShowWidget;
-            this.ToolStripShowWidget.Checked = StaticClasses.Config.ShowWidget;
+            base.WndProc(ref m);
         }
+
+        #endregion
     }
 }

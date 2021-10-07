@@ -27,8 +27,7 @@ namespace WorkhubForWindows
             Backgroundset();
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle,"Widget"));
-
-
+            
         }
 
         private void ShowWidget(object sender,EventArgs e)
@@ -77,6 +76,11 @@ namespace WorkhubForWindows
 
         }
 
+        private Image ResizeImage(Image imgToResize, Size size)
+        {
+            return (Image)(new Bitmap(imgToResize, size));
+        }
+
         void Backgroundset()
         {
             if (StaticClasses.Config.Widgetbackimg != "")
@@ -87,7 +91,27 @@ namespace WorkhubForWindows
                     {
                         //this.applistview.BackgroundImage.Dispose();
                     }
-                    this.applistview.BackgroundImage = Image.FromFile(StaticClasses.Config.Widgetbackimg);
+
+                    Bitmap bmp = new Bitmap(Image.FromFile(StaticClasses.Config.Widgetbackimg));
+
+                    int x, y;
+                    x = bmp.Width;
+                    y = bmp.Height;
+
+                    if (bmp.Width / this.Width >= bmp.Height / this.Height)
+                    {
+                        float ratio = (float)bmp.Width / (float)this.Width;
+                        this.applistview.BackgroundImage = ResizeImage(bmp, new Size((int)(bmp.Width / ratio), (int)(bmp.Height / ratio)));
+                    }
+                    else
+                    {
+                        float ratio = (float)bmp.Height / (float)this.Height;
+                        this.applistview.BackgroundImage = ResizeImage(bmp, new Size((int)(bmp.Width / ratio), (int)(bmp.Height / ratio)));
+                    }
+
+
+
+                    //this.applistview.BackgroundImage
                 }
                 else if (StaticClasses.Config.Widgetbackimg != "")
                 {
