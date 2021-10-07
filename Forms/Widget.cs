@@ -14,7 +14,7 @@ namespace WorkhubForWindows
     public partial class Widget : Form
     {
 
-        private static int lngWnP;
+       // private static int lngWnP;
         public Widget()
         {
             InitializeComponent();
@@ -34,13 +34,11 @@ namespace WorkhubForWindows
         private void ShowWidget(object sender,EventArgs e)
         {
             this.LoadConfig();
-            // Start WndProc
-            Start_WorkHubWndProc((int)this.Handle);
         }
 
         private void App_Closing()
         {
-            End_WorkHubWndProc((int)this.Handle);
+
         }
 
 
@@ -79,8 +77,6 @@ namespace WorkhubForWindows
 
         }
 
-
-
         void Backgroundset()
         {
             if (StaticClasses.Config.Widgetbackimg != "")
@@ -89,7 +85,7 @@ namespace WorkhubForWindows
                 {
                     if (this.applistview.BackgroundImage != null)
                     {
-                        this.applistview.BackgroundImage.Dispose();
+                        //this.applistview.BackgroundImage.Dispose();
                     }
                     this.applistview.BackgroundImage = Image.FromFile(StaticClasses.Config.Widgetbackimg);
                 }
@@ -104,16 +100,15 @@ namespace WorkhubForWindows
         {
             this.Font = new Font(StaticClasses.Config.font.Name, StaticClasses.Config.font.Size);
             this.Opacity = StaticClasses.Config.WidgetOpacity;
+            this.applistview.ForeColor = StaticClasses.Config.WidgetForeColor;
             Backgroundset();
             if (StaticClasses.Config.ShowWidget)
             {
-                this.WindowState = FormWindowState.Normal;
-                this.ShowInTaskbar = true;
+                this.Show();
             }
             else
             {
-                this.WindowState = FormWindowState.Minimized;
-                this.ShowInTaskbar = false;
+                this.Hide();
             }
         }
         #endregion
@@ -239,38 +234,20 @@ namespace WorkhubForWindows
 
         #region WinMsg
 
-        private delegate int D_WHWndProc(int hwnd, int msg, int wParam, int lParam);
-
-        // ウィンドウをサブクラス化するAPI
-        private static int GWL_WNDPROC = -4;
-        [System.Runtime.InteropServices.DllImport("user32.dll", EntryPoint = "GetWindowLongA")]
-        extern static int GetWindowLong(int hwnd, int nIndex);
-        [System.Runtime.InteropServices.DllImport("user32.dll", EntryPoint = "SetWindowLongA")]
-        extern static int SetWindowLong(int hwnd, int nIndex, int dwNewLong);
-        [System.Runtime.InteropServices.DllImport("user32.dll", EntryPoint = "SetWindowLongA")]
-        extern static int SetWindowLong(int hwnd, int nIndex, D_WHWndProc dwNewLong);
-        [System.Runtime.InteropServices.DllImport("user32.dll", EntryPoint = "CallWindowProcA")]
-        extern static int CallWindowProc(int lpPrevWndFunc, int hwnd, int msg, int wParam, int lParam);
-
-        // デフォルトのメッセージ処理関数
-
-        // 独自メッセージの処理を開始
-        public void Start_WorkHubWndProc(int hwnd)
+        //COPYDATASTRUCT構造体 
+        public struct COPYDATASTRUCT
         {
-            lngWnP = GetWindowLong(hwnd, GWL_WNDPROC);
-            SetWindowLong(hwnd, GWL_WNDPROC, WorkHubWndProc);
+            public Int32 dwData;  //送信する32ビット値
+            public Int32 cbData;  //lpDataのバイト数
+            public string lpData;  //送信するデータへのポインタ(0も可能)
         }
-
-        // 独自メッセージの処理を終了
-        public void End_WorkHubWndProc(int hwnd)
-        {
-            SetWindowLong(hwnd, GWL_WNDPROC, lngWnP);
-        }
+        public const int WM_COPYDATA = 0x4A;
+        public const int WM_USER = 0x400;
 
         // ウィンドウに来たメッセージを振り分ける関数
-        private int WorkHubWndProc(int hwnd, int msg, int wParam, int lParam)
+        protected override void WndProc(ref Message m)
         {
-            switch (msg)
+            switch (m.Msg)
             {
                 case StaticClasses.WorkHubMessages.ConfigChanged:
                     this.LoadConfig();
@@ -286,9 +263,10 @@ namespace WorkhubForWindows
                     App_Closing();
                     break;
                 default:
-                    return CallWindowProc(lngWnP, hwnd, msg, wParam, lParam);
+                    break;
             }
-            return 0;
+
+            base.WndProc(ref m);
         }
 
         #endregion

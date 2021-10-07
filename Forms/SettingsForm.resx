@@ -126,10 +126,14 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="FontName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 13</value>
+    <value>17, 16</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FontName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="FontName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 12</value>
+    <value>39, 15</value>
   </data>
   <data name="FontName.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -147,13 +151,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;FontName.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>24</value>
   </data>
   <data name="FontNames.Location" type="System.Drawing.Point, System.Drawing">
-    <value>69, 10</value>
+    <value>92, 12</value>
+  </data>
+  <data name="FontNames.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="FontNames.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 20</value>
+    <value>160, 23</value>
   </data>
   <data name="FontNames.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -168,13 +175,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;FontNames.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>23</value>
   </data>
   <data name="ApplyButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>513, 325</value>
+    <value>684, 406</value>
+  </data>
+  <data name="ApplyButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="ApplyButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
+    <value>100, 31</value>
   </data>
   <data name="ApplyButton.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -192,13 +202,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ApplyButton.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>22</value>
   </data>
   <data name="Cancel_Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>432, 325</value>
+    <value>576, 406</value>
+  </data>
+  <data name="Cancel_Button.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="Cancel_Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 25</value>
+    <value>100, 31</value>
   </data>
   <data name="Cancel_Button.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -216,13 +229,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Cancel_Button.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>21</value>
   </data>
   <data name="FontSizeBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 11</value>
+    <value>261, 14</value>
+  </data>
+  <data name="FontSizeBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="FontSizeBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 19</value>
+    <value>67, 22</value>
   </data>
   <data name="FontSizeBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -237,20 +253,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;FontSizeBox.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="backimglabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="backimglabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 37</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="backimglabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>16, 46</value>
   </data>
   <data name="backimglabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 12</value>
+    <value>208, 15</value>
   </data>
   <data name="backimglabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -268,16 +280,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;backimglabel.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>19</value>
   </data>
   <data name="backimgpath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 34</value>
+    <value>229, 42</value>
   </data>
   <data name="backimgpath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="backimgpath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 19</value>
+    <value>175, 22</value>
   </data>
   <data name="backimgpath.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -292,16 +304,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;backimgpath.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>18</value>
   </data>
   <data name="backimgref.Location" type="System.Drawing.Point, System.Drawing">
-    <value>308, 33</value>
+    <value>411, 41</value>
   </data>
   <data name="backimgref.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="backimgref.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 20</value>
+    <value>25, 25</value>
   </data>
   <data name="backimgref.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -319,16 +331,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;backimgref.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>17</value>
   </data>
   <data name="widgetbackimgref.Location" type="System.Drawing.Point, System.Drawing">
-    <value>308, 58</value>
+    <value>411, 72</value>
   </data>
   <data name="widgetbackimgref.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="widgetbackimgref.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 20</value>
+    <value>25, 25</value>
   </data>
   <data name="widgetbackimgref.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -346,16 +358,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;widgetbackimgref.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
   <data name="widgetbackimgpath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 59</value>
+    <value>229, 74</value>
   </data>
   <data name="widgetbackimgpath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="widgetbackimgpath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 19</value>
+    <value>175, 22</value>
   </data>
   <data name="widgetbackimgpath.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -370,19 +382,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;widgetbackimgpath.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="widgetbackimg.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="widgetbackimg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 59</value>
-  </data>
-  <data name="widgetbackimg.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>16, 74</value>
   </data>
   <data name="widgetbackimg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 12</value>
+    <value>173, 15</value>
   </data>
   <data name="widgetbackimg.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -400,16 +409,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;widgetbackimg.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>16</value>
   </data>
   <data name="LogoffSoundbutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>308, 106</value>
+    <value>411, 132</value>
   </data>
   <data name="LogoffSoundbutton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="LogoffSoundbutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 20</value>
+    <value>25, 25</value>
   </data>
   <data name="LogoffSoundbutton.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -427,16 +436,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LogoffSoundbutton.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>8</value>
   </data>
   <data name="LogoffsoundBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 107</value>
+    <value>229, 134</value>
   </data>
   <data name="LogoffsoundBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="LogoffsoundBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 19</value>
+    <value>175, 22</value>
   </data>
   <data name="LogoffsoundBox.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -451,19 +460,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;LogoffsoundBox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 107</value>
-  </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>16, 134</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 12</value>
+    <value>88, 15</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -481,16 +487,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="Shutdownsoundbutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>308, 81</value>
+    <value>411, 101</value>
   </data>
   <data name="Shutdownsoundbutton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="Shutdownsoundbutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 20</value>
+    <value>25, 25</value>
   </data>
   <data name="Shutdownsoundbutton.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -508,16 +514,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Shutdownsoundbutton.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>11</value>
   </data>
   <data name="Shutdownsoundbox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>172, 82</value>
+    <value>229, 102</value>
   </data>
   <data name="Shutdownsoundbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="Shutdownsoundbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 19</value>
+    <value>175, 22</value>
   </data>
   <data name="Shutdownsoundbox.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -532,19 +538,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Shutdownsoundbox.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>12</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 85</value>
-  </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>16, 106</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 12</value>
+    <value>115, 15</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -562,7 +565,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>13</value>
   </data>
   <data name="WidgetsSettingsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -571,10 +574,13 @@
     <value>MS UI Gothic, 10pt</value>
   </data>
   <data name="WidgetsSettingsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 159</value>
+    <value>16, 199</value>
+  </data>
+  <data name="WidgetsSettingsLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
   </data>
   <data name="WidgetsSettingsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 14</value>
+    <value>116, 17</value>
   </data>
   <data name="WidgetsSettingsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -592,16 +598,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;WidgetsSettingsLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
   <data name="OpacityBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>174, 181</value>
+    <value>228, 228</value>
   </data>
   <data name="OpacityBar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="OpacityBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 45</value>
+    <value>173, 56</value>
   </data>
   <data name="OpacityBar.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -616,19 +622,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;OpacityBar.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="OpacityLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="OpacityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 181</value>
-  </data>
-  <data name="OpacityLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>16, 228</value>
   </data>
   <data name="OpacityLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 12</value>
+    <value>55, 15</value>
   </data>
   <data name="OpacityLabel.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -646,16 +649,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;OpacityLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="OpacityBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 181</value>
+    <value>91, 228</value>
   </data>
   <data name="OpacityBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="OpacityBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 19</value>
+    <value>94, 22</value>
   </data>
   <data name="OpacityBox.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -670,13 +673,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;OpacityBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="StartUpbutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 122</value>
+    <value>16, 152</value>
+  </data>
+  <data name="StartUpbutton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="StartUpbutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 25</value>
+    <value>123, 31</value>
   </data>
   <data name="StartUpbutton.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -694,19 +700,100 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;StartUpbutton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="ColorDiag.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>176, 17</value>
+  </metadata>
+  <data name="OpacityPercent.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="OpacityPercent.Font" type="System.Drawing.Font, System.Drawing">
+    <value>MS UI Gothic, 12pt</value>
+  </data>
+  <data name="OpacityPercent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 228</value>
+  </data>
+  <data name="OpacityPercent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>19, 20</value>
+  </data>
+  <data name="OpacityPercent.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="OpacityPercent.Text" xml:space="preserve">
+    <value>%</value>
+  </data>
+  <data name="&gt;&gt;OpacityPercent.Name" xml:space="preserve">
+    <value>OpacityPercent</value>
+  </data>
+  <data name="&gt;&gt;OpacityPercent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OpacityPercent.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;OpacityPercent.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="WidgetForeColorLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="WidgetForeColorLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 269</value>
+  </data>
+  <data name="WidgetForeColorLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 15</value>
+  </data>
+  <data name="WidgetForeColorLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="WidgetForeColorLabel.Text" xml:space="preserve">
+    <value>Widget Text Color</value>
+  </data>
+  <data name="&gt;&gt;WidgetForeColorLabel.Name" xml:space="preserve">
+    <value>WidgetForeColorLabel</value>
+  </data>
+  <data name="&gt;&gt;WidgetForeColorLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WidgetForeColorLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;WidgetForeColorLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="WidgetForeColorChangeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 264</value>
+  </data>
+  <data name="WidgetForeColorChangeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 25</value>
+  </data>
+  <data name="WidgetForeColorChangeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="WidgetForeColorChangeButton.Text" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="&gt;&gt;WidgetForeColorChangeButton.Name" xml:space="preserve">
+    <value>WidgetForeColorChangeButton</value>
+  </data>
+  <data name="&gt;&gt;WidgetForeColorChangeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WidgetForeColorChangeButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;WidgetForeColorChangeButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>ja</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
+    <value>8, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>600, 360</value>
+    <value>800, 450</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -996,7 +1083,7 @@
 </value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Settings</value>
@@ -1006,6 +1093,12 @@
   </data>
   <data name="&gt;&gt;FontSelectDiag.Type" xml:space="preserve">
     <value>System.Windows.Forms.FontDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ColorDiag.Name" xml:space="preserve">
+    <value>ColorDiag</value>
+  </data>
+  <data name="&gt;&gt;ColorDiag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>SettingsForm</value>

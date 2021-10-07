@@ -124,6 +124,20 @@ namespace WorkhubForWindows
             set
             {
                 __WidgetOpacity = value;
+                SendWidgetConfigChanged();
+            }
+        }
+        private Color __WidgetForeColor = Color.FromArgb(0, 0, 0);
+        public Color WidgetForeColor
+        {
+            get
+            {
+                return __WidgetForeColor;
+            }
+            set
+            {
+                __WidgetForeColor = value;
+                this.SendWidgetConfigChanged();
             }
         }
         private Point __WidgetSize = new Point(350, 350);
@@ -158,7 +172,7 @@ namespace WorkhubForWindows
         [DllImport("User32.dll", EntryPoint = "PostMessage")]
         extern static Int32 PostMessage(Int32 hwnd, Int32 msg, Int32 wParam, Int32 lParam);
 
-        private void SendConfigChanged()
+        public void SendConfigChanged()
         {
             foreach (WorkhubWindowHandler i in StaticClasses.WindowHandler.WindowHandlers)
             {
@@ -171,7 +185,7 @@ namespace WorkhubForWindows
             this.SendConfigChanged();
         }
 
-        public void SendWidgetConfigChanged()
+        private void SendWidgetConfigChanged()
         {
             foreach (WorkhubWindowHandler i in StaticClasses.WindowHandler.WindowHandlers)
             {

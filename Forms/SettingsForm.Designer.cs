@@ -52,6 +52,10 @@
             this.OpacityLabel = new System.Windows.Forms.Label();
             this.OpacityBox = new System.Windows.Forms.NumericUpDown();
             this.StartUpbutton = new System.Windows.Forms.Button();
+            this.ColorDiag = new System.Windows.Forms.ColorDialog();
+            this.OpacityPercent = new System.Windows.Forms.Label();
+            this.WidgetForeColorLabel = new System.Windows.Forms.Label();
+            this.WidgetForeColorChangeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBox)).BeginInit();
             this.SuspendLayout();
@@ -166,6 +170,7 @@
             this.OpacityBar.Maximum = 100;
             this.OpacityBar.Name = "OpacityBar";
             this.OpacityBar.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.OpacityBar.Scroll += new System.EventHandler(this.OpacityBarScroll);
             // 
             // OpacityLabel
             // 
@@ -176,12 +181,31 @@
             // 
             resources.ApplyResources(this.OpacityBox, "OpacityBox");
             this.OpacityBox.Name = "OpacityBox";
+            this.OpacityBox.ValueChanged += new System.EventHandler(this.OpacityBoxChanged);
             // 
             // StartUpbutton
             // 
             resources.ApplyResources(this.StartUpbutton, "StartUpbutton");
             this.StartUpbutton.Name = "StartUpbutton";
             this.StartUpbutton.UseVisualStyleBackColor = true;
+            this.StartUpbutton.Click += new System.EventHandler(this.AddStartUpClicked);
+            // 
+            // OpacityPercent
+            // 
+            resources.ApplyResources(this.OpacityPercent, "OpacityPercent");
+            this.OpacityPercent.Name = "OpacityPercent";
+            // 
+            // WidgetForeColorLabel
+            // 
+            resources.ApplyResources(this.WidgetForeColorLabel, "WidgetForeColorLabel");
+            this.WidgetForeColorLabel.Name = "WidgetForeColorLabel";
+            // 
+            // WidgetForeColorChangeButton
+            // 
+            resources.ApplyResources(this.WidgetForeColorChangeButton, "WidgetForeColorChangeButton");
+            this.WidgetForeColorChangeButton.Name = "WidgetForeColorChangeButton";
+            this.WidgetForeColorChangeButton.UseVisualStyleBackColor = true;
+            this.WidgetForeColorChangeButton.Click += new System.EventHandler(this.WidgetForeColorChangeButtonClicked);
             // 
             // SettingsForm
             // 
@@ -189,6 +213,9 @@
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.WidgetForeColorChangeButton);
+            this.Controls.Add(this.WidgetForeColorLabel);
+            this.Controls.Add(this.OpacityPercent);
             this.Controls.Add(this.StartUpbutton);
             this.Controls.Add(this.OpacityBox);
             this.Controls.Add(this.OpacityLabel);
@@ -212,7 +239,8 @@
             this.Controls.Add(this.FontNames);
             this.Controls.Add(this.FontName);
             this.Name = "SettingsForm";
-            this.Click += new System.EventHandler(this.ApplyClicked);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Settings_Closed);
+            this.Load += new System.EventHandler(this.Settings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBox)).EndInit();
             this.ResumeLayout(false);
@@ -245,5 +273,9 @@
         private System.Windows.Forms.Label OpacityLabel;
         private System.Windows.Forms.NumericUpDown OpacityBox;
         private System.Windows.Forms.Button StartUpbutton;
+        private System.Windows.Forms.ColorDialog ColorDiag;
+        private System.Windows.Forms.Label OpacityPercent;
+        private System.Windows.Forms.Label WidgetForeColorLabel;
+        private System.Windows.Forms.Button WidgetForeColorChangeButton;
     }
 }

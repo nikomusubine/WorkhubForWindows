@@ -18,7 +18,7 @@ namespace WorkhubForWindows
     {
         private bool Quiting = false;
 
-        //public static Widget wg = new Widget();
+        public static Widget wg = new Widget();
         public Mainwindow()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace WorkhubForWindows
 
         private void MainWindowShown(object sender,EventArgs e)
         {
-          //  wg.Show();
+            wg.Show();
         }
 
 
@@ -75,18 +75,17 @@ namespace WorkhubForWindows
         {
             if (StaticClasses.Config.ShowWidget)
             {
-                MessageBox.Show("I'm sorry, but you can't use it now.\nPlease wait the future update...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               // MessageBox.Show("I'm sorry, but you can't use it now.\nPlease wait the future update...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 StaticClasses.Config.ShowWidget = false;
                 TrayRC_ShowWidget.Checked = false;
                 ToolStripShowWidget.Checked = false;
             }else
             {
-                MessageBox.Show("I'm sorry, but you can't use it now.\nPlease wait the future update...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               // MessageBox.Show("I'm sorry, but you can't use it now.\nPlease wait the future update...", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 StaticClasses.Config.ShowWidget = true;
                 TrayRC_ShowWidget.Checked = true;
                 ToolStripShowWidget.Checked = true;
-              //  wg.WindowState = FormWindowState.Normal;
-              //  wg.ShowInTaskbar = true;
+                wg.Show();
             }
         }
 
