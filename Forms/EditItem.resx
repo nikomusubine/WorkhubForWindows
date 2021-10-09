@@ -127,18 +127,18 @@
   <data name="ArgsBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>194, 257</value>
   </data>
+  <data name="&gt;&gt;MoveRbutton.Name" xml:space="preserve">
+    <value>MoveRbutton</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ArgsLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;MoveRbutton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Close_Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 23</value>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
   </data>
   <data name="&gt;&gt;Close_Button.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -151,9 +151,6 @@
   </data>
   <data name="okbutton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
   </data>
   <data name="NameLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
@@ -171,9 +168,6 @@
   <data name="&gt;&gt;PathLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ApplyButton.Text" xml:space="preserve">
-    <value>Apply</value>
-  </data>
   <data name="Close_Button.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -186,8 +180,8 @@
   <data name="&gt;&gt;MoveLbutton.Name" xml:space="preserve">
     <value>MoveLbutton</value>
   </data>
-  <data name="&gt;&gt;Close_Button.Name" xml:space="preserve">
-    <value>Close_Button</value>
+  <data name="MoveRbutton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>249, 3</value>
   </data>
   <data name="IconList.ImageSize" type="System.Drawing.Size, System.Drawing">
     <value>16, 16</value>
@@ -206,9 +200,6 @@
   </data>
   <data name="ArgsLabel.Text" xml:space="preserve">
     <value>CommandlineArgs</value>
-  </data>
-  <data name="&gt;&gt;PathBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="NameLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 127</value>
@@ -261,23 +252,23 @@
   <data name="&gt;&gt;NameLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel3</value>
   </data>
+  <data name="Close_Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 23</value>
+  </data>
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="&gt;&gt;ArgsLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tableLayoutPanel4.ColumnCount" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;IconList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ApplyButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>382, 412</value>
-  </data>
-  <data name="&gt;&gt;IconList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tableLayoutPanel3.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
@@ -320,6 +311,9 @@
   </data>
   <data name="Applist.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>391, 3</value>
   </data>
   <data name="NameLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -378,6 +372,9 @@
   <data name="$this.Text" xml:space="preserve">
     <value>EditItem</value>
   </data>
+  <data name="&gt;&gt;Close_Button.Name" xml:space="preserve">
+    <value>Close_Button</value>
+  </data>
   <data name="ApplyButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 23</value>
   </data>
@@ -423,8 +420,8 @@
   <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="NameBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="NameLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="PathLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ArgsLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ArgsBox" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PathBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,50,Percent,50,Absolute,158" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <data name="PathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 127</value>
+  <data name="&gt;&gt;PathBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;PathLabel.Name" xml:space="preserve">
     <value>PathLabel</value>
@@ -444,8 +441,8 @@
   <data name="&gt;&gt;Applist.Name" xml:space="preserve">
     <value>Applist</value>
   </data>
-  <data name="&gt;&gt;MoveRbutton.Name" xml:space="preserve">
-    <value>MoveRbutton</value>
+  <data name="ApplyButton.Text" xml:space="preserve">
+    <value>Apply</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -471,6 +468,9 @@
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="PathLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 127</value>
+  </data>
   <data name="Applist.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -489,8 +489,8 @@
   <data name="&gt;&gt;ArgsLabel.Name" xml:space="preserve">
     <value>ArgsLabel</value>
   </data>
-  <data name="MoveRbutton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 3</value>
+  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;PathBox.Name" xml:space="preserve">
     <value>PathBox</value>
@@ -500,6 +500,9 @@
   </data>
   <data name="&gt;&gt;NameLabel.Name" xml:space="preserve">
     <value>NameLabel</value>
+  </data>
+  <data name="tableLayoutPanel4.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="tableLayoutPanel2.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
@@ -533,9 +536,6 @@
   </data>
   <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
   </data>
   <data name="&gt;&gt;okbutton.Name" xml:space="preserve">
     <value>okbutton</value>
@@ -588,8 +588,8 @@
   <data name="okbutton.Location" type="System.Drawing.Point, System.Drawing">
     <value>257, 3</value>
   </data>
-  <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>391, 3</value>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MoveLbutton.ZOrder" xml:space="preserve">
     <value>0</value>

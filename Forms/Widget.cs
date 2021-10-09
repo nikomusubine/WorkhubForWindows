@@ -23,7 +23,7 @@ namespace WorkhubForWindows
             Button appcall = new Button();
             this.AcceptButton = appcall;
             appcall.Click += appstartcall;
-
+            this.FormClosing += Form_Closing;
             Backgroundset();
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle,"Widget"));
@@ -44,6 +44,14 @@ namespace WorkhubForWindows
         private void appstartcall(object sender, EventArgs e)
         {
             Functions.Application.StartProcess(StaticClasses.Executables[applistview.SelectedIndices[0]]);
+        }
+
+        private void Form_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            //this.WindowState = FormWindowState.Minimized;
+            this.Hide();
+            StaticClasses.Config.ShowWidget = false;
         }
 
         #region Functions
@@ -95,7 +103,6 @@ namespace WorkhubForWindows
                     Bitmap background = new Bitmap(this.Width, this.Height);
                     Graphics graphics = Graphics.FromImage(background);
                     Bitmap bmp = new Bitmap(Image.FromFile(StaticClasses.Config.Widgetbackimg));
-                    bmp.MakeTransparent(bmp.GetPixel(0,0));
                     int x, y;
                     x = bmp.Width;
                     y = bmp.Height;
@@ -145,8 +152,7 @@ namespace WorkhubForWindows
             }
         }
         #endregion
-
-        
+              
 
         #region Move Window
         private Point mousePoint;
@@ -308,8 +314,7 @@ namespace WorkhubForWindows
             }
         }
 
+
         #endregion
-
-
     }
 }

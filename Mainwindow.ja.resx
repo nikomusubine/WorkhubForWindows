@@ -119,25 +119,25 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Ribbon_Settings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>219, 26</value>
   </data>
   <data name="Ribbon_Settings.Text" xml:space="preserve">
     <value>環境設定(&amp;S)</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 6</value>
+    <value>216, 6</value>
   </data>
   <data name="ToolStripShowWidget.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>219, 26</value>
   </data>
   <data name="ToolStripShowWidget.Text" xml:space="preserve">
     <value>ウィジェットの表示(&amp;W)</value>
   </data>
   <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 6</value>
+    <value>216, 6</value>
   </data>
   <data name="quitQToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>224, 26</value>
+    <value>219, 26</value>
   </data>
   <data name="quitQToolStripMenuItem1.Text" xml:space="preserve">
     <value>終了(&amp;Q)</value>
@@ -471,17 +471,26 @@
   <data name="EditButton.Text" xml:space="preserve">
     <value>編集</value>
   </data>
+  <data name="addAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 24</value>
+  </data>
   <data name="addAToolStripMenuItem.Text" xml:space="preserve">
     <value>追加(&amp;A)</value>
   </data>
+  <data name="editEToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 24</value>
+  </data>
   <data name="editEToolStripMenuItem.Text" xml:space="preserve">
     <value>編集(&amp;E)</value>
+  </data>
+  <data name="deleteDToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 24</value>
   </data>
   <data name="deleteDToolStripMenuItem.Text" xml:space="preserve">
     <value>削除(&amp;D)</value>
   </data>
   <data name="ApplistRClick.Size" type="System.Drawing.Size, System.Drawing">
-    <value>211, 104</value>
+    <value>130, 76</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -127,9 +127,6 @@
   <data name="editEToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>210, 24</value>
   </data>
-  <data name="&gt;&gt;addAToolStripMenuItem.Name" xml:space="preserve">
-    <value>addAToolStripMenuItem</value>
-  </data>
   <data name="&gt;&gt;Apps.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
@@ -152,8 +149,12 @@
   <data name="EditButton.Text" xml:space="preserve">
     <value>Edit</value>
   </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Apps.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ButtonsPunel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
   </data>
   <data name="&gt;&gt;deleteDToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -167,26 +168,25 @@
   <data name="StartButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 24</value>
   </data>
-  <data name="Ribbon.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 2, 0, 2</value>
+  <data name="&gt;&gt;TrayRC_ShowWidget.Name" xml:space="preserve">
+    <value>TrayRC_ShowWidget</value>
   </data>
   <data name="deleteDToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>210, 24</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Apps.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;RibbonFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;StartButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HalfModebackimg.Name" xml:space="preserve">
-    <value>HalfModebackimg</value>
   </data>
   <data name="deleteDToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete(&amp;D)</value>
   </data>
   <data name="&gt;&gt;ListViewPanel.Name" xml:space="preserve">
+    <value>ListViewPanel</value>
+  </data>
+  <data name="&gt;&gt;ButtonsPunel.Parent" xml:space="preserve">
     <value>ListViewPanel</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
@@ -197,9 +197,6 @@
   </data>
   <data name="HomePanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 34</value>
-  </data>
-  <data name="&gt;&gt;RibbonFiles.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 6</value>
@@ -509,8 +506,8 @@
   <data name="StartButton.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;EditButton.Parent" xml:space="preserve">
-    <value>ButtonsPunel</value>
+  <data name="&gt;&gt;ToolStripShowWidget.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="AddItemButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 24</value>
@@ -521,8 +518,8 @@
   <data name="HomePanel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;ButtonsPunel.Parent" xml:space="preserve">
-    <value>ListViewPanel</value>
+  <data name="&gt;&gt;HalfModebackimg.Name" xml:space="preserve">
+    <value>HalfModebackimg</value>
   </data>
   <data name="Ribbon_Settings.Size" type="System.Drawing.Size, System.Drawing">
     <value>205, 26</value>
@@ -832,6 +829,9 @@
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>217, 6</value>
   </data>
+  <data name="HalfModebackimg.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
   <data name="&gt;&gt;IconList.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -898,8 +898,8 @@
   <data name="ButtonsPunel.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;editEToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ButtonsPunel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="AddItemButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="StartButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="EditButton" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="EditButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 24</value>
@@ -907,14 +907,17 @@
   <data name="&gt;&gt;StartButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;AddItemButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Mainwindow</value>
   </data>
   <data name="&gt;&gt;ButtonsPunel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="HalfModebackimg.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Zoom</value>
+  <data name="&gt;&gt;addAToolStripMenuItem.Name" xml:space="preserve">
+    <value>addAToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;StartButton.Parent" xml:space="preserve">
+    <value>ButtonsPunel</value>
   </data>
   <data name="Apps.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -931,9 +934,6 @@
   <data name="AddItemButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="HalfModebackimg.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
   <data name="ListViewPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
@@ -948,9 +948,6 @@
   </data>
   <data name="&gt;&gt;toolStripMenuItem4.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ButtonsPunel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
   </data>
   <data name="ApplistRClick.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 76</value>
@@ -973,11 +970,14 @@
   <data name="&gt;&gt;ListViewPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="StartButton.Text" xml:space="preserve">
     <value>Start</value>
   </data>
-  <data name="ButtonsPunel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="&gt;&gt;toolStripMenuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="quitQToolStripMenuItem.Text" xml:space="preserve">
     <value>Quit(&amp;Q)</value>
@@ -1002,9 +1002,6 @@
   </data>
   <data name="&gt;&gt;Ribbon.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;TrayRC_ShowWidget.Name" xml:space="preserve">
-    <value>TrayRC_ShowWidget</value>
   </data>
   <data name="AddItemButton.Text" xml:space="preserve">
     <value>Add</value>
@@ -1039,9 +1036,6 @@
   <data name="&gt;&gt;quitQToolStripMenuItem.Name" xml:space="preserve">
     <value>quitQToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;ApplistRClick.Name" xml:space="preserve">
     <value>ApplistRClick</value>
   </data>
@@ -1063,17 +1057,14 @@
   <data name="&gt;&gt;EditButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;EditButton.Parent" xml:space="preserve">
+    <value>ButtonsPunel</value>
   </data>
   <data name="HomePanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>615, 521</value>
   </data>
-  <data name="&gt;&gt;TrayRClick.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolStripShowWidget.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="HomePanel.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
@@ -1087,8 +1078,8 @@
   <data name="EditButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="ButtonsPunel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="AddItemButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="StartButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="EditButton" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  <data name="HalfModebackimg.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="TrayIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1114,6 +1105,9 @@
   <data name="HalfModebackimg.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
   </data>
+  <data name="&gt;&gt;editEToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;ButtonsPunel.Name" xml:space="preserve">
     <value>ButtonsPunel</value>
   </data>
@@ -1126,8 +1120,8 @@
   <data name="&gt;&gt;Ribbon.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;StartButton.Parent" xml:space="preserve">
-    <value>ButtonsPunel</value>
+  <data name="&gt;&gt;AddItemButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="addAToolStripMenuItem.Text" xml:space="preserve">
     <value>Add(&amp;A)</value>
@@ -1150,11 +1144,17 @@
   <data name="&gt;&gt;ListViewPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="ButtonsPunel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
   <data name="ListViewPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonsPunel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Apps" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,100,Absolute,35,Absolute,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="&gt;&gt;HalfModebackimg.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;TrayRClick.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;showMainWindowSToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1192,9 +1192,6 @@
   <data name="&gt;&gt;TrayIcon.Type" xml:space="preserve">
     <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Mainwindow</value>
-  </data>
   <data name="ToolStripShowWidget.Text" xml:space="preserve">
     <value>Show Widget(&amp;W)</value>
   </data>
@@ -1206,6 +1203,9 @@
   </data>
   <data name="TrayRC_ShowWidget.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 24</value>
+  </data>
+  <data name="Ribbon.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 2, 0, 2</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
