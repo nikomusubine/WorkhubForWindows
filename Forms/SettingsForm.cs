@@ -150,9 +150,10 @@ namespace WorkhubForWindows.Forms
                     // addStartup.jsを実行し、スタートアップにショートカット作成
                     if (File.Exists(jsFile))
                     {
-                        ProcessStartInfo psi = (new ProcessStartInfo());
+                        ProcessStartInfo psi = new ProcessStartInfo();
                         psi.FileName = "cscript";
                         psi.Arguments = @"//e:jscript " + jsFile;
+                        psi.Verb = "RunAs"; 
                         psi.WindowStyle = ProcessWindowStyle.Hidden;
                         Process p = Process.Start(psi);
 

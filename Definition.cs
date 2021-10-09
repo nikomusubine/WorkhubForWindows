@@ -15,6 +15,19 @@ namespace WorkhubForWindows
 {
     public class Executable
     {
+        public Executable(Executable executable)
+        {
+            Name = executable.Name;
+            Path = executable.Path;
+            Argments = executable.Argments;
+            point = executable.point;
+        }
+
+        public Executable()
+        {
+
+        }
+
         public string Name;
         public string Path;
         public string Argments;
@@ -114,6 +127,21 @@ namespace WorkhubForWindows
                 SendWidgetConfigChanged();
             }
         }
+        public int __MainWindowBackColor;
+        [XmlIgnore]
+        public Color MainWindowBackColor
+        {
+            get
+            {
+                return Color.FromArgb(__MainWindowBackColor);
+            }
+            set
+            {
+                __MainWindowBackColor = value.ToArgb();
+                this.SendWidgetConfigChanged();
+            }
+        }
+
         private double __WidgetOpacity = 1;
         public double WidgetOpacity
         {
@@ -127,7 +155,8 @@ namespace WorkhubForWindows
                 SendWidgetConfigChanged();
             }
         }
-        public int __WidgetForeColor = Color.FromArgb(0, 0, 0).ToArgb();
+        public int __WidgetForeColor;
+        [XmlIgnore]
         public Color WidgetForeColor
         {
             get
@@ -140,7 +169,7 @@ namespace WorkhubForWindows
                 this.SendWidgetConfigChanged();
             }
         }
-        private Point __WidgetSize = new Point(350, 350);
+        private Point __WidgetSize = new Point(400, 400);
         public Point WidgetSize
         {
             get
@@ -150,6 +179,19 @@ namespace WorkhubForWindows
             set
             {
                 __WidgetSize = value;
+            }
+        }
+        private bool __WidgetAlwaysDisplayTop = false;
+        public bool WidgetAlwaysDisplayTop
+        {
+            get
+            {
+                return __WidgetAlwaysDisplayTop;
+            }
+            set
+            {
+                __WidgetAlwaysDisplayTop = value;
+                SendWidgetConfigChanged();
             }
         }
         private HomeMode __Homemode = HomeMode.HalfHome;

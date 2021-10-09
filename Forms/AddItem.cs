@@ -15,6 +15,7 @@ namespace WorkhubForWindows.Forms
         public AddItemForm()
         {
             InitializeComponent();
+            this.FormClosed += WindowClosed;
         }
 
         private void ReferenceButton(object sender,EventArgs e)
@@ -30,7 +31,7 @@ namespace WorkhubForWindows.Forms
         {
             StaticClasses.Executables.Add
                 (
-                new Executable
+                new Executable()
                 {
                     Name = ItemNameBox.Text,
                     Path = FilePathBox.Text,
@@ -47,6 +48,11 @@ namespace WorkhubForWindows.Forms
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private void WindowClosed(object sender,EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

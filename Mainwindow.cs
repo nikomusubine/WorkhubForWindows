@@ -90,12 +90,24 @@ namespace WorkhubForWindows
             }
         }
 
+        private void DeleteClicked(object sender,EventArgs e)
+        {
+            StaticClasses.Executables.RemoveAt(this.Apps.SelectedIndices[0]);
+
+            Functions.Config.Applications.Save(StaticClasses.Executables);
+
+            foreach (WorkhubWindowHandler i in StaticClasses.WindowHandler.WindowHandlers)
+            {
+                Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.AppListChanged, 0, 0);
+            }
+        }
 
         #region TrayRClick
 
         private void ShowMainWindow(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            //this.WindowState = FormWindowState.Normal;
+            this.Show();
             this.TopMost = true;
             this.TopMost = false;
         }
@@ -118,7 +130,8 @@ namespace WorkhubForWindows
             if (!Quiting)
             {
                 e.Cancel = true;
-                this.WindowState = FormWindowState.Minimized;
+                //this.WindowState = FormWindowState.Minimized;
+                this.Hide();
             }
             else
             {
@@ -130,16 +143,15 @@ namespace WorkhubForWindows
         {
             if (e.Reason == SessionEndReasons.Logoff)
             {
-                Quiting = true;
-                Functions.WinMsgFuncs.AppClose();
-                Environment.Exit(0);
+
             }
             else if (e.Reason == SessionEndReasons.SystemShutdown)
             {
-                Quiting = true;
-                Functions.WinMsgFuncs.AppClose();
-                Environment.Exit(0);
+
             }
+            Quiting = true;
+            Functions.WinMsgFuncs.AppClose();
+            this.Close();
         }
         #endregion
 
@@ -216,6 +228,9 @@ namespace WorkhubForWindows
             {
                 case StaticClasses.WorkHubMessages.ConfigChanged:
                     this.LoadConfig();
+                    break;
+                case StaticClasses.WorkHubMessages.AppListChanged:
+                    initalizeApps();
                     break;
                 default:
                     break;

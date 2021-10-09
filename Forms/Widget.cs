@@ -92,23 +92,32 @@ namespace WorkhubForWindows
                         //this.applistview.BackgroundImage.Dispose();
                     }
 
+                    Bitmap background = new Bitmap(this.Width, this.Height);
+                    Graphics graphics = Graphics.FromImage(background);
                     Bitmap bmp = new Bitmap(Image.FromFile(StaticClasses.Config.Widgetbackimg));
-
+                    bmp.MakeTransparent(bmp.GetPixel(0,0));
                     int x, y;
                     x = bmp.Width;
                     y = bmp.Height;
-
-                    if (bmp.Width / this.Width >= bmp.Height / this.Height)
+                    float ratio;
+                    if (bmp.Width / this.Width >= bmp.Height / this.Height) //Width is larger
                     {
-                        float ratio = (float)bmp.Width / (float)this.Width;
-                        this.applistview.BackgroundImage = ResizeImage(bmp, new Size((int)(bmp.Width / ratio), (int)(bmp.Height / ratio)));
+                        ratio = (float)bmp.Width / (float)this.Width;
                     }
-                    else
+                    else //Height is larger
                     {
-                        float ratio = (float)bmp.Height / (float)this.Height;
-                        this.applistview.BackgroundImage = ResizeImage(bmp, new Size((int)(bmp.Width / ratio), (int)(bmp.Height / ratio)));
+                        ratio = (float)bmp.Height / (float)this.Height;
                     }
 
+                    bmp = (Bitmap)ResizeImage(bmp, new Size((int)(bmp.Width / ratio), (int)(bmp.Height / ratio)));
+
+                    graphics.DrawImage(bmp, background.Width / 2 - bmp.Width / 2, background.Height / 2 - bmp.Height / 2, bmp.Width, bmp.Height);
+
+                    applistview.BackgroundImage = background;
+
+                    graphics.Dispose();
+                    background.Dispose();
+                    bmp.Dispose();
 
 
                     //this.applistview.BackgroundImage
@@ -289,8 +298,14 @@ namespace WorkhubForWindows
                 default:
                     break;
             }
+            try
+            {
+                base.WndProc(ref m);
+            }
+            catch (Exception)
+            {
 
-            base.WndProc(ref m);
+            }
         }
 
         #endregion

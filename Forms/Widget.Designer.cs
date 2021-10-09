@@ -44,6 +44,7 @@
             this.applistview.HideSelection = false;
             this.applistview.LargeImageList = this.IconList;
             this.applistview.Location = new System.Drawing.Point(0, 0);
+            this.applistview.Margin = new System.Windows.Forms.Padding(0);
             this.applistview.MultiSelect = false;
             this.applistview.Name = "applistview";
             this.applistview.Size = new System.Drawing.Size(400, 400);

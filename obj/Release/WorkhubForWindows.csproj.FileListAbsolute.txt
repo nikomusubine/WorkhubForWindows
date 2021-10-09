@@ -21,3 +21,8 @@ D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Release\is\WorkhubForWindo
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Release\ja\WorkhubForWindows.resources.dll
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Release\WorkhubForWindows.exe
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Release\WorkhubForWindows.pdb
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\bin\Release\ar-KM\WorkhubForWindows.resources.dll
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Release\WorkhubForWindows.Forms.EditItem.ja.resources
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Release\WorkhubForWindows.Forms.SettingsForm.ar-KM.resources
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Release\WorkhubForWindows.Forms.SettingsForm.ja.resources
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Release\ar-KM\WorkhubForWindows.resources.dll

@@ -67,8 +67,8 @@
             // 
             // FontNames
             // 
-            this.FontNames.FormattingEnabled = true;
             resources.ApplyResources(this.FontNames, "FontNames");
+            this.FontNames.FormattingEnabled = true;
             this.FontNames.Name = "FontNames";
             // 
             // ApplyButton
@@ -210,8 +210,8 @@
             // SettingsForm
             // 
             this.AcceptButton = this.ApplyButton;
-            this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
+            this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.WidgetForeColorChangeButton);
             this.Controls.Add(this.WidgetForeColorLabel);

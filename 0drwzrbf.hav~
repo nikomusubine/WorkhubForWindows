@@ -209,7 +209,6 @@ namespace WorkhubForWindows
             this.Apps.MultiSelect = false;
             this.Apps.Name = "Apps";
             this.Apps.UseCompatibleStateImageBehavior = false;
-            this.Apps.DoubleClick += new System.EventHandler(this.StartPushed);
             // 
             // ApplistRClick
             // 
@@ -237,7 +236,6 @@ namespace WorkhubForWindows
             // 
             resources.ApplyResources(this.deleteDToolStripMenuItem, "deleteDToolStripMenuItem");
             this.deleteDToolStripMenuItem.Name = "deleteDToolStripMenuItem";
-            this.deleteDToolStripMenuItem.Click += new System.EventHandler(this.DeleteClicked);
             // 
             // HomePanel
             // 
@@ -262,7 +260,6 @@ namespace WorkhubForWindows
             // 
             // Mainwindow
             // 
-            this.AcceptButton = this.StartButton;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.HomePanel);

@@ -113,6 +113,9 @@
     <EmbeddedResource Include="Forms\AddItem.resx">
       <DependentUpon>AddItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditItem.ja.resx">
+      <DependentUpon>EditItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditItem.resx">
       <DependentUpon>EditItem.cs</DependentUpon>
     </EmbeddedResource>

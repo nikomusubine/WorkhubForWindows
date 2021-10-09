@@ -20,15 +20,111 @@ namespace WorkhubForWindows.Forms
             StaticClasses.Config = StaticClasses.Config.LoadConfig();
             this.Font = new Font(StaticClasses.Config.font.Name, StaticClasses.Config.font.Size);
             Applist.View = View.LargeIcon;
+            this.FormClosed += WindowClosed;
         }
 
-        private void AppsSelectedIndexChanged(object sender,EventArgs e)
+        private void AppsSelectedIndexChanged(object sender, EventArgs e)
         {
             //Applist.SelectedIndices[0]
             NameBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Name;
-            PathBox.Text =StaticClasses.Executables[Applist.SelectedIndices[0]].Path;
+            PathBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Path;
             ArgsBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Argments;
 
+        }
+
+        private void CloseButtonClicked(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void OKButtonClicked(object sender, EventArgs e)
+        {
+            if (Applist.SelectedIndices.Count != 0)
+            {
+                StaticClasses.Executables[Applist.SelectedIndices[0]].Name = NameBox.Text;
+                StaticClasses.Executables[Applist.SelectedIndices[0]].Path = PathBox.Text;
+                StaticClasses.Executables[Applist.SelectedIndices[0]].Argments = ArgsBox.Text;
+            }
+            this.Close();
+        }
+
+        private void ApplyButtonClicked(object sender, EventArgs e)
+        {
+            if (NameBox.Text == "")
+            {
+
+            }
+            else
+            {
+                StaticClasses.Executables[Applist.SelectedIndices[0]].Name = NameBox.Text;
+                StaticClasses.Executables[Applist.SelectedIndices[0]].Path = PathBox.Text;
+                StaticClasses.Executables[Applist.SelectedIndices[0]].Argments = ArgsBox.Text;
+            }
+        }
+
+        private void WindowClosed(object sender, EventArgs e)
+        {
+            Functions.Config.Applications.Save(StaticClasses.Executables);
+
+            foreach (WorkhubWindowHandler i in StaticClasses.WindowHandler.WindowHandlers)
+            {
+                Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.AppListChanged, 0, 0);
+            }
+            this.Dispose();
+        }
+
+        private void MoveLClicked(object sender,EventArgs e)
+        {
+            if (Applist.SelectedIndices.Count != 0)
+            {
+                if (Applist.SelectedIndices[0] != 0)
+                {
+                    Executable tmp = new Executable(StaticClasses.Executables[Applist.SelectedIndices[0]]);
+                    StaticClasses.Executables.Remove(StaticClasses.Executables[Applist.SelectedIndices[0]]);
+                    StaticClasses.Executables.Insert(Applist.SelectedIndices[0] - 1, tmp);
+                    Functions.Config.Applications.Save(StaticClasses.Executables);
+                    int selecteditem = Applist.SelectedIndices[0] - 1;
+                    initalizeApplist();
+                    Applist.Items[selecteditem].Selected = true;
+                }
+                else
+                {
+                    Executable tmp = new Executable(StaticClasses.Executables[Applist.SelectedIndices[0]]);
+                    StaticClasses.Executables.Remove(StaticClasses.Executables[Applist.SelectedIndices[0]]);
+                    StaticClasses.Executables.Insert(Applist.Items.Count - 1, tmp);
+                    Functions.Config.Applications.Save(StaticClasses.Executables);
+                    int selecteditem = Applist.Items.Count - 1;
+                    initalizeApplist();
+                    Applist.Items[selecteditem].Selected = true;
+                }
+            }
+        }
+
+        private void MoveRClicked(object sender, EventArgs e)
+        {
+            if (Applist.SelectedIndices.Count != 0)
+            {
+                if (Applist.SelectedIndices[0] != Applist.SelectedIndices.Count - 1)
+                {
+                    Executable tmp = new Executable(StaticClasses.Executables[Applist.SelectedIndices[0]]);
+                    StaticClasses.Executables.Remove(StaticClasses.Executables[Applist.SelectedIndices[0]]);
+                    StaticClasses.Executables.Insert(Applist.SelectedIndices[0] + 1, tmp);
+                    Functions.Config.Applications.Save(StaticClasses.Executables);
+                    int selecteditem = Applist.SelectedIndices[0] + 1;
+                    initalizeApplist();
+                    Applist.Items[selecteditem].Selected = true;
+                }
+                else
+                {
+                    Executable tmp = new Executable(StaticClasses.Executables[Applist.SelectedIndices[0]]);
+                    StaticClasses.Executables.Remove(StaticClasses.Executables[Applist.SelectedIndices[0]]);
+                    StaticClasses.Executables.Insert(0, tmp);
+                    Functions.Config.Applications.Save(StaticClasses.Executables);
+                    int selecteditem = 0;
+                    initalizeApplist();
+                    Applist.Items[selecteditem].Selected = true;
+                }
+            }
         }
 
         /// <summary>
