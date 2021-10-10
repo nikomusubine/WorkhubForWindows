@@ -1,4 +1,5 @@
 
 bin/Debug/Config/Config.xml
 bin/Debug/Config/Applications.xml
+bin/Debug
 *.xml
