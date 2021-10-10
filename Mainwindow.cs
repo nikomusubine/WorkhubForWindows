@@ -22,12 +22,12 @@ namespace WorkhubForWindows
         public Mainwindow()
         {
             InitializeComponent();
+            StaticClasses.Config = StaticClasses.Config.LoadConfig();
             initalizeApps();
 
 
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle, "MainForm"));
-            StaticClasses.Config = StaticClasses.Config.LoadConfig();
             this.LoadConfig();
             Apps.View = View.LargeIcon;
             this.FormClosing += Form_Closing;

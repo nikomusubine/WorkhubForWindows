@@ -169,8 +169,8 @@ namespace WorkhubForWindows
                 this.SendWidgetConfigChanged();
             }
         }
-        private Point __WidgetSize = new Point(400, 400);
-        public Point WidgetSize
+        private Size __WidgetSize = new Size(300, 300);
+        public Size WidgetSize
         {
             get
             {
@@ -179,6 +179,18 @@ namespace WorkhubForWindows
             set
             {
                 __WidgetSize = value;
+            }
+        }
+        private Point __WidgetPosition = new Point(0, 0);
+        public Point WidgetPosition
+        {
+            get
+            {
+                return __WidgetPosition;
+            }
+            set
+            {
+                __WidgetPosition = value;
             }
         }
         private bool __WidgetAlwaysDisplayTop = false;
@@ -253,6 +265,21 @@ namespace WorkhubForWindows
             return;
         }
 
+        public void SaveConfig()
+        {
+            Configure cfg = this;
+            XmlSerializer Serialize = new XmlSerializer(typeof(Configure));
+            if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config\\"))
+            {
+                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "Config");
+            }
+            using (var Streamwriter = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "Config\\Config.xml", false, new System.Text.UTF8Encoding(false)))
+            {
+                Serialize.Serialize(Streamwriter, cfg);
+                Streamwriter.Flush();
+            }
+            return;
+        }
         public Configure LoadConfig()
         {
             Configure cfg = new Configure();

@@ -19,7 +19,6 @@ namespace WorkhubForWindows
         {
             InitializeComponent();
             initalizeapplistview();
-
             Button appcall = new Button();
             this.AcceptButton = appcall;
             appcall.Click += appstartcall;
@@ -27,7 +26,6 @@ namespace WorkhubForWindows
             Backgroundset();
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle,"Widget"));
-            
         }
 
         private void ShowWidget(object sender,EventArgs e)
@@ -39,7 +37,6 @@ namespace WorkhubForWindows
         {
 
         }
-
 
         private void appstartcall(object sender, EventArgs e)
         {
@@ -54,6 +51,22 @@ namespace WorkhubForWindows
             StaticClasses.Config.ShowWidget = false;
         }
 
+        #region Right Click ContextMenu
+        private void LockWidget_Click(object sender, EventArgs e)
+        {
+            if (StaticClasses.Config.LockWidget)
+            {
+                StaticClasses.Config.LockWidget = false;
+            }
+            else
+            {
+                StaticClasses.Config.LockWidget = true;
+            }
+
+            StaticClasses.Config.SaveConfig();
+        }
+        #endregion
+
         #region Functions
         /// <summary>
         /// アプリケーションの読み込み
@@ -64,7 +77,12 @@ namespace WorkhubForWindows
             applistview.Clear();
             IconList.Images.Clear();
             StaticClasses.Executables = Functions.Config.Applications.Load();
+            this.Location = StaticClasses.Config.WidgetPosition;
+            this.StartPosition = FormStartPosition.Manual;
+            this.Size = StaticClasses.Config.WidgetSize;
+            this.applistview.Size = StaticClasses.Config.WidgetSize;
 
+            WidgetPosLock.Checked = StaticClasses.Config.LockWidget;
             for (int i = 0; i != StaticClasses.Executables.Count; i++)
             {
                 if (!File.Exists(StaticClasses.Executables[i].Path))
@@ -141,6 +159,14 @@ namespace WorkhubForWindows
             this.Font = new Font(StaticClasses.Config.font.Name, StaticClasses.Config.font.Size);
             this.Opacity = StaticClasses.Config.WidgetOpacity;
             this.applistview.ForeColor = StaticClasses.Config.WidgetForeColor;
+
+            this.Location = StaticClasses.Config.WidgetPosition;
+            this.StartPosition = FormStartPosition.Manual;
+            this.Size = StaticClasses.Config.WidgetSize;
+            this.applistview.Size = StaticClasses.Config.WidgetSize;
+
+            WidgetPosLock.Checked = StaticClasses.Config.LockWidget;
+
             Backgroundset();
             if (StaticClasses.Config.ShowWidget)
             {
@@ -152,8 +178,7 @@ namespace WorkhubForWindows
             }
         }
         #endregion
-              
-
+          
         #region Move Window
         private Point mousePoint;
 
@@ -170,103 +195,112 @@ namespace WorkhubForWindows
         private void Mouse_Move(object sender,
             System.Windows.Forms.MouseEventArgs e)
         {
-            if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
+            if (!StaticClasses.Config.LockWidget)
             {
-                // 吸着するサイズ(範囲)
-                Size gap = new Size(12, 12);
-
-                // 移動先のフォーム位置
-                Rectangle newPosition = new Rectangle(
-                    this.Left + e.X - mousePoint.X,
-                    this.Top + e.Y - mousePoint.Y,
-                    this.Width,
-                    this.Height);
-                // 判定用のRECT
-                Rectangle newRect = new Rectangle();
-
-                // 作業領域の取得（この作業領域の内側に吸着する）
-                Size area = new Size(
-                    System.Windows.Forms.Screen.GetWorkingArea(this).Width,
-                    System.Windows.Forms.Screen.GetWorkingArea(this).Height);
-
-                // 画面端の判定用（画面の端の位置に、吸着するサイズ分のRECTを定義する）
-                Rectangle rectLeft = new Rectangle(
-                                            0,
-                                            0,
-                                            gap.Width,
-                                            area.Height);
-                Rectangle rectTop = new Rectangle(
-                                            0,
-                                            0,
-                                            area.Width,
-                                            gap.Height);
-                Rectangle rectRight = new Rectangle(
-                                            area.Width - gap.Width,
-                                            0,
-                                            gap.Width,
-                                            area.Height);
-                Rectangle rectBottom = new Rectangle(
-                                            0,
-                                            area.Height - gap.Height,
-                                            area.Width,
-                                            gap.Height);
-                // 衝突判定
-                // 判定用のRECTを自分のウィンドウの隅に重ねるように移動し、
-                // 画面端の判定用のRECTと衝突しているかチェックする。
-                // 衝突していた場合は、吸着させるように移動する
-
-                // 左端衝突判定
+                if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
                 {
-                    newRect = newPosition;
-                    newRect.Width = gap.Width;
+                    // 吸着するサイズ(範囲)
+                    Size gap = new Size(12, 12);
 
-                    if (newRect.IntersectsWith(rectLeft))
+                    // 移動先のフォーム位置
+                    Rectangle newPosition = new Rectangle(
+                        this.Left + e.X - mousePoint.X,
+                        this.Top + e.Y - mousePoint.Y,
+                        this.Width,
+                        this.Height);
+                    // 判定用のRECT
+                    Rectangle newRect = new Rectangle();
+
+                    // 作業領域の取得（この作業領域の内側に吸着する）
+                    Size area = new Size(
+                        System.Windows.Forms.Screen.GetWorkingArea(this).Width,
+                        System.Windows.Forms.Screen.GetWorkingArea(this).Height);
+
+                    // 画面端の判定用（画面の端の位置に、吸着するサイズ分のRECTを定義する）
+                    Rectangle rectLeft = new Rectangle(
+                                                0,
+                                                0,
+                                                gap.Width,
+                                                area.Height);
+                    Rectangle rectTop = new Rectangle(
+                                                0,
+                                                0,
+                                                area.Width,
+                                                gap.Height);
+                    Rectangle rectRight = new Rectangle(
+                                                area.Width - gap.Width,
+                                                0,
+                                                gap.Width,
+                                                area.Height);
+                    Rectangle rectBottom = new Rectangle(
+                                                0,
+                                                area.Height - gap.Height,
+                                                area.Width,
+                                                gap.Height);
+                    // 衝突判定
+                    // 判定用のRECTを自分のウィンドウの隅に重ねるように移動し、
+                    // 画面端の判定用のRECTと衝突しているかチェックする。
+                    // 衝突していた場合は、吸着させるように移動する
+
+                    // 左端衝突判定
                     {
-                        // 左端に吸着させる
-                        newPosition.X = 0;
-                    }
-                }
-                // 右端衝突判定
-                {
-                    newRect = newPosition;
-                    newRect.X = newPosition.Right - gap.Width;  // ウィンドウの右隅
-                    newRect.Width = gap.Width;
+                        newRect = newPosition;
+                        newRect.Width = gap.Width;
 
-                    if (newRect.IntersectsWith(rectRight))
+                        if (newRect.IntersectsWith(rectLeft))
+                        {
+                            // 左端に吸着させる
+                            newPosition.X = 0;
+                        }
+                    }
+                    // 右端衝突判定
                     {
-                        // 右端に吸着させる
-                        newPosition.X = area.Width - this.Width;
-                    }
-                }
-                // 上端衝突判定
-                {
-                    newRect = newPosition;
-                    newRect.Height = gap.Height;
+                        newRect = newPosition;
+                        newRect.X = newPosition.Right - gap.Width;  // ウィンドウの右隅
+                        newRect.Width = gap.Width;
 
-                    if (newRect.IntersectsWith(rectTop))
+                        if (newRect.IntersectsWith(rectRight))
+                        {
+                            // 右端に吸着させる
+                            newPosition.X = area.Width - this.Width;
+                        }
+                    }
+                    // 上端衝突判定
                     {
-                        // 上端に吸着させる
-                        newPosition.Y = 0;
-                    }
-                }
-                // 下端衝突判定
-                {
-                    newRect = newPosition;
-                    newRect.Y = newPosition.Bottom - gap.Height; // ウィンドウの下端
-                    newRect.Height = gap.Height;
+                        newRect = newPosition;
+                        newRect.Height = gap.Height;
 
-                    if (newRect.IntersectsWith(rectBottom))
+                        if (newRect.IntersectsWith(rectTop))
+                        {
+                            // 上端に吸着させる
+                            newPosition.Y = 0;
+                        }
+                    }
+                    // 下端衝突判定
                     {
-                        // 下端に吸着させる
-                        newPosition.Y = area.Height - this.Height;
+                        newRect = newPosition;
+                        newRect.Y = newPosition.Bottom - gap.Height; // ウィンドウの下端
+                        newRect.Height = gap.Height;
+
+                        if (newRect.IntersectsWith(rectBottom))
+                        {
+                            // 下端に吸着させる
+                            newPosition.Y = area.Height - this.Height;
+                        }
                     }
+
+                    // 実際に移動させる
+                    this.Location = new Point(newPosition.Left, newPosition.Top);
+
+
                 }
-
-                // 実際に移動させる
-                this.Location = new Point(newPosition.Left, newPosition.Top);
-
-
             }
+        }
+
+        private void Mouse_Up(object sender,MouseEventArgs e)
+        {
+            StaticClasses.Config.WidgetPosition = this.Location;
+            StaticClasses.Config.SaveConfig(StaticClasses.Config);
         }
 
         #endregion

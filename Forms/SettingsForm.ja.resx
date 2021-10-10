@@ -119,67 +119,67 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="FontName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 15</value>
+    <value>40, 12</value>
   </data>
   <data name="FontName.Text" xml:space="preserve">
     <value>フォント:</value>
   </data>
   <data name="ApplyButton.Text" xml:space="preserve">
-    <value>適用</value>
+    <value>適用(&amp;A)</value>
   </data>
   <data name="Cancel_Button.Text" xml:space="preserve">
-    <value>キャンセル</value>
+    <value>キャンセル(&amp;C</value>
   </data>
   <data name="backimglabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 15</value>
+    <value>108, 12</value>
   </data>
   <data name="backimglabel.Text" xml:space="preserve">
     <value>メインウィンドウの背景</value>
   </data>
   <data name="widgetbackimg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 15</value>
+    <value>87, 12</value>
   </data>
   <data name="widgetbackimg.Text" xml:space="preserve">
     <value>ウィジェットの背景</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 15</value>
+    <value>110, 12</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>ログオフ検知時の音声</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>169, 15</value>
+    <value>135, 12</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>シャットダウン検知時の音声</value>
   </data>
   <data name="WidgetsSettingsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 17</value>
+    <value>91, 14</value>
   </data>
   <data name="WidgetsSettingsLabel.Text" xml:space="preserve">
     <value>ウィジェット設定</value>
   </data>
   <data name="OpacityBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 226</value>
+    <value>174, 181</value>
   </data>
   <data name="OpacityLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 226</value>
+    <value>15, 181</value>
   </data>
   <data name="OpacityLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 15</value>
+    <value>41, 12</value>
   </data>
   <data name="OpacityLabel.Text" xml:space="preserve">
     <value>透明度</value>
   </data>
   <data name="OpacityBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 226</value>
+    <value>71, 181</value>
   </data>
   <data name="OpacityBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 22</value>
+    <value>99, 19</value>
   </data>
   <data name="WidgetForeColorLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 15</value>
+    <value>99, 12</value>
   </data>
   <data name="WidgetForeColorLabel.Text" xml:space="preserve">
     <value>ウィジェットの文字色</value>

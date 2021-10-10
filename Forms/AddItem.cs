@@ -40,8 +40,12 @@ namespace WorkhubForWindows.Forms
                 );
 
             Functions.Config.Applications.Save(StaticClasses.Executables);
-
+            foreach (WorkhubWindowHandler i in StaticClasses.WindowHandler.WindowHandlers)
+            {
+                Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.AppListChanged, 0, 0);
+            }
             this.DialogResult = DialogResult.OK;
+
         }
 
         private void CancelClick(object sender,EventArgs e)
