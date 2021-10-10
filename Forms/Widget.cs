@@ -23,6 +23,7 @@ namespace WorkhubForWindows
             this.AcceptButton = appcall;
             appcall.Click += appstartcall;
             this.FormClosing += Form_Closing;
+
             Backgroundset();
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle,"Widget"));
@@ -109,8 +110,10 @@ namespace WorkhubForWindows
 
         void Backgroundset()
         {
+
             if (StaticClasses.Config.Widgetbackimg != "")
             {
+
                 if (File.Exists(StaticClasses.Config.Widgetbackimg))
                 {
                     if (this.applistview.BackgroundImage != null)
@@ -125,19 +128,23 @@ namespace WorkhubForWindows
                     x = bmp.Width;
                     y = bmp.Height;
                     float ratio;
-                    if (bmp.Width / this.Width >= bmp.Height / this.Height) //Width is larger
+                    Task task = Task.Run(() =>
                     {
-                        ratio = (float)bmp.Width / (float)this.Width;
-                    }
-                    else //Height is larger
-                    {
-                        ratio = (float)bmp.Height / (float)this.Height;
-                    }
+                        if (bmp.Width / this.Width >= bmp.Height / this.Height) //Width is larger
+                        {
+                            ratio = (float)bmp.Width / (float)this.Width;
+                        }
+                        else //Height is larger
+                        {
+                            ratio = (float)bmp.Height / (float)this.Height;
+                        }
 
-                    bmp = (Bitmap)ResizeImage(bmp, new Size((int)(bmp.Width / ratio), (int)(bmp.Height / ratio)));
+                        bmp = (Bitmap)ResizeImage(bmp, new Size((int)(bmp.Width / ratio), (int)(bmp.Height / ratio)));
 
-                    graphics.DrawImage(bmp, background.Width / 2 - bmp.Width / 2, background.Height / 2 - bmp.Height / 2, bmp.Width, bmp.Height);
+                        graphics.DrawImage(bmp, background.Width / 2 - bmp.Width / 2, background.Height / 2 - bmp.Height / 2, bmp.Width, bmp.Height);
+                    });
 
+                    task.Wait();
                     applistview.BackgroundImage = background;
 
                     graphics.Dispose();
@@ -152,6 +159,7 @@ namespace WorkhubForWindows
                     StaticClasses.Config.Widgetbackimg = "";
                 }
             }
+
         }
        
         void LoadConfig()
@@ -199,6 +207,7 @@ namespace WorkhubForWindows
             {
                 if ((e.Button & MouseButtons.Left) == MouseButtons.Left)
                 {
+
                     // 吸着するサイズ(範囲)
                     Size gap = new Size(12, 12);
 
@@ -297,10 +306,14 @@ namespace WorkhubForWindows
             }
         }
 
-        private void Mouse_Up(object sender,MouseEventArgs e)
+        private void Mouse_Up(object sender, MouseEventArgs e)
         {
-            StaticClasses.Config.WidgetPosition = this.Location;
-            StaticClasses.Config.SaveConfig(StaticClasses.Config);
+            Task task = Task.Run(() =>
+            {
+                StaticClasses.Config.WidgetPosition = this.Location;
+                StaticClasses.Config.SaveConfig(StaticClasses.Config);
+            });
+            task.Wait();
         }
 
         #endregion
@@ -323,13 +336,17 @@ namespace WorkhubForWindows
             switch (m.Msg)
             {
                 case StaticClasses.WorkHubMessages.ConfigChanged:
-                    this.LoadConfig();
+                    
+
+                        this.LoadConfig();
                     break;
                 case StaticClasses.WorkHubMessages.AppListChanged:
                     initalizeapplistview();
                     break;
                 case StaticClasses.WorkHubMessages.WidgetConfigChanged:
-                    this.LoadConfig();
+                    
+
+                        this.LoadConfig();
                     break;
 
                 case StaticClasses.WorkHubMessages.ApplicationQuit:

@@ -46,3 +46,4 @@ D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.Fo
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.Forms.SettingsForm.ja.resources
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\ar-KM\WorkhubForWindows.resources.dll
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.Forms.EditItem.ja.resources
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.Widget.ja.resources
