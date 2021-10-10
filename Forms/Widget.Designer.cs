@@ -95,6 +95,7 @@
             this.Name = "Widget";
             this.Text = "Widget";
             this.Shown += new System.EventHandler(this.ShowWidget);
+            this.DoubleClick += new System.EventHandler(this.appstartcall);
             this.RCMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
