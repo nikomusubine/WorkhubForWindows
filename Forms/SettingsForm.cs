@@ -22,6 +22,7 @@ namespace WorkhubForWindows.Forms
         private bool frmLoadFlg = false; // Form1ロード済みか
         private bool isstartup = false;
         private Color WidgetForeColor;
+        private Color WidgetBackColor;
 
         public SettingsForm()
         {
@@ -212,6 +213,14 @@ namespace WorkhubForWindows.Forms
             }
         }
 
+        private void WidgetBackColorChange(object sender,EventArgs e)
+        {
+            ColorDiag.Color = WidgetBackColor;
+            if (ColorDiag.ShowDialog() == DialogResult.OK)
+            {
+                WidgetBackColor = ColorDiag.Color;
+            }
+        }
         #region Apply or Cancel
         private void ApplyClicked(object sender, EventArgs e)
         {
@@ -222,6 +231,7 @@ namespace WorkhubForWindows.Forms
             StaticClasses.Config.Widgetbackimg = widgetbackimgpath.Text;
             StaticClasses.Config.WidgetOpacity = (double)OpacityBox.Value / 100;
             StaticClasses.Config.WidgetForeColor = WidgetForeColor;
+            StaticClasses.Config.WidgetBackColor = WidgetBackColor;
             #endregion
             StaticClasses.Config.SaveConfig(StaticClasses.Config);
             StaticClasses.Config.ApplyConfig();
@@ -248,6 +258,7 @@ namespace WorkhubForWindows.Forms
             OpacityBox.Value = (int)(StaticClasses.Config.WidgetOpacity * 100);
 
             WidgetForeColor = StaticClasses.Config.WidgetForeColor;
+            WidgetBackColor = StaticClasses.Config.WidgetBackColor;
         }
         #endregion
     }

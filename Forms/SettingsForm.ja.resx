@@ -122,7 +122,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="FontNames.Size" type="System.Drawing.Size, System.Drawing">
-    <value>469, 23</value>
+    <value>460, 23</value>
   </data>
   <data name="ApplyButton.Text" xml:space="preserve">
     <value>適用(&amp;A)</value>
@@ -131,10 +131,10 @@
     <value>キャンセル(&amp;C</value>
   </data>
   <data name="FontSizeBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>700, 4</value>
+    <value>686, 4</value>
   </data>
   <data name="FontSizeBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 22</value>
+    <value>74, 22</value>
   </data>
   <data name="backimglabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>133, 15</value>
@@ -143,23 +143,23 @@
     <value>メインウィンドウの背景</value>
   </data>
   <data name="backimgref.Location" type="System.Drawing.Point, System.Drawing">
-    <value>721, 2</value>
+    <value>740, 2</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="backimgref.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="backimgref.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 25</value>
+    <value>25, 33</value>
   </data>
   <data name="widgetbackimgref.Location" type="System.Drawing.Point, System.Drawing">
-    <value>721, 44</value>
+    <value>740, 39</value>
   </data>
   <data name="widgetbackimgref.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
   <data name="widgetbackimgref.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 25</value>
+    <value>25, 33</value>
   </data>
   <data name="widgetbackimg.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 15</value>
@@ -167,26 +167,20 @@
   <data name="widgetbackimg.Text" xml:space="preserve">
     <value>ウィジェットの背景</value>
   </data>
-  <data name="WidgetsSettingsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>111, 17</value>
-  </data>
-  <data name="WidgetsSettingsLabel.Text" xml:space="preserve">
-    <value>ウィジェット設定</value>
-  </data>
   <data name="OpacityLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>52, 15</value>
   </data>
   <data name="OpacityLabel.Text" xml:space="preserve">
     <value>透明度</value>
   </data>
-  <data name="OpacityBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>132, 22</value>
-  </data>
   <data name="WidgetForeColorLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 15</value>
   </data>
   <data name="WidgetForeColorLabel.Text" xml:space="preserve">
     <value>ウィジェットの文字色</value>
+  </data>
+  <data name="WidgetBackColorLabel.Text" xml:space="preserve">
+    <value>ウィジェットの背景色</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

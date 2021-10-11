@@ -53,29 +53,33 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.WidgetBackColorLabel = new System.Windows.Forms.Label();
+            this.WidgetBackColorButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.GeneralSettingsPanel = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.SettingsTab = new System.Windows.Forms.TabControl();
             this.General = new System.Windows.Forms.TabPage();
             this.Widget = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBox)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.GeneralSettingsPanel.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.SettingsTab.SuspendLayout();
             this.General.SuspendLayout();
             this.Widget.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // FontName
@@ -211,9 +215,47 @@
             // tableLayoutPanel8
             // 
             resources.ApplyResources(this.tableLayoutPanel8, "tableLayoutPanel8");
-            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel2, 0, 2);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel1, 0, 0);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            // 
+            // tableLayoutPanel9
+            // 
+            resources.ApplyResources(this.tableLayoutPanel9, "tableLayoutPanel9");
+            this.tableLayoutPanel9.Controls.Add(this.WidgetBackColorLabel, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.WidgetBackColorButton, 1, 0);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            // 
+            // WidgetBackColorLabel
+            // 
+            resources.ApplyResources(this.WidgetBackColorLabel, "WidgetBackColorLabel");
+            this.WidgetBackColorLabel.Name = "WidgetBackColorLabel";
+            // 
+            // WidgetBackColorButton
+            // 
+            resources.ApplyResources(this.WidgetBackColorButton, "WidgetBackColorButton");
+            this.WidgetBackColorButton.Name = "WidgetBackColorButton";
+            this.WidgetBackColorButton.UseVisualStyleBackColor = true;
+            this.WidgetBackColorButton.Click += new System.EventHandler(this.WidgetBackColorChange);
+            // 
+            // tableLayoutPanel2
+            // 
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.WidgetForeColorLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.WidgetForeColorChangeButton, 1, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // GeneralSettingsPanel
             // 
@@ -264,24 +306,6 @@
             this.Widget.Name = "Widget";
             this.Widget.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
-            // 
-            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.WidgetForeColorLabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.WidgetForeColorChangeButton, 1, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            // 
-            // tableLayoutPanel2
-            // 
-            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
             // SettingsForm
             // 
             this.AcceptButton = this.ApplyButton;
@@ -302,6 +326,12 @@
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.tableLayoutPanel9.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.GeneralSettingsPanel.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
@@ -310,10 +340,6 @@
             this.SettingsTab.ResumeLayout(false);
             this.General.ResumeLayout(false);
             this.Widget.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -353,5 +379,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.Label WidgetBackColorLabel;
+        private System.Windows.Forms.Button WidgetBackColorButton;
     }
 }

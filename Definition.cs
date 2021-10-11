@@ -141,7 +141,20 @@ namespace WorkhubForWindows
                 this.SendWidgetConfigChanged();
             }
         }
-
+        public int __WidgetBackColor;
+        [XmlIgnore]
+        public Color WidgetBackColor
+        {
+            get
+            {
+                return Color.FromArgb(__WidgetBackColor);
+            }
+            set
+            {
+                __WidgetBackColor = value.ToArgb();
+                this.SendWidgetConfigChanged();
+            }
+        }
         private double __WidgetOpacity = 1;
         public double WidgetOpacity
         {

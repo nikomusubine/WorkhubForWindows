@@ -23,7 +23,7 @@ namespace WorkhubForWindows
             this.AcceptButton = appcall;
             appcall.Click += appstartcall;
             this.FormClosing += Form_Closing;
-
+            
             Backgroundset();
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle,"Widget"));
@@ -124,7 +124,7 @@ namespace WorkhubForWindows
                     Bitmap background = new Bitmap(this.Width, this.Height);
                     Graphics graphics = Graphics.FromImage(background);
                     Bitmap bmp = new Bitmap(Image.FromFile(StaticClasses.Config.Widgetbackimg));
-                    graphics.Clear(Color.White);
+                    graphics.Clear(StaticClasses.Config.WidgetBackColor);
                     int x, y;
                     x = bmp.Width;
                     y = bmp.Height;
