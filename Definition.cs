@@ -218,8 +218,8 @@ namespace WorkhubForWindows
                 this.__Homemode = value;
             }
         }
-        public string LogoffSound;
-        public string ShutdownSound;
+        //public string LogoffSound;
+        //public string ShutdownSound;
 
 
 

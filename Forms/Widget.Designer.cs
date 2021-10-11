@@ -58,17 +58,17 @@
             // 
             // RCMenu
             // 
-            resources.ApplyResources(this.RCMenu, "RCMenu");
             this.RCMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.RCMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.WidgetPosLock});
             this.RCMenu.Name = "RCMenu";
+            resources.ApplyResources(this.RCMenu, "RCMenu");
             // 
             // WidgetPosLock
             // 
-            resources.ApplyResources(this.WidgetPosLock, "WidgetPosLock");
             this.WidgetPosLock.CheckOnClick = true;
             this.WidgetPosLock.Name = "WidgetPosLock";
+            resources.ApplyResources(this.WidgetPosLock, "WidgetPosLock");
             this.WidgetPosLock.Click += new System.EventHandler(this.LockWidget_Click);
             // 
             // IconList

@@ -101,32 +101,6 @@ namespace WorkhubForWindows.Forms
 
         }
 
-        private void ShutdownrefClick(object sender, EventArgs e)
-        {
-            OpenFileDialog ofdiag = new OpenFileDialog();
-            ofdiag.FileName = Shutdownsoundbox.Text;
-            ofdiag.Filter = "Sound File(*.wav) |*.wav";
-
-            if (ofdiag.ShowDialog() == DialogResult.OK)
-            {
-                Shutdownsoundbox.Text = ofdiag.FileName;
-            }
-
-        }
-
-        private void LogoffsoundrefClick(object sender, EventArgs e)
-        {
-            OpenFileDialog ofdiag = new OpenFileDialog();
-            ofdiag.FileName = LogoffsoundBox.Text;
-            ofdiag.Filter = "Sound File(*.wav) |*.wav";
-
-            if (ofdiag.ShowDialog() == DialogResult.OK)
-            {
-                LogoffsoundBox.Text = ofdiag.FileName;
-            }
-
-        }
-
         private void AddStartUpClicked(object sender,EventArgs e)
         {
             if (!frmLoadFlg) return;
@@ -246,8 +220,6 @@ namespace WorkhubForWindows.Forms
             StaticClasses.Config.font = ftmp;
             StaticClasses.Config.backimgpath = backimgpath.Text;
             StaticClasses.Config.Widgetbackimg = widgetbackimgpath.Text;
-            StaticClasses.Config.LogoffSound = LogoffsoundBox.Text;
-            StaticClasses.Config.ShutdownSound = Shutdownsoundbox.Text;
             StaticClasses.Config.WidgetOpacity = (double)OpacityBox.Value / 100;
             StaticClasses.Config.WidgetForeColor = WidgetForeColor;
             #endregion

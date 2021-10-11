@@ -124,6 +124,7 @@ namespace WorkhubForWindows
                     Bitmap background = new Bitmap(this.Width, this.Height);
                     Graphics graphics = Graphics.FromImage(background);
                     Bitmap bmp = new Bitmap(Image.FromFile(StaticClasses.Config.Widgetbackimg));
+                    graphics.Clear(Color.White);
                     int x, y;
                     x = bmp.Width;
                     y = bmp.Height;

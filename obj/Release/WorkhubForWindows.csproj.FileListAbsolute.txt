@@ -26,3 +26,4 @@ D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Release\WorkhubForWindows.
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Release\WorkhubForWindows.Forms.SettingsForm.ar-KM.resources
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Release\WorkhubForWindows.Forms.SettingsForm.ja.resources
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Release\ar-KM\WorkhubForWindows.resources.dll
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Release\WorkhubForWindows.Widget.ja.resources
