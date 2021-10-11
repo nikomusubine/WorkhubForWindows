@@ -110,7 +110,14 @@ namespace WorkhubForWindows
 
         void Backgroundset()
         {
+            try
+            {
+                this.applistview.BackColor = StaticClasses.Config.WidgetBackColor; 
+            }
+            catch
+            {
 
+            }
             if (StaticClasses.Config.Widgetbackimg != "")
             {
 
