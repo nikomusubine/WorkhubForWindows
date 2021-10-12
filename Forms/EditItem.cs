@@ -26,10 +26,12 @@ namespace WorkhubForWindows.Forms
         private void AppsSelectedIndexChanged(object sender, EventArgs e)
         {
             //Applist.SelectedIndices[0]
-            NameBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Name;
-            PathBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Path;
-            ArgsBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Argments;
-
+            if (Applist.SelectedIndices.Count != 0)
+            {
+                NameBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Name;
+                PathBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Path;
+                ArgsBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Argments;
+            }
         }
 
         private void CloseButtonClicked(object sender, EventArgs e)

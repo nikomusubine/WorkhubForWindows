@@ -32,6 +32,7 @@ namespace WorkhubForWindows
         private void ShowWidget(object sender,EventArgs e)
         {
             this.LoadConfig();
+            Backgroundset();
         }
 
         private void App_Closing()
@@ -344,19 +345,17 @@ namespace WorkhubForWindows
             switch (m.Msg)
             {
                 case StaticClasses.WorkHubMessages.ConfigChanged:
-                    
-
                         this.LoadConfig();
                     break;
                 case StaticClasses.WorkHubMessages.AppListChanged:
                     initalizeapplistview();
                     break;
                 case StaticClasses.WorkHubMessages.WidgetConfigChanged:
-                    
-
                         this.LoadConfig();
                     break;
-
+                case StaticClasses.WorkHubMessages.WidgetBackgroundSet:
+                    Backgroundset();
+                    break;
                 case StaticClasses.WorkHubMessages.ApplicationQuit:
                     App_Closing();
                     break;
