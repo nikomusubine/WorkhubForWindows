@@ -11,6 +11,7 @@ using WorkhubForWindows.Forms;
 using System.IO;
 using Microsoft.Win32;
 using System.Xml.Serialization;
+using System.Text.Json;
 
 namespace WorkhubForWindows
 {
@@ -32,14 +33,17 @@ namespace WorkhubForWindows
             Apps.View = View.LargeIcon;
             this.FormClosing += Form_Closing;
             StaticClasses.AppStatus.Started = true;
-
+            StaticClasses.Langs.LoadLanguagePack("Languages\\" + StaticClasses.Config.Language + ".xml",ref StaticClasses.Langs);
+            foreach (var i in StaticClasses.WindowHandler.WindowHandlers)
+            {
+                Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.LanguagePackLoad, 0, 0);
+            }
         }
 
         private void MainWindowShown(object sender, EventArgs e)
         {
             wg.Show();
         }
-
 
         private void Additem(object sender, EventArgs e)
         {
@@ -114,7 +118,7 @@ namespace WorkhubForWindows
 
         private void Quit(object sender, EventArgs e)
         {
-            DialogResult diagres = MessageBox.Show("Quit Application?", "infomation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult diagres = MessageBox.Show(StaticClasses.Langs.Mainwindow.MB_Quit_Verif, "infomation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (diagres == DialogResult.Yes)
             {
                 Quiting = true;
@@ -155,6 +159,7 @@ namespace WorkhubForWindows
         }
         #endregion
 
+        #region Functions
         /// <summary>
         /// アプリケーションの読み込み
         /// Load Applications
@@ -208,7 +213,18 @@ namespace WorkhubForWindows
             }
         }
 
-
+        void LoadLanguage()
+        {
+            
+            AddItemButton.Text = StaticClasses.Langs.Mainwindow.AdditemButton;
+            EditButton.Text = StaticClasses.Langs.Mainwindow.EdititemButton;
+            StartButton.Text = StaticClasses.Langs.Mainwindow.StartButton;
+            RibbonFiles.Text = StaticClasses.Langs.Mainwindow.RibbonFiles.Text;
+            Ribbon_Settings.Text = StaticClasses.Langs.Mainwindow.RibbonFiles.Settings;
+            ToolStripShowWidget.Text = StaticClasses.Langs.Mainwindow.RibbonFiles.ShowWidget;
+            ToolStripQuit.Text = StaticClasses.Langs.Mainwindow.RibbonFiles.Quit;
+        }
+        #endregion
         #region WinMsg
 
         //COPYDATASTRUCT構造体 
@@ -231,6 +247,9 @@ namespace WorkhubForWindows
                     break;
                 case StaticClasses.WorkHubMessages.AppListChanged:
                     initalizeApps();
+                    break;
+                case StaticClasses.WorkHubMessages.LanguagePackLoad:
+                    LoadLanguage();
                     break;
                 default:
                     break;

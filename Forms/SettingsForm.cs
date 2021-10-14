@@ -36,9 +36,12 @@ namespace WorkhubForWindows.Forms
                 }
 
             }
+            
             initalizeform();
+            LanguageLoad();
         }
 
+        #region EventHandlers
         private void Settings_Load(object sender, EventArgs e)
         {
             // プロジェクト＞プロパティ＞アセンブリ情報　で指定した「タイトル」を取得
@@ -66,7 +69,11 @@ namespace WorkhubForWindows.Forms
 
             if (isstartup)
             {
-
+                StartUpbutton.Text = StaticClasses.Langs.Settings.Startup_Remove;
+            }
+            else
+            {
+                StartUpbutton.Text = StaticClasses.Langs.Settings.Startup_Add;
             }
             frmLoadFlg = true;
         }
@@ -143,6 +150,7 @@ namespace WorkhubForWindows.Forms
                             aplTitle,
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
+                        StartUpbutton.Text = StaticClasses.Langs.Settings.Startup_Remove;
                     }
                     else
                     {
@@ -175,6 +183,7 @@ namespace WorkhubForWindows.Forms
                             aplTitle,
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
+                        StartUpbutton.Text = StaticClasses.Langs.Settings.Startup_Add;
                     }
                     catch (IOException ex)
                     {
@@ -221,6 +230,7 @@ namespace WorkhubForWindows.Forms
                 WidgetBackColor = ColorDiag.Color;
             }
         }
+
         #region Apply or Cancel
         private void ApplyClicked(object sender, EventArgs e)
         {
@@ -232,9 +242,15 @@ namespace WorkhubForWindows.Forms
             StaticClasses.Config.WidgetOpacity = (double)OpacityBox.Value / 100;
             StaticClasses.Config.WidgetForeColor = WidgetForeColor;
             StaticClasses.Config.WidgetBackColor = WidgetBackColor;
+            StaticClasses.Config.Language = this.LanguageBox.Text;
             #endregion
             StaticClasses.Config.SaveConfig(StaticClasses.Config);
             StaticClasses.Config.ApplyConfig();
+            StaticClasses.Langs.LoadLanguagePack("Languages\\" + StaticClasses.Config.Language + ".xml", ref StaticClasses.Langs);
+            foreach (var i in StaticClasses.WindowHandler.WindowHandlers)
+            {
+                Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.LanguagePackLoad, 0, 0);
+            }
             this.Close();
         }
 
@@ -243,7 +259,8 @@ namespace WorkhubForWindows.Forms
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
-        #endregion  
+        #endregion
+        #endregion
 
         #region Functions
         void initalizeform()
@@ -259,6 +276,66 @@ namespace WorkhubForWindows.Forms
 
             WidgetForeColor = StaticClasses.Config.WidgetForeColor;
             WidgetBackColor = StaticClasses.Config.WidgetBackColor;
+
+            LanguageBox.Text = StaticClasses.Config.Language;
+            foreach (string str in Directory.GetFiles("Languages","*.xml",SearchOption.TopDirectoryOnly))
+            {
+                string temp = str.Split('\\')[str.Split('\\').Length - 1];
+                temp = temp.Split('.')[0];
+                LanguageBox.Items.Add(temp);
+            }
+        }
+
+        void LanguageLoad()
+        {
+            if (StaticClasses.Langs.Settings.Tab_General != null)
+            {
+                this.General.Text = StaticClasses.Langs.Settings.Tab_General;
+            }
+            if (StaticClasses.Langs.Settings.Tab_Widget != null)
+            {
+                this.Widget.Text = StaticClasses.Langs.Settings.Tab_Widget;
+            }
+            if (StaticClasses.Langs.Settings.Label_Font != null)
+            {
+                this.FontLabel.Text = StaticClasses.Langs.Settings.Label_Font;
+            }
+            if (StaticClasses.Langs.Settings.Label_MainBackimgPath != null)
+            {
+                this.backimglabel.Text = StaticClasses.Langs.Settings.Label_MainBackimgPath;
+            }
+            if (StaticClasses.Langs.Settings.Label_WidgetBackimgPath != null)
+            {
+                this.widgetbackimg.Text = StaticClasses.Langs.Settings.Label_WidgetBackimgPath;
+            }
+            if (StaticClasses.Langs.Settings.Label_Language != null)
+            {
+                this.LanguageLabel.Text = StaticClasses.Langs.Settings.Label_Language;
+            }
+            if (StaticClasses.Langs.Settings.Label_Opacity != null)
+            {
+                this.OpacityLabel.Text = StaticClasses.Langs.Settings.Label_Opacity;
+            }
+            if (StaticClasses.Langs.Settings.Label_WidgetTextColor != null)
+            {
+                this.WidgetForeColorLabel.Text = StaticClasses.Langs.Settings.Label_WidgetTextColor;
+            }
+            if (StaticClasses.Langs.Settings.Label_WidgetBackColor != null)
+            {
+                this.WidgetBackColorLabel.Text = StaticClasses.Langs.Settings.Label_WidgetBackColor;
+            }
+            if (StaticClasses.Langs.Settings.Label_WidgetSCKey != null)
+            {
+                this.WidgetSCKeyLabel.Text = StaticClasses.Langs.Settings.Label_WidgetSCKey;
+            }
+            if (StaticClasses.Langs.Settings.Button_Cancel != null)
+            {
+                this.Cancel_Button.Text = StaticClasses.Langs.Settings.Button_Cancel;
+            }
+            if (StaticClasses.Langs.Settings.Button_Apply != null)
+            {
+                this.ApplyButton.Text = StaticClasses.Langs.Settings.Button_Apply;
+            }
         }
         #endregion
     }

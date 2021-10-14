@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="IconList.ImageSize" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
-  </data>
   <data name="Applist.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 2</value>
   </data>
@@ -129,7 +126,25 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="Applist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 330</value>
+    <value>287, 336</value>
+  </data>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 10</value>
+  </data>
+  <data name="tableLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>582, 362</value>
+  </data>
+  <data name="tableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 342</value>
+  </data>
+  <data name="tableLayoutPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 18</value>
   </data>
   <data name="Close_Button.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 0</value>
@@ -138,10 +153,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="Close_Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 24</value>
-  </data>
-  <data name="Close_Button.Text" xml:space="preserve">
-    <value>閉じる(&amp;C)</value>
+    <value>91, 18</value>
   </data>
   <data name="okbutton.Location" type="System.Drawing.Point, System.Drawing">
     <value>192, 0</value>
@@ -150,7 +162,7 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="okbutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 24</value>
+    <value>93, 18</value>
   </data>
   <data name="ApplyButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>97, 0</value>
@@ -159,19 +171,16 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="ApplyButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 24</value>
+    <value>91, 18</value>
   </data>
-  <data name="ApplyButton.Text" xml:space="preserve">
-    <value>適用(&amp;A)</value>
+  <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 2</value>
   </data>
-  <data name="tableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 336</value>
-  </data>
-  <data name="tableLayoutPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tableLayoutPanel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 24</value>
+  <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 330</value>
   </data>
   <data name="NameBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>145, 2</value>
@@ -189,37 +198,28 @@
     <value>2, 0, 2, 0</value>
   </data>
   <data name="NameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 102</value>
-  </data>
-  <data name="NameLabel.Text" xml:space="preserve">
-    <value>名前</value>
+    <value>139, 114</value>
   </data>
   <data name="PathLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 102</value>
+    <value>2, 114</value>
   </data>
   <data name="PathLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="PathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 102</value>
-  </data>
-  <data name="PathLabel.Text" xml:space="preserve">
-    <value>パス</value>
+    <value>139, 114</value>
   </data>
   <data name="ArgsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 204</value>
+    <value>2, 228</value>
   </data>
   <data name="ArgsLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="ArgsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 126</value>
-  </data>
-  <data name="ArgsLabel.Text" xml:space="preserve">
-    <value>コマンドライン引数</value>
+    <value>139, 102</value>
   </data>
   <data name="ArgsBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 206</value>
+    <value>145, 230</value>
   </data>
   <data name="ArgsBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -228,7 +228,7 @@
     <value>139, 19</value>
   </data>
   <data name="PathBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 104</value>
+    <value>145, 116</value>
   </data>
   <data name="PathBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -236,14 +236,14 @@
   <data name="PathBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>139, 19</value>
   </data>
-  <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 2</value>
+  <data name="tableLayoutPanel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 342</value>
   </data>
-  <data name="tableLayoutPanel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tableLayoutPanel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
-  <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>286, 330</value>
+  <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>287, 18</value>
   </data>
   <data name="MoveLbutton.Location" type="System.Drawing.Point, System.Drawing">
     <value>43, 2</value>
@@ -252,7 +252,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="MoveLbutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 20</value>
+    <value>56, 14</value>
   </data>
   <data name="MoveRbutton.Location" type="System.Drawing.Point, System.Drawing">
     <value>187, 2</value>
@@ -261,25 +261,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="MoveRbutton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 20</value>
-  </data>
-  <data name="tableLayoutPanel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 336</value>
-  </data>
-  <data name="tableLayoutPanel4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="tableLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>287, 24</value>
-  </data>
-  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 10</value>
-  </data>
-  <data name="tableLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>582, 362</value>
+    <value>56, 14</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 12</value>
@@ -573,8 +555,5 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>項目を編集</value>
   </data>
 </root>

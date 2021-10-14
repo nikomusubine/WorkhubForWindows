@@ -27,6 +27,7 @@ namespace WorkhubForWindows
             Backgroundset();
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle,"Widget"));
+            LoadLanguage();
         }
 
         private void ShowWidget(object sender,EventArgs e)
@@ -84,7 +85,7 @@ namespace WorkhubForWindows
             this.Size = StaticClasses.Config.WidgetSize;
             this.applistview.Size = StaticClasses.Config.WidgetSize;
 
-            WidgetPosLock.Checked = StaticClasses.Config.LockWidget;
+            FixWidgetPos.Checked = StaticClasses.Config.LockWidget;
             for (int i = 0; i != StaticClasses.Executables.Count; i++)
             {
                 if (!File.Exists(StaticClasses.Executables[i].Path))
@@ -182,7 +183,7 @@ namespace WorkhubForWindows
             this.Size = StaticClasses.Config.WidgetSize;
             this.applistview.Size = StaticClasses.Config.WidgetSize;
 
-            WidgetPosLock.Checked = StaticClasses.Config.LockWidget;
+            FixWidgetPos.Checked = StaticClasses.Config.LockWidget;
 
             Backgroundset();
             if (StaticClasses.Config.ShowWidget)
@@ -192,6 +193,14 @@ namespace WorkhubForWindows
             else
             {
                 this.Hide();
+            }
+        }
+
+        void LoadLanguage()
+        {
+            if(StaticClasses.Langs.Widget.WidgetRC.FixWidgetPos!=null)
+            {
+                this.FixWidgetPos.Text = StaticClasses.Langs.Widget.WidgetRC.FixWidgetPos;
             }
         }
         #endregion
@@ -355,6 +364,9 @@ namespace WorkhubForWindows
                     break;
                 case StaticClasses.WorkHubMessages.WidgetBackgroundSet:
                     Backgroundset();
+                    break;
+                case StaticClasses.WorkHubMessages.LanguagePackLoad:
+                    LoadLanguage();
                     break;
                 case StaticClasses.WorkHubMessages.ApplicationQuit:
                     App_Closing();

@@ -16,8 +16,9 @@ namespace WorkhubForWindows.Forms
         {
             InitializeComponent();
             this.FormClosed += WindowClosed;
+            LoadLanguage();
         }
-
+        #region Event Handlers
         private void ReferenceButton(object sender,EventArgs e)
         {
             RefDiag.FileName = FilePathBox.Text;
@@ -57,6 +58,18 @@ namespace WorkhubForWindows.Forms
         private void WindowClosed(object sender,EventArgs e)
         {
             this.Dispose();
+        }
+        #endregion
+
+        private void LoadLanguage()
+        {
+            ItemnameLabel.Text = StaticClasses.Langs.AddItem.Label_Name;
+            FilepathLabel.Text = StaticClasses.Langs.AddItem.Label_Path;
+            CmdArgsLabel.Text = StaticClasses.Langs.AddItem.Label_Args;
+
+            ButtonApply.Text = StaticClasses.Langs.AddItem.ApplyButton;
+            ButtonCancel.Text = StaticClasses.Langs.AddItem.CancelButton;
+            ButtonReference.Text = StaticClasses.Langs.AddItem.RefButton;
         }
     }
 }

@@ -10,11 +10,11 @@ using System.IO;
 using System.Xml.Serialization;
 using WorkhubForWindows.Functions;
 using System.Runtime.InteropServices;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace WorkhubForWindows
 {
-
-
     public class Executable
     {
         public Executable(Executable executable)
@@ -68,6 +68,116 @@ namespace WorkhubForWindows
     {
         FullScreen=0,
         HalfHome=1,
+    }
+
+    public class LanguagePack
+    {
+        public __Mainwindow Mainwindow = new __Mainwindow();
+        public class __Mainwindow
+        {
+            public string AdditemButton;
+            public string EdititemButton;
+            public string StartButton;
+
+            public __RibbonFiles RibbonFiles = new __RibbonFiles();
+            public class __RibbonFiles
+            {
+                public string Text;
+                public string Settings;
+                public string ShowWidget;
+                public string Quit;
+            }
+            public __ApplistRC ApplistRC = new __ApplistRC();
+            public class __ApplistRC
+            {
+                public string Add;
+                public string Edit;
+                public string Delete;
+                public string RunAdmin;
+            }
+            public __TasktrayIcon TasktrayIcon = new __TasktrayIcon();
+            public class __TasktrayIcon
+            {
+                public string ShowMainWindow;
+                public string ShowWidget;
+                public string Settings;
+                public string AddItem;
+                public string Quit;
+            }
+            public string MB_Quit_Verif;
+        }
+        public __AddItem AddItem = new __AddItem();
+        public class __AddItem
+        {
+            public string WindowTitle;
+            public string Label_Name;
+            public string Label_Path;
+            public string Label_Args;
+
+            public string CancelButton;
+            public string ApplyButton;
+            public string RefButton;
+        }
+        public __EditItem EditItem = new __EditItem();
+        public class __EditItem
+        {
+            public string WindowTitle;
+            public string Label_Name;
+            public string Label_Path;
+            public string Label_Args;
+
+            public string CloseButton;
+            public string ApplyButton;
+            public string OKButton;
+        }
+        public __Widget Widget = new __Widget();
+        public class __Widget
+        {
+            public __WidgetRC WidgetRC = new __WidgetRC();
+            public class __WidgetRC
+            {
+                public string FixWidgetPos;
+            }
+        }
+        public __Settings Settings = new __Settings();
+        public class __Settings
+        {
+            public string WindowTitle;
+            public string Label_Font;
+            public string Label_MainBackimgPath;
+            public string Label_WidgetBackimgPath;
+            public string Label_Language;
+            public string Label_Opacity;
+            public string Label_WidgetTextColor;
+            public string Label_WidgetBackColor;
+            public string Label_WidgetSCKey;
+            public string Tab_General;
+            public string Tab_Widget;
+            public string Button_Apply;
+            public string Button_Cancel;
+            public string Startup_Add;
+            public string Startup_Remove;
+        }
+
+        public void LoadLanguagePack(string Path,ref LanguagePack Lpack)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(LanguagePack));
+
+            var xmlSettings = new System.Xml.XmlReaderSettings
+            {
+                CheckCharacters = false,
+            };
+            using (var streamReader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + Path, Encoding.UTF8))
+            using (var xmlReader = System.Xml.XmlReader.Create(streamReader, xmlSettings))
+            {
+                Lpack = (LanguagePack)serializer.Deserialize(xmlReader);
+            }
+
+
+            return;
+
+        }
+
     }
 
     public class Configure
@@ -242,6 +352,18 @@ namespace WorkhubForWindows
                 this.__Homemode = value;
             }
         }
+        private string __Language = "English";
+        public string Language
+        {
+            get
+            {
+                return __Language;
+            }
+            set
+            {
+                __Language = value;
+            }
+        }
         //public string LogoffSound;
         //public string ShutdownSound;
 
@@ -341,6 +463,7 @@ namespace WorkhubForWindows
             public const int AppListChanged = 0x2501;
             public const int WidgetConfigChanged = 0x2502;
             public const int WidgetBackgroundSet = 0x2503;
+            public const int LanguagePackLoad = 0x2504;
             public const int ApplicationQuit = 0x2510;
         }
 
@@ -356,5 +479,6 @@ namespace WorkhubForWindows
             public static bool Started = false;
         }
 
+        public static LanguagePack Langs = new LanguagePack();
     }
 }

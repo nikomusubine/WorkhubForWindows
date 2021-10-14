@@ -125,8 +125,14 @@
     <value>110, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="FixWidgetPos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 22</value>
+  </data>
+  <data name="FixWidgetPos.Text" xml:space="preserve">
+    <value>Fix Widget Position(&amp;F)</value>
+  </data>
   <data name="RCMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 26</value>
+    <value>191, 48</value>
   </data>
   <data name="&gt;&gt;RCMenu.Name" xml:space="preserve">
     <value>RCMenu</value>
@@ -167,12 +173,6 @@
   </data>
   <data name="&gt;&gt;applistview.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="WidgetPosLock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 22</value>
-  </data>
-  <data name="WidgetPosLock.Text" xml:space="preserve">
-    <value>Fix Widget Position(&amp;F)</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -476,10 +476,10 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Widget</value>
   </data>
-  <data name="&gt;&gt;WidgetPosLock.Name" xml:space="preserve">
-    <value>WidgetPosLock</value>
+  <data name="&gt;&gt;FixWidgetPos.Name" xml:space="preserve">
+    <value>FixWidgetPos</value>
   </data>
-  <data name="&gt;&gt;WidgetPosLock.Type" xml:space="preserve">
+  <data name="&gt;&gt;FixWidgetPos.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;IconList.Name" xml:space="preserve">

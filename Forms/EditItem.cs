@@ -21,6 +21,7 @@ namespace WorkhubForWindows.Forms
             this.Font = new Font(StaticClasses.Config.font.Name, StaticClasses.Config.font.Size);
             Applist.View = View.LargeIcon;
             this.FormClosed += WindowClosed;
+            LoadLanguage();
         }
 
         private void AppsSelectedIndexChanged(object sender, EventArgs e)
@@ -157,5 +158,35 @@ namespace WorkhubForWindows.Forms
 
 
         }
+
+        void LoadLanguage()
+        {
+            
+            if (StaticClasses.Langs.EditItem.Label_Name != null)
+            {
+                this.NameLabel.Text = StaticClasses.Langs.EditItem.Label_Name;
+            }
+            if (StaticClasses.Langs.EditItem.Label_Path != null)
+            {
+                this.PathLabel.Text = StaticClasses.Langs.EditItem.Label_Path;
+            }
+            if (StaticClasses.Langs.EditItem.Label_Args!=null)
+            {
+                this.ArgsLabel.Text = StaticClasses.Langs.EditItem.Label_Args;
+            }
+            if (StaticClasses.Langs.EditItem.OKButton != null)
+            {
+                this.okbutton.Text = StaticClasses.Langs.EditItem.OKButton;
+            }
+            if (StaticClasses.Langs.EditItem.ApplyButton != null)
+            {
+                this.ApplyButton.Text = StaticClasses.Langs.EditItem.ApplyButton;
+            }
+            if (StaticClasses.Langs.EditItem.CloseButton != null)
+            {
+                this.Close_Button.Text = StaticClasses.Langs.EditItem.CloseButton;
+            }
+        }
+
     }
 }

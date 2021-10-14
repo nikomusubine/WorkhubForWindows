@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddItemForm));
-            this.label1 = new System.Windows.Forms.Label();
+            this.ItemnameLabel = new System.Windows.Forms.Label();
             this.ItemNameBox = new System.Windows.Forms.TextBox();
             this.FilePathBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.FilepathLabel = new System.Windows.Forms.Label();
             this.ButtonReference = new System.Windows.Forms.Button();
             this.CmdArgsBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.CmdArgsLabel = new System.Windows.Forms.Label();
             this.ButtonApply = new System.Windows.Forms.Button();
             this.ButtonCancel = new System.Windows.Forms.Button();
             this.RefDiag = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
-            // label1
+            // ItemnameLabel
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.ItemnameLabel, "ItemnameLabel");
+            this.ItemnameLabel.Name = "ItemnameLabel";
             // 
             // ItemNameBox
             // 
@@ -56,10 +56,10 @@
             resources.ApplyResources(this.FilePathBox, "FilePathBox");
             this.FilePathBox.Name = "FilePathBox";
             // 
-            // label2
+            // FilepathLabel
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.FilepathLabel, "FilepathLabel");
+            this.FilepathLabel.Name = "FilepathLabel";
             // 
             // ButtonReference
             // 
@@ -73,10 +73,10 @@
             resources.ApplyResources(this.CmdArgsBox, "CmdArgsBox");
             this.CmdArgsBox.Name = "CmdArgsBox";
             // 
-            // label3
+            // CmdArgsLabel
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
+            resources.ApplyResources(this.CmdArgsLabel, "CmdArgsLabel");
+            this.CmdArgsLabel.Name = "CmdArgsLabel";
             // 
             // ButtonApply
             // 
@@ -87,8 +87,8 @@
             // 
             // ButtonCancel
             // 
-            resources.ApplyResources(this.ButtonCancel, "ButtonCancel");
             this.ButtonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.ButtonCancel, "ButtonCancel");
             this.ButtonCancel.Name = "ButtonCancel";
             this.ButtonCancel.UseVisualStyleBackColor = true;
             this.ButtonCancel.Click += new System.EventHandler(this.CancelClick);
@@ -107,12 +107,12 @@
             this.Controls.Add(this.ButtonCancel);
             this.Controls.Add(this.ButtonApply);
             this.Controls.Add(this.CmdArgsBox);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.CmdArgsLabel);
             this.Controls.Add(this.ButtonReference);
             this.Controls.Add(this.FilePathBox);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.FilepathLabel);
             this.Controls.Add(this.ItemNameBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ItemnameLabel);
             this.Name = "AddItemForm";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -121,13 +121,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ItemnameLabel;
         private System.Windows.Forms.TextBox ItemNameBox;
         private System.Windows.Forms.TextBox FilePathBox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label FilepathLabel;
         private System.Windows.Forms.Button ButtonReference;
         private System.Windows.Forms.TextBox CmdArgsBox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label CmdArgsLabel;
         private System.Windows.Forms.Button ButtonApply;
         private System.Windows.Forms.Button ButtonCancel;
         private System.Windows.Forms.OpenFileDialog RefDiag;

@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Widget));
             this.applistview = new System.Windows.Forms.ListView();
             this.RCMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.WidgetPosLock = new System.Windows.Forms.ToolStripMenuItem();
+            this.FixWidgetPos = new System.Windows.Forms.ToolStripMenuItem();
             this.IconList = new System.Windows.Forms.ImageList(this.components);
             this.RCMenu.SuspendLayout();
             this.SuspendLayout();
@@ -61,16 +61,16 @@
             // 
             this.RCMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.RCMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.WidgetPosLock});
+            this.FixWidgetPos});
             this.RCMenu.Name = "RCMenu";
             resources.ApplyResources(this.RCMenu, "RCMenu");
             // 
-            // WidgetPosLock
+            // FixWidgetPos
             // 
-            this.WidgetPosLock.CheckOnClick = true;
-            this.WidgetPosLock.Name = "WidgetPosLock";
-            resources.ApplyResources(this.WidgetPosLock, "WidgetPosLock");
-            this.WidgetPosLock.Click += new System.EventHandler(this.LockWidget_Click);
+            this.FixWidgetPos.CheckOnClick = true;
+            this.FixWidgetPos.Name = "FixWidgetPos";
+            resources.ApplyResources(this.FixWidgetPos, "FixWidgetPos");
+            this.FixWidgetPos.Click += new System.EventHandler(this.LockWidget_Click);
             // 
             // IconList
             // 
@@ -96,6 +96,6 @@
         private System.Windows.Forms.ImageList IconList;
         public System.Windows.Forms.ListView applistview;
         private System.Windows.Forms.ContextMenuStrip RCMenu;
-        private System.Windows.Forms.ToolStripMenuItem WidgetPosLock;
+        private System.Windows.Forms.ToolStripMenuItem FixWidgetPos;
     }
 }
