@@ -2,7 +2,9 @@
 bin/Debug/Config/Config.xml
 bin/Debug/Config/Applications.xml
 bin/Debug
-*.xml
+bin/Release
+bin/Release/Config/Applications.xml
+bin/Release/Config/Applications.xml
 *.vcxproj.user
 *.suo
 *.sdf
