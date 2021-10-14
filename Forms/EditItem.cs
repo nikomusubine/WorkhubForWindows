@@ -161,7 +161,10 @@ namespace WorkhubForWindows.Forms
 
         void LoadLanguage()
         {
-            
+            if (StaticClasses.Langs.EditItem.WindowTitle != null)
+            {
+                this.Text = StaticClasses.Langs.EditItem.WindowTitle;
+            }
             if (StaticClasses.Langs.EditItem.Label_Name != null)
             {
                 this.NameLabel.Text = StaticClasses.Langs.EditItem.Label_Name;

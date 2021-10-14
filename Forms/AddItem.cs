@@ -63,6 +63,7 @@ namespace WorkhubForWindows.Forms
 
         private void LoadLanguage()
         {
+            this.Text = StaticClasses.Langs.AddItem.WindowTitle;
             ItemnameLabel.Text = StaticClasses.Langs.AddItem.Label_Name;
             FilepathLabel.Text = StaticClasses.Langs.AddItem.Label_Path;
             CmdArgsLabel.Text = StaticClasses.Langs.AddItem.Label_Args;

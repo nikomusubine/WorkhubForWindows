@@ -26,6 +26,7 @@
     <MB_Quit_Verif>アプリケーションを終了しますか?</MB_Quit_Verif>
   </Mainwindow>
   <AddItem>
+    <WindowTitle>新規作成</WindowTitle>
     <Label_Name>名前</Label_Name>
     <Label_Path>パス</Label_Path>
     <Label_Args>コマンドライン引数</Label_Args>
@@ -34,6 +35,7 @@
     <RefButton>参照</RefButton>
   </AddItem>
   <EditItem>
+    <WindowTitle>編集</WindowTitle>
     <Label_Name>名前</Label_Name>
     <Label_Path>パス</Label_Path>
     <Label_Args>引数</Label_Args>
