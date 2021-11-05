@@ -8,6 +8,7 @@
       <Text>ファイル(&amp;F)</Text>
       <Settings>環境設定(&amp;S)</Settings>
       <ShowWidget>ウィジェットを表示(&amp;W)</ShowWidget>
+      <AddItem>アイテムを追加(&amp;A)</AddItem>
       <Quit>終了(&amp;Q)</Quit>
     </RibbonFiles>
     <ApplistRC>

@@ -40,7 +40,6 @@
             // applistview
             // 
             resources.ApplyResources(this.applistview, "applistview");
-            this.applistview.AutoArrange = false;
             this.applistview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.applistview.ContextMenuStrip = this.RCMenu;
             this.applistview.HideSelection = false;
@@ -74,7 +73,7 @@
             // 
             // IconList
             // 
-            this.IconList.ColorDepth = System.Windows.Forms.ColorDepth.Depth24Bit;
+            this.IconList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             resources.ApplyResources(this.IconList, "IconList");
             this.IconList.TransparentColor = System.Drawing.Color.Transparent;
             // 

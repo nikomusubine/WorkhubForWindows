@@ -66,8 +66,8 @@
             this.StartUpbutton = new System.Windows.Forms.Button();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.LanguageLabel = new System.Windows.Forms.Label();
-            this.Widget = new System.Windows.Forms.TabPage();
             this.LanguageBox = new System.Windows.Forms.ComboBox();
+            this.Widget = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBox)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
@@ -96,6 +96,7 @@
             // Cancel_Button
             // 
             resources.ApplyResources(this.Cancel_Button, "Cancel_Button");
+            this.Cancel_Button.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancel_Button.Name = "Cancel_Button";
             this.Cancel_Button.UseVisualStyleBackColor = true;
             this.Cancel_Button.Click += new System.EventHandler(this.CancelClicked);
@@ -316,18 +317,18 @@
             resources.ApplyResources(this.LanguageLabel, "LanguageLabel");
             this.LanguageLabel.Name = "LanguageLabel";
             // 
+            // LanguageBox
+            // 
+            this.LanguageBox.FormattingEnabled = true;
+            resources.ApplyResources(this.LanguageBox, "LanguageBox");
+            this.LanguageBox.Name = "LanguageBox";
+            // 
             // Widget
             // 
             this.Widget.Controls.Add(this.tableLayoutPanel5);
             resources.ApplyResources(this.Widget, "Widget");
             this.Widget.Name = "Widget";
             this.Widget.UseVisualStyleBackColor = true;
-            // 
-            // LanguageBox
-            // 
-            this.LanguageBox.FormattingEnabled = true;
-            resources.ApplyResources(this.LanguageBox, "LanguageBox");
-            this.LanguageBox.Name = "LanguageBox";
             // 
             // SettingsForm
             // 

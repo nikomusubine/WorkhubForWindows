@@ -41,13 +41,13 @@ namespace WorkhubForWindows
             this.ToolStripQuit = new System.Windows.Forms.ToolStripMenuItem();
             this.TrayIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.TrayRClick = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showMainWindowSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TrayRC_ShowMain = new System.Windows.Forms.ToolStripMenuItem();
             this.TrayRC_ShowWidget = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.settingsSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addItemAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TrayRC_Settings = new System.Windows.Forms.ToolStripMenuItem();
+            this.TrayRC_AddItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
-            this.quitQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TrayRC_Quit = new System.Windows.Forms.ToolStripMenuItem();
             this.ButtonsPunel = new System.Windows.Forms.TableLayoutPanel();
             this.AddItemButton = new System.Windows.Forms.Button();
             this.StartButton = new System.Windows.Forms.Button();
@@ -133,21 +133,21 @@ namespace WorkhubForWindows
             // 
             this.TrayRClick.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.TrayRClick.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showMainWindowSToolStripMenuItem,
+            this.TrayRC_ShowMain,
             this.TrayRC_ShowWidget,
             this.toolStripMenuItem1,
-            this.settingsSToolStripMenuItem,
-            this.addItemAToolStripMenuItem,
+            this.TrayRC_Settings,
+            this.TrayRC_AddItem,
             this.toolStripMenuItem4,
-            this.quitQToolStripMenuItem});
+            this.TrayRC_Quit});
             this.TrayRClick.Name = "TrayRClick";
             resources.ApplyResources(this.TrayRClick, "TrayRClick");
             // 
-            // showMainWindowSToolStripMenuItem
+            // TrayRC_ShowMain
             // 
-            this.showMainWindowSToolStripMenuItem.Name = "showMainWindowSToolStripMenuItem";
-            resources.ApplyResources(this.showMainWindowSToolStripMenuItem, "showMainWindowSToolStripMenuItem");
-            this.showMainWindowSToolStripMenuItem.Click += new System.EventHandler(this.ShowMainWindow);
+            this.TrayRC_ShowMain.Name = "TrayRC_ShowMain";
+            resources.ApplyResources(this.TrayRC_ShowMain, "TrayRC_ShowMain");
+            this.TrayRC_ShowMain.Click += new System.EventHandler(this.ShowMainWindow);
             // 
             // TrayRC_ShowWidget
             // 
@@ -161,28 +161,28 @@ namespace WorkhubForWindows
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
             // 
-            // settingsSToolStripMenuItem
+            // TrayRC_Settings
             // 
-            this.settingsSToolStripMenuItem.Name = "settingsSToolStripMenuItem";
-            resources.ApplyResources(this.settingsSToolStripMenuItem, "settingsSToolStripMenuItem");
-            this.settingsSToolStripMenuItem.Click += new System.EventHandler(this.SettingsPushed);
+            this.TrayRC_Settings.Name = "TrayRC_Settings";
+            resources.ApplyResources(this.TrayRC_Settings, "TrayRC_Settings");
+            this.TrayRC_Settings.Click += new System.EventHandler(this.SettingsPushed);
             // 
-            // addItemAToolStripMenuItem
+            // TrayRC_AddItem
             // 
-            this.addItemAToolStripMenuItem.Name = "addItemAToolStripMenuItem";
-            resources.ApplyResources(this.addItemAToolStripMenuItem, "addItemAToolStripMenuItem");
-            this.addItemAToolStripMenuItem.Click += new System.EventHandler(this.Additem);
+            this.TrayRC_AddItem.Name = "TrayRC_AddItem";
+            resources.ApplyResources(this.TrayRC_AddItem, "TrayRC_AddItem");
+            this.TrayRC_AddItem.Click += new System.EventHandler(this.Additem);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
             // 
-            // quitQToolStripMenuItem
+            // TrayRC_Quit
             // 
-            this.quitQToolStripMenuItem.Name = "quitQToolStripMenuItem";
-            resources.ApplyResources(this.quitQToolStripMenuItem, "quitQToolStripMenuItem");
-            this.quitQToolStripMenuItem.Click += new System.EventHandler(this.Quit);
+            this.TrayRC_Quit.Name = "TrayRC_Quit";
+            resources.ApplyResources(this.TrayRC_Quit, "TrayRC_Quit");
+            this.TrayRC_Quit.Click += new System.EventHandler(this.Quit);
             // 
             // ButtonsPunel
             // 
@@ -306,9 +306,9 @@ namespace WorkhubForWindows
         private System.Windows.Forms.ToolStripMenuItem Ribbon_Settings;
         private System.Windows.Forms.NotifyIcon TrayIcon;
         private System.Windows.Forms.ContextMenuStrip TrayRClick;
-        private System.Windows.Forms.ToolStripMenuItem showMainWindowSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TrayRC_ShowMain;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem quitQToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TrayRC_Quit;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem ToolStripQuit;
         private System.Windows.Forms.TableLayoutPanel ButtonsPunel;
@@ -327,8 +327,8 @@ namespace WorkhubForWindows
         private System.Windows.Forms.ToolStripMenuItem deleteDToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel ListViewPanel;
         private System.Windows.Forms.PictureBox HalfModebackimg;
-        private System.Windows.Forms.ToolStripMenuItem settingsSToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addItemAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TrayRC_Settings;
+        private System.Windows.Forms.ToolStripMenuItem TrayRC_AddItem;
     }
 }
 

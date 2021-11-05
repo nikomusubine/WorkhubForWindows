@@ -223,6 +223,12 @@ namespace WorkhubForWindows
             Ribbon_Settings.Text = StaticClasses.Langs.Mainwindow.RibbonFiles.Settings;
             ToolStripShowWidget.Text = StaticClasses.Langs.Mainwindow.RibbonFiles.ShowWidget;
             ToolStripQuit.Text = StaticClasses.Langs.Mainwindow.RibbonFiles.Quit;
+            TrayRC_ShowMain.Text = StaticClasses.Langs.Mainwindow.TasktrayIcon.ShowMainWindow;
+            TrayRC_ShowWidget.Text = StaticClasses.Langs.Mainwindow.TasktrayIcon.ShowWidget;
+            TrayRC_Settings.Text = StaticClasses.Langs.Mainwindow.TasktrayIcon.Settings;    
+            TrayRC_AddItem.Text = StaticClasses.Langs.Mainwindow.TasktrayIcon.AddItem;
+            TrayRC_Quit.Text = StaticClasses.Langs.Mainwindow.TasktrayIcon.Quit;
+
         }
         #endregion
         #region WinMsg

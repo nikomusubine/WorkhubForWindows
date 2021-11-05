@@ -39,6 +39,10 @@
             this.ButtonApply = new System.Windows.Forms.Button();
             this.ButtonCancel = new System.Windows.Forms.Button();
             this.RefDiag = new System.Windows.Forms.OpenFileDialog();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // ItemnameLabel
@@ -87,8 +91,8 @@
             // 
             // ButtonCancel
             // 
-            this.ButtonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             resources.ApplyResources(this.ButtonCancel, "ButtonCancel");
+            this.ButtonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ButtonCancel.Name = "ButtonCancel";
             this.ButtonCancel.UseVisualStyleBackColor = true;
             this.ButtonCancel.Click += new System.EventHandler(this.CancelClick);
@@ -98,24 +102,39 @@
             this.RefDiag.FileName = "RefrenceFile";
             resources.ApplyResources(this.RefDiag, "RefDiag");
             // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.ItemnameLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ItemNameBox, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.CmdArgsBox, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.FilepathLabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.CmdArgsLabel, 0, 2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
+            // tableLayoutPanel2
+            // 
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
+            this.tableLayoutPanel2.Controls.Add(this.ButtonReference, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.FilePathBox, 0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            // 
             // AddItemForm
             // 
             this.AcceptButton = this.ButtonApply;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.ButtonCancel;
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.ButtonCancel);
             this.Controls.Add(this.ButtonApply);
-            this.Controls.Add(this.CmdArgsBox);
-            this.Controls.Add(this.CmdArgsLabel);
-            this.Controls.Add(this.ButtonReference);
-            this.Controls.Add(this.FilePathBox);
-            this.Controls.Add(this.FilepathLabel);
-            this.Controls.Add(this.ItemNameBox);
-            this.Controls.Add(this.ItemnameLabel);
             this.Name = "AddItemForm";
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -131,5 +150,7 @@
         private System.Windows.Forms.Button ButtonApply;
         private System.Windows.Forms.Button ButtonCancel;
         private System.Windows.Forms.OpenFileDialog RefDiag;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }

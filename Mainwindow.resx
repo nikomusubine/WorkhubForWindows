@@ -128,31 +128,31 @@
     <value>17, 17</value>
   </metadata>
   <data name="Ribbon_Settings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>224, 26</value>
   </data>
   <data name="Ribbon_Settings.Text" xml:space="preserve">
     <value>Settings(&amp;S)</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
+    <value>221, 6</value>
   </data>
   <data name="ToolStripShowWidget.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>224, 26</value>
   </data>
   <data name="ToolStripShowWidget.Text" xml:space="preserve">
     <value>Show Widget(&amp;W)</value>
   </data>
   <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 6</value>
+    <value>221, 6</value>
   </data>
   <data name="ToolStripQuit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>224, 26</value>
   </data>
   <data name="ToolStripQuit.Text" xml:space="preserve">
     <value>Quit(&amp;Q)</value>
   </data>
   <data name="RibbonFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 20</value>
+    <value>69, 24</value>
   </data>
   <data name="RibbonFiles.Text" xml:space="preserve">
     <value>Files(&amp;F)</value>
@@ -162,10 +162,10 @@
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Ribbon.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 2, 0, 2</value>
+    <value>5, 2, 0, 2</value>
   </data>
   <data name="Ribbon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>484, 24</value>
+    <value>645, 28</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Ribbon.TabIndex" type="System.Int32, mscorlib">
@@ -192,44 +192,44 @@
   <metadata name="TrayRClick.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>344, 17</value>
   </metadata>
-  <data name="showMainWindowSToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 22</value>
+  <data name="TrayRC_ShowMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 24</value>
   </data>
-  <data name="showMainWindowSToolStripMenuItem.Text" xml:space="preserve">
+  <data name="TrayRC_ShowMain.Text" xml:space="preserve">
     <value>ShowMainWindow(&amp;M)</value>
   </data>
   <data name="TrayRC_ShowWidget.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 22</value>
+    <value>225, 24</value>
   </data>
   <data name="TrayRC_ShowWidget.Text" xml:space="preserve">
     <value>Show Widget(&amp;W)</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 6</value>
+    <value>222, 6</value>
   </data>
-  <data name="settingsSToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 22</value>
+  <data name="TrayRC_Settings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 24</value>
   </data>
-  <data name="settingsSToolStripMenuItem.Text" xml:space="preserve">
+  <data name="TrayRC_Settings.Text" xml:space="preserve">
     <value>Settings(&amp;S)</value>
   </data>
-  <data name="addItemAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 22</value>
+  <data name="TrayRC_AddItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 24</value>
   </data>
-  <data name="addItemAToolStripMenuItem.Text" xml:space="preserve">
+  <data name="TrayRC_AddItem.Text" xml:space="preserve">
     <value>Add item(&amp;A)</value>
   </data>
   <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 6</value>
+    <value>222, 6</value>
   </data>
-  <data name="quitQToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 22</value>
+  <data name="TrayRC_Quit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 24</value>
   </data>
-  <data name="quitQToolStripMenuItem.Text" xml:space="preserve">
+  <data name="TrayRC_Quit.Text" xml:space="preserve">
     <value>Quit(&amp;Q)</value>
   </data>
   <data name="TrayRClick.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 126</value>
+    <value>226, 164</value>
   </data>
   <data name="&gt;&gt;TrayRClick.Name" xml:space="preserve">
     <value>TrayRClick</value>
@@ -543,13 +543,13 @@
     <value>NoControl</value>
   </data>
   <data name="AddItemButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 4</value>
+    <value>13, 5</value>
   </data>
   <data name="AddItemButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="AddItemButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 19</value>
+    <value>75, 24</value>
   </data>
   <data name="AddItemButton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -576,13 +576,13 @@
     <value>NoControl</value>
   </data>
   <data name="StartButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 4</value>
+    <value>218, 5</value>
   </data>
   <data name="StartButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="StartButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 19</value>
+    <value>75, 24</value>
   </data>
   <data name="StartButton.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -609,13 +609,13 @@
     <value>NoControl</value>
   </data>
   <data name="EditButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 4</value>
+    <value>115, 5</value>
   </data>
   <data name="EditButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="EditButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 19</value>
+    <value>75, 24</value>
   </data>
   <data name="EditButton.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -636,7 +636,7 @@
     <value>2</value>
   </data>
   <data name="ButtonsPunel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 389</value>
+    <value>0, 486</value>
   </data>
   <data name="ButtonsPunel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -645,7 +645,7 @@
     <value>1</value>
   </data>
   <data name="ButtonsPunel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 28</value>
+    <value>308, 35</value>
   </data>
   <data name="ButtonsPunel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -672,25 +672,25 @@
     <value>470, 17</value>
   </metadata>
   <data name="addAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 22</value>
+    <value>143, 24</value>
   </data>
   <data name="addAToolStripMenuItem.Text" xml:space="preserve">
     <value>Add(&amp;A)</value>
   </data>
   <data name="editEToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 22</value>
+    <value>143, 24</value>
   </data>
   <data name="editEToolStripMenuItem.Text" xml:space="preserve">
     <value>Edit(&amp;E)</value>
   </data>
   <data name="deleteDToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 22</value>
+    <value>143, 24</value>
   </data>
   <data name="deleteDToolStripMenuItem.Text" xml:space="preserve">
     <value>Delete(&amp;D)</value>
   </data>
   <data name="ApplistRClick.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 70</value>
+    <value>144, 76</value>
   </data>
   <data name="&gt;&gt;ApplistRClick.Name" xml:space="preserve">
     <value>ApplistRClick</value>
@@ -705,7 +705,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="Apps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 389</value>
+    <value>308, 486</value>
   </data>
   <data name="Apps.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -738,7 +738,7 @@
     <value>1</value>
   </data>
   <data name="ListViewPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 0</value>
+    <value>307, 0</value>
   </data>
   <data name="ListViewPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -747,7 +747,7 @@
     <value>2</value>
   </data>
   <data name="ListViewPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 417</value>
+    <value>308, 521</value>
   </data>
   <data name="ListViewPanel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -765,7 +765,7 @@
     <value>0</value>
   </data>
   <data name="ListViewPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonsPunel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Apps" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,100,Absolute,28,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonsPunel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Apps" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,100,Absolute,35,Absolute,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="HalfModebackimg.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -780,7 +780,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="HalfModebackimg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 417</value>
+    <value>307, 521</value>
   </data>
   <data name="HalfModebackimg.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -798,13 +798,16 @@
     <value>1</value>
   </data>
   <data name="HomePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 27</value>
+    <value>16, 34</value>
+  </data>
+  <data name="HomePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="HomePanel.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="HomePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>461, 417</value>
+    <value>615, 521</value>
   </data>
   <data name="HomePanel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -828,7 +831,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
+    <value>8, 15</value>
   </data>
   <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -837,7 +840,7 @@
     <value>Zoom</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>484, 456</value>
+    <value>645, 570</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1126,6 +1129,9 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
     <value>WorkhubForWindows</value>
   </data>
@@ -1177,10 +1183,10 @@
   <data name="&gt;&gt;TrayIcon.Type" xml:space="preserve">
     <value>System.Windows.Forms.NotifyIcon, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;showMainWindowSToolStripMenuItem.Name" xml:space="preserve">
-    <value>showMainWindowSToolStripMenuItem</value>
+  <data name="&gt;&gt;TrayRC_ShowMain.Name" xml:space="preserve">
+    <value>TrayRC_ShowMain</value>
   </data>
-  <data name="&gt;&gt;showMainWindowSToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;TrayRC_ShowMain.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;TrayRC_ShowWidget.Name" xml:space="preserve">
@@ -1195,16 +1201,16 @@
   <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;settingsSToolStripMenuItem.Name" xml:space="preserve">
-    <value>settingsSToolStripMenuItem</value>
+  <data name="&gt;&gt;TrayRC_Settings.Name" xml:space="preserve">
+    <value>TrayRC_Settings</value>
   </data>
-  <data name="&gt;&gt;settingsSToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;TrayRC_Settings.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;addItemAToolStripMenuItem.Name" xml:space="preserve">
-    <value>addItemAToolStripMenuItem</value>
+  <data name="&gt;&gt;TrayRC_AddItem.Name" xml:space="preserve">
+    <value>TrayRC_AddItem</value>
   </data>
-  <data name="&gt;&gt;addItemAToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;TrayRC_AddItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem4.Name" xml:space="preserve">
@@ -1213,10 +1219,10 @@
   <data name="&gt;&gt;toolStripMenuItem4.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;quitQToolStripMenuItem.Name" xml:space="preserve">
-    <value>quitQToolStripMenuItem</value>
+  <data name="&gt;&gt;TrayRC_Quit.Name" xml:space="preserve">
+    <value>TrayRC_Quit</value>
   </data>
-  <data name="&gt;&gt;quitQToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;TrayRC_Quit.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;addAToolStripMenuItem.Name" xml:space="preserve">

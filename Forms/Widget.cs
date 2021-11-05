@@ -14,7 +14,7 @@ namespace WorkhubForWindows
     public partial class Widget : Form
     {
 
-       // private static int lngWnP;
+        // private static int lngWnP;
         public Widget()
         {
             InitializeComponent();
@@ -23,14 +23,16 @@ namespace WorkhubForWindows
             this.AcceptButton = appcall;
             appcall.Click += appstartcall;
             this.FormClosing += Form_Closing;
-            
+
             Backgroundset();
             //AddWindowHandler
-            StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle,"Widget"));
+            StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle, "Widget"));
             LoadLanguage();
+
+          //  Application.AddMessageFilter(MsgFilter);
         }
 
-        private void ShowWidget(object sender,EventArgs e)
+        private void ShowWidget(object sender, EventArgs e)
         {
             this.LoadConfig();
             Backgroundset();
@@ -114,7 +116,7 @@ namespace WorkhubForWindows
         {
             try
             {
-                this.applistview.BackColor = StaticClasses.Config.WidgetBackColor; 
+                this.applistview.BackColor = StaticClasses.Config.WidgetBackColor;
             }
             catch
             {
@@ -171,7 +173,7 @@ namespace WorkhubForWindows
             }
 
         }
-       
+
         void LoadConfig()
         {
             this.Font = new Font(StaticClasses.Config.font.Name, StaticClasses.Config.font.Size);
@@ -198,13 +200,13 @@ namespace WorkhubForWindows
 
         void LoadLanguage()
         {
-            if(StaticClasses.Langs.Widget.WidgetRC.FixWidgetPos!=null)
+            if (StaticClasses.Langs.Widget.WidgetRC.FixWidgetPos != null)
             {
                 this.FixWidgetPos.Text = StaticClasses.Langs.Widget.WidgetRC.FixWidgetPos;
             }
         }
         #endregion
-          
+
         #region Move Window
         private Point mousePoint;
 
@@ -348,19 +350,27 @@ namespace WorkhubForWindows
         public const int WM_COPYDATA = 0x4A;
         public const int WM_USER = 0x400;
 
-        // ウィンドウに来たメッセージを振り分ける関数
+
         protected override void WndProc(ref Message m)
         {
+            try
+            {
+                base.WndProc(ref m);
+            }
+            catch (ArgumentException)
+            {
+
+            }
             switch (m.Msg)
             {
                 case StaticClasses.WorkHubMessages.ConfigChanged:
-                        this.LoadConfig();
+                    LoadConfig();
                     break;
                 case StaticClasses.WorkHubMessages.AppListChanged:
                     initalizeapplistview();
                     break;
                 case StaticClasses.WorkHubMessages.WidgetConfigChanged:
-                        this.LoadConfig();
+                    this.LoadConfig();
                     break;
                 case StaticClasses.WorkHubMessages.WidgetBackgroundSet:
                     Backgroundset();
@@ -374,17 +384,46 @@ namespace WorkhubForWindows
                 default:
                     break;
             }
-            try
-            {
-                base.WndProc(ref m);
-            }
-            catch (Exception)
-            {
-
-            }
         }
 
 
         #endregion
     }
+    /*
+    struct MsgandFunction
+    {
+        int hWnd;
+
+    }
+    public class MsgFilter : IMessageFilter
+    {
+        public bool PreFilterMessage(ref Message m,)
+        {
+            switch (m.Msg)
+            {
+                case StaticClasses.WorkHubMessages.ConfigChanged:
+                    LoadConfig();
+                    break;
+                case StaticClasses.WorkHubMessages.AppListChanged:
+                    initalizeapplistview();
+                    break;
+                case StaticClasses.WorkHubMessages.WidgetConfigChanged:
+                    this.LoadConfig();
+                    break;
+                case StaticClasses.WorkHubMessages.WidgetBackgroundSet:
+                    Backgroundset();
+                    break;
+                case StaticClasses.WorkHubMessages.LanguagePackLoad:
+                    LoadLanguage();
+                    break;
+                case StaticClasses.WorkHubMessages.ApplicationQuit:
+                    App_Closing();
+                    break;
+                default:
+                    break;
+            }
+            return false;
+        }
+    }
+    */
 }
