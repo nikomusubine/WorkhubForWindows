@@ -211,6 +211,7 @@
             resources.ApplyResources(this.ResetWidgetPosition, "ResetWidgetPosition");
             this.ResetWidgetPosition.Name = "ResetWidgetPosition";
             this.ResetWidgetPosition.UseVisualStyleBackColor = true;
+            this.ResetWidgetPosition.Click += new System.EventHandler(this.ResetWidgetPosition_Clicked);
             // 
             // SettingsTab
             // 

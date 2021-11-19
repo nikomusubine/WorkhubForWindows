@@ -231,6 +231,18 @@ namespace WorkhubForWindows.Forms
             }
         }
 
+        private void ResetWidgetPosition_Clicked(object sender,EventArgs e)
+        {
+            StaticClasses.Config.WidgetPosition = new Vector2(0, 0);
+            foreach (var i in StaticClasses.WindowHandler.WindowHandlers)
+            {
+                if (i.Name == "Widget")
+                {
+                    Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.WidgetConfigChanged, 0, 0);
+                }
+            }
+        }
+
         #region Apply or Cancel
         private void ApplyClicked(object sender, EventArgs e)
         {

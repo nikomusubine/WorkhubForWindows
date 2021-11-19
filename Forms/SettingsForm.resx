@@ -190,7 +190,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="OpacityBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 32</value>
+    <value>173, 42</value>
   </data>
   <data name="OpacityBar.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -376,7 +376,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 36</value>
+    <value>160, 46</value>
   </data>
   <data name="tableLayoutPanel7.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -406,7 +406,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>764, 36</value>
+    <value>764, 46</value>
   </data>
   <data name="tableLayoutPanel6.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -499,7 +499,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 28</value>
+    <value>0, 27</value>
   </data>
   <data name="tableLayoutPanel9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -508,7 +508,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>764, 28</value>
+    <value>764, 27</value>
   </data>
   <data name="tableLayoutPanel9.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -568,7 +568,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 56</value>
+    <value>0, 54</value>
   </data>
   <data name="tableLayoutPanel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -577,7 +577,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>764, 120</value>
+    <value>764, 32</value>
   </data>
   <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -613,7 +613,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>764, 28</value>
+    <value>764, 27</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -634,7 +634,7 @@
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="WidgetForeColorLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="WidgetForeColorChangeButton" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,19.67044,Percent,80.32956" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 36</value>
+    <value>0, 46</value>
   </data>
   <data name="tableLayoutPanel8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -643,7 +643,7 @@
     <value>3</value>
   </data>
   <data name="tableLayoutPanel8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>764, 176</value>
+    <value>764, 80</value>
   </data>
   <data name="tableLayoutPanel8.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -661,7 +661,31 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel8.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel9" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel2" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,28,Absolute,28,Absolute,28" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel9" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel2" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,27,Absolute,27,Absolute,32" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="ResetWidgetPosition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 129</value>
+  </data>
+  <data name="ResetWidgetPosition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 31</value>
+  </data>
+  <data name="ResetWidgetPosition.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ResetWidgetPosition.Text" xml:space="preserve">
+    <value>Reset Widget Position</value>
+  </data>
+  <data name="&gt;&gt;ResetWidgetPosition.Name" xml:space="preserve">
+    <value>ResetWidgetPosition</value>
+  </data>
+  <data name="&gt;&gt;ResetWidgetPosition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ResetWidgetPosition.Parent" xml:space="preserve">
+    <value>tableLayoutPanel5</value>
+  </data>
+  <data name="&gt;&gt;ResetWidgetPosition.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="tableLayoutPanel5.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -670,10 +694,10 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="tableLayoutPanel5.RowCount" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tableLayoutPanel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>764, 212</value>
+    <value>764, 359</value>
   </data>
   <data name="tableLayoutPanel5.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -691,7 +715,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel5.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel6" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel8" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50" /&gt;&lt;Rows Styles="Percent,17.14286,Percent,82.85714" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="tableLayoutPanel6" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="tableLayoutPanel8" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ResetWidgetPosition" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50" /&gt;&lt;Rows Styles="Percent,36.50794,Percent,63.49206,Absolute,232" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="SettingsTab.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -724,7 +748,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="FontLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>207, 28</value>
+    <value>206, 28</value>
   </data>
   <data name="FontLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -748,13 +772,13 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="FontNames.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 4</value>
+    <value>214, 4</value>
   </data>
   <data name="FontNames.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="FontNames.Size" type="System.Drawing.Size, System.Drawing">
-    <value>452, 23</value>
+    <value>450, 23</value>
   </data>
   <data name="FontNames.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -775,13 +799,13 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="FontSizeBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>675, 4</value>
+    <value>672, 4</value>
   </data>
   <data name="FontSizeBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="FontSizeBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 22</value>
+    <value>88, 22</value>
   </data>
   <data name="FontSizeBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -826,7 +850,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="FontLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="FontNames" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="FontSizeBox" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,31.42857,Percent,68.57143,Absolute,92" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="FontLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="FontNames" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="FontSizeBox" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,31.42857,Percent,68.57143,Absolute,95" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>

@@ -12,9 +12,27 @@ using WorkhubForWindows.Functions;
 using System.Runtime.InteropServices;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Windows.Forms;
 
 namespace WorkhubForWindows
 {
+    public struct Vector2
+    {
+        public Vector2(int x,int y)
+        {
+            X = x;
+            Y = y;
+        }
+
+        public int X;
+        public int Y;
+
+        public static implicit operator Point(Vector2 v)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     public class Executable
     {
         public Executable(Executable executable)
@@ -338,6 +356,18 @@ namespace WorkhubForWindows
             {
                 __WidgetAlwaysDisplayTop = value;
                 SendWidgetConfigChanged();
+            }
+        }
+        private List<Keys> __WidgetShortcutKey = new List<Keys> { Keys.Control, Keys.Shift, Keys.Alt, Keys.W };
+        public List<Keys> WidgetShortcutKey
+        {
+            get
+            {
+                return __WidgetShortcutKey;
+            }
+            set
+            {
+                __WidgetShortcutKey = value;
             }
         }
         private HomeMode __Homemode = HomeMode.HalfHome;

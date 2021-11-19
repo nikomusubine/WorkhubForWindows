@@ -45,10 +45,7 @@ namespace WorkhubForWindows
 
         private void appstartcall(object sender, EventArgs e)
         {
-            if (applistview.SelectedIndices.Count != 0)
-            {
-                Functions.Application.StartProcess(StaticClasses.Executables[applistview.SelectedIndices[0]]);
-            }   
+            Functions.Application.StartProcess(StaticClasses.Executables[applistview.SelectedIndices[0]]);
         }
 
         private void Form_Closing(object sender, System.ComponentModel.CancelEventArgs e)
