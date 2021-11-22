@@ -44,9 +44,7 @@ namespace WorkhubForWindows.Forms
         {
             if (Applist.SelectedIndices.Count != 0)
             {
-                StaticClasses.Executables[Applist.SelectedIndices[0]].Name = NameBox.Text;
-                StaticClasses.Executables[Applist.SelectedIndices[0]].Path = PathBox.Text;
-                StaticClasses.Executables[Applist.SelectedIndices[0]].Argments = ArgsBox.Text;
+                StaticClasses.Executables[Applist.SelectedIndices[0]] = new Executable(NameBox.Text, PathBox.Text, ArgsBox.Text);
             }
             this.Close();
         }
@@ -59,9 +57,7 @@ namespace WorkhubForWindows.Forms
             }
             else
             {
-                StaticClasses.Executables[Applist.SelectedIndices[0]].Name = NameBox.Text;
-                StaticClasses.Executables[Applist.SelectedIndices[0]].Path = PathBox.Text;
-                StaticClasses.Executables[Applist.SelectedIndices[0]].Argments = ArgsBox.Text;
+                StaticClasses.Executables[Applist.SelectedIndices[0]] = new Executable(NameBox.Text, PathBox.Text, ArgsBox.Text);
             }
         }
 

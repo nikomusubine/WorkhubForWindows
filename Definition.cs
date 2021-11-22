@@ -33,8 +33,16 @@ namespace WorkhubForWindows
         }
     }
 
-    public class Executable
+    public struct Executable
     {
+        public Executable(string name, string path, string args)
+        {
+            Name = name;
+            Path = path;
+            Argments = args;
+            point = new Point(0, 0);
+        }
+
         public Executable(Executable executable)
         {
             Name = executable.Name;
@@ -43,10 +51,10 @@ namespace WorkhubForWindows
             point = executable.point;
         }
 
-        public Executable()
+        /*public Executable()
         {
 
-        }
+        }*/
 
         public string Name;
         public string Path;
