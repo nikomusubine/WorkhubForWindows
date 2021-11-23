@@ -103,7 +103,7 @@ namespace WorkhubForWindows.Forms
         {
             if (Applist.SelectedIndices.Count != 0)
             {
-                if (Applist.SelectedIndices[0] != Applist.SelectedIndices.Count - 1)
+                if (Applist.SelectedIndices[0] != Applist.Items.Count - 1)
                 {
                     Executable tmp = new Executable(StaticClasses.Executables[Applist.SelectedIndices[0]]);
                     StaticClasses.Executables.Remove(StaticClasses.Executables[Applist.SelectedIndices[0]]);
