@@ -1,10 +1,4 @@
-
-bin/Debug/Config/Config.xml
-bin/Debug/Config/Applications.xml
-bin/Debug
-bin/Release
-bin/Release/Config/Applications.xml
-bin/Release/Config/Applications.xml
+bin/
 *.vcxproj.user
 *.suo
 *.sdf
