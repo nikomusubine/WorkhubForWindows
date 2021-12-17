@@ -1,4 +1,9 @@
-bin/
+bin/*
+obj/*
 *.vcxproj.user
 *.suo
 *.sdf
+.vs/WorkhubForWindows/v16/.suo
+.vs/WorkhubForWindows/project-colors.json
+.vs/WorkhubForWindows/v16/.suo
+.vs/WorkhubForWindows/v16/.suo
