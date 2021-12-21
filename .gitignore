@@ -7,3 +7,7 @@ obj/*
 .vs/WorkhubForWindows/project-colors.json
 .vs/WorkhubForWindows/v16/.suo
 .vs/WorkhubForWindows/v16/.suo
+*.pdb
+*.exe
+*.cache
+*.dll

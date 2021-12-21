@@ -44,6 +44,7 @@ namespace WorkhubForWindows.Forms
         #region EventHandlers
         private void Settings_Load(object sender, EventArgs e)
         {
+            this.Font = StaticClasses.Config.font;
             // プロジェクト＞プロパティ＞アセンブリ情報　で指定した「タイトル」を取得
             var assembly = Assembly.GetExecutingAssembly();
             var attribute = Attribute.GetCustomAttribute(
@@ -350,5 +351,17 @@ namespace WorkhubForWindows.Forms
             }
         }
         #endregion
+            
+        private void ResetWidgetPosition_Click(object sender, EventArgs e)
+        {
+            foreach(var i in StaticClasses.WindowHandler.WindowHandlers)
+            {
+                if (i.Name == "Widget")
+                {
+                    Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.WidgetPositionReset, 0, 0);
+                    StaticClasses.Config.WidgetPosition = new Point(0, 0);
+                }
+            }
+        }
     }
 }

@@ -16,6 +16,7 @@ namespace WorkhubForWindows.Forms
         {
             InitializeComponent();
             this.FormClosed += WindowClosed;
+            this.Font = StaticClasses.Config.font;
             LoadLanguage();
         }
         #region Event Handlers

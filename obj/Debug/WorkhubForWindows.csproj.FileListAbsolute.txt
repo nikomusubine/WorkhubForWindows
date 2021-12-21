@@ -1,4 +1,3 @@
-D:\Program DATA\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.csprojAssemblyReference.cache
 D:\Program DATA\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.Mainwindow.resources
 D:\Program DATA\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.Properties.Resources.resources
 D:\Program DATA\Github\Nikochan\WorkhubForWindows\obj\Debug\WorkhubForWindows.csproj.GenerateResource.cache
@@ -70,3 +69,5 @@ D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.Fo
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.Forms.EditItem.ja.resources
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\ja-JP\WorkhubForWindows.resources.dll
 D:\Program DATA\Github\Nikochan\WorkHubForWindows\bin\Debug\Languages\日本語.xml
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.csproj.AssemblyReference.cache
+D:\Program DATA\Github\Nikochan\WorkHubForWindows\obj\Debug\WorkhubForWindows.csproj.SuggestedBindingRedirects.cache

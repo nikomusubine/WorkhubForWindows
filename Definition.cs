@@ -88,6 +88,13 @@ namespace WorkhubForWindows
 
         public string Name { get; set; }
         public float Size { get; set; }
+
+        public static implicit operator Font(OwnFont font)
+        {
+            return new Font(font.Name, font.Size);
+        }
+
+
     }
     
     public enum HomeMode
@@ -502,6 +509,7 @@ namespace WorkhubForWindows
             public const int WidgetConfigChanged = 0x2502;
             public const int WidgetBackgroundSet = 0x2503;
             public const int LanguagePackLoad = 0x2504;
+            public const int WidgetPositionReset = 0x2505;
             public const int ApplicationQuit = 0x2510;
         }
 

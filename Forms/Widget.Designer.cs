@@ -34,7 +34,9 @@
             this.RCMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.FixWidgetPos = new System.Windows.Forms.ToolStripMenuItem();
             this.IconList = new System.Windows.Forms.ImageList(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.RCMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // applistview
@@ -77,16 +79,23 @@
             resources.ApplyResources(this.IconList, "IconList");
             this.IconList.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // panel1
+            // 
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Controls.Add(this.applistview);
+            this.panel1.Name = "panel1";
+            // 
             // Widget
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.applistview);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Widget";
             this.Shown += new System.EventHandler(this.ShowWidget);
             this.DoubleClick += new System.EventHandler(this.appstartcall);
             this.RCMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -96,5 +105,6 @@
         public System.Windows.Forms.ListView applistview;
         private System.Windows.Forms.ContextMenuStrip RCMenu;
         private System.Windows.Forms.ToolStripMenuItem FixWidgetPos;
+        private System.Windows.Forms.Panel panel1;
     }
 }

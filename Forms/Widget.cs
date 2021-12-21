@@ -13,16 +13,20 @@ namespace WorkhubForWindows
 {
     public partial class Widget : Form
     {
-
         // private static int lngWnP;
         public Widget()
         {
+
             InitializeComponent();
             initalizeapplistview();
             Button appcall = new Button();
             this.AcceptButton = appcall;
             appcall.Click += appstartcall;
             this.FormClosing += Form_Closing;
+
+            int ScrollBW = new VScrollBar().Width;
+            this.Size = new Size(this.Size.Width + ScrollBW, this.Size.Height);
+            this.applistview.Size = new Size(this.applistview.Size.Width + ScrollBW, this.applistview.Size.Height);
 
             Backgroundset();
             //AddWindowHandler
@@ -89,6 +93,7 @@ namespace WorkhubForWindows
             this.StartPosition = FormStartPosition.Manual;
             this.Size = StaticClasses.Config.WidgetSize;
             this.applistview.Size = StaticClasses.Config.WidgetSize;
+            this.Font = StaticClasses.Config.font;
 
             FixWidgetPos.Checked = StaticClasses.Config.LockWidget;
             for (int i = 0; i != StaticClasses.Executables.Count; i++)
@@ -107,7 +112,7 @@ namespace WorkhubForWindows
                 applistview.Items[applistview.Items.Count - 1].ImageIndex = applistview.Items.Count - 1;
             }
 
-
+                    
         }
 
         private Image ResizeImage(Image imgToResize, Size size)
@@ -378,6 +383,9 @@ namespace WorkhubForWindows
                 case StaticClasses.WorkHubMessages.WidgetBackgroundSet:
                     Backgroundset();
                     break;
+                case StaticClasses.WorkHubMessages.WidgetPositionReset:
+                    this.Location = new Point(0, 0);
+                    break;
                 case StaticClasses.WorkHubMessages.LanguagePackLoad:
                     LoadLanguage();
                     break;
@@ -429,4 +437,5 @@ namespace WorkhubForWindows
         }
     }
     */
+
 }
