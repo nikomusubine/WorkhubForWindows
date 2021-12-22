@@ -184,6 +184,7 @@ namespace WorkhubForWindows
             public string Label_WidgetTextColor;
             public string Label_WidgetBackColor;
             public string Label_WidgetSCKey;
+            public string Label_WidgetSize;
             public string Tab_General;
             public string Tab_Widget;
             public string Button_Apply;
@@ -348,7 +349,7 @@ namespace WorkhubForWindows
                 __WidgetSize = value;
             }
         }
-        private Point __WidgetPosition = new Point(0, 0);
+        private Point __WidgetPosition = new Point(400, 375);
         public Point WidgetPosition
         {
             get

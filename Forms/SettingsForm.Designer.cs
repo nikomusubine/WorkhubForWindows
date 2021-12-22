@@ -69,6 +69,10 @@
             this.LanguageLabel = new System.Windows.Forms.Label();
             this.LanguageBox = new System.Windows.Forms.ComboBox();
             this.Widget = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.WidgetSizeLabel = new System.Windows.Forms.Label();
+            this.WidgetSizeBar = new System.Windows.Forms.TrackBar();
+            this.WidgetSizeBox = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBox)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
@@ -85,6 +89,9 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.Widget.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBox)).BeginInit();
             this.SuspendLayout();
             // 
             // ApplyButton
@@ -167,6 +174,7 @@
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel2, 0, 2);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel1, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel11, 0, 3);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             // 
             // tableLayoutPanel9
@@ -339,6 +347,49 @@
             this.Widget.Name = "Widget";
             this.Widget.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel11
+            // 
+            resources.ApplyResources(this.tableLayoutPanel11, "tableLayoutPanel11");
+            this.tableLayoutPanel11.Controls.Add(this.WidgetSizeLabel, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.WidgetSizeBar, 2, 0);
+            this.tableLayoutPanel11.Controls.Add(this.WidgetSizeBox, 1, 0);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            // 
+            // WidgetSizeLabel
+            // 
+            resources.ApplyResources(this.WidgetSizeLabel, "WidgetSizeLabel");
+            this.WidgetSizeLabel.Name = "WidgetSizeLabel";
+            // 
+            // WidgetSizeBar
+            // 
+            resources.ApplyResources(this.WidgetSizeBar, "WidgetSizeBar");
+            this.WidgetSizeBar.Maximum = 1000;
+            this.WidgetSizeBar.Minimum = 50;
+            this.WidgetSizeBar.Name = "WidgetSizeBar";
+            this.WidgetSizeBar.Value = 50;
+            this.WidgetSizeBar.ValueChanged += new System.EventHandler(this.WidgetSizeBarChanged);
+            // 
+            // WidgetSizeBox
+            // 
+            resources.ApplyResources(this.WidgetSizeBox, "WidgetSizeBox");
+            this.WidgetSizeBox.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.WidgetSizeBox.Minimum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.WidgetSizeBox.Name = "WidgetSizeBox";
+            this.WidgetSizeBox.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.WidgetSizeBox.ValueChanged += new System.EventHandler(this.WidgetSizeBoxChanged);
+            // 
             // SettingsForm
             // 
             this.AcceptButton = this.ApplyButton;
@@ -376,6 +427,10 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
             this.Widget.ResumeLayout(false);
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -422,5 +477,9 @@
         private System.Windows.Forms.Label LanguageLabel;
         private System.Windows.Forms.ComboBox LanguageBox;
         private System.Windows.Forms.Button ResetWidgetPosition;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.Label WidgetSizeLabel;
+        private System.Windows.Forms.TrackBar WidgetSizeBar;
+        private System.Windows.Forms.NumericUpDown WidgetSizeBox;
     }
 }

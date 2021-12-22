@@ -59,6 +59,7 @@
     <Label_WidgetTextColor>ウィジェットの文字色</Label_WidgetTextColor>
     <Label_WidgetBackColor>ウィジェットの背景色</Label_WidgetBackColor>
     <Label_WidgetSCKey>ウィジェット表示のショートカットキー</Label_WidgetSCKey>
+	  <Label_WidgetSize>ウィジェットのサイズ</Label_WidgetSize>
     <Tab_General>全般</Tab_General>
     <Tab_Widget>ウィジェット</Tab_Widget>
     <Button_Apply>適用(&amp;A)</Button_Apply>

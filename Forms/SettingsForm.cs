@@ -231,6 +231,16 @@ namespace WorkhubForWindows.Forms
                 WidgetBackColor = ColorDiag.Color;
             }
         }
+        #region WidgetSizeChanged
+        private void WidgetSizeBoxChanged(object sender,EventArgs e)
+        {
+            WidgetSizeBar.Value = (int)WidgetSizeBox.Value;
+        }
+        private void WidgetSizeBarChanged(object sender, EventArgs e)
+        {
+            WidgetSizeBox.Value = WidgetSizeBar.Value;
+        }
+        #endregion
 
         private void ResetWidgetPosition_Clicked(object sender,EventArgs e)
         {
@@ -256,6 +266,10 @@ namespace WorkhubForWindows.Forms
             StaticClasses.Config.WidgetForeColor = WidgetForeColor;
             StaticClasses.Config.WidgetBackColor = WidgetBackColor;
             StaticClasses.Config.Language = this.LanguageBox.Text;
+
+            float Div = (float)StaticClasses.Config.WidgetSize.Height / StaticClasses.Config.WidgetSize.Width;
+            StaticClasses.Config.WidgetSize = new Size((int)WidgetSizeBox.Value, (int)((int)WidgetSizeBox.Value * Div));
+
             #endregion
             StaticClasses.Config.SaveConfig(StaticClasses.Config);
             StaticClasses.Config.ApplyConfig();
@@ -264,6 +278,8 @@ namespace WorkhubForWindows.Forms
             {
                 Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.LanguagePackLoad, 0, 0);
             }
+
+
             this.Close();
         }
 
@@ -289,6 +305,8 @@ namespace WorkhubForWindows.Forms
 
             WidgetForeColor = StaticClasses.Config.WidgetForeColor;
             WidgetBackColor = StaticClasses.Config.WidgetBackColor;
+            WidgetSizeBox.Value = StaticClasses.Config.WidgetSize.Width;
+            WidgetSizeBar.Value = StaticClasses.Config.WidgetSize.Height;
 
             LanguageBox.Text = StaticClasses.Config.Language;
             foreach (string str in Directory.GetFiles("Languages","*.xml",SearchOption.TopDirectoryOnly))
@@ -340,6 +358,10 @@ namespace WorkhubForWindows.Forms
             if (StaticClasses.Langs.Settings.Label_WidgetSCKey != null)
             {
                 this.WidgetSCKeyLabel.Text = StaticClasses.Langs.Settings.Label_WidgetSCKey;
+            }
+            if (StaticClasses.Langs.Settings.Label_WidgetSize != null)
+            {
+                this.WidgetSizeLabel.Text = StaticClasses.Langs.Settings.Label_WidgetSize;
             }
             if (StaticClasses.Langs.Settings.Button_Cancel != null)
             {
