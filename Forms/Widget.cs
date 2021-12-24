@@ -33,7 +33,7 @@ namespace WorkhubForWindows
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle, "Widget"));
             LoadLanguage();
 
-          //  Application.AddMessageFilter(MsgFilter);
+            //  Application.AddMessageFilter(MsgFilter);
         }
 
         private void ShowWidget(object sender, EventArgs e)
@@ -52,7 +52,7 @@ namespace WorkhubForWindows
             if (applistview.SelectedIndices.Count != 0)
             {
                 Functions.Application.StartProcess(StaticClasses.Executables[applistview.SelectedIndices[0]]);
-            }   
+            }
         }
 
         private void Form_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -108,11 +108,35 @@ namespace WorkhubForWindows
                 Bitmap bmp = Icon.ExtractAssociatedIcon(StaticClasses.Executables[i].Path).ToBitmap();
 
                 IconList.Images.Add(StaticClasses.Executables[i].Name, bmp);
-                applistview.Items.Add(StaticClasses.Executables[i].Name/*.Replace(' ','\n')*/);
+                applistview.Items.Add(EditString(StaticClasses.Executables[i].Name));
                 applistview.Items[applistview.Items.Count - 1].ImageIndex = applistview.Items.Count - 1;
             }
 
-                    
+
+        }
+
+        private string EditString(string String)
+        {
+            string[] str = String.Split(' ');
+            string returnback = str[0];
+
+            for (int i = 1; i != str.Length; i++)
+            {
+                StringBuilder sb = new StringBuilder(returnback);
+                if (returnback.Split('\n')[returnback.Split('\n').Length - 1].Length > 10)
+                {
+                    sb.Append("\n");
+                    sb.Append(str[i]);
+                }
+                else
+                {
+                    sb.Append(" ");
+                    sb.Append(str[i]);
+                }
+                returnback = sb.ToString();
+            }
+
+            return returnback;
         }
 
         private Image ResizeImage(Image imgToResize, Size size)
@@ -190,8 +214,13 @@ namespace WorkhubForWindows
 
             this.Location = StaticClasses.Config.WidgetPosition;
             this.StartPosition = FormStartPosition.Manual;
+            this.MaximumSize = StaticClasses.Config.WidgetSize;
+            this.panel1.MaximumSize = StaticClasses.Config.WidgetSize;
+            applistview.SizeForce(new Size(StaticClasses.Config.WidgetSize.Width + new VScrollBar().Width, StaticClasses.Config.WidgetSize.Height + SystemInformation.HorizontalScrollBarHeight - (int)this.Font.Size));
+            applistview.Location = new Point(0, 0);
             this.Size = StaticClasses.Config.WidgetSize;
             this.applistview.Size = StaticClasses.Config.WidgetSize;
+            this.panel1.Size = StaticClasses.Config.WidgetSize;
 
             FixWidgetPos.Checked = StaticClasses.Config.LockWidget;
 
@@ -399,6 +428,23 @@ namespace WorkhubForWindows
 
 
         #endregion
+    }
+
+    public static class Widget_Expansion
+    {
+        public static void SizeForce(this ListView listView,Size size)
+        {
+            listView.MinimumSize = size;
+            listView.MaximumSize = size;
+            listView.Size = size;
+        }
+
+        public static void SizeForce(this ListView listView, int Width,int Height)
+        {
+            listView.MinimumSize = new Size(Width, Height);
+            listView.MaximumSize = new Size(Width, Height);
+            listView.Size = new Size(Width, Height);
+        }
     }
     /*
     struct MsgandFunction
