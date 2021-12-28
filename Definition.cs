@@ -33,6 +33,21 @@ namespace WorkhubForWindows
         }
     }
 
+    [Serializable]
+    public class Shortcut
+    {
+        public Shortcut(KeyModifiers modifires,Keys key)
+        {
+            Modifires = modifires;
+            keys = key;
+        }
+
+        public KeyModifiers Modifires;
+        public Keys keys;
+
+        
+    }
+
     public struct Executable
     {
         public Executable(string name, string path, string args)
@@ -214,6 +229,7 @@ namespace WorkhubForWindows
 
     }
 
+    [Serializable]
     public class Configure
     {
 
@@ -374,8 +390,49 @@ namespace WorkhubForWindows
                 SendWidgetConfigChanged();
             }
         }
-        private List<Keys> __WidgetShortcutKey = new List<Keys> { Keys.Control, Keys.Shift, Keys.Alt, Keys.W };
-        public List<Keys> WidgetShortcutKey
+
+        private List<string> __WidgetShortcutkey = new List<string>();
+        public List<string> WidgetShortcutkey
+        {
+            get
+            {
+                return __WidgetShortcutkey;
+            }
+            set
+            {
+                __WidgetShortcutkey = value;
+                Shortcut sc = new Shortcut(KeyModifiers.None, Keys.None);
+
+                foreach(var i in value)
+                {
+                    if (i == Keys.Control.ToString())
+                    {
+                        sc.Modifires |= KeyModifiers.Control;
+                    }else if (i == Keys.Shift.ToString())
+                    {
+                        sc.Modifires |= KeyModifiers.Shift;
+                    }
+                    else if(i == Keys.Alt.ToString())
+                    {
+                        sc.Modifires |= KeyModifiers.Alt;
+                    }
+                    else if(i == Keys.LWin.ToString())
+                    {
+                        sc.Modifires |= KeyModifiers.Windows;
+                    }
+                    else
+                    {
+                        Keys.TryParse(i.ToUpper(), out sc.keys);  
+                    }
+                }
+
+                __WidgetShortcutKey = sc;
+            }
+        }
+
+        private Shortcut __WidgetShortcutKey = new Shortcut(KeyModifiers.Control | KeyModifiers.Alt| KeyModifiers.Shift, Keys.W);
+        [XmlIgnore]
+        public Shortcut WidgetShortcutKey
         {
             get
             {
@@ -384,6 +441,26 @@ namespace WorkhubForWindows
             set
             {
                 __WidgetShortcutKey = value;
+
+                __WidgetShortcutkey.Clear();
+                WidgetShortcutkey.Clear();
+                if (Convert.ToBoolean((int)(value.Modifires & KeyModifiers.Alt)))
+                {
+                    __WidgetShortcutkey.Add(KeyModifiers.Alt.ToString());
+                }else if (Convert.ToBoolean((int)(value.Modifires & KeyModifiers.Control)))
+                {
+                    __WidgetShortcutkey.Add(KeyModifiers.Control.ToString());
+                }
+                else if (Convert.ToBoolean((int)(value.Modifires & KeyModifiers.Shift)))
+                {
+                    __WidgetShortcutkey.Add(KeyModifiers.Shift.ToString());
+                }
+                else if (Convert.ToBoolean((int)(value.Modifires & KeyModifiers.Windows)))
+                {
+                    __WidgetShortcutkey.Add(KeyModifiers.Windows.ToString());
+                }
+
+                __WidgetShortcutkey.Add(value.keys.ToString());
             }
         }
         private HomeMode __Homemode = HomeMode.HalfHome;
@@ -483,21 +560,48 @@ namespace WorkhubForWindows
             {
                 return cfg;
             }
-            XmlSerializer serializer = new XmlSerializer(typeof(Configure));
 
-            var xmlSettings = new System.Xml.XmlReaderSettings
+
+        
+
+
+            XmlSerializer serializer = new XmlSerializer(typeof(Configure));
+                var xmlSettings = new System.Xml.XmlReaderSettings
+                {
+                    CheckCharacters = false,
+                };
+                using (var streamReader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "Config\\Config.xml", Encoding.UTF8))
+                using (var xmlReader = System.Xml.XmlReader.Create(streamReader, xmlSettings))
+                {
+                    cfg = (Configure)serializer.Deserialize(xmlReader);
+                }
+
+            if (cfg.WidgetShortcutkey.Count != 0)
             {
-                CheckCharacters = false,
-            };
-            using (var streamReader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "Config\\Config.xml", Encoding.UTF8))
-            using (var xmlReader = System.Xml.XmlReader.Create(streamReader, xmlSettings))
+                List<string> ls = cfg.WidgetShortcutkey;
+                cfg.WidgetShortcutkey = ls;
+            }
+            else
             {
-                cfg = (Configure)serializer.Deserialize(xmlReader);
+                Shortcut sc = cfg.WidgetShortcutKey;
+                cfg.WidgetShortcutKey = sc;
             }
             return cfg;
         }
     }
 
+        [Flags]
+    public enum KeyModifiers
+    {
+        None = 0,
+        Alt = 1,
+        Control = 2,
+        Shift = 4,
+        // Either WINDOWS key was held down. These keys are labeled with the Windows logo.
+        // Keyboard shortcuts that involve the WINDOWS key are reserved for use by the
+        // operating system.
+        Windows = 8
+    }
     public static class StaticClasses
     {
         public static List<Executable> Executables { get; set; } = new List<Executable>();
