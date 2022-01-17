@@ -88,6 +88,7 @@
             // 
             // SettingsTimer
             // 
+            this.SettingsTimer.Enabled = true;
             this.SettingsTimer.Interval = 1000;
             this.SettingsTimer.Tick += new System.EventHandler(this.SettingsTimerTIck);
             // 
