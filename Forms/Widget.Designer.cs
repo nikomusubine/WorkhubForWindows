@@ -35,6 +35,7 @@
             this.FixWidgetPos = new System.Windows.Forms.ToolStripMenuItem();
             this.IconList = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.SettingsTimer = new System.Windows.Forms.Timer(this.components);
             this.RCMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +86,11 @@
             this.panel1.Controls.Add(this.applistview);
             this.panel1.Name = "panel1";
             // 
+            // SettingsTimer
+            // 
+            this.SettingsTimer.Interval = 1000;
+            this.SettingsTimer.Tick += new System.EventHandler(this.SettingsTimerTIck);
+            // 
             // Widget
             // 
             resources.ApplyResources(this, "$this");
@@ -106,5 +112,6 @@
         private System.Windows.Forms.ContextMenuStrip RCMenu;
         private System.Windows.Forms.ToolStripMenuItem FixWidgetPos;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Timer SettingsTimer;
     }
 }

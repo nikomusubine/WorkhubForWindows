@@ -27,6 +27,7 @@ namespace WorkhubForWindows
             public static void StartProcess(WorkhubForWindows.Executable executable, bool RunasAdmin)
             {
                 Process Prs = new Process();
+
                 Prs.StartInfo.FileName = executable.Path;
                 Prs.StartInfo.Arguments = executable.Argments;
                 Prs.StartInfo.UseShellExecute = RunasAdmin;

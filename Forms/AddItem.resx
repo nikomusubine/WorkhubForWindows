@@ -187,7 +187,7 @@
     <value>237, 22</value>
   </data>
   <data name="FilePathBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;FilePathBox.Name" xml:space="preserve">
     <value>FilePathBox</value>
@@ -241,7 +241,7 @@
     <value>95, 25</value>
   </data>
   <data name="ButtonReference.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="ButtonReference.Text" xml:space="preserve">
     <value>Reference</value>
@@ -271,7 +271,7 @@
     <value>337, 22</value>
   </data>
   <data name="CmdArgsBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;CmdArgsBox.Name" xml:space="preserve">
     <value>CmdArgsBox</value>
@@ -325,7 +325,7 @@
     <value>95, 25</value>
   </data>
   <data name="ButtonApply.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="ButtonApply.Text" xml:space="preserve">
     <value>Apply</value>
@@ -355,7 +355,7 @@
     <value>95, 25</value>
   </data>
   <data name="ButtonCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="ButtonCancel.Text" xml:space="preserve">
     <value>Cancel</value>

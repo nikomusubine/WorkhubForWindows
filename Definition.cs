@@ -295,7 +295,7 @@ namespace WorkhubForWindows
             {
                 this.__ShowWidget = value;
 
-                SendWidgetConfigChanged();
+                ShowWidgetChanged();
             }
         }
         public int __MainWindowBackColor;
@@ -519,6 +519,14 @@ namespace WorkhubForWindows
             }
         }
 
+        private void ShowWidgetChanged()
+        {
+            foreach (WorkhubWindowHandler i in StaticClasses.WindowHandler.WindowHandlers)
+            {
+                PostMessage(i.hWnd, StaticClasses.WorkHubMessages.IsWidgetShowChanged, 0, 0);
+            }
+        }
+
         public void SaveConfig(Configure cfg)
         {
             XmlSerializer Serialize = new XmlSerializer(typeof(Configure));
@@ -615,6 +623,7 @@ namespace WorkhubForWindows
             public const int WidgetBackgroundSet = 0x2503;
             public const int LanguagePackLoad = 0x2504;
             public const int WidgetPositionReset = 0x2505;
+            public const int IsWidgetShowChanged = 0x2506;
             public const int ApplicationQuit = 0x2510;
         }
 

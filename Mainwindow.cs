@@ -94,6 +94,11 @@ namespace WorkhubForWindows
             }
         }
 
+        private void RunAsAdminClicked(object sender,EventArgs e)
+        {
+
+        }
+
         private void DeleteClicked(object sender,EventArgs e)
         {
             StaticClasses.Executables.RemoveAt(this.Apps.SelectedIndices[0]);

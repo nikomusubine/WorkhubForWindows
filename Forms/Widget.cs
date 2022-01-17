@@ -75,6 +75,22 @@ namespace WorkhubForWindows
             StaticClasses.Config.ShowWidget = false;
         }
 
+        private void SettingsTimerTIck(object sender,EventArgs e)
+        {
+            if (this.Size!=StaticClasses.Config.WidgetSize)
+            {
+                this.Size = StaticClasses.Config.WidgetSize;
+            }
+
+            if (this.applistview.BackgroundImage == null)
+            {
+                if (StaticClasses.Config.Widgetbackimg != "")
+                {
+                    Backgroundset();
+                }
+            }
+        }
+
         #region Right Click ContextMenu
         private void LockWidget_Click(object sender, EventArgs e)
         {
@@ -161,6 +177,7 @@ namespace WorkhubForWindows
             try
             {
                 this.applistview.BackColor = StaticClasses.Config.WidgetBackColor;
+                this.BackColor = StaticClasses.Config.WidgetBackColor;
             }
             catch
             {
@@ -440,6 +457,16 @@ namespace WorkhubForWindows
                     break;
                 case StaticClasses.WorkHubMessages.LanguagePackLoad:
                     LoadLanguage();
+                    break;
+                case StaticClasses.WorkHubMessages.IsWidgetShowChanged:
+                    if (StaticClasses.Config.ShowWidget)
+                    {
+                        this.Show();
+                    }
+                    else
+                    {
+                        this.Hide();
+                    }
                     break;
                 case StaticClasses.WorkHubMessages.ApplicationQuit:
                     App_Closing();

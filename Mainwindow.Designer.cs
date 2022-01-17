@@ -60,6 +60,7 @@ namespace WorkhubForWindows
             this.HomePanel = new System.Windows.Forms.TableLayoutPanel();
             this.ListViewPanel = new System.Windows.Forms.TableLayoutPanel();
             this.HalfModebackimg = new System.Windows.Forms.PictureBox();
+            this.RunAsAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.Ribbon.SuspendLayout();
             this.TrayRClick.SuspendLayout();
             this.ButtonsPunel.SuspendLayout();
@@ -233,7 +234,8 @@ namespace WorkhubForWindows
             this.ApplistRClick.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addAToolStripMenuItem,
             this.editEToolStripMenuItem,
-            this.deleteDToolStripMenuItem});
+            this.deleteDToolStripMenuItem,
+            this.RunAsAdmin});
             this.ApplistRClick.Name = "ApplistRClick";
             resources.ApplyResources(this.ApplistRClick, "ApplistRClick");
             // 
@@ -275,6 +277,12 @@ namespace WorkhubForWindows
             resources.ApplyResources(this.HalfModebackimg, "HalfModebackimg");
             this.HalfModebackimg.Name = "HalfModebackimg";
             this.HalfModebackimg.TabStop = false;
+            // 
+            // RunAsAdmin
+            // 
+            this.RunAsAdmin.Name = "RunAsAdmin";
+            resources.ApplyResources(this.RunAsAdmin, "RunAsAdmin");
+            this.RunAsAdmin.Click += new System.EventHandler(this.RunAsAdminClicked);
             // 
             // Mainwindow
             // 
@@ -329,6 +337,7 @@ namespace WorkhubForWindows
         private System.Windows.Forms.PictureBox HalfModebackimg;
         private System.Windows.Forms.ToolStripMenuItem TrayRC_Settings;
         private System.Windows.Forms.ToolStripMenuItem TrayRC_AddItem;
+        private System.Windows.Forms.ToolStripMenuItem RunAsAdmin;
     }
 }
 

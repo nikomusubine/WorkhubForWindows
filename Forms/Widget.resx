@@ -157,7 +157,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="applistview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 350</value>
+    <value>382, 303</value>
   </data>
   <data name="applistview.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -204,6 +204,9 @@
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="SettingsTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>225, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -523,6 +526,12 @@
   </data>
   <data name="&gt;&gt;IconList.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SettingsTimer.Name" xml:space="preserve">
+    <value>SettingsTimer</value>
+  </data>
+  <data name="&gt;&gt;SettingsTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Widget</value>
