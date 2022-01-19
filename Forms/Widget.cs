@@ -202,23 +202,19 @@ namespace WorkhubForWindows
                     x = bmp.Width;
                     y = bmp.Height;
                     float ratio;
-                    Task task = Task.Run(() =>
+                    if (bmp.Width / this.Width >= bmp.Height / this.Height) //Width is larger
                     {
-                        if (bmp.Width / this.Width >= bmp.Height / this.Height) //Width is larger
-                        {
-                            ratio = (float)bmp.Width / (float)this.Width;
-                        }
-                        else //Height is larger
-                        {
-                            ratio = (float)bmp.Height / (float)this.Height;
-                        }
+                        ratio = (float)bmp.Width / (float)this.Width;
+                    }
+                    else //Height is larger
+                    {
+                        ratio = (float)bmp.Height / (float)this.Height;
+                    }
 
-                        bmp = (Bitmap)ResizeImage(bmp, new Size((int)(bmp.Width / ratio), (int)(bmp.Height / ratio)));
+                    bmp = (Bitmap)ResizeImage(bmp, new Size((int)(bmp.Width / ratio), (int)(bmp.Height / ratio)));
 
-                        graphics.DrawImage(bmp, background.Width / 2 - bmp.Width / 2, background.Height / 2 - bmp.Height / 2, bmp.Width, bmp.Height);
-                    });
+                    graphics.DrawImage(bmp, background.Width / 2 - bmp.Width / 2, background.Height / 2 - bmp.Height / 2, bmp.Width, bmp.Height);
 
-                    task.Wait();
                     applistview.BackgroundImage = background;
 
                     graphics.Dispose();
