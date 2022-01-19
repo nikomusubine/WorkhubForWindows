@@ -29,27 +29,33 @@ namespace WorkhubForWindows.Forms
             }
         }
 
-        private void ApplyClick(object sender,EventArgs e)
+        private void ApplyClick(object sender, EventArgs e)
         {
-            StaticClasses.Executables.Add
-                (
-                new Executable()
-                {
-                    Name = ItemNameBox.Text,
-                    Path = FilePathBox.Text,
-                    Argments=CmdArgsBox.Text
-                }
-                );
-
-            Functions.Config.Applications.Save(StaticClasses.Executables);
-            foreach (WorkhubWindowHandler i in StaticClasses.WindowHandler.WindowHandlers)
+            if (FilePathBox.Text == "")
             {
-                Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.AppListChanged, 0, 0);
+                MessageBox.Show("You must type the file path!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            this.DialogResult = DialogResult.OK;
+            else
+            {
+                StaticClasses.Executables.Add
+                    (
+                    new Executable()
+                    {
+                        Name = ItemNameBox.Text,
+                        Path = FilePathBox.Text,
+                        Argments = CmdArgsBox.Text
+                    }
+                    );
 
+                Functions.Config.Applications.Save(StaticClasses.Executables);
+                foreach (WorkhubWindowHandler i in StaticClasses.WindowHandler.WindowHandlers)
+                {
+                    Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.AppListChanged, 0, 0);
+                }
+                this.DialogResult = DialogResult.OK;
+
+            }
         }
-
         private void CancelClick(object sender,EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;

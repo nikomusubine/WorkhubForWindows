@@ -178,6 +178,7 @@ namespace WorkhubForWindows
             {
                 this.applistview.BackColor = StaticClasses.Config.WidgetBackColor;
                 this.BackColor = StaticClasses.Config.WidgetBackColor;
+                this.panel1.BackColor = StaticClasses.Config.WidgetBackColor;
             }
             catch
             {
