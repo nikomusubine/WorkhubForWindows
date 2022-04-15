@@ -35,6 +35,7 @@ namespace WorkhubForWindows.Forms
                 NameBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Name;
                 PathBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Path;
                 ArgsBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Argments;
+                RunasAdminBox.Checked=StaticClasses.Executables[Applist.SelectedIndices[0]].RunasAdmin;
             }
         }
 
@@ -60,7 +61,7 @@ namespace WorkhubForWindows.Forms
             }
             else
             {
-                StaticClasses.Executables[Applist.SelectedIndices[0]] = new Executable(NameBox.Text, PathBox.Text, ArgsBox.Text);
+                StaticClasses.Executables[Applist.SelectedIndices[0]] = new Executable(NameBox.Text, PathBox.Text, ArgsBox.Text,RunasAdminBox.Checked);
             }
         }
 

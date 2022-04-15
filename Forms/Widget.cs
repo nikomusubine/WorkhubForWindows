@@ -67,7 +67,7 @@ namespace WorkhubForWindows
         {
             if (applistview.SelectedIndices.Count != 0)
             {
-                Functions.Application.StartProcess(StaticClasses.Executables[applistview.SelectedIndices[0]]);
+                Functions.Application.StartProcess(StaticClasses.Executables[applistview.SelectedIndices[0]], true);
             }
         }
 

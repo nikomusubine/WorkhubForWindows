@@ -146,7 +146,7 @@
     <value>Quit(&amp;Q)</value>
   </data>
   <data name="RibbonFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 24</value>
+    <value>69, 26</value>
   </data>
   <data name="RibbonFiles.Text" xml:space="preserve">
     <value>Files(&amp;F)</value>
@@ -159,7 +159,7 @@
     <value>5, 2, 0, 2</value>
   </data>
   <data name="Ribbon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>645, 28</value>
+    <value>645, 30</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Ribbon.TabIndex" type="System.Int32, mscorlib">
@@ -537,7 +537,7 @@
     <value>NoControl</value>
   </data>
   <data name="AddItemButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 5</value>
+    <value>26, 5</value>
   </data>
   <data name="AddItemButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -570,7 +570,7 @@
     <value>NoControl</value>
   </data>
   <data name="StartButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>218, 5</value>
+    <value>283, 5</value>
   </data>
   <data name="StartButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -603,7 +603,7 @@
     <value>NoControl</value>
   </data>
   <data name="EditButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>115, 5</value>
+    <value>154, 5</value>
   </data>
   <data name="EditButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -630,7 +630,7 @@
     <value>2</value>
   </data>
   <data name="ButtonsPunel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 486</value>
+    <value>0, 615</value>
   </data>
   <data name="ButtonsPunel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -639,7 +639,7 @@
     <value>1</value>
   </data>
   <data name="ButtonsPunel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 35</value>
+    <value>385, 35</value>
   </data>
   <data name="ButtonsPunel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -705,7 +705,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="Apps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 486</value>
+    <value>385, 615</value>
   </data>
   <data name="Apps.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -738,7 +738,7 @@
     <value>1</value>
   </data>
   <data name="ListViewPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>307, 0</value>
+    <value>384, 0</value>
   </data>
   <data name="ListViewPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -747,7 +747,7 @@
     <value>2</value>
   </data>
   <data name="ListViewPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 521</value>
+    <value>385, 650</value>
   </data>
   <data name="ListViewPanel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -783,7 +783,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="HalfModebackimg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 521</value>
+    <value>384, 650</value>
   </data>
   <data name="HalfModebackimg.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>

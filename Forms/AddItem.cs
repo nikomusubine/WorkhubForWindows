@@ -47,7 +47,8 @@ namespace WorkhubForWindows.Forms
                     {
                         Name = ItemNameBox.Text,
                         Path = FilePathBox.Text,
-                        Argments = CmdArgsBox.Text
+                        Argments = CmdArgsBox.Text,
+                        RunasAdmin = RunasAdminBox.Checked
                     }
                     );
 
