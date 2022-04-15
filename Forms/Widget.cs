@@ -67,7 +67,19 @@ namespace WorkhubForWindows
         {
             if (applistview.SelectedIndices.Count != 0)
             {
-                Functions.Application.StartProcess(StaticClasses.Executables[applistview.SelectedIndices[0]]);
+                
+                if (Functions.Application.StartProcess(StaticClasses.Executables[applistview.SelectedIndices[0]]) == 1)
+                {
+                    StaticClasses.Executables[applistview.SelectedItems[0].Index] = new Executable(
+                        StaticClasses.Executables[applistview.SelectedItems[0].Index].Name,
+                        StaticClasses.Executables[applistview.SelectedItems[0].Index].Path,
+                        StaticClasses.Executables[applistview.SelectedItems[0].Index].Argments,
+                        true
+                        );
+                    StaticClasses.LoadIcons();
+
+                    Functions.Config.Applications.Save(StaticClasses.Executables);
+                }
             }
         }
 

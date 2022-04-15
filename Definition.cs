@@ -55,6 +55,16 @@ namespace WorkhubForWindows
             Name = name;
             Path = path;
             Argments = args;
+            RunasAdmin = false;
+            point = new Point(0, 0);
+        }
+
+        public Executable(string name, string path, string args,bool runasAdmin)
+        {
+            Name = name;
+            Path = path;
+            Argments = args;
+            RunasAdmin = runasAdmin;
             point = new Point(0, 0);
         }
 
@@ -63,6 +73,7 @@ namespace WorkhubForWindows
             Name = executable.Name;
             Path = executable.Path;
             Argments = executable.Argments;
+            RunasAdmin=executable.RunasAdmin;
             point = executable.point;
         }
 
@@ -74,6 +85,7 @@ namespace WorkhubForWindows
         public string Name;
         public string Path;
         public string Argments;
+        public bool RunasAdmin;
         public Point point;
     }
 
@@ -689,11 +701,11 @@ namespace WorkhubForWindows
         }
 
         public static ImageList IconList=new ImageList();
-        
+
         public static void LoadIcons()
         {
-
             IconList.Images.Clear();
+            Icon Sield = Functions.WinAPIFuncs.GetSieldIcon(false);
             for (int i = 0; i != StaticClasses.Executables.Count; i++)
             {
                 if (!File.Exists(StaticClasses.Executables[i].Path))
@@ -704,13 +716,20 @@ namespace WorkhubForWindows
                     continue;
                 }
                 Bitmap bmp = Icon.ExtractAssociatedIcon(StaticClasses.Executables[i].Path).ToBitmap();
-
+                if (Executables[i].RunasAdmin)
+                {
+                    Graphics graphics = Graphics.FromImage(bmp);
+                    float Devision = 2;
+                    Image sield = new Bitmap(Sield.ToBitmap(), new Size((int)(bmp.Width / Devision), (int)(bmp.Height / Devision)));
+                    graphics.DrawImage(sield, bmp.Width - (bmp.Width / Devision), bmp.Height - (bmp.Height / Devision), sield.Width, sield.Height);
+                    graphics.Dispose();
+                }
                 IconList.Images.Add(StaticClasses.Executables[i].Name, bmp);
             }
 
 
         }
-
+        
         public static class AppStatus
         {
             public static bool Started = false;

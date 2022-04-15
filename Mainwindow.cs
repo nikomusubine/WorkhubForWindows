@@ -13,6 +13,7 @@ using Microsoft.Win32;
 using System.Xml.Serialization;
 using System.Text.Json;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace WorkhubForWindows
 {
@@ -43,8 +44,8 @@ namespace WorkhubForWindows
             StaticClasses.IconList.ImageSize = new Size(32, 32);
             StaticClasses.Config = StaticClasses.Config.LoadConfig();
             initalizeApps();
-
-            
+            RunAsAdmin.Image = Functions.WinAPIFuncs.GetSieldIcon(false).ToBitmap();
+                        
 
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle, "MainForm"));
@@ -79,7 +80,18 @@ namespace WorkhubForWindows
         {
             for (int i = 0; i != Apps.SelectedItems.Count; i++)
             {
-                Functions.Application.StartProcess(StaticClasses.Executables[Apps.SelectedItems[i].Index]);
+                if (Functions.Application.StartProcess(StaticClasses.Executables[Apps.SelectedItems[i].Index]) == 1)
+                {
+                    StaticClasses.Executables[Apps.SelectedItems[i].Index] = new Executable(
+                        StaticClasses.Executables[Apps.SelectedItems[i].Index].Name,
+                        StaticClasses.Executables[Apps.SelectedItems[i].Index].Path,
+                        StaticClasses.Executables[Apps.SelectedItems[i].Index].Argments,
+                        true
+                        ) ;
+                    StaticClasses.LoadIcons();
+
+                    Functions.Config.Applications.Save(StaticClasses.Executables);
+                }
             }
         }
 
@@ -117,7 +129,10 @@ namespace WorkhubForWindows
 
         private void RunAsAdminClicked(object sender,EventArgs e)
         {
-
+            for (int i = 0; i != Apps.SelectedItems.Count; i++)
+            {
+                Functions.Application.StartProcess(StaticClasses.Executables[Apps.SelectedItems[i].Index]);
+            }
         }
 
         private void DeleteClicked(object sender,EventArgs e)

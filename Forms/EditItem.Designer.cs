@@ -36,12 +36,14 @@
             this.okbutton = new System.Windows.Forms.Button();
             this.ApplyButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.RunasLabel = new System.Windows.Forms.Label();
             this.NameBox = new System.Windows.Forms.TextBox();
             this.NameLabel = new System.Windows.Forms.Label();
             this.PathLabel = new System.Windows.Forms.Label();
             this.ArgsLabel = new System.Windows.Forms.Label();
             this.ArgsBox = new System.Windows.Forms.TextBox();
             this.PathBox = new System.Windows.Forms.TextBox();
+            this.RunasAdminBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.MoveLbutton = new System.Windows.Forms.Button();
             this.MoveRbutton = new System.Windows.Forms.Button();
@@ -101,13 +103,20 @@
             // tableLayoutPanel3
             // 
             resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
+            this.tableLayoutPanel3.Controls.Add(this.RunasLabel, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.NameBox, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.NameLabel, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.PathLabel, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.ArgsLabel, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.ArgsBox, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.PathBox, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.RunasAdminBox, 1, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            // 
+            // RunasLabel
+            // 
+            resources.ApplyResources(this.RunasLabel, "RunasLabel");
+            this.RunasLabel.Name = "RunasLabel";
             // 
             // NameBox
             // 
@@ -138,6 +147,12 @@
             // 
             resources.ApplyResources(this.PathBox, "PathBox");
             this.PathBox.Name = "PathBox";
+            // 
+            // RunasAdminBox
+            // 
+            resources.ApplyResources(this.RunasAdminBox, "RunasAdminBox");
+            this.RunasAdminBox.Name = "RunasAdminBox";
+            this.RunasAdminBox.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel4
             // 
@@ -193,5 +208,7 @@
         private System.Windows.Forms.Button Close_Button;
         private System.Windows.Forms.Button ApplyButton;
         private System.Windows.Forms.Button okbutton;
+        private System.Windows.Forms.Label RunasLabel;
+        private System.Windows.Forms.CheckBox RunasAdminBox;
     }
 }
