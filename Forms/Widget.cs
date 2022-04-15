@@ -37,7 +37,8 @@ namespace WorkhubForWindows
             int ScrollBW = new VScrollBar().Width;
             this.Size = new Size(this.Size.Width + ScrollBW, this.Size.Height);
             this.applistview.Size = new Size(this.applistview.Size.Width + ScrollBW, this.applistview.Size.Height);
-
+            this.applistview.SmallImageList = StaticClasses.IconList;
+            this.applistview.LargeImageList = StaticClasses.IconList;
             Backgroundset();
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle, "Widget"));
@@ -118,7 +119,6 @@ namespace WorkhubForWindows
         void initalizeapplistview()
         {
             applistview.Clear();
-            IconList.Images.Clear();
             StaticClasses.Executables = Functions.Config.Applications.Load();
             this.Location = StaticClasses.Config.WidgetPosition;
             this.StartPosition = FormStartPosition.Manual;
@@ -127,18 +127,9 @@ namespace WorkhubForWindows
             this.Font = StaticClasses.Config.font;
 
             FixWidgetPos.Checked = StaticClasses.Config.LockWidget;
-            for (int i = 0; i != StaticClasses.Executables.Count; i++)
+            for (int i = 0; i != StaticClasses.IconList.Images.Count; i++)
             {
-                if (!File.Exists(StaticClasses.Executables[i].Path))
-                {
-                    MessageBox.Show("A File was not found! \nThe file will be removed from the list. ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    StaticClasses.Executables.RemoveAt(i);
-                    i--;
-                    continue;
-                }
-                Bitmap bmp = Icon.ExtractAssociatedIcon(StaticClasses.Executables[i].Path).ToBitmap();
 
-                IconList.Images.Add(StaticClasses.Executables[i].Name, bmp);
                 applistview.Items.Add(EditString(StaticClasses.Executables[i].Name));
                 applistview.Items[applistview.Items.Count - 1].ImageIndex = applistview.Items.Count - 1;
             }

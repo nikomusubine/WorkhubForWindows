@@ -31,7 +31,6 @@ namespace WorkhubForWindows
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mainwindow));
-            this.IconList = new System.Windows.Forms.ImageList(this.components);
             this.Ribbon = new System.Windows.Forms.MenuStrip();
             this.RibbonFiles = new System.Windows.Forms.ToolStripMenuItem();
             this.Ribbon_Settings = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,12 +68,6 @@ namespace WorkhubForWindows
             this.ListViewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HalfModebackimg)).BeginInit();
             this.SuspendLayout();
-            // 
-            // IconList
-            // 
-            this.IconList.ColorDepth = System.Windows.Forms.ColorDepth.Depth24Bit;
-            resources.ApplyResources(this.IconList, "IconList");
-            this.IconList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // Ribbon
             // 
@@ -222,7 +215,6 @@ namespace WorkhubForWindows
             this.Apps.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Apps.ContextMenuStrip = this.ApplistRClick;
             this.Apps.HideSelection = false;
-            this.Apps.LargeImageList = this.IconList;
             this.Apps.MultiSelect = false;
             this.Apps.Name = "Apps";
             this.Apps.UseCompatibleStateImageBehavior = false;
@@ -309,7 +301,6 @@ namespace WorkhubForWindows
 
         #endregion
         private System.Windows.Forms.MenuStrip Ribbon;
-        private System.Windows.Forms.ImageList IconList;
         private System.Windows.Forms.ToolStripMenuItem RibbonFiles;
         private System.Windows.Forms.ToolStripMenuItem Ribbon_Settings;
         private System.Windows.Forms.NotifyIcon TrayIcon;

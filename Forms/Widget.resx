@@ -140,16 +140,6 @@
   <data name="&gt;&gt;RCMenu.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="applistview.LabelWrap" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <metadata name="IconList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="IconList.ImageSize" type="System.Drawing.Size, System.Drawing">
-    <value>32, 32</value>
-  </data>
   <data name="applistview.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -159,6 +149,7 @@
   <data name="applistview.Size" type="System.Drawing.Size, System.Drawing">
     <value>382, 303</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="applistview.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -520,12 +511,6 @@
   </data>
   <data name="&gt;&gt;FixWidgetPos.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IconList.Name" xml:space="preserve">
-    <value>IconList</value>
-  </data>
-  <data name="&gt;&gt;IconList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;SettingsTimer.Name" xml:space="preserve">
     <value>SettingsTimer</value>

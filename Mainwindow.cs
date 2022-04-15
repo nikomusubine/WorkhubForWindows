@@ -36,9 +36,14 @@ namespace WorkhubForWindows
                 }
             }
             InitializeComponent();
-            
+            this.Apps.SmallImageList = StaticClasses.IconList;
+            this.Apps.LargeImageList = StaticClasses.IconList;
+            StaticClasses.IconList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            StaticClasses.IconList.TransparentColor = Color.Transparent;
+            StaticClasses.IconList.ImageSize = new Size(32, 32);
             StaticClasses.Config = StaticClasses.Config.LoadConfig();
             initalizeApps();
+
             
 
             //AddWindowHandler
@@ -188,21 +193,11 @@ namespace WorkhubForWindows
         void initalizeApps()
         {
             Apps.Clear();
-            IconList.Images.Clear();
             StaticClasses.Executables = Functions.Config.Applications.Load();
 
+            StaticClasses.LoadIcons();
             for (int i = 0; i != StaticClasses.Executables.Count; i++)
             {
-                if (!File.Exists(StaticClasses.Executables[i].Path))
-                {
-                    MessageBox.Show("A File was not found! \nThe file will be removed from the list. ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    StaticClasses.Executables.RemoveAt(i);
-                    i--;
-                    continue;
-                }
-                Bitmap bmp = Icon.ExtractAssociatedIcon(StaticClasses.Executables[i].Path).ToBitmap();
-
-                IconList.Images.Add(StaticClasses.Executables[i].Name, bmp);
                 Apps.Items.Add(StaticClasses.Executables[i].Name/*.Replace(' ','\n')*/);
                 Apps.Items[Apps.Items.Count - 1].ImageIndex = Apps.Items.Count - 1;
             }

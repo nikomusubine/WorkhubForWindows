@@ -298,7 +298,7 @@ namespace WorkhubForWindows
                 ShowWidgetChanged();
             }
         }
-        public string __MainWindowBackColor;
+        public string __MainWindowBackColor="ffffff";
         [XmlIgnore]
         public Color MainWindowBackColor
         {
@@ -330,7 +330,7 @@ namespace WorkhubForWindows
                 __MainWindowBackColor = String.Format("{0:x2}{1:x2}{2:x2}", r, g, b);
             }
         }
-        public string __WidgetBackColor;
+        public string __WidgetBackColor = "ffffff";
         [XmlIgnore]
         public Color WidgetBackColor
         {
@@ -376,7 +376,7 @@ namespace WorkhubForWindows
                 SendWidgetConfigChanged();
             }
         }
-        public string __WidgetForeColor;
+        public string __WidgetForeColor = "000000";
         [XmlIgnore]
         public Color WidgetForeColor
         {
@@ -620,6 +620,7 @@ namespace WorkhubForWindows
             }
             if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config\\Config.xml"))
             {
+                this.SaveConfig();
                 return cfg;
             }
 
@@ -687,7 +688,28 @@ namespace WorkhubForWindows
             public static List<WorkhubWindowHandler> WindowHandlers = new List<WorkhubWindowHandler>();
         }
 
+        public static ImageList IconList=new ImageList();
+        
+        public static void LoadIcons()
+        {
 
+            IconList.Images.Clear();
+            for (int i = 0; i != StaticClasses.Executables.Count; i++)
+            {
+                if (!File.Exists(StaticClasses.Executables[i].Path))
+                {
+                    MessageBox.Show("A File was not found! \nThe file will be removed from the list. ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    StaticClasses.Executables.RemoveAt(i);
+                    i--;
+                    continue;
+                }
+                Bitmap bmp = Icon.ExtractAssociatedIcon(StaticClasses.Executables[i].Path).ToBitmap();
+
+                IconList.Images.Add(StaticClasses.Executables[i].Name, bmp);
+            }
+
+
+        }
 
         public static class AppStatus
         {

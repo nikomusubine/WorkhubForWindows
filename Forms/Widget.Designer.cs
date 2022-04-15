@@ -33,7 +33,6 @@
             this.applistview = new System.Windows.Forms.ListView();
             this.RCMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.FixWidgetPos = new System.Windows.Forms.ToolStripMenuItem();
-            this.IconList = new System.Windows.Forms.ImageList(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.SettingsTimer = new System.Windows.Forms.Timer(this.components);
             this.RCMenu.SuspendLayout();
@@ -46,10 +45,8 @@
             this.applistview.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.applistview.ContextMenuStrip = this.RCMenu;
             this.applistview.HideSelection = false;
-            this.applistview.LargeImageList = this.IconList;
             this.applistview.MultiSelect = false;
             this.applistview.Name = "applistview";
-            this.applistview.SmallImageList = this.IconList;
             this.applistview.TileSize = new System.Drawing.Size(50, 50);
             this.applistview.UseCompatibleStateImageBehavior = false;
             this.applistview.VirtualListSize = 3;
@@ -73,12 +70,6 @@
             this.FixWidgetPos.Name = "FixWidgetPos";
             resources.ApplyResources(this.FixWidgetPos, "FixWidgetPos");
             this.FixWidgetPos.Click += new System.EventHandler(this.LockWidget_Click);
-            // 
-            // IconList
-            // 
-            this.IconList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            resources.ApplyResources(this.IconList, "IconList");
-            this.IconList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // panel1
             // 
@@ -108,7 +99,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ImageList IconList;
         public System.Windows.Forms.ListView applistview;
         private System.Windows.Forms.ContextMenuStrip RCMenu;
         private System.Windows.Forms.ToolStripMenuItem FixWidgetPos;

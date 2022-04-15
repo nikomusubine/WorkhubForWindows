@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditItem));
             this.Applist = new System.Windows.Forms.ListView();
-            this.IconList = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.Close_Button = new System.Windows.Forms.Button();
@@ -57,19 +55,10 @@
             // 
             resources.ApplyResources(this.Applist, "Applist");
             this.Applist.HideSelection = false;
-            this.Applist.LargeImageList = this.IconList;
             this.Applist.Name = "Applist";
-            this.Applist.SmallImageList = this.IconList;
-            this.Applist.StateImageList = this.IconList;
             this.Applist.UseCompatibleStateImageBehavior = false;
             this.Applist.View = System.Windows.Forms.View.List;
             this.Applist.SelectedIndexChanged += new System.EventHandler(this.AppsSelectedIndexChanged);
-            // 
-            // IconList
-            // 
-            this.IconList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            resources.ApplyResources(this.IconList, "IconList");
-            this.IconList.TransparentColor = System.Drawing.Color.Transparent;
             // 
             // tableLayoutPanel1
             // 
@@ -190,7 +179,6 @@
 
         private System.Windows.Forms.ListView Applist;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ImageList IconList;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label NameLabel;
