@@ -12,6 +12,7 @@ using System.IO;
 using Microsoft.Win32;
 using System.Xml.Serialization;
 using System.Text.Json;
+using System.Diagnostics;
 
 namespace WorkhubForWindows
 {
@@ -19,17 +20,31 @@ namespace WorkhubForWindows
     {
         private bool Quiting = false;
 
-        public static Widget wg = new Widget();
+        public static Widget wg;
         public Mainwindow()
         {
+            string name = Process.GetCurrentProcess().ProcessName;
+            Process[] processes = Process.GetProcessesByName(name);
+            for (int i = 0; i < processes.Length; i++)
+            {
+                Process proc = processes[i];
+                if (proc.ProcessName == name && proc.MainWindowTitle == "WorkhubForWindows")
+                {
+                    Functions.WinAPIFuncs.PostMessage((int)proc.MainWindowHandle, StaticClasses.WorkHubMessages.ShowMainWindow, 0, 0);
+                    this.Dispose();
+                    Environment.Exit(1);
+                }
+            }
             InitializeComponent();
+            
             StaticClasses.Config = StaticClasses.Config.LoadConfig();
             initalizeApps();
-
+            
 
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle, "MainForm"));
             this.LoadConfig();
+            wg = new Widget();
             Apps.View = View.LargeIcon;
             this.FormClosing += Form_Closing;
             StaticClasses.AppStatus.Started = true;
@@ -37,6 +52,7 @@ namespace WorkhubForWindows
             foreach (var i in StaticClasses.WindowHandler.WindowHandlers)
             {
                 Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.LanguagePackLoad, 0, 0);
+                Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.ConfigChanged, 0, 0);
             }
         }
 
@@ -261,6 +277,11 @@ namespace WorkhubForWindows
                     break;
                 case StaticClasses.WorkHubMessages.LanguagePackLoad:
                     LoadLanguage();
+                    break;
+                case StaticClasses.WorkHubMessages.ShowMainWindow:
+                    this.Show();
+                    this.TopMost = true;
+                    this.TopMost = false;
                     break;
                 default:
                     break;

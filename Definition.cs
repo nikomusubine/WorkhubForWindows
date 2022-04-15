@@ -298,31 +298,68 @@ namespace WorkhubForWindows
                 ShowWidgetChanged();
             }
         }
-        public int __MainWindowBackColor;
+        public string __MainWindowBackColor;
         [XmlIgnore]
         public Color MainWindowBackColor
         {
             get
             {
-                return Color.FromArgb(__MainWindowBackColor);
+                Color c = new Color();
+                byte a, r, g, b;
+                a = 255;
+                try
+                {
+                    r = (byte)Int32.Parse(string.Format("{0}{1}", __MainWindowBackColor[0], __MainWindowBackColor[1]), System.Globalization.NumberStyles.HexNumber);
+                    g = (byte)Int32.Parse(string.Format("{0}{1}", __MainWindowBackColor[2], __MainWindowBackColor[3]), System.Globalization.NumberStyles.HexNumber);
+                    b = (byte)Int32.Parse(string.Format("{0}{1}", __MainWindowBackColor[4], __MainWindowBackColor[5]), System.Globalization.NumberStyles.HexNumber);
+
+                    c = Color.FromArgb(a, r, g, b);
+                }
+                catch (System.FormatException)
+                {
+                    c = Color.White;
+                }
+                return c;
             }
             set
             {
-                __MainWindowBackColor = value.ToArgb();
-                this.SendWidgetConfigChanged();
+                byte r, g, b;
+                r = value.R;
+                g = value.G;
+                b = value.B;
+                __MainWindowBackColor = String.Format("{0:x2}{1:x2}{2:x2}", r, g, b);
             }
         }
-        public int __WidgetBackColor;
+        public string __WidgetBackColor;
         [XmlIgnore]
         public Color WidgetBackColor
         {
             get
             {
-                return Color.FromArgb(__WidgetBackColor);
+                Color c=new Color();
+                byte a, r, g, b;
+                a = 255;
+                try
+                {
+                    r = (byte)Int32.Parse(string.Format("{0}{1}", __WidgetBackColor[0], __WidgetBackColor[1]), System.Globalization.NumberStyles.HexNumber);
+                    g = (byte)Int32.Parse(string.Format("{0}{1}", __WidgetBackColor[2], __WidgetBackColor[3]), System.Globalization.NumberStyles.HexNumber);
+                    b = (byte)Int32.Parse(string.Format("{0}{1}", __WidgetBackColor[4], __WidgetBackColor[5]), System.Globalization.NumberStyles.HexNumber);
+
+                    c = Color.FromArgb(a, r, g, b);
+                }
+                catch (System.FormatException)
+                {
+                    c = Color.White;
+                }
+                return c;
             }
             set
             {
-                __WidgetBackColor = value.ToArgb();
+                byte r, g, b;
+                r = value.R;
+                g = value.G;
+                b = value.B;
+                __WidgetBackColor = String.Format("{0:x2}{1:x2}{2:x2}",r,g,b);
                 this.SendWidgetConfigChanged();
             }
         }
@@ -339,18 +376,35 @@ namespace WorkhubForWindows
                 SendWidgetConfigChanged();
             }
         }
-        public int __WidgetForeColor;
+        public string __WidgetForeColor;
         [XmlIgnore]
         public Color WidgetForeColor
         {
             get
             {
-                return Color.FromArgb(__WidgetForeColor);
+                Color c = new Color();
+                byte a, r, g, b;
+                a = 255;
+                try
+                {
+                    r = (byte)Int32.Parse(string.Format("{0}{1}", __WidgetForeColor[0], __WidgetForeColor[1]), System.Globalization.NumberStyles.HexNumber);
+                    g = (byte)Int32.Parse(string.Format("{0}{1}", __WidgetForeColor[2], __WidgetForeColor[3]), System.Globalization.NumberStyles.HexNumber);
+                    b = (byte)Int32.Parse(string.Format("{0}{1}", __WidgetForeColor[4], __WidgetForeColor[5]), System.Globalization.NumberStyles.HexNumber);
+
+                    c = Color.FromArgb(a, r, g, b);
+                }
+                catch (System.FormatException) {
+                    c = Color.Black;
+                }
+                return c;
             }
             set
             {
-                __WidgetForeColor = value.ToArgb();
-                this.SendWidgetConfigChanged();
+                byte r, g, b;
+                r = value.R;
+                g = value.G;
+                b = value.B;
+                __WidgetForeColor = String.Format("{0:x2}{1:x2}{2:x2}", r, g, b);
             }
         }
         private Size __WidgetSize = new Size(300, 300);
@@ -624,6 +678,7 @@ namespace WorkhubForWindows
             public const int LanguagePackLoad = 0x2504;
             public const int WidgetPositionReset = 0x2505;
             public const int IsWidgetShowChanged = 0x2506;
+            public const int ShowMainWindow = 0x2507;
             public const int ApplicationQuit = 0x2510;
         }
 

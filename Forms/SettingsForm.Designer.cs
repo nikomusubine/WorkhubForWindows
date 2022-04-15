@@ -49,6 +49,10 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.WidgetSCKeyLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.WidgetSizeLabel = new System.Windows.Forms.Label();
+            this.WidgetSizeBar = new System.Windows.Forms.TrackBar();
+            this.WidgetSizeBox = new System.Windows.Forms.NumericUpDown();
             this.ResetWidgetPosition = new System.Windows.Forms.Button();
             this.SettingsTab = new System.Windows.Forms.TabControl();
             this.General = new System.Windows.Forms.TabPage();
@@ -69,10 +73,6 @@
             this.LanguageLabel = new System.Windows.Forms.Label();
             this.LanguageBox = new System.Windows.Forms.ComboBox();
             this.Widget = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.WidgetSizeLabel = new System.Windows.Forms.Label();
-            this.WidgetSizeBar = new System.Windows.Forms.TrackBar();
-            this.WidgetSizeBox = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBox)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
@@ -82,6 +82,9 @@
             this.tableLayoutPanel9.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBox)).BeginInit();
             this.SettingsTab.SuspendLayout();
             this.General.SuspendLayout();
             this.GeneralSettingsPanel.SuspendLayout();
@@ -89,9 +92,6 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.Widget.SuspendLayout();
-            this.tableLayoutPanel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBox)).BeginInit();
             this.SuspendLayout();
             // 
             // ApplyButton
@@ -213,6 +213,49 @@
             this.tableLayoutPanel1.Controls.Add(this.WidgetForeColorLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.WidgetForeColorChangeButton, 1, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
+            // tableLayoutPanel11
+            // 
+            resources.ApplyResources(this.tableLayoutPanel11, "tableLayoutPanel11");
+            this.tableLayoutPanel11.Controls.Add(this.WidgetSizeLabel, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.WidgetSizeBar, 2, 0);
+            this.tableLayoutPanel11.Controls.Add(this.WidgetSizeBox, 1, 0);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            // 
+            // WidgetSizeLabel
+            // 
+            resources.ApplyResources(this.WidgetSizeLabel, "WidgetSizeLabel");
+            this.WidgetSizeLabel.Name = "WidgetSizeLabel";
+            // 
+            // WidgetSizeBar
+            // 
+            resources.ApplyResources(this.WidgetSizeBar, "WidgetSizeBar");
+            this.WidgetSizeBar.Maximum = 1000;
+            this.WidgetSizeBar.Minimum = 50;
+            this.WidgetSizeBar.Name = "WidgetSizeBar";
+            this.WidgetSizeBar.Value = 50;
+            this.WidgetSizeBar.ValueChanged += new System.EventHandler(this.WidgetSizeBarChanged);
+            // 
+            // WidgetSizeBox
+            // 
+            resources.ApplyResources(this.WidgetSizeBox, "WidgetSizeBox");
+            this.WidgetSizeBox.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.WidgetSizeBox.Minimum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.WidgetSizeBox.Name = "WidgetSizeBox";
+            this.WidgetSizeBox.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.WidgetSizeBox.ValueChanged += new System.EventHandler(this.WidgetSizeBoxChanged);
             // 
             // ResetWidgetPosition
             // 
@@ -347,49 +390,6 @@
             this.Widget.Name = "Widget";
             this.Widget.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel11
-            // 
-            resources.ApplyResources(this.tableLayoutPanel11, "tableLayoutPanel11");
-            this.tableLayoutPanel11.Controls.Add(this.WidgetSizeLabel, 0, 0);
-            this.tableLayoutPanel11.Controls.Add(this.WidgetSizeBar, 2, 0);
-            this.tableLayoutPanel11.Controls.Add(this.WidgetSizeBox, 1, 0);
-            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            // 
-            // WidgetSizeLabel
-            // 
-            resources.ApplyResources(this.WidgetSizeLabel, "WidgetSizeLabel");
-            this.WidgetSizeLabel.Name = "WidgetSizeLabel";
-            // 
-            // WidgetSizeBar
-            // 
-            resources.ApplyResources(this.WidgetSizeBar, "WidgetSizeBar");
-            this.WidgetSizeBar.Maximum = 1000;
-            this.WidgetSizeBar.Minimum = 50;
-            this.WidgetSizeBar.Name = "WidgetSizeBar";
-            this.WidgetSizeBar.Value = 50;
-            this.WidgetSizeBar.ValueChanged += new System.EventHandler(this.WidgetSizeBarChanged);
-            // 
-            // WidgetSizeBox
-            // 
-            resources.ApplyResources(this.WidgetSizeBox, "WidgetSizeBox");
-            this.WidgetSizeBox.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.WidgetSizeBox.Minimum = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.WidgetSizeBox.Name = "WidgetSizeBox";
-            this.WidgetSizeBox.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
-            this.WidgetSizeBox.ValueChanged += new System.EventHandler(this.WidgetSizeBoxChanged);
-            // 
             // SettingsForm
             // 
             this.AcceptButton = this.ApplyButton;
@@ -417,6 +417,10 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel11.ResumeLayout(false);
+            this.tableLayoutPanel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBox)).EndInit();
             this.SettingsTab.ResumeLayout(false);
             this.General.ResumeLayout(false);
             this.GeneralSettingsPanel.ResumeLayout(false);
@@ -427,10 +431,6 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
             this.Widget.ResumeLayout(false);
-            this.tableLayoutPanel11.ResumeLayout(false);
-            this.tableLayoutPanel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBox)).EndInit();
             this.ResumeLayout(false);
 
         }

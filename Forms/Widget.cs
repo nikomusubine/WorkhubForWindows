@@ -55,7 +55,10 @@ namespace WorkhubForWindows
         private void App_Closing()
         {
             this.FormClosing -= Form_Closing;
-            Hotkey.Dispose();
+            if (Hotkey != null)
+            {
+                Hotkey.Dispose();
+            }
             this.Close();
         }
 
@@ -253,8 +256,14 @@ namespace WorkhubForWindows
             {
                 Hotkey.Dispose();
             }
-            Hotkey = new HotKeyRegister(this.Handle, HotkeyID, StaticClasses.Config.WidgetShortcutKey.Modifires, StaticClasses.Config.WidgetShortcutKey.keys);
+            try
+            {
+                Hotkey = new HotKeyRegister(this.Handle, HotkeyID, StaticClasses.Config.WidgetShortcutKey.Modifires, StaticClasses.Config.WidgetShortcutKey.keys);
+            }
+            catch (System.ApplicationException)
+            {
 
+            }
             Backgroundset();
             if (StaticClasses.Config.ShowWidget)
             {

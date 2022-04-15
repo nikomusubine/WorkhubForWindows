@@ -39,7 +39,15 @@ namespace WorkhubForWindows
                 Prs.StartInfo.FileName = executable.Path;
                 Prs.StartInfo.Arguments = executable.Argments;
                 Prs.StartInfo.UseShellExecute = false;
-                Prs.Start();
+                try {
+                    Prs.Start();
+                }
+                catch(System.ComponentModel.Win32Exception)
+                {
+                    Prs.StartInfo.Verb = "RunAs";
+                    Prs.StartInfo.UseShellExecute = true;
+                    Prs.Start();
+                }
             }
         }
 

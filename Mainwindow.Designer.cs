@@ -57,10 +57,10 @@ namespace WorkhubForWindows
             this.addAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.RunAsAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.HomePanel = new System.Windows.Forms.TableLayoutPanel();
             this.ListViewPanel = new System.Windows.Forms.TableLayoutPanel();
             this.HalfModebackimg = new System.Windows.Forms.PictureBox();
-            this.RunAsAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.Ribbon.SuspendLayout();
             this.TrayRClick.SuspendLayout();
             this.ButtonsPunel.SuspendLayout();
@@ -257,6 +257,12 @@ namespace WorkhubForWindows
             resources.ApplyResources(this.deleteDToolStripMenuItem, "deleteDToolStripMenuItem");
             this.deleteDToolStripMenuItem.Click += new System.EventHandler(this.DeleteClicked);
             // 
+            // RunAsAdmin
+            // 
+            this.RunAsAdmin.Name = "RunAsAdmin";
+            resources.ApplyResources(this.RunAsAdmin, "RunAsAdmin");
+            this.RunAsAdmin.Click += new System.EventHandler(this.RunAsAdminClicked);
+            // 
             // HomePanel
             // 
             resources.ApplyResources(this.HomePanel, "HomePanel");
@@ -277,12 +283,6 @@ namespace WorkhubForWindows
             resources.ApplyResources(this.HalfModebackimg, "HalfModebackimg");
             this.HalfModebackimg.Name = "HalfModebackimg";
             this.HalfModebackimg.TabStop = false;
-            // 
-            // RunAsAdmin
-            // 
-            this.RunAsAdmin.Name = "RunAsAdmin";
-            resources.ApplyResources(this.RunAsAdmin, "RunAsAdmin");
-            this.RunAsAdmin.Click += new System.EventHandler(this.RunAsAdminClicked);
             // 
             // Mainwindow
             // 
@@ -334,10 +334,10 @@ namespace WorkhubForWindows
         private System.Windows.Forms.ToolStripMenuItem editEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteDToolStripMenuItem;
         private System.Windows.Forms.TableLayoutPanel ListViewPanel;
-        private System.Windows.Forms.PictureBox HalfModebackimg;
         private System.Windows.Forms.ToolStripMenuItem TrayRC_Settings;
         private System.Windows.Forms.ToolStripMenuItem TrayRC_AddItem;
         private System.Windows.Forms.ToolStripMenuItem RunAsAdmin;
+        private System.Windows.Forms.PictureBox HalfModebackimg;
     }
 }
 

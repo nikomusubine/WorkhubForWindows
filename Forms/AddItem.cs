@@ -31,6 +31,10 @@ namespace WorkhubForWindows.Forms
 
         private void ApplyClick(object sender, EventArgs e)
         {
+            if (ItemNameBox.Text == "")
+            {
+                MessageBox.Show("You must type the file Name!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }else
             if (FilePathBox.Text == "")
             {
                 MessageBox.Show("You must type the file path!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
