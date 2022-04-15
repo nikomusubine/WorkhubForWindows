@@ -84,6 +84,21 @@ namespace WorkhubForWindows
                     return (executable.RunasAdmin) ? 1 : 0;
                     
                 }
+                else
+                {
+                    Prs.StartInfo.UseShellExecute = false;
+                    try
+                    {
+                        Prs.Start();
+                    }
+                    catch (System.ComponentModel.Win32Exception)
+                    {
+                        Prs.StartInfo.Verb = "RunAs";
+                        Prs.StartInfo.UseShellExecute = true;
+                        executable.RunasAdmin = true;
+                        Prs.Start();
+                    }
+                }
             }
         }
 
