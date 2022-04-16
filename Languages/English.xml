@@ -14,7 +14,7 @@
       <Add>Add(&amp;A)</Add>
       <Edit>Edit(&amp;E)</Edit>
       <Delete>Delete(&amp;D)</Delete>
-      <RunAdmin>RunAdmin</RunAdmin>
+      <RunAdmin>Run as admin</RunAdmin>
     </ApplistRC>
     <TasktrayIcon>
       <ShowMainWindow>Show MainWindow(&amp;M)</ShowMainWindow>
@@ -26,9 +26,10 @@
     <MB_Quit_Verif>Would you like to quit application?</MB_Quit_Verif>
   </Mainwindow>
   <AddItem>
-     <Label_Name>Name</Label_Name>
-     <Label_Path>Path</Label_Path>
+    <Label_Name>Name</Label_Name>
+    <Label_Path>Path</Label_Path>
     <Label_Args>Args</Label_Args>
+	<Label_RunasAdmin>Run as admin</Label_RunasAdmin>
     <CancelButton>Cancel(&amp;C)</CancelButton>
     <ApplyButton>Apply(&amp;A)</ApplyButton>
     <RefButton>Reference</RefButton>
@@ -38,6 +39,7 @@
     <Label_Name>Name</Label_Name>
     <Label_Path>Path</Label_Path>
     <Label_Args>Args</Label_Args>
+	<Label_RunasAdmin>Run as admin</Label_RunasAdmin>
     <CloseButton>Close(&amp;C)</CloseButton>
     <ApplyButton>Apply(&amp;A)</ApplyButton>
     <OKButton>OK(&amp;O)</OKButton>
@@ -60,7 +62,13 @@
 	<Label_WidgetSize>WidgetSize</Label_WidgetSize>
     <Tab_General>General</Tab_General>
     <Tab_Widget>Widget</Tab_Widget>
+	<Button_HotkeySet>Set hotkey</Button_HotkeySet>
+    <Button_ResetWidgetPos>Reset Widget Position</Button_ResetWidgetPos>
     <Button_Apply>Apply(&amp;A)</Button_Apply>
     <Button_Cancel>Cancel(&amp;C)</Button_Cancel>
   </Settings>
+  <HotkeyRegester>
+	  <Label_1>Please press some keys...</Label_1>
+	  <Label_2>If you want to cancel, push X button...</Label_2>
+  </HotkeyRegester>
 </LanguagePack>

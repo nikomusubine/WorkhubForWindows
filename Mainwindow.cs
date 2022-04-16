@@ -24,7 +24,7 @@ namespace WorkhubForWindows
         public static Widget wg;
         public Mainwindow()
         {
-            /*string name = Process.GetCurrentProcess().ProcessName;
+            string name = Process.GetCurrentProcess().ProcessName;
             Process[] processes = Process.GetProcessesByName(name);
             for (int i = 0; i < processes.Length; i++)
             {
@@ -35,7 +35,7 @@ namespace WorkhubForWindows
                     this.Dispose();
                     Environment.Exit(1);
                 }
-            }*/
+            }
             InitializeComponent();
             this.Apps.SmallImageList = StaticClasses.IconList;
             this.Apps.LargeImageList = StaticClasses.IconList;
@@ -44,7 +44,7 @@ namespace WorkhubForWindows
             StaticClasses.IconList.ImageSize = new Size(32, 32);
             StaticClasses.Config = StaticClasses.Config.LoadConfig();
             initalizeApps();
-            RunAsAdmin.Image = Functions.WinAPIFuncs.GetSieldIcon(false).ToBitmap();
+            ApplistRC_RunAsAdmin.Image = Functions.WinAPIFuncs.GetSieldIcon(false).ToBitmap();
                         
 
             //AddWindowHandler
@@ -254,6 +254,10 @@ namespace WorkhubForWindows
             Ribbon_Settings.Text = StaticClasses.Langs.Mainwindow.RibbonFiles.Settings;
             ToolStripShowWidget.Text = StaticClasses.Langs.Mainwindow.RibbonFiles.ShowWidget;
             ToolStripQuit.Text = StaticClasses.Langs.Mainwindow.RibbonFiles.Quit;
+            ApplistRC_Add.Text = StaticClasses.Langs.Mainwindow.ApplistRC.Add;
+            ApplistRC_Edit.Text = StaticClasses.Langs.Mainwindow.ApplistRC.Edit;
+            ApplistRC_Delete.Text = StaticClasses.Langs.Mainwindow.ApplistRC.Delete;
+            ApplistRC_RunAsAdmin.Text = StaticClasses.Langs.Mainwindow.ApplistRC.RunAdmin;
             TrayRC_ShowMain.Text = StaticClasses.Langs.Mainwindow.TasktrayIcon.ShowMainWindow;
             TrayRC_ShowWidget.Text = StaticClasses.Langs.Mainwindow.TasktrayIcon.ShowWidget;
             TrayRC_Settings.Text = StaticClasses.Langs.Mainwindow.TasktrayIcon.Settings;    

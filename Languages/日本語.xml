@@ -15,7 +15,7 @@
       <Add>追加(&amp;A)</Add>
       <Edit>編集(&amp;E)</Edit>
       <Delete>削除(&amp;D)</Delete>
-      <RunAdmin>管理者権限で起動</RunAdmin>
+      <RunAdmin>管理者として実行</RunAdmin>
     </ApplistRC>
     <TasktrayIcon>
       <ShowMainWindow>メインウィンドウを表示(&amp;M)</ShowMainWindow>
@@ -31,6 +31,7 @@
     <Label_Name>名前</Label_Name>
     <Label_Path>パス</Label_Path>
     <Label_Args>コマンドライン引数</Label_Args>
+	<Label_RunasAdmin>管理者として実行</Label_RunasAdmin>
     <CancelButton>キャンセル(&amp;C)</CancelButton>
     <ApplyButton>適用(&amp;A)</ApplyButton>
     <RefButton>参照</RefButton>
@@ -40,6 +41,7 @@
     <Label_Name>名前</Label_Name>
     <Label_Path>パス</Label_Path>
     <Label_Args>引数</Label_Args>
+	<Label_RunasAdmin>管理者として実行</Label_RunasAdmin>
     <CloseButton>閉じる(&amp;C)</CloseButton>
     <ApplyButton>適用(&amp;A)</ApplyButton>
     <OKButton>OK(&amp;O)</OKButton>
@@ -59,10 +61,16 @@
     <Label_WidgetTextColor>ウィジェットの文字色</Label_WidgetTextColor>
     <Label_WidgetBackColor>ウィジェットの背景色</Label_WidgetBackColor>
     <Label_WidgetSCKey>ウィジェット表示のショートカットキー</Label_WidgetSCKey>
-	  <Label_WidgetSize>ウィジェットのサイズ</Label_WidgetSize>
+	<Label_WidgetSize>ウィジェットのサイズ</Label_WidgetSize>
     <Tab_General>全般</Tab_General>
     <Tab_Widget>ウィジェット</Tab_Widget>
+	<Button_HotkeySet>ホットキーを設定</Button_HotkeySet>
+	<Button_ResetWidgetPos>ウィジェット位置をリセット</Button_ResetWidgetPos>
     <Button_Apply>適用(&amp;A)</Button_Apply>
     <Button_Cancel>キャンセル(&amp;C)</Button_Cancel>
   </Settings>
+  <HotkeyRegester>
+	<Label_1>キーを押してください...</Label_1>
+	<Label_2>Xボタンを押してキャンセル...</Label_2>
+  </HotkeyRegester>
 </LanguagePack>

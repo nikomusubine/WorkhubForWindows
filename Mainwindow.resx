@@ -146,7 +146,7 @@
     <value>Quit(&amp;Q)</value>
   </data>
   <data name="RibbonFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 26</value>
+    <value>69, 24</value>
   </data>
   <data name="RibbonFiles.Text" xml:space="preserve">
     <value>Files(&amp;F)</value>
@@ -159,7 +159,7 @@
     <value>5, 2, 0, 2</value>
   </data>
   <data name="Ribbon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>645, 30</value>
+    <value>645, 28</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Ribbon.TabIndex" type="System.Int32, mscorlib">
@@ -537,7 +537,7 @@
     <value>NoControl</value>
   </data>
   <data name="AddItemButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 5</value>
+    <value>13, 5</value>
   </data>
   <data name="AddItemButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -570,7 +570,7 @@
     <value>NoControl</value>
   </data>
   <data name="StartButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>283, 5</value>
+    <value>218, 5</value>
   </data>
   <data name="StartButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -603,7 +603,7 @@
     <value>NoControl</value>
   </data>
   <data name="EditButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 5</value>
+    <value>115, 5</value>
   </data>
   <data name="EditButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -630,7 +630,7 @@
     <value>2</value>
   </data>
   <data name="ButtonsPunel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 615</value>
+    <value>0, 486</value>
   </data>
   <data name="ButtonsPunel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -639,7 +639,7 @@
     <value>1</value>
   </data>
   <data name="ButtonsPunel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>385, 35</value>
+    <value>308, 35</value>
   </data>
   <data name="ButtonsPunel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -665,32 +665,32 @@
   <metadata name="ApplistRClick.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>470, 17</value>
   </metadata>
-  <data name="addAToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 24</value>
+  <data name="ApplistRC_Add.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 24</value>
   </data>
-  <data name="addAToolStripMenuItem.Text" xml:space="preserve">
+  <data name="ApplistRC_Add.Text" xml:space="preserve">
     <value>Add(&amp;A)</value>
   </data>
-  <data name="editEToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 24</value>
+  <data name="ApplistRC_Edit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 24</value>
   </data>
-  <data name="editEToolStripMenuItem.Text" xml:space="preserve">
+  <data name="ApplistRC_Edit.Text" xml:space="preserve">
     <value>Edit(&amp;E)</value>
   </data>
-  <data name="deleteDToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 24</value>
+  <data name="ApplistRC_Delete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 24</value>
   </data>
-  <data name="deleteDToolStripMenuItem.Text" xml:space="preserve">
+  <data name="ApplistRC_Delete.Text" xml:space="preserve">
     <value>Delete(&amp;D)</value>
   </data>
-  <data name="RunAsAdmin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 24</value>
+  <data name="ApplistRC_RunAsAdmin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>210, 24</value>
   </data>
-  <data name="RunAsAdmin.Text" xml:space="preserve">
+  <data name="ApplistRC_RunAsAdmin.Text" xml:space="preserve">
     <value>RunAsAdmin(&amp;R)</value>
   </data>
   <data name="ApplistRClick.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 100</value>
+    <value>211, 128</value>
   </data>
   <data name="&gt;&gt;ApplistRClick.Name" xml:space="preserve">
     <value>ApplistRClick</value>
@@ -705,7 +705,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="Apps.Size" type="System.Drawing.Size, System.Drawing">
-    <value>385, 615</value>
+    <value>308, 486</value>
   </data>
   <data name="Apps.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -738,7 +738,7 @@
     <value>1</value>
   </data>
   <data name="ListViewPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>384, 0</value>
+    <value>307, 0</value>
   </data>
   <data name="ListViewPanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -747,7 +747,7 @@
     <value>2</value>
   </data>
   <data name="ListViewPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>385, 650</value>
+    <value>308, 521</value>
   </data>
   <data name="ListViewPanel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -783,7 +783,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="HalfModebackimg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>384, 650</value>
+    <value>307, 521</value>
   </data>
   <data name="HalfModebackimg.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1222,28 +1222,28 @@
   <data name="&gt;&gt;TrayRC_Quit.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;addAToolStripMenuItem.Name" xml:space="preserve">
-    <value>addAToolStripMenuItem</value>
+  <data name="&gt;&gt;ApplistRC_Add.Name" xml:space="preserve">
+    <value>ApplistRC_Add</value>
   </data>
-  <data name="&gt;&gt;addAToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;ApplistRC_Add.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;editEToolStripMenuItem.Name" xml:space="preserve">
-    <value>editEToolStripMenuItem</value>
+  <data name="&gt;&gt;ApplistRC_Edit.Name" xml:space="preserve">
+    <value>ApplistRC_Edit</value>
   </data>
-  <data name="&gt;&gt;editEToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;ApplistRC_Edit.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;deleteDToolStripMenuItem.Name" xml:space="preserve">
-    <value>deleteDToolStripMenuItem</value>
+  <data name="&gt;&gt;ApplistRC_Delete.Name" xml:space="preserve">
+    <value>ApplistRC_Delete</value>
   </data>
-  <data name="&gt;&gt;deleteDToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;ApplistRC_Delete.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;RunAsAdmin.Name" xml:space="preserve">
-    <value>RunAsAdmin</value>
+  <data name="&gt;&gt;ApplistRC_RunAsAdmin.Name" xml:space="preserve">
+    <value>ApplistRC_RunAsAdmin</value>
   </data>
-  <data name="&gt;&gt;RunAsAdmin.Type" xml:space="preserve">
+  <data name="&gt;&gt;ApplistRC_RunAsAdmin.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

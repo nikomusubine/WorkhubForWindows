@@ -267,6 +267,10 @@ namespace WorkhubForWindows
             {
 
             }
+            catch (ApplicationException)
+            {
+
+            }
             Backgroundset();
             if (StaticClasses.Config.ShowWidget)
             {

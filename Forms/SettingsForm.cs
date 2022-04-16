@@ -369,10 +369,6 @@ namespace WorkhubForWindows.Forms
             {
                 this.WidgetBackColorLabel.Text = StaticClasses.Langs.Settings.Label_WidgetBackColor;
             }
-            if (StaticClasses.Langs.Settings.Label_WidgetSCKey != null)
-            {
-                this.WidgetSCKeyLabel.Text = StaticClasses.Langs.Settings.Label_WidgetSCKey;
-            }
             if (StaticClasses.Langs.Settings.Label_WidgetSize != null)
             {
                 this.WidgetSizeLabel.Text = StaticClasses.Langs.Settings.Label_WidgetSize;
@@ -384,6 +380,14 @@ namespace WorkhubForWindows.Forms
             if (StaticClasses.Langs.Settings.Button_Apply != null)
             {
                 this.ApplyButton.Text = StaticClasses.Langs.Settings.Button_Apply;
+            }
+            if (StaticClasses.Langs.Settings.Button_HotkeySet != null)
+            {
+                this.HotKeySetButton.Text = StaticClasses.Langs.Settings.Button_HotkeySet;
+            }
+            if (StaticClasses.Langs.Settings.Button_ResetWidgetPos != null)
+            {
+                this.ResetWidgetPosition.Text = StaticClasses.Langs.Settings.Button_ResetWidgetPos;
             }
         }
         #endregion

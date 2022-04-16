@@ -189,6 +189,7 @@ namespace WorkhubForWindows
             public string Label_Name;
             public string Label_Path;
             public string Label_Args;
+            public string Label_RunasAdmin;
 
             public string CancelButton;
             public string ApplyButton;
@@ -201,6 +202,7 @@ namespace WorkhubForWindows
             public string Label_Name;
             public string Label_Path;
             public string Label_Args;
+            public string Label_RunasAdmin;
 
             public string CloseButton;
             public string ApplyButton;
@@ -230,12 +232,20 @@ namespace WorkhubForWindows
             public string Label_WidgetSize;
             public string Tab_General;
             public string Tab_Widget;
+            public string Button_HotkeySet;
+            public string Button_ResetWidgetPos;
             public string Button_Apply;
             public string Button_Cancel;
             public string Startup_Add;
             public string Startup_Remove;
         }
 
+        public __HotkeyRegester HotkeyRegester = new __HotkeyRegester();
+        public class __HotkeyRegester
+        {
+            public string Label_1;
+            public string Label_2;
+        }
         public void LoadLanguagePack(string Path,ref LanguagePack Lpack)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(LanguagePack));

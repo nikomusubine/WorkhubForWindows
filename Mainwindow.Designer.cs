@@ -53,10 +53,10 @@ namespace WorkhubForWindows
             this.EditButton = new System.Windows.Forms.Button();
             this.Apps = new System.Windows.Forms.ListView();
             this.ApplistRClick = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.addAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RunAsAdmin = new System.Windows.Forms.ToolStripMenuItem();
+            this.ApplistRC_Add = new System.Windows.Forms.ToolStripMenuItem();
+            this.ApplistRC_Edit = new System.Windows.Forms.ToolStripMenuItem();
+            this.ApplistRC_Delete = new System.Windows.Forms.ToolStripMenuItem();
+            this.ApplistRC_RunAsAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.HomePanel = new System.Windows.Forms.TableLayoutPanel();
             this.ListViewPanel = new System.Windows.Forms.TableLayoutPanel();
             this.HalfModebackimg = new System.Windows.Forms.PictureBox();
@@ -224,36 +224,36 @@ namespace WorkhubForWindows
             // 
             this.ApplistRClick.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.ApplistRClick.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addAToolStripMenuItem,
-            this.editEToolStripMenuItem,
-            this.deleteDToolStripMenuItem,
-            this.RunAsAdmin});
+            this.ApplistRC_Add,
+            this.ApplistRC_Edit,
+            this.ApplistRC_Delete,
+            this.ApplistRC_RunAsAdmin});
             this.ApplistRClick.Name = "ApplistRClick";
             resources.ApplyResources(this.ApplistRClick, "ApplistRClick");
             // 
-            // addAToolStripMenuItem
+            // ApplistRC_Add
             // 
-            this.addAToolStripMenuItem.Name = "addAToolStripMenuItem";
-            resources.ApplyResources(this.addAToolStripMenuItem, "addAToolStripMenuItem");
-            this.addAToolStripMenuItem.Click += new System.EventHandler(this.Additem);
+            this.ApplistRC_Add.Name = "ApplistRC_Add";
+            resources.ApplyResources(this.ApplistRC_Add, "ApplistRC_Add");
+            this.ApplistRC_Add.Click += new System.EventHandler(this.Additem);
             // 
-            // editEToolStripMenuItem
+            // ApplistRC_Edit
             // 
-            this.editEToolStripMenuItem.Name = "editEToolStripMenuItem";
-            resources.ApplyResources(this.editEToolStripMenuItem, "editEToolStripMenuItem");
-            this.editEToolStripMenuItem.Click += new System.EventHandler(this.EditPushed);
+            this.ApplistRC_Edit.Name = "ApplistRC_Edit";
+            resources.ApplyResources(this.ApplistRC_Edit, "ApplistRC_Edit");
+            this.ApplistRC_Edit.Click += new System.EventHandler(this.EditPushed);
             // 
-            // deleteDToolStripMenuItem
+            // ApplistRC_Delete
             // 
-            this.deleteDToolStripMenuItem.Name = "deleteDToolStripMenuItem";
-            resources.ApplyResources(this.deleteDToolStripMenuItem, "deleteDToolStripMenuItem");
-            this.deleteDToolStripMenuItem.Click += new System.EventHandler(this.DeleteClicked);
+            this.ApplistRC_Delete.Name = "ApplistRC_Delete";
+            resources.ApplyResources(this.ApplistRC_Delete, "ApplistRC_Delete");
+            this.ApplistRC_Delete.Click += new System.EventHandler(this.DeleteClicked);
             // 
-            // RunAsAdmin
+            // ApplistRC_RunAsAdmin
             // 
-            this.RunAsAdmin.Name = "RunAsAdmin";
-            resources.ApplyResources(this.RunAsAdmin, "RunAsAdmin");
-            this.RunAsAdmin.Click += new System.EventHandler(this.RunAsAdminClicked);
+            this.ApplistRC_RunAsAdmin.Name = "ApplistRC_RunAsAdmin";
+            resources.ApplyResources(this.ApplistRC_RunAsAdmin, "ApplistRC_RunAsAdmin");
+            this.ApplistRC_RunAsAdmin.Click += new System.EventHandler(this.RunAsAdminClicked);
             // 
             // HomePanel
             // 
@@ -321,13 +321,13 @@ namespace WorkhubForWindows
         private System.Windows.Forms.ToolStripMenuItem TrayRC_ShowWidget;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
         private System.Windows.Forms.ContextMenuStrip ApplistRClick;
-        private System.Windows.Forms.ToolStripMenuItem addAToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editEToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ApplistRC_Add;
+        private System.Windows.Forms.ToolStripMenuItem ApplistRC_Edit;
+        private System.Windows.Forms.ToolStripMenuItem ApplistRC_Delete;
         private System.Windows.Forms.TableLayoutPanel ListViewPanel;
         private System.Windows.Forms.ToolStripMenuItem TrayRC_Settings;
         private System.Windows.Forms.ToolStripMenuItem TrayRC_AddItem;
-        private System.Windows.Forms.ToolStripMenuItem RunAsAdmin;
+        private System.Windows.Forms.ToolStripMenuItem ApplistRC_RunAsAdmin;
         private System.Windows.Forms.PictureBox HalfModebackimg;
     }
 }

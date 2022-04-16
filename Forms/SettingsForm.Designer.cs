@@ -40,21 +40,21 @@
             this.WidgetForeColorLabel = new System.Windows.Forms.Label();
             this.WidgetForeColorChangeButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.HotKeySetButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.WidgetBackColorLabel = new System.Windows.Forms.Label();
             this.WidgetBackColorButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.WidgetSCKeyLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.WidgetSizeLabel = new System.Windows.Forms.Label();
             this.WidgetSizeBar = new System.Windows.Forms.TrackBar();
             this.WidgetSizeBox = new System.Windows.Forms.NumericUpDown();
             this.ResetWidgetPosition = new System.Windows.Forms.Button();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.HotKeySetButton = new System.Windows.Forms.Button();
+            this.HotkeyBox = new System.Windows.Forms.TextBox();
             this.SettingsTab = new System.Windows.Forms.TabControl();
             this.General = new System.Windows.Forms.TabPage();
             this.GeneralSettingsPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -74,8 +74,6 @@
             this.LanguageLabel = new System.Windows.Forms.Label();
             this.LanguageBox = new System.Windows.Forms.ComboBox();
             this.Widget = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.HotkeyBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBox)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
@@ -83,11 +81,11 @@
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBox)).BeginInit();
+            this.tableLayoutPanel12.SuspendLayout();
             this.SettingsTab.SuspendLayout();
             this.General.SuspendLayout();
             this.GeneralSettingsPanel.SuspendLayout();
@@ -95,7 +93,6 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.Widget.SuspendLayout();
-            this.tableLayoutPanel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // ApplyButton
@@ -158,13 +155,6 @@
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel12, 0, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             // 
-            // HotKeySetButton
-            // 
-            resources.ApplyResources(this.HotKeySetButton, "HotKeySetButton");
-            this.HotKeySetButton.Name = "HotKeySetButton";
-            this.HotKeySetButton.UseVisualStyleBackColor = true;
-            this.HotKeySetButton.Click += new System.EventHandler(this.RegesterHotKeyButtonClicked);
-            // 
             // tableLayoutPanel6
             // 
             resources.ApplyResources(this.tableLayoutPanel6, "tableLayoutPanel6");
@@ -184,9 +174,8 @@
             // 
             resources.ApplyResources(this.tableLayoutPanel8, "tableLayoutPanel8");
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel2, 0, 2);
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel1, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel11, 0, 3);
+            this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel11, 0, 2);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             // 
             // tableLayoutPanel9
@@ -207,17 +196,6 @@
             this.WidgetBackColorButton.Name = "WidgetBackColorButton";
             this.WidgetBackColorButton.UseVisualStyleBackColor = true;
             this.WidgetBackColorButton.Click += new System.EventHandler(this.WidgetBackColorChange);
-            // 
-            // tableLayoutPanel2
-            // 
-            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
-            this.tableLayoutPanel2.Controls.Add(this.WidgetSCKeyLabel, 0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            // 
-            // WidgetSCKeyLabel
-            // 
-            resources.ApplyResources(this.WidgetSCKeyLabel, "WidgetSCKeyLabel");
-            this.WidgetSCKeyLabel.Name = "WidgetSCKeyLabel";
             // 
             // tableLayoutPanel1
             // 
@@ -275,6 +253,26 @@
             this.ResetWidgetPosition.Name = "ResetWidgetPosition";
             this.ResetWidgetPosition.UseVisualStyleBackColor = true;
             this.ResetWidgetPosition.Click += new System.EventHandler(this.ResetWidgetPosition_Click);
+            // 
+            // tableLayoutPanel12
+            // 
+            resources.ApplyResources(this.tableLayoutPanel12, "tableLayoutPanel12");
+            this.tableLayoutPanel12.Controls.Add(this.HotKeySetButton, 1, 0);
+            this.tableLayoutPanel12.Controls.Add(this.HotkeyBox, 0, 0);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            // 
+            // HotKeySetButton
+            // 
+            resources.ApplyResources(this.HotKeySetButton, "HotKeySetButton");
+            this.HotKeySetButton.Name = "HotKeySetButton";
+            this.HotKeySetButton.UseVisualStyleBackColor = true;
+            this.HotKeySetButton.Click += new System.EventHandler(this.RegesterHotKeyButtonClicked);
+            // 
+            // HotkeyBox
+            // 
+            resources.ApplyResources(this.HotkeyBox, "HotkeyBox");
+            this.HotkeyBox.Name = "HotkeyBox";
+            this.HotkeyBox.ReadOnly = true;
             // 
             // SettingsTab
             // 
@@ -402,19 +400,6 @@
             this.Widget.Name = "Widget";
             this.Widget.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel12
-            // 
-            resources.ApplyResources(this.tableLayoutPanel12, "tableLayoutPanel12");
-            this.tableLayoutPanel12.Controls.Add(this.HotKeySetButton, 1, 0);
-            this.tableLayoutPanel12.Controls.Add(this.HotkeyBox, 0, 0);
-            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
-            // 
-            // HotkeyBox
-            // 
-            resources.ApplyResources(this.HotkeyBox, "HotkeyBox");
-            this.HotkeyBox.Name = "HotkeyBox";
-            this.HotkeyBox.ReadOnly = true;
-            // 
             // SettingsForm
             // 
             this.AcceptButton = this.ApplyButton;
@@ -438,14 +423,14 @@
             this.tableLayoutPanel8.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WidgetSizeBox)).EndInit();
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel12.PerformLayout();
             this.SettingsTab.ResumeLayout(false);
             this.General.ResumeLayout(false);
             this.GeneralSettingsPanel.ResumeLayout(false);
@@ -456,8 +441,6 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
             this.Widget.ResumeLayout(false);
-            this.tableLayoutPanel12.ResumeLayout(false);
-            this.tableLayoutPanel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -480,8 +463,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.TabControl SettingsTab;
         private System.Windows.Forms.TabPage Widget;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label WidgetSCKeyLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Label WidgetBackColorLabel;

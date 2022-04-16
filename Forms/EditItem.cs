@@ -178,6 +178,10 @@ namespace WorkhubForWindows.Forms
             {
                 this.Close_Button.Text = StaticClasses.Langs.EditItem.CloseButton;
             }
+            if (StaticClasses.Langs.EditItem.Label_RunasAdmin != null)
+            {
+                this.RunasLabel.Text = StaticClasses.Langs.EditItem.Label_RunasAdmin;
+            }
         }
 
     }
