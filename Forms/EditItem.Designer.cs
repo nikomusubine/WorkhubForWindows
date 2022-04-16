@@ -47,8 +47,6 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.MoveLbutton = new System.Windows.Forms.Button();
             this.MoveRbutton = new System.Windows.Forms.Button();
-            this.RunasLabel = new System.Windows.Forms.Label();
-            this.RunasAdminBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -176,17 +174,6 @@
             this.MoveRbutton.Name = "MoveRbutton";
             this.MoveRbutton.UseVisualStyleBackColor = true;
             this.MoveRbutton.Click += new System.EventHandler(this.MoveRClicked);
-            // 
-            // RunasLabel
-            // 
-            resources.ApplyResources(this.RunasLabel, "RunasLabel");
-            this.RunasLabel.Name = "RunasLabel";
-            // 
-            // RunasAdminBox
-            // 
-            resources.ApplyResources(this.RunasAdminBox, "RunasAdminBox");
-            this.RunasAdminBox.Name = "RunasAdminBox";
-            this.RunasAdminBox.UseVisualStyleBackColor = true;
             // 
             // EditItem
             // 

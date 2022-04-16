@@ -24,7 +24,7 @@ namespace WorkhubForWindows
         public static Widget wg;
         public Mainwindow()
         {
-            string name = Process.GetCurrentProcess().ProcessName;
+            /*string name = Process.GetCurrentProcess().ProcessName;
             Process[] processes = Process.GetProcessesByName(name);
             for (int i = 0; i < processes.Length; i++)
             {
@@ -35,7 +35,7 @@ namespace WorkhubForWindows
                     this.Dispose();
                     Environment.Exit(1);
                 }
-            }
+            }*/
             InitializeComponent();
             this.Apps.SmallImageList = StaticClasses.IconList;
             this.Apps.LargeImageList = StaticClasses.IconList;

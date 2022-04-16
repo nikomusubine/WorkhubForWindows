@@ -40,6 +40,7 @@
             this.WidgetForeColorLabel = new System.Windows.Forms.Label();
             this.WidgetForeColorChangeButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.HotKeySetButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
@@ -73,6 +74,8 @@
             this.LanguageLabel = new System.Windows.Forms.Label();
             this.LanguageBox = new System.Windows.Forms.ComboBox();
             this.Widget = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.HotkeyBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBox)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
@@ -92,6 +95,7 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.Widget.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // ApplyButton
@@ -150,8 +154,16 @@
             resources.ApplyResources(this.tableLayoutPanel5, "tableLayoutPanel5");
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel8, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.ResetWidgetPosition, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.ResetWidgetPosition, 0, 3);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel12, 0, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            // 
+            // HotKeySetButton
+            // 
+            resources.ApplyResources(this.HotKeySetButton, "HotKeySetButton");
+            this.HotKeySetButton.Name = "HotKeySetButton";
+            this.HotKeySetButton.UseVisualStyleBackColor = true;
+            this.HotKeySetButton.Click += new System.EventHandler(this.RegesterHotKeyButtonClicked);
             // 
             // tableLayoutPanel6
             // 
@@ -390,6 +402,19 @@
             this.Widget.Name = "Widget";
             this.Widget.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel12
+            // 
+            resources.ApplyResources(this.tableLayoutPanel12, "tableLayoutPanel12");
+            this.tableLayoutPanel12.Controls.Add(this.HotKeySetButton, 1, 0);
+            this.tableLayoutPanel12.Controls.Add(this.HotkeyBox, 0, 0);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            // 
+            // HotkeyBox
+            // 
+            resources.ApplyResources(this.HotkeyBox, "HotkeyBox");
+            this.HotkeyBox.Name = "HotkeyBox";
+            this.HotkeyBox.ReadOnly = true;
+            // 
             // SettingsForm
             // 
             this.AcceptButton = this.ApplyButton;
@@ -431,6 +456,8 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
             this.Widget.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.tableLayoutPanel12.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -481,5 +508,8 @@
         private System.Windows.Forms.Label WidgetSizeLabel;
         private System.Windows.Forms.TrackBar WidgetSizeBar;
         private System.Windows.Forms.NumericUpDown WidgetSizeBox;
+        private System.Windows.Forms.Button HotKeySetButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.TextBox HotkeyBox;
     }
 }

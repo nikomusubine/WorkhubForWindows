@@ -36,15 +36,31 @@ namespace WorkhubForWindows
     [Serializable]
     public class Shortcut
     {
-        public Shortcut(KeyModifiers modifires,Keys key)
+        public Shortcut(KeyModifiers modifires, Keys key)
         {
             Modifires = modifires;
             keys = key;
         }
+        public Shortcut(Shortcut shortcut)
+        {
+            Modifires = shortcut.Modifires;
+            keys = shortcut.keys;
+        }
+
 
         public KeyModifiers Modifires;
         public Keys keys;
+        public new string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            if (Modifires != KeyModifiers.None)
+            {
+                sb.Append(string.Format("{0},", Modifires.ToString()));
+            }
+            sb.Append(string.Format("{0}", keys.ToString()));
 
+            return sb.ToString();
+        }
         
     }
 
@@ -528,6 +544,7 @@ namespace WorkhubForWindows
 
                 __WidgetShortcutkey.Add(value.keys.ToString());
             }
+
         }
         private HomeMode __Homemode = HomeMode.HalfHome;
         public HomeMode Homemode

@@ -113,6 +113,12 @@
     <Compile Include="Forms\EditItem.Designer.cs">
       <DependentUpon>EditItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\HotKeyRegester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HotKeyRegester.Designer.cs">
+      <DependentUpon>HotKeyRegester.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditItem.resx">
       <DependentUpon>EditItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HotKeyRegester.resx">
+      <DependentUpon>HotKeyRegester.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SettingsForm.ar-KM.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>

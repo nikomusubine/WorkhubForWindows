@@ -263,7 +263,7 @@ namespace WorkhubForWindows
             {
                 Hotkey = new HotKeyRegister(this.Handle, HotkeyID, StaticClasses.Config.WidgetShortcutKey.Modifires, StaticClasses.Config.WidgetShortcutKey.keys);
             }
-            catch (System.ApplicationException)
+            catch (System.ArgumentException)
             {
 
             }

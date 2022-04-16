@@ -40,8 +40,8 @@
             this.ButtonCancel = new System.Windows.Forms.Button();
             this.RefDiag = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.RunasAdminLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.RunasAdminBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -117,17 +117,17 @@
             this.tableLayoutPanel1.Controls.Add(this.RunasAdminBox, 1, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
+            // RunasAdminLabel
+            // 
+            resources.ApplyResources(this.RunasAdminLabel, "RunasAdminLabel");
+            this.RunasAdminLabel.Name = "RunasAdminLabel";
+            // 
             // tableLayoutPanel2
             // 
             resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
             this.tableLayoutPanel2.Controls.Add(this.ButtonReference, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.FilePathBox, 0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            // 
-            // RunasAdminLabel
-            // 
-            resources.ApplyResources(this.RunasAdminLabel, "RunasAdminLabel");
-            this.RunasAdminLabel.Name = "RunasAdminLabel";
             // 
             // RunasAdminBox
             // 

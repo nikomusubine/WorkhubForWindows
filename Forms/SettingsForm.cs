@@ -23,6 +23,7 @@ namespace WorkhubForWindows.Forms
         private bool isstartup = false;
         private Color WidgetForeColor;
         private Color WidgetBackColor;
+        private Shortcut shortcut;
 
         public SettingsForm()
         {
@@ -36,7 +37,6 @@ namespace WorkhubForWindows.Forms
                 }
 
             }
-            
             initalizeform();
             LanguageLoad();
         }
@@ -231,6 +231,17 @@ namespace WorkhubForWindows.Forms
                 WidgetBackColor = ColorDiag.Color;
             }
         }
+        private void RegesterHotKeyButtonClicked(object sender,EventArgs e)
+        {
+            HotKeyRegester hotkey = new HotKeyRegester();
+            hotkey.ShowDialog();
+            shortcut.Modifires = hotkey.PressedKeyModifires;
+            shortcut.keys = hotkey.PressedKeys;
+
+            HotkeyBox.Text = shortcut.ToString();
+            hotkey.Dispose();
+        }
+
         #region WidgetSizeChanged
         private void WidgetSizeBoxChanged(object sender,EventArgs e)
         {
@@ -269,7 +280,7 @@ namespace WorkhubForWindows.Forms
 
             float Div = (float)StaticClasses.Config.WidgetSize.Height / StaticClasses.Config.WidgetSize.Width;
             StaticClasses.Config.WidgetSize = new Size((int)WidgetSizeBox.Value, (int)((int)WidgetSizeBox.Value * Div));
-
+            StaticClasses.Config.WidgetShortcutKey = shortcut;
             #endregion
             StaticClasses.Config.SaveConfig(StaticClasses.Config);
             StaticClasses.Config.ApplyConfig();
@@ -294,6 +305,8 @@ namespace WorkhubForWindows.Forms
         #region Functions
         void initalizeform()
         {
+
+            shortcut = new Shortcut(StaticClasses.Config.WidgetShortcutKey);
             FontNames.Text = StaticClasses.Config.font.Name;
             FontSizeBox.Text = StaticClasses.Config.font.Size.ToString();
 
@@ -307,6 +320,7 @@ namespace WorkhubForWindows.Forms
             WidgetBackColor = StaticClasses.Config.WidgetBackColor;
             WidgetSizeBox.Value = StaticClasses.Config.WidgetSize.Width;
             WidgetSizeBar.Value = StaticClasses.Config.WidgetSize.Height;
+            HotkeyBox.Text = shortcut.ToString();
 
             LanguageBox.Text = StaticClasses.Config.Language;
             foreach (string str in Directory.GetFiles("Languages","*.xml",SearchOption.TopDirectoryOnly))
