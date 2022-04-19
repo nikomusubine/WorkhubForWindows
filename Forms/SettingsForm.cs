@@ -94,7 +94,7 @@ namespace WorkhubForWindows.Forms
             {
                 backimgpath.Text = ofdiag.FileName;
             }
-
+            ofdiag.Dispose();
         }
 
         private void WidgetBackImgRefClick(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace WorkhubForWindows.Forms
             {
                 widgetbackimgpath.Text = ofdiag.FileName;
             }
-
+            ofdiag.Dispose();
         }
 
         private void AddStartUpClicked(object sender,EventArgs e)
@@ -235,10 +235,13 @@ namespace WorkhubForWindows.Forms
         {
             HotKeyRegester hotkey = new HotKeyRegester();
             hotkey.ShowDialog();
-            shortcut.Modifires = hotkey.PressedKeyModifires;
-            shortcut.keys = hotkey.PressedKeys;
+            if (!hotkey.Canceled)
+            {
+                shortcut.Modifires = hotkey.PressedKeyModifires;
+                shortcut.keys = hotkey.PressedKeys;
 
-            HotkeyBox.Text = shortcut.ToString();
+                HotkeyBox.Text = shortcut.ToString();
+            }
             hotkey.Dispose();
         }
 

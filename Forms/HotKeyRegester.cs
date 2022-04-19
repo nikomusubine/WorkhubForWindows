@@ -14,11 +14,12 @@ namespace WorkhubForWindows.Forms
     {
         public Keys PressedKeys;
         public KeyModifiers PressedKeyModifires;
+        public bool Canceled;
 
         public HotKeyRegester()
         {
             InitializeComponent();
-
+            Canceled = true;
             this.Font = StaticClasses.Config.font;
             label1.Font = new Font(StaticClasses.Config.font.Name, 32);
             if (StaticClasses.Langs.HotkeyRegester.Label_1 != null)
@@ -47,7 +48,13 @@ namespace WorkhubForWindows.Forms
             {
                 PressedKeyModifires = PressedKeyModifires | KeyModifiers.Alt;
             }
+            Canceled = false;
             this.Close();
+        }
+
+        private void WindowClosing(object sender,EventArgs e)
+        {
+
         }
     }
 }

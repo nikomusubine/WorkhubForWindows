@@ -539,15 +539,16 @@ namespace WorkhubForWindows
                 if (Convert.ToBoolean((int)(value.Modifires & KeyModifiers.Alt)))
                 {
                     __WidgetShortcutkey.Add(KeyModifiers.Alt.ToString());
-                }else if (Convert.ToBoolean((int)(value.Modifires & KeyModifiers.Control)))
+                }
+                if (Convert.ToBoolean((int)(value.Modifires & KeyModifiers.Control)))
                 {
                     __WidgetShortcutkey.Add(KeyModifiers.Control.ToString());
                 }
-                else if (Convert.ToBoolean((int)(value.Modifires & KeyModifiers.Shift)))
+                if (Convert.ToBoolean((int)(value.Modifires & KeyModifiers.Shift)))
                 {
                     __WidgetShortcutkey.Add(KeyModifiers.Shift.ToString());
                 }
-                else if (Convert.ToBoolean((int)(value.Modifires & KeyModifiers.Windows)))
+                if (Convert.ToBoolean((int)(value.Modifires & KeyModifiers.Windows)))
                 {
                     __WidgetShortcutkey.Add(KeyModifiers.Windows.ToString());
                 }
