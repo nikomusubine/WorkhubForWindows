@@ -13,6 +13,7 @@ using System.Security.Permissions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Interop;
 using System.Threading;
+using Microsoft.Win32;
 
 namespace WorkhubForWindows
 {
@@ -91,7 +92,12 @@ namespace WorkhubForWindows
             StaticClasses.Config.ShowWidget = false;
         }
 
-        private void SettingsTimerTIck(object sender,EventArgs e)
+        private void SystemEvents_SessionEnding(object sender, SessionEndingEventArgs e)
+        {
+            this.FormClosing -= Form_Closing;
+        }
+
+            private void SettingsTimerTIck(object sender,EventArgs e)
         {
             if (this.Size!=StaticClasses.Config.WidgetSize)
             {
@@ -418,6 +424,9 @@ namespace WorkhubForWindows
                 StaticClasses.Config.SaveConfig(StaticClasses.Config);
             });
             task.Wait();
+
+            StaticClasses.Config.WidgetPosition = this.Location;
+            StaticClasses.Config.SaveConfig();
         }
 
         #endregion
@@ -434,6 +443,7 @@ namespace WorkhubForWindows
         public const int WM_COPYDATA = 0x4A;
         public const int WM_USER = 0x400;
 
+        private const int WM_QUERYENDSESSION = 0x11;
         public new void Show()
         {
             this.WindowState = FormWindowState.Normal;
@@ -483,6 +493,7 @@ namespace WorkhubForWindows
                     break;
                 case StaticClasses.WorkHubMessages.ApplicationQuit:
                     App_Closing();
+                    this.Dispose();
                     break;
                 case WM_HOTKEY:
                     if (StaticClasses.Config.ShowWidget)
@@ -501,6 +512,13 @@ namespace WorkhubForWindows
                         }
                     }
 
+                    break;
+
+                case WM_QUERYENDSESSION:
+
+                    this.FormClosing -= Form_Closing;
+                    Functions.WinMsgFuncs.AppClose();
+                    Environment.Exit(0);
                     break;
                 default:
                     break;

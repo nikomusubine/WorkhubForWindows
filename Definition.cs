@@ -581,6 +581,7 @@ namespace WorkhubForWindows
                 __Language = value;
             }
         }
+        public int EULA = 0;
         //public string LogoffSound;
         //public string ShutdownSound;
 

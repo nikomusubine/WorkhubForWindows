@@ -135,6 +135,12 @@
     <Compile Include="Forms\EditItem.Designer.cs">
       <DependentUpon>EditItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EULA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EULA.Designer.cs">
+      <DependentUpon>EULA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\HotKeyRegester.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,15 @@
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions\Functions.cs" />
+    <Compile Include="MainBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_FullScreenList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_FullScreenList.Designer.cs">
+      <DependentUpon>Main_FullScreenList.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ListFullScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -183,6 +198,9 @@
     <EmbeddedResource Include="Forms\EditItem.resx">
       <DependentUpon>EditItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EULA.resx">
+      <DependentUpon>EULA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\HotKeyRegester.resx">
       <DependentUpon>HotKeyRegester.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mainwindow.resx">
       <DependentUpon>Mainwindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_FullScreenList.resx">
+      <DependentUpon>Main_FullScreenList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -250,6 +271,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="EULA\Ja_Jp.txt" />
     <Content Include="ICO_4Niko.ico" />
     <Content Include="Languages\日本語.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

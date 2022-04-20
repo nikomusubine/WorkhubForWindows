@@ -17,20 +17,20 @@ using System.Runtime.InteropServices;
 
 namespace WorkhubForWindows
 {
-    public partial class Mainwindow : Form
+    public partial class Main_FullScreenList : Form
     {
         private bool Quiting = false;
 
         public static Widget wg;
-        public Mainwindow()
+        public Main_FullScreenList()
         {
-            
+
             InitializeComponent();
             this.Apps.SmallImageList = StaticClasses.IconList;
             this.Apps.LargeImageList = StaticClasses.IconList;
             initalizeApps();
             ApplistRC_RunAsAdmin.Image = Functions.WinAPIFuncs.GetSieldIcon(false).ToBitmap();
-                        
+
 
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle, "MainForm"));
@@ -39,7 +39,7 @@ namespace WorkhubForWindows
             Apps.View = View.LargeIcon;
             this.FormClosing += Form_Closing;
             StaticClasses.AppStatus.Started = true;
-            StaticClasses.Langs.LoadLanguagePack("Languages\\" + StaticClasses.Config.Language + ".xml",ref StaticClasses.Langs);
+            StaticClasses.Langs.LoadLanguagePack("Languages\\" + StaticClasses.Config.Language + ".xml", ref StaticClasses.Langs);
             foreach (var i in StaticClasses.WindowHandler.WindowHandlers)
             {
                 Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.LanguagePackLoad, 0, 0);
@@ -72,7 +72,7 @@ namespace WorkhubForWindows
                         StaticClasses.Executables[Apps.SelectedItems[i].Index].Path,
                         StaticClasses.Executables[Apps.SelectedItems[i].Index].Argments,
                         true
-                        ) ;
+                        );
                     StaticClasses.LoadIcons();
 
                     Functions.Config.Applications.Save(StaticClasses.Executables);
@@ -112,7 +112,7 @@ namespace WorkhubForWindows
             }
         }
 
-        private void RunAsAdminClicked(object sender,EventArgs e)
+        private void RunAsAdminClicked(object sender, EventArgs e)
         {
             for (int i = 0; i != Apps.SelectedItems.Count; i++)
             {
@@ -120,7 +120,7 @@ namespace WorkhubForWindows
             }
         }
 
-        private void DeleteClicked(object sender,EventArgs e)
+        private void DeleteClicked(object sender, EventArgs e)
         {
             StaticClasses.Executables.RemoveAt(this.Apps.SelectedIndices[0]);
 
@@ -212,10 +212,9 @@ namespace WorkhubForWindows
             {
                 if (File.Exists(StaticClasses.Config.backimgpath))
                 {
-                    if (StaticClasses.Config.Homemode == HomeMode.HalfHome)
-                    {
-                        this.HalfModebackimg.BackgroundImage = Image.FromFile(StaticClasses.Config.backimgpath);
-                    }
+                    
+                        this.Apps.BackgroundImage = Image.FromFile(StaticClasses.Config.backimgpath);
+                    
                 }
                 else if (StaticClasses.Config.backimgpath != "")
                 {
@@ -230,7 +229,7 @@ namespace WorkhubForWindows
 
         void LoadLanguage()
         {
-            
+
             AddItemButton.Text = StaticClasses.Langs.Mainwindow.AdditemButton;
             EditButton.Text = StaticClasses.Langs.Mainwindow.EdititemButton;
             StartButton.Text = StaticClasses.Langs.Mainwindow.StartButton;
@@ -244,7 +243,7 @@ namespace WorkhubForWindows
             ApplistRC_RunAsAdmin.Text = StaticClasses.Langs.Mainwindow.ApplistRC.RunAdmin;
             TrayRC_ShowMain.Text = StaticClasses.Langs.Mainwindow.TasktrayIcon.ShowMainWindow;
             TrayRC_ShowWidget.Text = StaticClasses.Langs.Mainwindow.TasktrayIcon.ShowWidget;
-            TrayRC_Settings.Text = StaticClasses.Langs.Mainwindow.TasktrayIcon.Settings;    
+            TrayRC_Settings.Text = StaticClasses.Langs.Mainwindow.TasktrayIcon.Settings;
             TrayRC_AddItem.Text = StaticClasses.Langs.Mainwindow.TasktrayIcon.AddItem;
             TrayRC_Quit.Text = StaticClasses.Langs.Mainwindow.TasktrayIcon.Quit;
 
@@ -285,13 +284,12 @@ namespace WorkhubForWindows
                 case StaticClasses.WorkHubMessages.ApplicationQuit:
                     this.FormClosing -= Form_Closing;
                     Quiting = true;
-                    Environment.Exit(0);
+                    this.Dispose();
                     break;
                 case WM_QUERYENDSESSION:
                     this.FormClosing -= Form_Closing;
                     Quiting = true;
                     Functions.WinMsgFuncs.AppClose();
-                    Environment.Exit(0);
                     break;
                 default:
                     break;

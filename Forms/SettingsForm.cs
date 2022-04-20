@@ -280,7 +280,7 @@ namespace WorkhubForWindows.Forms
             StaticClasses.Config.WidgetForeColor = WidgetForeColor;
             StaticClasses.Config.WidgetBackColor = WidgetBackColor;
             StaticClasses.Config.Language = this.LanguageBox.Text;
-
+            
             float Div = (float)StaticClasses.Config.WidgetSize.Height / StaticClasses.Config.WidgetSize.Width;
             StaticClasses.Config.WidgetSize = new Size((int)WidgetSizeBox.Value, (int)((int)WidgetSizeBox.Value * Div));
             StaticClasses.Config.WidgetShortcutKey = shortcut;
@@ -288,6 +288,14 @@ namespace WorkhubForWindows.Forms
             StaticClasses.Config.SaveConfig(StaticClasses.Config);
             StaticClasses.Config.ApplyConfig();
             StaticClasses.Langs.LoadLanguagePack("Languages\\" + StaticClasses.Config.Language + ".xml", ref StaticClasses.Langs);
+            if (MainWndStyleFull.Checked)
+            {
+                StaticClasses.Config.Homemode = HomeMode.FullScreen;
+            }
+            else
+            {
+                StaticClasses.Config.Homemode = HomeMode.HalfHome;
+            }
             foreach (var i in StaticClasses.WindowHandler.WindowHandlers)
             {
                 Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.LanguagePackLoad, 0, 0);
@@ -325,6 +333,18 @@ namespace WorkhubForWindows.Forms
             WidgetSizeBar.Value = StaticClasses.Config.WidgetSize.Height;
             HotkeyBox.Text = shortcut.ToString();
 
+            switch (StaticClasses.Config.Homemode)
+            {
+                case HomeMode.HalfHome:
+                    MainWndStyleFull.Checked = false;
+                    MainWndStyleHalf.Checked = true;
+                    break;
+                case HomeMode.FullScreen:
+                    MainWndStyleFull.Checked = true;
+                    MainWndStyleHalf.Checked = false;
+                    break;
+
+            }
             LanguageBox.Text = StaticClasses.Config.Language;
             foreach (string str in Directory.GetFiles("Languages","*.xml",SearchOption.TopDirectoryOnly))
             {
