@@ -148,6 +148,10 @@ namespace WorkhubForWindows
             if (diagres == DialogResult.Yes)
             {
                 Quiting = true;
+                foreach(WorkhubWindowHandler wh in StaticClasses.WindowHandler.WindowHandlers)
+                {
+                    Functions.WinAPIFuncs.PostMessage(wh.hWnd, StaticClasses.WorkHubMessages.ApplicationQuit, 0, 0);
+                }
                 this.Close();
                 //Environment.Exit(0);
             }
@@ -212,9 +216,18 @@ namespace WorkhubForWindows
             {
                 if (File.Exists(StaticClasses.Config.backimgpath))
                 {
-                    
-                        this.Apps.BackgroundImage = Image.FromFile(StaticClasses.Config.backimgpath);
-                    
+                    Image img = Image.FromFile(StaticClasses.Config.backimgpath);
+                    float x = img.Size.Width, y = img.Size.Height;
+                    if (y / (Apps.Width / x) < Apps.Height / (Apps.Width / x))
+                    {
+                        this.Apps.BackgroundImage = (Image)new Bitmap(img, new Size(Apps.Width, (int)(y / (Apps.Width / x))));
+                    }
+                    else
+                    {
+
+                    }
+
+
                 }
                 else if (StaticClasses.Config.backimgpath != "")
                 {
@@ -222,9 +235,10 @@ namespace WorkhubForWindows
 
                 }
 
-                this.TrayRC_ShowWidget.Checked = StaticClasses.Config.ShowWidget;
-                this.ToolStripShowWidget.Checked = StaticClasses.Config.ShowWidget;
+
             }
+            this.TrayRC_ShowWidget.Checked = StaticClasses.Config.ShowWidget;
+            this.ToolStripShowWidget.Checked = StaticClasses.Config.ShowWidget;
         }
 
         void LoadLanguage()

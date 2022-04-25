@@ -1,74 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguagePack xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Mainwindow>
-    <AdditemButton>Add(&amp;A)</AdditemButton>
-    <EdititemButton>Edit(&amp;E)</EdititemButton>
-    <StartButton>Start(&amp;S)</StartButton>
-    <RibbonFiles>
-      <Text>Files(&amp;F)</Text>
-      <Settings>Settings(&amp;S)</Settings>
-      <ShowWidget>Show Widget(&amp;W)</ShowWidget>
-      <Quit>Quit(&amp;Q)</Quit>
-    </RibbonFiles>
-    <ApplistRC>
-      <Add>Add(&amp;A)</Add>
-      <Edit>Edit(&amp;E)</Edit>
-      <Delete>Delete(&amp;D)</Delete>
-      <RunAdmin>Run as admin</RunAdmin>
-    </ApplistRC>
-    <TasktrayIcon>
-      <ShowMainWindow>Show MainWindow(&amp;M)</ShowMainWindow>
-      <ShowWidget>Show Widget(&amp;W)</ShowWidget>
-      <Settings>Settings(&amp;S)</Settings>
-      <AddItem>Add Item(&amp;A)</AddItem>
-      <Quit>Quit(&amp;Q)</Quit>
-    </TasktrayIcon>
-    <MB_Quit_Verif>Would you like to quit application?</MB_Quit_Verif>
-  </Mainwindow>
-  <AddItem>
-    <Label_Name>Name</Label_Name>
-    <Label_Path>Path</Label_Path>
-    <Label_Args>Args</Label_Args>
-	<Label_RunasAdmin>Run as admin</Label_RunasAdmin>
-    <CancelButton>Cancel(&amp;C)</CancelButton>
-    <ApplyButton>Apply(&amp;A)</ApplyButton>
-    <RefButton>Reference</RefButton>
-  </AddItem>
-  <EditItem>
-    <WindowTitle>Edit</WindowTitle>
-    <Label_Name>Name</Label_Name>
-    <Label_Path>Path</Label_Path>
-    <Label_Args>Args</Label_Args>
-	<Label_RunasAdmin>Run as admin</Label_RunasAdmin>
-    <CloseButton>Close(&amp;C)</CloseButton>
-    <ApplyButton>Apply(&amp;A)</ApplyButton>
-    <OKButton>OK(&amp;O)</OKButton>
-  </EditItem>
-  <Widget>
-    <WidgetRC>
-      <FixWidgetPos>Fix Widget Position(&amp;F)</FixWidgetPos>
-    </WidgetRC>
-  </Widget>
-  <Settings>
-    <WindowTitle>Settings</WindowTitle>
-    <Label_Font>Font</Label_Font>
-    <Label_MainBackimgPath>MainWindow Background Image</Label_MainBackimgPath>
-    <Label_WidgetBackimgPath>Widget Background Image</Label_WidgetBackimgPath>
-    <Label_Language>Language</Label_Language>
-    <Label_Opacity>Opacity</Label_Opacity>
-    <Label_WidgetTextColor>Widget Text Color</Label_WidgetTextColor>
-    <Label_WidgetBackColor>Widget Back Color</Label_WidgetBackColor>
-    <Label_WidgetSCKey>Show Widget Shortcut Key</Label_WidgetSCKey>
-	<Label_WidgetSize>WidgetSize</Label_WidgetSize>
-    <Tab_General>General</Tab_General>
-    <Tab_Widget>Widget</Tab_Widget>
-	<Button_HotkeySet>Set hotkey</Button_HotkeySet>
-    <Button_ResetWidgetPos>Reset Widget Position</Button_ResetWidgetPos>
-    <Button_Apply>Apply(&amp;A)</Button_Apply>
-    <Button_Cancel>Cancel(&amp;C)</Button_Cancel>
-  </Settings>
-  <HotkeyRegester>
-	  <Label_1>Please press some keys...</Label_1>
-	  <Label_2>If you want to cancel, push X button...</Label_2>
-  </HotkeyRegester>
+	<Mainwindow>
+		<AdditemButton>Add(&amp;A)</AdditemButton>
+		<EdititemButton>Edit(&amp;E)</EdititemButton>
+		<StartButton>Start(&amp;S)</StartButton>
+		<RibbonFiles>
+			<Text>Files(&amp;F)</Text>
+			<Settings>Settings(&amp;S)</Settings>
+			<ShowWidget>Show Widget(&amp;W)</ShowWidget>
+			<Quit>Quit(&amp;Q)</Quit>
+		</RibbonFiles>
+		<ApplistRC>
+			<Add>Add(&amp;A)</Add>
+			<Edit>Edit(&amp;E)</Edit>
+			<Delete>Delete(&amp;D)</Delete>
+			<RunAdmin>Run as admin</RunAdmin>
+		</ApplistRC>
+		<TasktrayIcon>
+			<ShowMainWindow>Show MainWindow(&amp;M)</ShowMainWindow>
+			<ShowWidget>Show Widget(&amp;W)</ShowWidget>
+			<Settings>Settings(&amp;S)</Settings>
+			<AddItem>Add Item(&amp;A)</AddItem>
+			<Quit>Quit(&amp;Q)</Quit>
+		</TasktrayIcon>
+		<MB_Quit_Verif>Would you like to quit application?</MB_Quit_Verif>
+	</Mainwindow>
+	<AddItem>
+		<Label_Name>Name</Label_Name>
+		<Label_Path>Path</Label_Path>
+		<Label_Args>Args</Label_Args>
+		<Label_RunasAdmin>Run as admin</Label_RunasAdmin>
+		<CancelButton>Cancel(&amp;C)</CancelButton>
+		<ApplyButton>Apply(&amp;A)</ApplyButton>
+		<RefButton>Reference</RefButton>
+	</AddItem>
+	<EditItem>
+		<WindowTitle>Edit</WindowTitle>
+		<Label_Name>Name</Label_Name>
+		<Label_Path>Path</Label_Path>
+		<Label_Args>Args</Label_Args>
+		<Label_RunasAdmin>Run as admin</Label_RunasAdmin>
+		<CloseButton>Close(&amp;C)</CloseButton>
+		<ApplyButton>Apply(&amp;A)</ApplyButton>
+		<OKButton>OK(&amp;O)</OKButton>
+	</EditItem>
+	<Widget>
+		<WidgetRC>
+			<FixWidgetPos>Fix Widget Position(&amp;F)</FixWidgetPos>
+		</WidgetRC>
+	</Widget>
+	<Settings>
+		<WindowTitle>Settings</WindowTitle>
+		<Label_Font>Font</Label_Font>
+		<Label_MainBackimgPath>MainWindow Background Image</Label_MainBackimgPath>
+		<Label_WidgetBackimgPath>Widget Background Image</Label_WidgetBackimgPath>
+		<Label_Language>Language</Label_Language>
+		<Label_Opacity>Opacity</Label_Opacity>
+		<Label_WidgetTextColor>Widget Text Color</Label_WidgetTextColor>
+		<Label_WidgetBackColor>Widget Back Color</Label_WidgetBackColor>
+		<Label_WidgetSCKey>Show Widget Shortcut Key</Label_WidgetSCKey>
+		<Label_WidgetSize>WidgetSize</Label_WidgetSize>
+		<Label_MainWndStyle>Style of main window</Label_MainWndStyle>
+		<Label_NeedsRestart>Needs to restart</Label_NeedsRestart>
+		<Tab_General>General</Tab_General>
+		<Tab_Widget>Widget</Tab_Widget>
+		<Button_HotkeySet>Set hotkey</Button_HotkeySet>
+		<Button_ResetWidgetPos>Reset Widget Position</Button_ResetWidgetPos>
+		<Button_Apply>Apply(&amp;A)</Button_Apply>
+		<Button_Cancel>Cancel(&amp;C)</Button_Cancel>
+	</Settings>
+	<HotkeyRegester>
+		<Label_1>Please press some keys...</Label_1>
+		<Label_2>If you want to cancel, push X button...</Label_2>
+	</HotkeyRegester>
 </LanguagePack>

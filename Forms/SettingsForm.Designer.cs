@@ -73,14 +73,14 @@
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.LanguageLabel = new System.Windows.Forms.Label();
             this.LanguageBox = new System.Windows.Forms.ComboBox();
-            this.Widget = new System.Windows.Forms.TabPage();
             this.MainWindow = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.NeedsToRebootLabel = new System.Windows.Forms.Label();
             this.MainWndStyleHalf = new System.Windows.Forms.RadioButton();
             this.MainWndStyleFull = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.MainWndStyleLabel = new System.Windows.Forms.Label();
+            this.Widget = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBox)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
@@ -99,10 +99,10 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
-            this.Widget.SuspendLayout();
             this.MainWindow.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.Widget.SuspendLayout();
             this.SuspendLayout();
             // 
             // ApplyButton
@@ -327,6 +327,7 @@
             resources.ApplyResources(this.FontNames, "FontNames");
             this.FontNames.FormattingEnabled = true;
             this.FontNames.Name = "FontNames";
+            this.FontNames.SelectedIndexChanged += new System.EventHandler(this.FontNames_SelectedIndexChanged);
             // 
             // FontSizeBox
             // 
@@ -404,13 +405,6 @@
             resources.ApplyResources(this.LanguageBox, "LanguageBox");
             this.LanguageBox.Name = "LanguageBox";
             // 
-            // Widget
-            // 
-            this.Widget.Controls.Add(this.tableLayoutPanel5);
-            resources.ApplyResources(this.Widget, "Widget");
-            this.Widget.Name = "Widget";
-            this.Widget.UseVisualStyleBackColor = true;
-            // 
             // MainWindow
             // 
             this.MainWindow.Controls.Add(this.tableLayoutPanel2);
@@ -424,10 +418,20 @@
             this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             // 
-            // label1
+            // panel1
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Controls.Add(this.NeedsToRebootLabel);
+            this.panel1.Controls.Add(this.MainWndStyleHalf);
+            this.panel1.Controls.Add(this.MainWndStyleFull);
+            this.panel1.Controls.Add(this.MainWndStyleLabel);
+            this.panel1.Name = "panel1";
+            // 
+            // NeedsToRebootLabel
+            // 
+            resources.ApplyResources(this.NeedsToRebootLabel, "NeedsToRebootLabel");
+            this.NeedsToRebootLabel.ForeColor = System.Drawing.Color.Red;
+            this.NeedsToRebootLabel.Name = "NeedsToRebootLabel";
             // 
             // MainWndStyleHalf
             // 
@@ -443,20 +447,17 @@
             this.MainWndStyleFull.TabStop = true;
             this.MainWndStyleFull.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // MainWndStyleLabel
             // 
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.MainWndStyleHalf);
-            this.panel1.Controls.Add(this.MainWndStyleFull);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Name = "panel1";
+            resources.ApplyResources(this.MainWndStyleLabel, "MainWndStyleLabel");
+            this.MainWndStyleLabel.Name = "MainWndStyleLabel";
             // 
-            // label2
+            // Widget
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Name = "label2";
+            this.Widget.Controls.Add(this.tableLayoutPanel5);
+            resources.ApplyResources(this.Widget, "Widget");
+            this.Widget.Name = "Widget";
+            this.Widget.UseVisualStyleBackColor = true;
             // 
             // SettingsForm
             // 
@@ -498,11 +499,11 @@
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
-            this.Widget.ResumeLayout(false);
             this.MainWindow.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.Widget.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -556,10 +557,10 @@
         private System.Windows.Forms.TextBox HotkeyBox;
         private System.Windows.Forms.TabPage MainWindow;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label MainWndStyleLabel;
         private System.Windows.Forms.RadioButton MainWndStyleHalf;
         private System.Windows.Forms.RadioButton MainWndStyleFull;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label NeedsToRebootLabel;
     }
 }

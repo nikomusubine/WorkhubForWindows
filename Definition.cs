@@ -72,15 +72,37 @@ namespace WorkhubForWindows
             Path = path;
             Argments = args;
             RunasAdmin = false;
+            IconPath = "";
             point = new Point(0, 0);
         }
 
-        public Executable(string name, string path, string args,bool runasAdmin)
+        public Executable(string name, string path, string args, bool runasAdmin, string iconPath)
         {
             Name = name;
             Path = path;
             Argments = args;
             RunasAdmin = runasAdmin;
+            IconPath = iconPath;
+            point = new Point(0, 0);
+        }
+
+        public Executable(string name, string path, string args, string iconPath)
+        {
+            Name = name;
+            Path = path;
+            Argments = args;
+            RunasAdmin = false;
+            IconPath = iconPath;
+            point = new Point(0, 0);
+        }
+
+        public Executable(string name, string path, string args, bool runasAdmin)
+        {
+            Name = name;
+            Path = path;
+            Argments = args;
+            RunasAdmin = runasAdmin;
+            IconPath = "";
             point = new Point(0, 0);
         }
 
@@ -89,7 +111,8 @@ namespace WorkhubForWindows
             Name = executable.Name;
             Path = executable.Path;
             Argments = executable.Argments;
-            RunasAdmin=executable.RunasAdmin;
+            RunasAdmin = executable.RunasAdmin;
+            IconPath = executable.IconPath;
             point = executable.point;
         }
 
@@ -101,6 +124,7 @@ namespace WorkhubForWindows
         public string Name;
         public string Path;
         public string Argments;
+        public string IconPath;
         public bool RunasAdmin;
         public Point point;
     }
@@ -230,6 +254,8 @@ namespace WorkhubForWindows
             public string Label_WidgetBackColor;
             public string Label_WidgetSCKey;
             public string Label_WidgetSize;
+            public string Label_MainWndStyle;
+            public string Label_NeedsRestart;
             public string Tab_General;
             public string Tab_Widget;
             public string Button_HotkeySet;
@@ -744,7 +770,14 @@ namespace WorkhubForWindows
                     i--;
                     continue;
                 }
-                Bitmap bmp = Icon.ExtractAssociatedIcon(StaticClasses.Executables[i].Path).ToBitmap();
+                Bitmap bmp;
+                if (Executables[i].IconPath != "")
+                {
+                    bmp = (Bitmap)Image.FromFile(StaticClasses.Executables[i].IconPath);
+                }else
+                {
+                    bmp = Icon.ExtractAssociatedIcon(StaticClasses.Executables[i].Path).ToBitmap();
+                }
                 if (Executables[i].RunasAdmin)
                 {
                     Graphics graphics = Graphics.FromImage(bmp);

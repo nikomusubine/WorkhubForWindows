@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WorkhubForWindows.Forms
@@ -396,6 +390,14 @@ namespace WorkhubForWindows.Forms
             {
                 this.WidgetSizeLabel.Text = StaticClasses.Langs.Settings.Label_WidgetSize;
             }
+            if (StaticClasses.Langs.Settings.Label_MainWndStyle != null)
+            {
+                this.MainWndStyleLabel.Text = StaticClasses.Langs.Settings.Label_MainWndStyle;
+            }
+            if (StaticClasses.Langs.Settings.Label_NeedsRestart != null)
+            {
+                this.NeedsToRebootLabel.Text = StaticClasses.Langs.Settings.Label_NeedsRestart;
+            }
             if (StaticClasses.Langs.Settings.Button_Cancel != null)
             {
                 this.Cancel_Button.Text = StaticClasses.Langs.Settings.Button_Cancel;
@@ -425,6 +427,11 @@ namespace WorkhubForWindows.Forms
                     StaticClasses.Config.WidgetPosition = new Point(0, 0);
                 }
             }
+        }
+
+        private void FontNames_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FontNames.Font = new Font(FontNames.Text, StaticClasses.Config.font.Size);
         }
     }
 }

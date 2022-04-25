@@ -148,6 +148,10 @@ namespace WorkhubForWindows
             if (diagres == DialogResult.Yes)
             {
                 Quiting = true;
+                foreach (WorkhubWindowHandler wh in StaticClasses.WindowHandler.WindowHandlers)
+                {
+                    Functions.WinAPIFuncs.PostMessage(wh.hWnd, StaticClasses.WorkHubMessages.ApplicationQuit, 0, 0);
+                }
                 this.Close();
                 //Environment.Exit(0);
             }

@@ -24,7 +24,8 @@ namespace WorkhubForWindows
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-
+        Main_FullScreenList FMainwnd;
+        Mainwindow halfMainwnd;
         public MainBase()
         {
             string name = Process.GetCurrentProcess().ProcessName;
@@ -45,23 +46,25 @@ namespace WorkhubForWindows
             StaticClasses.IconList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             StaticClasses.IconList.TransparentColor = Color.Transparent;
             StaticClasses.IconList.ImageSize = new Size(32, 32);
+            StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle, "Base"));
             switch (StaticClasses.Config.Homemode)
             {
                 case HomeMode.FullScreen:
-                    Main_FullScreenList FMainwnd = new Main_FullScreenList();
+                     FMainwnd = new Main_FullScreenList();
                     FMainwnd.ShowDialog();
                     break;
                 case HomeMode.HalfHome:
-                    Mainwindow halfMainwnd = new Mainwindow();
+                    halfMainwnd = new Mainwindow();
                     halfMainwnd.ShowDialog();
                     break;
             }
             this.Load += OpenAndClose;
+            this.Shown += OpenAndClose;
         }
 
         private void OpenAndClose(object sender,EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private System.ComponentModel.IContainer components = null; 
@@ -73,5 +76,37 @@ namespace WorkhubForWindows
             }
             base.Dispose(disposing);
         }
+        #region WinMsg
+
+        //COPYDATASTRUCT構造体 
+        public struct COPYDATASTRUCT
+        {
+            public Int32 dwData;  //送信する32ビット値
+            public Int32 cbData;  //lpDataのバイト数
+            public string lpData;  //送信するデータへのポインタ(0も可能)
+        }
+        public const int WM_COPYDATA = 0x4A;
+        public const int WM_USER = 0x400;
+        private const int WM_QUERYENDSESSION = 0x11;
+
+        // ウィンドウに来たメッセージを振り分ける関数
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case StaticClasses.WorkHubMessages.ApplicationQuit:
+                    this.Dispose();
+                    break;
+                case WM_QUERYENDSESSION:
+                    Functions.WinMsgFuncs.AppClose();
+                    break;
+                default:
+                    break;
+            }
+
+            base.WndProc(ref m);
+        }
+
+        #endregion
     }
 }

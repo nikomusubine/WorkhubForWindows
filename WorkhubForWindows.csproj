@@ -219,6 +219,9 @@
     <EmbeddedResource Include="Forms\Widget.resx">
       <DependentUpon>Widget.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainBase.resx">
+      <DependentUpon>MainBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mainwindow.is.resx">
       <DependentUpon>Mainwindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,7 +274,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EULA\Ja_Jp.txt" />
+    <EmbeddedResource Include="EULA\Ja_Jp.txt" />
     <Content Include="ICO_4Niko.ico" />
     <Content Include="Languages\日本語.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
