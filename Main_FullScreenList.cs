@@ -22,6 +22,7 @@ namespace WorkhubForWindows
         private bool Quiting = false;
 
         public static Widget wg;
+        private Image rawImage;
         public Main_FullScreenList()
         {
 
@@ -216,16 +217,8 @@ namespace WorkhubForWindows
             {
                 if (File.Exists(StaticClasses.Config.backimgpath))
                 {
-                    Image img = Image.FromFile(StaticClasses.Config.backimgpath);
-                    float x = img.Size.Width, y = img.Size.Height;
-                    if (y / (Apps.Width / x) < Apps.Height / (Apps.Width / x))
-                    {
-                        this.Apps.BackgroundImage = (Image)new Bitmap(img, new Size(Apps.Width, (int)(y / (Apps.Width / x))));
-                    }
-                    else
-                    {
-
-                    }
+                    rawImage=Image.FromFile(StaticClasses.Config.backimgpath);
+                    BackgroundImageSet();
 
 
                 }
@@ -237,6 +230,18 @@ namespace WorkhubForWindows
 
 
             }
+            else if(rawImage != null)
+            {
+                rawImage.Dispose();
+            }
+            this.BackColor = StaticClasses.Config.MainWindowBackColor;
+            this.AddItemButton.BackColor = StaticClasses.Config.MainWindowBackColor;
+            this.EditButton.BackColor = StaticClasses.Config.MainWindowBackColor;
+            this.StartButton.BackColor = StaticClasses.Config.MainWindowBackColor;
+            this.Ribbon.BackColor = StaticClasses.Config.MainWindowBackColor;
+            this.ForeColor = StaticClasses.Config.MainWindowForeColor;
+            this.Ribbon.ForeColor = StaticClasses.Config.MainWindowForeColor;
+            this.Apps.ForeColor = StaticClasses.Config.MainWindowForeColor;
             this.TrayRC_ShowWidget.Checked = StaticClasses.Config.ShowWidget;
             this.ToolStripShowWidget.Checked = StaticClasses.Config.ShowWidget;
         }
@@ -313,5 +318,36 @@ namespace WorkhubForWindows
         }
 
         #endregion
+
+        private void PaintCalled(object sender, EventArgs e)
+        {
+            if (rawImage != null)
+            {
+                BackgroundImageSet();
+            }
+
+        }
+
+        void BackgroundImageSet()
+        {
+            if (Apps == null) { return; }
+            Image image = new Bitmap(Apps.Width, Apps.Height);
+            Graphics graphics = Graphics.FromImage(image);
+            graphics.Clear(StaticClasses.Config.MainWindowBackColor);
+            float x = rawImage.Size.Width, y = rawImage.Size.Height;
+            if (y / (x / Apps.Width) < Apps.Height)//縦そろえる
+            {
+                graphics.DrawImage((Image)new Bitmap(rawImage, new Size(Apps.Width, (int)(y / (x / Apps.Width)))), 0, (Apps.Height - (int)(y / (x / Apps.Width))) / 2, Apps.Width, (int)(y / (x / Apps.Width)));
+
+                this.Apps.BackgroundImage = image;
+            }
+            else
+            {
+                graphics.DrawImage((Image)new Bitmap(rawImage, new Size((int)(x / (y / Apps.Height)), Apps.Height))
+                    , (Apps.Width - (int)(x / (y / Apps.Height))) / 2, 0, (int)(x / (y / Apps.Height)), Apps.Height);
+
+                this.Apps.BackgroundImage = image;
+            }
+        }
     }
 }

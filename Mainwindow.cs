@@ -300,7 +300,7 @@ namespace WorkhubForWindows
                 default:
                     break;
             }
-
+    
             base.WndProc(ref m);
         }
 

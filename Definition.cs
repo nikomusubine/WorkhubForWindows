@@ -247,6 +247,8 @@ namespace WorkhubForWindows
             public string WindowTitle;
             public string Label_Font;
             public string Label_MainBackimgPath;
+            public string Label_MainBackColor;
+            public string Label_MainTextColor;
             public string Label_WidgetBackimgPath;
             public string Label_Language;
             public string Label_Opacity;
@@ -392,6 +394,38 @@ namespace WorkhubForWindows
                 g = value.G;
                 b = value.B;
                 __MainWindowBackColor = String.Format("{0:x2}{1:x2}{2:x2}", r, g, b);
+            }
+        }
+        public string __MainWindowForeColor = "000000";
+        [XmlIgnore]
+        public Color MainWindowForeColor
+        {
+            get
+            {
+                Color c = new Color();
+                byte a, r, g, b;
+                a = 255;
+                try
+                {
+                    r = (byte)Int32.Parse(string.Format("{0}{1}", __MainWindowForeColor[0], __MainWindowForeColor[1]), System.Globalization.NumberStyles.HexNumber);
+                    g = (byte)Int32.Parse(string.Format("{0}{1}", __MainWindowForeColor[2], __MainWindowForeColor[3]), System.Globalization.NumberStyles.HexNumber);
+                    b = (byte)Int32.Parse(string.Format("{0}{1}", __MainWindowForeColor[4], __MainWindowForeColor[5]), System.Globalization.NumberStyles.HexNumber);
+
+                    c = Color.FromArgb(a, r, g, b);
+                }
+                catch (System.FormatException)
+                {
+                    c = Color.White;
+                }
+                return c;
+            }
+            set
+            {
+                byte r, g, b;
+                r = value.R;
+                g = value.G;
+                b = value.B;
+                __MainWindowForeColor = String.Format("{0:x2}{1:x2}{2:x2}", r, g, b);
             }
         }
         public string __WidgetBackColor = "ffffff";
@@ -771,7 +805,7 @@ namespace WorkhubForWindows
                     continue;
                 }
                 Bitmap bmp;
-                if (Executables[i].IconPath != "")
+                if (Executables[i].IconPath != null)
                 {
                     bmp = (Bitmap)Image.FromFile(StaticClasses.Executables[i].IconPath);
                 }else
