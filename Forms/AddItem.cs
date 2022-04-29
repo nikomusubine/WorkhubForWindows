@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,10 @@ namespace WorkhubForWindows.Forms
             {
                 MessageBox.Show("You must type the file path!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+            if (!File.Exists(IconBox.Text))
+            {
+                MessageBox.Show("The icon file was not found!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
             else
             {
                 StaticClasses.Executables.Add
@@ -48,7 +53,8 @@ namespace WorkhubForWindows.Forms
                         Name = ItemNameBox.Text,
                         Path = FilePathBox.Text,
                         Argments = CmdArgsBox.Text,
-                        RunasAdmin = RunasAdminBox.Checked
+                        RunasAdmin = RunasAdminBox.Checked,
+                        IconPath = IconBox.Text
                     }
                     );
 

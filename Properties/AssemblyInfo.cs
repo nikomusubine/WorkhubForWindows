@@ -7,10 +7,10 @@ using System.Runtime.InteropServices;
 // これらの属性値を変更します。
 [assembly: AssemblyTitle("WorkhubForWindows")]
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyConfiguration("Debug")]
 [assembly: AssemblyCompany("Nikochan")]
 [assembly: AssemblyProduct("WorkhubForWindows")]
-[assembly: AssemblyCopyright("Copyright  2021 Niko Musubine")]
+[assembly: AssemblyCopyright("Copyright  2022 Niko Musubine")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

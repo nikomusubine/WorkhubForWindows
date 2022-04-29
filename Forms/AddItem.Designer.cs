@@ -40,10 +40,15 @@
             this.ButtonCancel = new System.Windows.Forms.Button();
             this.RefDiag = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.IconRef = new System.Windows.Forms.Button();
+            this.IconBox = new System.Windows.Forms.TextBox();
+            this.IconLabel = new System.Windows.Forms.Label();
             this.RunasAdminLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.RunasAdminBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,6 +112,8 @@
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.IconLabel, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.RunasAdminLabel, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.ItemnameLabel, 0, 0);
@@ -116,6 +123,29 @@
             this.tableLayoutPanel1.Controls.Add(this.CmdArgsLabel, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.RunasAdminBox, 1, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.Controls.Add(this.IconRef, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.IconBox, 0, 0);
+            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            // 
+            // IconRef
+            // 
+            resources.ApplyResources(this.IconRef, "IconRef");
+            this.IconRef.Name = "IconRef";
+            this.IconRef.UseVisualStyleBackColor = true;
+            // 
+            // IconBox
+            // 
+            resources.ApplyResources(this.IconBox, "IconBox");
+            this.IconBox.Name = "IconBox";
+            // 
+            // IconLabel
+            // 
+            resources.ApplyResources(this.IconLabel, "IconLabel");
+            this.IconLabel.Name = "IconLabel";
             // 
             // RunasAdminLabel
             // 
@@ -147,6 +177,8 @@
             this.Name = "AddItemForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
@@ -169,5 +201,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label RunasAdminLabel;
         private System.Windows.Forms.CheckBox RunasAdminBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button IconRef;
+        private System.Windows.Forms.TextBox IconBox;
+        private System.Windows.Forms.Label IconLabel;
     }
 }
