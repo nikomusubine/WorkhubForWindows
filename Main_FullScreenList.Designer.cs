@@ -72,7 +72,7 @@ namespace WorkhubForWindows
             this.RibbonFiles});
             this.Ribbon.Location = new System.Drawing.Point(0, 0);
             this.Ribbon.Name = "Ribbon";
-            this.Ribbon.Size = new System.Drawing.Size(645, 28);
+            this.Ribbon.Size = new System.Drawing.Size(645, 24);
             this.Ribbon.TabIndex = 3;
             // 
             // RibbonFiles

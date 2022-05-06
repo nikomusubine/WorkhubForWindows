@@ -10,8 +10,6 @@ using System.IO;
 using System.Xml.Serialization;
 using WorkhubForWindows.Functions;
 using System.Runtime.InteropServices;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Windows.Forms;
 
 namespace WorkhubForWindows
@@ -805,7 +803,7 @@ namespace WorkhubForWindows
                     continue;
                 }
                 Bitmap bmp;
-                if (Executables[i].IconPath != null)
+                if (Executables[i].IconPath != "" && Executables[i].IconPath != null)
                 {
                     bmp = (Bitmap)Image.FromFile(StaticClasses.Executables[i].IconPath);
                 }else

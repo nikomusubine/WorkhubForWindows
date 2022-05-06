@@ -151,13 +151,13 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="ItemNameBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 2</value>
+    <value>122, 2</value>
   </data>
   <data name="ItemNameBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="ItemNameBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>356, 22</value>
+    <value>354, 22</value>
   </data>
   <data name="ItemNameBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -178,13 +178,13 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="FilePathBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
+    <value>3, 2</value>
   </data>
   <data name="FilePathBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="FilePathBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 22</value>
+    <value>254, 22</value>
   </data>
   <data name="FilePathBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -235,10 +235,10 @@
     <value>263, 2</value>
   </data>
   <data name="ButtonReference.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="ButtonReference.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 25</value>
+    <value>94, 25</value>
   </data>
   <data name="ButtonReference.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -262,13 +262,13 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="CmdArgsBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 64</value>
+    <value>122, 64</value>
   </data>
   <data name="CmdArgsBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="CmdArgsBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>356, 22</value>
+    <value>354, 22</value>
   </data>
   <data name="CmdArgsBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -316,7 +316,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="ButtonApply.Location" type="System.Drawing.Point, System.Drawing">
-    <value>390, 171</value>
+    <value>389, 171</value>
   </data>
   <data name="ButtonApply.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -384,14 +384,17 @@
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="tableLayoutPanel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
   <data name="IconRef.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="IconRef.Location" type="System.Drawing.Point, System.Drawing">
-    <value>242, 3</value>
+    <value>266, 3</value>
   </data>
   <data name="IconRef.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 23</value>
+    <value>91, 22</value>
   </data>
   <data name="IconRef.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -415,10 +418,13 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="IconBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>3, 2</value>
+  </data>
+  <data name="IconBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="IconBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 22</value>
+    <value>251, 22</value>
   </data>
   <data name="IconBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -436,10 +442,13 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 123</value>
+    <value>119, 120</value>
+  </data>
+  <data name="tableLayoutPanel3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
   </data>
   <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>338, 29</value>
+    <value>360, 29</value>
   </data>
   <data name="tableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -457,7 +466,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="IconRef" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="IconBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,239,Absolute,43" /&gt;&lt;Rows Styles="Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="IconRef" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="IconBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,257,Absolute,97" /&gt;&lt;Rows Styles="Absolute,29" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="IconLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -559,7 +568,10 @@
     <value>True</value>
   </data>
   <data name="RunasAdminBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 96</value>
+    <value>122, 95</value>
+  </data>
+  <data name="RunasAdminBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="RunasAdminBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 17</value>

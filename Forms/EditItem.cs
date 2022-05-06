@@ -21,9 +21,9 @@ namespace WorkhubForWindows.Forms
             this.Font = new Font(StaticClasses.Config.font.Name, StaticClasses.Config.font.Size);
             Applist.View = View.LargeIcon;
             this.FormClosed += WindowClosed;
-
-            this.Applist.SmallImageList = StaticClasses.IconList;
-            this.Applist.LargeImageList = StaticClasses.IconList;
+            this.Icons = StaticClasses.IconList;
+            this.Applist.SmallImageList = this.Icons;
+            this.Applist.LargeImageList = this.Icons;
             LoadLanguage();
         }
 
@@ -86,6 +86,9 @@ namespace WorkhubForWindows.Forms
                     StaticClasses.Executables.Remove(StaticClasses.Executables[Applist.SelectedIndices[0]]);
                     StaticClasses.Executables.Insert(Applist.SelectedIndices[0] - 1, tmp);
                     Functions.Config.Applications.Save(StaticClasses.Executables);
+                    Image img = Icons.Images[Applist.SelectedIndices[0]];
+                    Icons.Images[Applist.SelectedIndices[0]] = Icons.Images[Applist.SelectedIndices[0] - 1];
+                    Icons.Images[Applist.SelectedIndices[0]-1] = img;
                     int selecteditem = Applist.SelectedIndices[0] - 1;
                     initalizeApplist();
                     Applist.Items[selecteditem].Selected = true;
@@ -96,6 +99,10 @@ namespace WorkhubForWindows.Forms
                     StaticClasses.Executables.Remove(StaticClasses.Executables[Applist.SelectedIndices[0]]);
                     StaticClasses.Executables.Insert(Applist.Items.Count - 1, tmp);
                     Functions.Config.Applications.Save(StaticClasses.Executables);
+
+                    Image img = Icons.Images[Applist.SelectedIndices[0]];
+                    Icons.Images.RemoveAt(Applist.SelectedIndices[0]);
+                    Icons.Images.Add(img);
                     int selecteditem = Applist.Items.Count - 1;
                     initalizeApplist();
                     Applist.Items[selecteditem].Selected = true;
@@ -113,6 +120,9 @@ namespace WorkhubForWindows.Forms
                     StaticClasses.Executables.Remove(StaticClasses.Executables[Applist.SelectedIndices[0]]);
                     StaticClasses.Executables.Insert(Applist.SelectedIndices[0] + 1, tmp);
                     Functions.Config.Applications.Save(StaticClasses.Executables);
+                    Image img = Icons.Images[Applist.SelectedIndices[0]];
+                    Icons.Images[Applist.SelectedIndices[0]] = Icons.Images[Applist.SelectedIndices[0] + 1];
+                    Icons.Images[Applist.SelectedIndices[0] + 1] = img;
                     int selecteditem = Applist.SelectedIndices[0] + 1;
                     initalizeApplist();
                     Applist.Items[selecteditem].Selected = true;
@@ -123,6 +133,23 @@ namespace WorkhubForWindows.Forms
                     StaticClasses.Executables.Remove(StaticClasses.Executables[Applist.SelectedIndices[0]]);
                     StaticClasses.Executables.Insert(0, tmp);
                     Functions.Config.Applications.Save(StaticClasses.Executables);
+
+                    Image swap1 = Icons.Images[0], swap2;
+                    for (int i = 0; i != Applist.Items.Count; i++)
+                    {
+                        if(i == 0)
+                        {
+                            Icons.Images[i] = Icons.Images[Applist.SelectedIndices[0]];
+                            continue;
+                        }
+                        swap2 = Icons.Images[i];
+                        Icons.Images[i] = swap1;
+                        swap1 = swap2;
+
+                    }
+
+                  
+                    
                     int selecteditem = 0;
                     initalizeApplist();
                     Applist.Items[selecteditem].Selected = true;

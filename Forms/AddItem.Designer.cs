@@ -126,9 +126,9 @@
             // 
             // tableLayoutPanel3
             // 
+            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
             this.tableLayoutPanel3.Controls.Add(this.IconRef, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.IconBox, 0, 0);
-            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             // 
             // IconRef
@@ -136,6 +136,7 @@
             resources.ApplyResources(this.IconRef, "IconRef");
             this.IconRef.Name = "IconRef";
             this.IconRef.UseVisualStyleBackColor = true;
+            this.IconRef.Click += new System.EventHandler(this.IconRef_Click);
             // 
             // IconBox
             // 

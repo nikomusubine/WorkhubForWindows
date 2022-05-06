@@ -80,6 +80,11 @@
             this.MainWndStyleHalf = new System.Windows.Forms.RadioButton();
             this.MainWndStyleFull = new System.Windows.Forms.RadioButton();
             this.MainWndStyleLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.MainTextColorButton = new System.Windows.Forms.Button();
+            this.Main_TextColor = new System.Windows.Forms.Label();
             this.Widget = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OpacityBox)).BeginInit();
@@ -102,6 +107,7 @@
             this.MainWindow.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
             this.Widget.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -416,6 +422,7 @@
             // 
             resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
             this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel15, 0, 1);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             // 
             // panel1
@@ -451,6 +458,39 @@
             // 
             resources.ApplyResources(this.MainWndStyleLabel, "MainWndStyleLabel");
             this.MainWndStyleLabel.Name = "MainWndStyleLabel";
+            // 
+            // tableLayoutPanel15
+            // 
+            resources.ApplyResources(this.tableLayoutPanel15, "tableLayoutPanel15");
+            this.tableLayoutPanel15.Controls.Add(this.button2, 1, 1);
+            this.tableLayoutPanel15.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel15.Controls.Add(this.MainTextColorButton, 1, 0);
+            this.tableLayoutPanel15.Controls.Add(this.Main_TextColor, 0, 0);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // MainTextColorButton
+            // 
+            resources.ApplyResources(this.MainTextColorButton, "MainTextColorButton");
+            this.MainTextColorButton.Name = "MainTextColorButton";
+            this.MainTextColorButton.UseVisualStyleBackColor = true;
+            this.MainTextColorButton.Click += new System.EventHandler(this.MainTextColorButton_Click);
+            // 
+            // Main_TextColor
+            // 
+            resources.ApplyResources(this.Main_TextColor, "Main_TextColor");
+            this.Main_TextColor.Name = "Main_TextColor";
             // 
             // Widget
             // 
@@ -503,6 +543,8 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.tableLayoutPanel15.PerformLayout();
             this.Widget.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -562,5 +604,10 @@
         private System.Windows.Forms.RadioButton MainWndStyleFull;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label NeedsToRebootLabel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label Main_TextColor;
+        private System.Windows.Forms.Button MainTextColorButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
     }
 }

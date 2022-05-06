@@ -29,6 +29,17 @@ namespace WorkhubForWindows.Forms
                 FilePathBox.Text = RefDiag.FileName;
             }
         }
+        private void IconRef_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.CheckPathExists = true;
+            openFileDialog.FileName = IconBox.Text;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                IconBox.Text = openFileDialog.FileName;
+            }
+            openFileDialog.Dispose();
+        }
 
         private void ApplyClick(object sender, EventArgs e)
         {
@@ -40,7 +51,7 @@ namespace WorkhubForWindows.Forms
             {
                 MessageBox.Show("You must type the file path!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            if (!File.Exists(IconBox.Text))
+            if (IconBox.Text!="" && !File.Exists(IconBox.Text))
             {
                 MessageBox.Show("The icon file was not found!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -90,5 +101,6 @@ namespace WorkhubForWindows.Forms
             ButtonCancel.Text = StaticClasses.Langs.AddItem.CancelButton;
             ButtonReference.Text = StaticClasses.Langs.AddItem.RefButton;
         }
+
     }
 }

@@ -17,6 +17,8 @@ namespace WorkhubForWindows.Forms
         private bool isstartup = false;
         private Color WidgetForeColor;
         private Color WidgetBackColor;
+        private Color MainForeColor;
+        private Color MainBackColor;
         private Shortcut shortcut;
 
         public SettingsForm()
@@ -225,6 +227,24 @@ namespace WorkhubForWindows.Forms
                 WidgetBackColor = ColorDiag.Color;
             }
         }
+
+        private void MainTextColorButton_Click(object sender, EventArgs e)
+        {
+            ColorDiag.Color = MainForeColor;
+            if (ColorDiag.ShowDialog() == DialogResult.OK)
+            {
+                MainForeColor = ColorDiag.Color;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ColorDiag.Color = MainBackColor;
+            if (ColorDiag.ShowDialog() == DialogResult.OK)
+            {
+                MainBackColor = ColorDiag.Color;
+            }
+        }
         private void RegesterHotKeyButtonClicked(object sender,EventArgs e)
         {
             HotKeyRegester hotkey = new HotKeyRegester();
@@ -273,6 +293,8 @@ namespace WorkhubForWindows.Forms
             StaticClasses.Config.WidgetOpacity = (double)OpacityBox.Value / 100;
             StaticClasses.Config.WidgetForeColor = WidgetForeColor;
             StaticClasses.Config.WidgetBackColor = WidgetBackColor;
+            StaticClasses.Config.MainWindowForeColor = MainForeColor;
+            StaticClasses.Config.MainWindowBackColor = MainBackColor;
             StaticClasses.Config.Language = this.LanguageBox.Text;
             
             float Div = (float)StaticClasses.Config.WidgetSize.Height / StaticClasses.Config.WidgetSize.Width;
@@ -327,6 +349,8 @@ namespace WorkhubForWindows.Forms
             WidgetSizeBar.Value = StaticClasses.Config.WidgetSize.Height;
             HotkeyBox.Text = shortcut.ToString();
 
+            MainForeColor = StaticClasses.Config.MainWindowForeColor;
+            MainBackColor = StaticClasses.Config.MainWindowBackColor;
             switch (StaticClasses.Config.Homemode)
             {
                 case HomeMode.HalfHome:
@@ -433,5 +457,7 @@ namespace WorkhubForWindows.Forms
         {
             FontNames.Font = new Font(FontNames.Text, StaticClasses.Config.font.Size);
         }
+
+        
     }
 }

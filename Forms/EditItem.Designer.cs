@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditItem));
             this.Applist = new System.Windows.Forms.ListView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -47,6 +48,7 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.MoveLbutton = new System.Windows.Forms.Button();
             this.MoveRbutton = new System.Windows.Forms.Button();
+            this.Icons = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -175,6 +177,12 @@
             this.MoveRbutton.UseVisualStyleBackColor = true;
             this.MoveRbutton.Click += new System.EventHandler(this.MoveRClicked);
             // 
+            // Icons
+            // 
+            this.Icons.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            resources.ApplyResources(this.Icons, "Icons");
+            this.Icons.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // EditItem
             // 
             resources.ApplyResources(this, "$this");
@@ -210,5 +218,6 @@
         private System.Windows.Forms.Button okbutton;
         private System.Windows.Forms.Label RunasLabel;
         private System.Windows.Forms.CheckBox RunasAdminBox;
+        private System.Windows.Forms.ImageList Icons;
     }
 }

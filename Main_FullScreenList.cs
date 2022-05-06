@@ -10,10 +10,6 @@ using System.Windows.Forms;
 using WorkhubForWindows.Forms;
 using System.IO;
 using Microsoft.Win32;
-using System.Xml.Serialization;
-using System.Text.Json;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
 
 namespace WorkhubForWindows
 {
@@ -117,7 +113,7 @@ namespace WorkhubForWindows
         {
             for (int i = 0; i != Apps.SelectedItems.Count; i++)
             {
-                Functions.Application.StartProcess(StaticClasses.Executables[Apps.SelectedItems[i].Index]);
+                Functions.Application.StartProcess(StaticClasses.Executables[Apps.SelectedItems[i].Index],true);
             }
         }
 
