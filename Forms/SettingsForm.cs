@@ -83,7 +83,7 @@ namespace WorkhubForWindows.Forms
         private void BackImgRefClick(object sender, EventArgs e)
         {
             OpenFileDialog ofdiag = new OpenFileDialog();
-
+            ofdiag.InitialDirectory = backimgpath.Text;
             ofdiag.Filter = "Image File(*.bmp;*.png;*.jpg;*.jpeg) |*.bmp;*.png;*.jpg;*.jpeg";
 
             if (ofdiag.ShowDialog() == DialogResult.OK)
@@ -96,6 +96,7 @@ namespace WorkhubForWindows.Forms
         private void WidgetBackImgRefClick(object sender, EventArgs e)
         {
             OpenFileDialog ofdiag = new OpenFileDialog();
+            ofdiag.InitialDirectory = widgetbackimgpath.Text;
 
             ofdiag.Filter = "Image File(*.bmp;*.png;*.jpg;*.jpeg) |*.bmp;*.png;*.jpg;*.jpeg";
 

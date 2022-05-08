@@ -23,7 +23,7 @@ namespace WorkhubForWindows.Forms
         #region Event Handlers
         private void ReferenceButton(object sender,EventArgs e)
         {
-            RefDiag.FileName = FilePathBox.Text;
+            RefDiag.InitialDirectory = FilePathBox.Text;
             if (RefDiag.ShowDialog() == DialogResult.OK)
             {
                 FilePathBox.Text = RefDiag.FileName;
@@ -33,7 +33,7 @@ namespace WorkhubForWindows.Forms
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.CheckPathExists = true;
-            openFileDialog.FileName = IconBox.Text;
+            openFileDialog.InitialDirectory = IconBox.Text;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 IconBox.Text = openFileDialog.FileName;

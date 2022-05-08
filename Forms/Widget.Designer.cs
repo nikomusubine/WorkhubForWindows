@@ -33,6 +33,7 @@
             this.applistview = new System.Windows.Forms.ListView();
             this.RCMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.FixWidgetPos = new System.Windows.Forms.ToolStripMenuItem();
+            this.RCMenuRunAsAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SettingsTimer = new System.Windows.Forms.Timer(this.components);
             this.RCMenu.SuspendLayout();
@@ -60,7 +61,8 @@
             // 
             this.RCMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.RCMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FixWidgetPos});
+            this.FixWidgetPos,
+            this.RCMenuRunAsAdmin});
             this.RCMenu.Name = "RCMenu";
             resources.ApplyResources(this.RCMenu, "RCMenu");
             // 
@@ -70,6 +72,12 @@
             this.FixWidgetPos.Name = "FixWidgetPos";
             resources.ApplyResources(this.FixWidgetPos, "FixWidgetPos");
             this.FixWidgetPos.Click += new System.EventHandler(this.LockWidget_Click);
+            // 
+            // RCMenuRunAsAdmin
+            // 
+            this.RCMenuRunAsAdmin.Name = "RCMenuRunAsAdmin";
+            resources.ApplyResources(this.RCMenuRunAsAdmin, "RCMenuRunAsAdmin");
+            this.RCMenuRunAsAdmin.Click += new System.EventHandler(this.RCMenuRunAsAdmin_Click);
             // 
             // panel1
             // 
@@ -104,5 +112,6 @@
         private System.Windows.Forms.ToolStripMenuItem FixWidgetPos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer SettingsTimer;
+        private System.Windows.Forms.ToolStripMenuItem RCMenuRunAsAdmin;
     }
 }

@@ -35,6 +35,7 @@ namespace WorkhubForWindows
             appcall.Click += appstartcall;
             this.FormClosing += Form_Closing;
 
+            RCMenuRunAsAdmin.Image = Functions.WinAPIFuncs.GetSieldIcon(false).ToBitmap();
             int ScrollBW = new VScrollBar().Width;
             this.Size = new Size(this.Size.Width + ScrollBW, this.Size.Height);
             this.applistview.Size = new Size(this.applistview.Size.Width + ScrollBW, this.applistview.Size.Height);
@@ -126,6 +127,10 @@ namespace WorkhubForWindows
             }
 
             StaticClasses.Config.SaveConfig();
+        }
+        private void RCMenuRunAsAdmin_Click(object sender, EventArgs e)
+        {
+            Functions.Application.StartProcess(StaticClasses.Executables[applistview.SelectedIndices[0]], true);
         }
         #endregion
 
@@ -526,9 +531,10 @@ namespace WorkhubForWindows
         }
 
 
+
+
         #endregion
 
-        
 
     }
 
