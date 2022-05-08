@@ -82,7 +82,7 @@
             this.MainWndStyleLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.MainBackColorLabel = new System.Windows.Forms.Label();
             this.MainTextColorButton = new System.Windows.Forms.Button();
             this.Main_TextColor = new System.Windows.Forms.Label();
             this.Widget = new System.Windows.Forms.TabPage();
@@ -463,7 +463,7 @@
             // 
             resources.ApplyResources(this.tableLayoutPanel15, "tableLayoutPanel15");
             this.tableLayoutPanel15.Controls.Add(this.button2, 1, 1);
-            this.tableLayoutPanel15.Controls.Add(this.label2, 0, 1);
+            this.tableLayoutPanel15.Controls.Add(this.MainBackColorLabel, 0, 1);
             this.tableLayoutPanel15.Controls.Add(this.MainTextColorButton, 1, 0);
             this.tableLayoutPanel15.Controls.Add(this.Main_TextColor, 0, 0);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
@@ -475,10 +475,10 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label2
+            // MainBackColorLabel
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.MainBackColorLabel, "MainBackColorLabel");
+            this.MainBackColorLabel.Name = "MainBackColorLabel";
             // 
             // MainTextColorButton
             // 
@@ -604,7 +604,7 @@
         private System.Windows.Forms.RadioButton MainWndStyleFull;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label NeedsToRebootLabel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label MainBackColorLabel;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label Main_TextColor;
         private System.Windows.Forms.Button MainTextColorButton;
