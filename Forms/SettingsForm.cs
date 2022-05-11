@@ -423,6 +423,15 @@ namespace WorkhubForWindows.Forms
             {
                 this.NeedsToRebootLabel.Text = StaticClasses.Langs.Settings.Label_NeedsRestart;
             }
+            if (StaticClasses.Langs.Settings.Label_MainTextColor != null)
+            {
+                this.Main_TextColor.Text = StaticClasses.Langs.Settings.Label_MainTextColor;
+            }
+            if (StaticClasses.Langs.Settings.Label_MainBackColor != null)
+            {
+                this.MainBackColorLabel.Text = StaticClasses.Langs.Settings.Label_MainBackColor;
+            }
+
             if (StaticClasses.Langs.Settings.Button_Cancel != null)
             {
                 this.Cancel_Button.Text = StaticClasses.Langs.Settings.Button_Cancel;

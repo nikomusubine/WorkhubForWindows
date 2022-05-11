@@ -25,6 +25,8 @@ namespace WorkhubForWindows
         const int HotkeyID = 0x2501;
         const int WM_HOTKEY = 0x0312;
 
+        bool shiftPressing = false;
+
         public Widget()
         {
 
@@ -45,6 +47,7 @@ namespace WorkhubForWindows
             //AddWindowHandler
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle, "Widget"));
             LoadLanguage();
+            shiftPressing = false;
 
             //  Application.AddMessageFilter(MsgFilter);
         }
@@ -69,7 +72,11 @@ namespace WorkhubForWindows
         {
             if (applistview.SelectedIndices.Count != 0)
             {
-                
+                if (shiftPressing)
+                {
+                    Functions.Application.StartProcess(StaticClasses.Executables[applistview.SelectedIndices[0]], true);
+                }
+                else
                 if (Functions.Application.StartProcess(StaticClasses.Executables[applistview.SelectedIndices[0]]) == 1)
                 {
                     StaticClasses.Executables[applistview.SelectedItems[0].Index] = new Executable(
@@ -111,6 +118,22 @@ namespace WorkhubForWindows
                 {
                     Backgroundset();
                 }
+            }
+        }
+
+        private void KeyDownEvent(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Shift || e.KeyCode == Keys.ShiftKey)
+            {
+                shiftPressing = true;
+            }
+        }
+
+        private void KeyUpEvent(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Shift || e.KeyCode == Keys.ShiftKey)
+            {
+                shiftPressing = false;
             }
         }
 
@@ -298,6 +321,10 @@ namespace WorkhubForWindows
             if (StaticClasses.Langs.Widget.WidgetRC.FixWidgetPos != null)
             {
                 this.FixWidgetPos.Text = StaticClasses.Langs.Widget.WidgetRC.FixWidgetPos;
+            }
+            if (StaticClasses.Langs.Widget.WidgetRC.RunAsAdmin != null)
+            {
+                this.RCMenuRunAsAdmin.Text = StaticClasses.Langs.Widget.WidgetRC.RunAsAdmin;
             }
         }
         #endregion
@@ -533,9 +560,8 @@ namespace WorkhubForWindows
 
 
 
+
         #endregion
-
-
     }
 
     public static class Widget_Expansion

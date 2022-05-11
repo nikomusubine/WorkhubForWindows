@@ -237,6 +237,7 @@ namespace WorkhubForWindows
             public class __WidgetRC
             {
                 public string FixWidgetPos;
+                public string RunAsAdmin;
             }
         }
         public __Settings Settings = new __Settings();

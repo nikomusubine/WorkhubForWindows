@@ -49,6 +49,7 @@
 	<Widget>
 		<WidgetRC>
 			<FixWidgetPos>ウィジェットの位置を固定(&amp;F)</FixWidgetPos>
+			<RunAsAdmin>管理者として実行</RunAsAdmin>
 		</WidgetRC>
 	</Widget>
 	<Settings>
@@ -60,6 +61,8 @@
 		<Label_Opacity>透明度</Label_Opacity>
 		<Label_WidgetTextColor>ウィジェットの文字色</Label_WidgetTextColor>
 		<Label_WidgetBackColor>ウィジェットの背景色</Label_WidgetBackColor>
+		<Label_MainTextColor>メインウィンドウの文字色</Label_MainTextColor>
+		<Label_MainBackColor>メインウィンドウの背景色</Label_MainBackColor>
 		<Label_WidgetSCKey>ウィジェット表示のショートカットキー</Label_WidgetSCKey>
 		<Label_WidgetSize>ウィジェットのサイズ</Label_WidgetSize>
 		<Label_MainWndStyle>メインウィンドウのスタイル</Label_MainWndStyle>
@@ -70,7 +73,8 @@
 		<Button_ResetWidgetPos>ウィジェット位置をリセット</Button_ResetWidgetPos>
 		<Button_Apply>適用(&amp;A)</Button_Apply>
 		<Button_Cancel>キャンセル(&amp;C)</Button_Cancel>
-	</Settings>
+	
+</Settings>
 	<HotkeyRegester>
 		<Label_1>キーを押してください...</Label_1>
 		<Label_2>Xボタンを押してキャンセル...</Label_2>

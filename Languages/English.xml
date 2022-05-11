@@ -47,6 +47,7 @@
 	<Widget>
 		<WidgetRC>
 			<FixWidgetPos>Fix Widget Position(&amp;F)</FixWidgetPos>
+			<RunAsAdmin>Run as Admin(&amp;A)</RunAsAdmin>
 		</WidgetRC>
 	</Widget>
 	<Settings>
@@ -58,6 +59,8 @@
 		<Label_Opacity>Opacity</Label_Opacity>
 		<Label_WidgetTextColor>Widget Text Color</Label_WidgetTextColor>
 		<Label_WidgetBackColor>Widget Back Color</Label_WidgetBackColor>
+		<Label_MainTextColor>Main Window Text Color</Label_MainTextColor>
+		<Label_MainBackColor>Main Window Back Color</Label_MainBackColor>
 		<Label_WidgetSCKey>Show Widget Shortcut Key</Label_WidgetSCKey>
 		<Label_WidgetSize>WidgetSize</Label_WidgetSize>
 		<Label_MainWndStyle>Style of main window</Label_MainWndStyle>

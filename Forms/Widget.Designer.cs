@@ -52,6 +52,8 @@
             this.applistview.UseCompatibleStateImageBehavior = false;
             this.applistview.VirtualListSize = 3;
             this.applistview.DoubleClick += new System.EventHandler(this.appstartcall);
+            this.applistview.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownEvent);
+            this.applistview.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyUpEvent);
             this.applistview.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Down);
             this.applistview.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mouse_Down);
             this.applistview.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Mouse_Move);
@@ -100,6 +102,8 @@
             this.Name = "Widget";
             this.Shown += new System.EventHandler(this.ShowWidget);
             this.DoubleClick += new System.EventHandler(this.appstartcall);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownEvent);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyUpEvent);
             this.RCMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
