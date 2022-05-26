@@ -103,22 +103,67 @@ namespace WorkhubForWindows
 
                 public static List<Executable> Load()
                 {
+
                     List<Executable> exes = new List<Executable>();
-                    if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config"))
+                    if (Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config"))
                     {
-                        Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "Config");
+                        if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config\\Applications.xml"))
+                        {
+                            if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan"))
+                            {
+                                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan");
+
+                            }
+                            if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows"))
+                            {
+                                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWIndows");
+                            }
+                            if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config"))
+                            {
+                                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config");
+                            }
+                            if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config\\Applications.xml"))
+                            {
+                                File.Copy(AppDomain.CurrentDomain.BaseDirectory + "Config\\Applications.xml", Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config\\Applications.xml");
+                                if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config\\Applications.xml"))
+                                {
+                                    MessageBox.Show("Copied the Applications File to " + Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config\\Applications.xml" + ".",
+                                    "Information",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    File.Delete(AppDomain.CurrentDomain.BaseDirectory + "Config\\Applications.xml");
+                                }
+                                
+                            }
+                        }
                     }
-                    if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config\\Applications.xml"))
+                    else//元のConfigが存在しない
                     {
-                        return exes;
+                        if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan"))
+                        {
+                            Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan");
+
+                        }
+                        if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows"))
+                        {
+                            Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWIndows");
+                        }
+                        if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config"))
+                        {
+                            Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config");
+                        }
+                        if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config\\Applications.xml"))
+                        {
+                            return exes;
+                        }
                     }
+
                     XmlSerializer serializer = new XmlSerializer(typeof(List<Executable>));
                     
                     var xmlSettings = new System.Xml.XmlReaderSettings
                     {
                         CheckCharacters = false,
                     };
-                    using (var streamReader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "Config\\Applications.xml", Encoding.UTF8))
+                    using (var streamReader = new StreamReader(StaticClasses.ConfigFoldor + "Config\\Applications.xml", Encoding.UTF8))
                     using (var xmlReader = System.Xml.XmlReader.Create(streamReader, xmlSettings))
                     {
                         exes = (List<Executable>)serializer.Deserialize(xmlReader);

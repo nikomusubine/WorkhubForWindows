@@ -734,9 +734,13 @@ namespace WorkhubForWindows
                     if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config\\Config.xml"))
                     {
                         File.Copy(AppDomain.CurrentDomain.BaseDirectory + "Config\\Config.xml", Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config\\Config.xml");
-                        MessageBox.Show("Copied the configfile to " + Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config\\Config.xml" + ".",
-                            "Information",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config\\Config.xml"))
+                        {
+                            MessageBox.Show("Copied the configfile to " + Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config\\Config.xml" + ".",
+                                "Information",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            File.Delete(AppDomain.CurrentDomain.BaseDirectory + "Config\\Config.xml");
+                        }
                     }
                 }
             }
