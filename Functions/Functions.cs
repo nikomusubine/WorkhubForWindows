@@ -31,6 +31,7 @@ namespace WorkhubForWindows
                 Prs.StartInfo.FileName = executable.Path;
                 Prs.StartInfo.Arguments = executable.Argments;
                 Prs.StartInfo.UseShellExecute = RunasAdmin;
+                Prs.StartInfo.WorkingDirectory = Path.GetDirectoryName(executable.Path);
                 Prs.StartInfo.Verb = "RunAs";
                 try
                 {
@@ -46,6 +47,7 @@ namespace WorkhubForWindows
                 Process Prs = new Process();
                 Prs.StartInfo.FileName = executable.Path;
                 Prs.StartInfo.Arguments = executable.Argments;
+                Prs.StartInfo.WorkingDirectory = Path.GetDirectoryName(executable.Path);
                 if (executable.RunasAdmin)
                 {
                     Prs.StartInfo.Verb = "RunAs";

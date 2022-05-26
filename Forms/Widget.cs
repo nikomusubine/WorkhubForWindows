@@ -105,9 +105,9 @@ namespace WorkhubForWindows
             this.FormClosing -= Form_Closing;
         }
 
-            private void SettingsTimerTIck(object sender,EventArgs e)
+        private void SettingsTimerTIck(object sender, EventArgs e)
         {
-            if (this.Size!=StaticClasses.Config.WidgetSize)
+            if (this.Size != StaticClasses.Config.WidgetSize)
             {
                 this.Size = StaticClasses.Config.WidgetSize;
             }
@@ -566,14 +566,14 @@ namespace WorkhubForWindows
 
     public static class Widget_Expansion
     {
-        public static void SizeForce(this System.Windows.Forms.ListView listView,Size size)
+        public static void SizeForce(this System.Windows.Forms.ListView listView, Size size)
         {
             listView.MinimumSize = size;
             listView.MaximumSize = size;
             listView.Size = size;
         }
 
-        public static void SizeForce(this System.Windows.Forms.ListView listView, int Width,int Height)
+        public static void SizeForce(this System.Windows.Forms.ListView listView, int Width, int Height)
         {
             listView.MinimumSize = new Size(Width, Height);
             listView.MaximumSize = new Size(Width, Height);
@@ -812,7 +812,7 @@ namespace WorkhubForWindows
     /// A nice generic class to register multiple hotkeys for your app
     /// </summary>
     // --------------------------------------------------------------------------
-    
+
 
     /*
     struct MsgandFunction
