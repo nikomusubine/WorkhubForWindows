@@ -73,8 +73,9 @@
 		<Button_ResetWidgetPos>ウィジェット位置をリセット</Button_ResetWidgetPos>
 		<Button_Apply>適用(&amp;A)</Button_Apply>
 		<Button_Cancel>キャンセル(&amp;C)</Button_Cancel>
-	
-</Settings>
+		<Startup_Add>スタートアップに追加</Startup_Add>
+		<Startup_Remove>スタートアップから削除</Startup_Remove>
+	</Settings>
 	<HotkeyRegester>
 		<Label_1>キーを押してください...</Label_1>
 		<Label_2>Xボタンを押してキャンセル...</Label_2>

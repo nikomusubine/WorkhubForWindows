@@ -684,11 +684,11 @@ namespace WorkhubForWindows
         public void SaveConfig(Configure cfg)
         {
             XmlSerializer Serialize = new XmlSerializer(typeof(Configure));
-            if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config\\"))
+            if (!Directory.Exists(StaticClasses.ConfigPath + "Config\\"))
             {
-                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "Config");
+                Directory.CreateDirectory(StaticClasses.ConfigPath + "Config");
             }
-            using (var Streamwriter = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "Config\\Config.xml", false, new System.Text.UTF8Encoding(false)))
+            using (var Streamwriter = new StreamWriter(StaticClasses.ConfigPath + "Config\\Config.xml", false, new System.Text.UTF8Encoding(false)))
             {
                 Serialize.Serialize(Streamwriter, cfg);
                 Streamwriter.Flush();
@@ -700,11 +700,11 @@ namespace WorkhubForWindows
         {
             Configure cfg = this;
             XmlSerializer Serialize = new XmlSerializer(typeof(Configure));
-            if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config\\"))
+            if (!Directory.Exists(StaticClasses.ConfigPath + "Config"))
             {
-                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "Config");
+                Directory.CreateDirectory(StaticClasses.ConfigPath + "Config");
             }
-            using (var Streamwriter = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "Config\\Config.xml", false, new System.Text.UTF8Encoding(false)))
+            using (var Streamwriter = new StreamWriter(StaticClasses.ConfigPath + "Config\\Config.xml", false, new System.Text.UTF8Encoding(false)))
             {
                 Serialize.Serialize(Streamwriter, cfg);
                 Streamwriter.Flush();
@@ -714,18 +714,55 @@ namespace WorkhubForWindows
         public Configure LoadConfig()
         {
             Configure cfg = new Configure();
-            if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config"))
+            if (Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config")) //元のConfigが存在
             {
-                Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "Config");
+                if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config\\Config.xml"))
+                {
+                    if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan"))
+                    {
+                        Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan");
+
+                    }
+                    if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows"))
+                    {
+                        Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWIndows");
+                    }
+                    if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config"))
+                    {
+                        Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config");
+                    }
+                    if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config\\Config.xml"))
+                    {
+                        File.Copy(AppDomain.CurrentDomain.BaseDirectory + "Config\\Config.xml", Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config\\Config.xml");
+                        MessageBox.Show("Copied the configfile to " + Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config\\Config.xml" + ".",
+                            "Information",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
             }
-            if (!File.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config\\Config.xml"))
+            else//元のConfigが存在しない
             {
-                this.SaveConfig();
-                return cfg;
+                if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan"))
+                {
+                    Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan");
+
+                }
+                if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows"))
+                {
+                    Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWIndows");
+                }
+                if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config"))
+                {
+                    Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWIndows\\Config");
+                }
+                if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\Config\\Config.xml"))
+                {
+                    this.SaveConfig();
+                    return cfg;
+                }
             }
 
 
-        
 
 
             XmlSerializer serializer = new XmlSerializer(typeof(Configure));
@@ -733,7 +770,7 @@ namespace WorkhubForWindows
                 {
                     CheckCharacters = false,
                 };
-                using (var streamReader = new StreamReader(AppDomain.CurrentDomain.BaseDirectory + "Config\\Config.xml", Encoding.UTF8))
+                using (var streamReader = new StreamReader(StaticClasses.ConfigFoldor + "Config\\Config.xml", Encoding.UTF8))
                 using (var xmlReader = System.Xml.XmlReader.Create(streamReader, xmlSettings))
                 {
                     cfg = (Configure)serializer.Deserialize(xmlReader);
@@ -770,6 +807,7 @@ namespace WorkhubForWindows
         public static List<Executable> Executables { get; set; } = new List<Executable>();
         public static string ConfigFoldor { get; set; }
         public static Configure Config { get; set; } = new Configure();
+        public static string ConfigPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\";
         public static class WorkHubMessages
         {
             public const int ConfigChanged = 0x2500;

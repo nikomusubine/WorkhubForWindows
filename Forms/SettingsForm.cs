@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
+using System.Text;
 using System.Windows.Forms;
 
 namespace WorkhubForWindows.Forms
@@ -24,22 +25,6 @@ namespace WorkhubForWindows.Forms
         public SettingsForm()
         {
             InitializeComponent();
-
-            foreach (FontFamily item in FontFamily.Families)
-            {
-                if (item.IsStyleAvailable(FontStyle.Regular))
-                {
-                    FontNames.Items.Add(item.Name);
-                }
-
-            }
-            initalizeform();
-            LanguageLoad();
-        }
-
-        #region EventHandlers
-        private void Settings_Load(object sender, EventArgs e)
-        {
             this.Font = StaticClasses.Config.font;
             // プロジェクト＞プロパティ＞アセンブリ情報　で指定した「タイトル」を取得
             var assembly = Assembly.GetExecutingAssembly();
@@ -54,13 +39,20 @@ namespace WorkhubForWindows.Forms
             exeFile = Path.GetFileName(Application.ExecutablePath);
 
             // WSHスクリプト名
-            jsFile = Directory.GetParent(Application.ExecutablePath) + "\\addStartup.js";
+            //jsFile = Directory.GetParent(Application.ExecutablePath) + "\\addStartup.js";
+            jsFile = AppDomain.CurrentDomain.BaseDirectory + "\\addStartup.js";
 
             // ショートカットのリンク名
-            String sMnu = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
+            string sMnu = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
             lnkFile = sMnu + "\\" + aplTitle + ".lnk";
 
 
+        }
+
+        #region EventHandlers
+        private void Settings_Load(object sender, EventArgs e)
+        {
+            
             // スタートアップ有無
             isstartup = File.Exists(lnkFile);
 
@@ -73,6 +65,18 @@ namespace WorkhubForWindows.Forms
                 StartUpbutton.Text = StaticClasses.Langs.Settings.Startup_Add;
             }
             frmLoadFlg = true;
+
+            FontNames.Items.Clear();
+            foreach (FontFamily item in FontFamily.Families)
+            {
+                if (item.IsStyleAvailable(FontStyle.Regular))
+                {
+                    FontNames.Items.Add(item.Name);
+                }
+
+            }
+            initalizeform();
+            LanguageLoad();
         }
 
         private void FontSizeKeyPress(object sender, KeyPressEventArgs e)
@@ -123,7 +127,17 @@ namespace WorkhubForWindows.Forms
                         w.WriteLine("ws = WScript.CreateObject('WScript.Shell');");
                         w.WriteLine("ln = ws.SpecialFolders('Startup') + '\\\\' + '" + aplTitle + ".lnk';");
                         w.WriteLine("sc = ws.CreateShortcut(ln);");
-                        w.WriteLine("sc.TargetPath = ws.CurrentDirectory + '\\\\" + exeFile + "';");
+                        StringBuilder sb = new StringBuilder();
+                        StringBuilder tmp = new StringBuilder();
+                        string[] dividedText = (AppDomain.CurrentDomain.BaseDirectory + exeFile).Split('\\');
+                        for(int i = 0; i != dividedText.Length; i++)
+                        {
+                            tmp.Clear();
+                            tmp.Append(dividedText[i]);
+                            tmp.Append("\\\\");
+                            sb.Append(tmp.ToString());
+                        }
+                        w.WriteLine("sc.TargetPath = \'" + sb.ToString() + "';");
                         w.WriteLine("sc.Save();");
                     }
 
@@ -149,6 +163,7 @@ namespace WorkhubForWindows.Forms
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                         StartUpbutton.Text = StaticClasses.Langs.Settings.Startup_Remove;
+                        isstartup = true;
                     }
                     else
                     {
@@ -182,6 +197,7 @@ namespace WorkhubForWindows.Forms
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                         StartUpbutton.Text = StaticClasses.Langs.Settings.Startup_Add;
+                        isstartup = false;
                     }
                     catch (IOException ex)
                     {
@@ -198,7 +214,22 @@ namespace WorkhubForWindows.Forms
 
         private void Settings_Closed(object sender,FormClosedEventArgs e)
         {
-            this.Dispose();
+
+        }
+
+        private void FormShown(object sender,EventArgs e)
+        {
+            FontNames.Items.Clear();
+            foreach (FontFamily item in FontFamily.Families)
+            {
+                if (item.IsStyleAvailable(FontStyle.Regular))
+                {
+                    FontNames.Items.Add(item.Name);
+                }
+
+            }
+            initalizeform();
+            LanguageLoad();
         }
 
         private void OpacityBarScroll(object sender,EventArgs e)
@@ -364,6 +395,7 @@ namespace WorkhubForWindows.Forms
                     break;
 
             }
+            LanguageBox.Items.Clear();
             LanguageBox.Text = StaticClasses.Config.Language;
             foreach (string str in Directory.GetFiles("Languages","*.xml",SearchOption.TopDirectoryOnly))
             {

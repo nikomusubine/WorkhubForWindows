@@ -18,6 +18,7 @@ namespace WorkhubForWindows
         private bool Quiting = false;
 
         public static Widget wg;
+        public static SettingsForm sf;
         private Image rawImage;
         public Main_FullScreenList()
         {
@@ -33,6 +34,7 @@ namespace WorkhubForWindows
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle, "MainForm"));
             this.LoadConfig();
             wg = new Widget();
+            sf=new SettingsForm();
             Apps.View = View.LargeIcon;
             this.FormClosing += Form_Closing;
             StaticClasses.AppStatus.Started = true;
@@ -86,8 +88,7 @@ namespace WorkhubForWindows
 
         private void SettingsPushed(object sender, EventArgs e)
         {
-            SettingsForm sform = new SettingsForm();
-            sform.ShowDialog();
+            sf.ShowDialog();
         }
 
         private void ShowWidget(object sender, EventArgs e)

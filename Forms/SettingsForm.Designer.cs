@@ -533,6 +533,7 @@
             this.SettingsTab.ResumeLayout(false);
             this.General.ResumeLayout(false);
             this.GeneralSettingsPanel.ResumeLayout(false);
+            this.GeneralSettingsPanel.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
