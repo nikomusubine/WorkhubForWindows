@@ -93,7 +93,6 @@ namespace WorkhubForWindows
             IconPath = iconPath;
             point = new Point(0, 0);
         }
-
         public Executable(string name, string path, string args, bool runasAdmin)
         {
             Name = name;
@@ -101,6 +100,15 @@ namespace WorkhubForWindows
             Argments = args;
             RunasAdmin = runasAdmin;
             IconPath = "";
+            point = new Point(0, 0);
+        }
+        public Executable(string name, string path, string args, string iconPath,bool runasAdmin)
+        {
+            Name = name;
+            Path = path;
+            Argments = args;
+            RunasAdmin = runasAdmin;
+            IconPath = iconPath;
             point = new Point(0, 0);
         }
 
@@ -774,7 +782,7 @@ namespace WorkhubForWindows
                 {
                     CheckCharacters = false,
                 };
-                using (var streamReader = new StreamReader(StaticClasses.ConfigFoldor + "Config\\Config.xml", Encoding.UTF8))
+                using (var streamReader = new StreamReader(StaticClasses.ConfigPath + "Config\\Config.xml", Encoding.UTF8))
                 using (var xmlReader = System.Xml.XmlReader.Create(streamReader, xmlSettings))
                 {
                     cfg = (Configure)serializer.Deserialize(xmlReader);
@@ -809,7 +817,7 @@ namespace WorkhubForWindows
     public static class StaticClasses
     {
         public static List<Executable> Executables { get; set; } = new List<Executable>();
-        public static string ConfigFoldor { get; set; }
+        //public static string ConfigFoldor { get; set; }
         public static Configure Config { get; set; } = new Configure();
         public static string ConfigPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\";
         public static class WorkHubMessages
@@ -853,6 +861,10 @@ namespace WorkhubForWindows
                 {
                     bmp = Icon.ExtractAssociatedIcon(StaticClasses.Executables[i].Path).ToBitmap();
                 }
+                if (Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "FixedIcon.*").Length!=0)
+                {
+                    bmp = (Bitmap)Image.FromFile(Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "FixedIcon.*")[0]);
+                }
                 if (Executables[i].RunasAdmin)
                 {
                     Graphics graphics = Graphics.FromImage(bmp);
@@ -862,6 +874,7 @@ namespace WorkhubForWindows
                     graphics.Dispose();
                 }
                 IconList.Images.Add(StaticClasses.Executables[i].Name, bmp);
+
             }
 
 

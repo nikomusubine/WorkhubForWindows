@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WorkhubForWindows.Forms;
 
 namespace WorkhubForWindows
 {
@@ -18,6 +19,7 @@ namespace WorkhubForWindows
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
             string name = Process.GetCurrentProcess().ProcessName;
             Process[] processes = Process.GetProcessesByName(name);
             for (int i = 0; i < processes.Length; i++)
@@ -25,14 +27,23 @@ namespace WorkhubForWindows
                 Process proc = processes[i];
                 if (proc.ProcessName == name && proc.MainWindowTitle == "WorkhubForWindows")
                 {
-                    Functions.WinAPIFuncs.PostMessage((int)proc.MainWindowHandle, StaticClasses.WorkHubMessages.ShowMainWindow, 0, 0);
+                   // Functions.WinAPIFuncs.PostMessage((int)proc.MainWindowHandle, StaticClasses.WorkHubMessages.ShowMainWindow, 0, 0);
 
-                    Environment.Exit(1);
+                    //Environment.Exit(1);
                 }
             }
             StaticClasses.Config = StaticClasses.Config.LoadConfig();
             //EULA
-
+            if (StaticClasses.Config.EULA == 0)
+            {
+                EULA eula = new EULA();
+                eula.ShowDialog();
+                if (!eula.agree)
+                {
+                    Environment.Exit(-1);
+                }
+            }
+            StaticClasses.Config.EULA = 1;
             StaticClasses.IconList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             StaticClasses.IconList.TransparentColor = Color.Transparent;
             StaticClasses.IconList.ImageSize = new Size(32, 32);

@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EULA));
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.AcceptButton = new System.Windows.Forms.Button();
+            this.ButtonAccept = new System.Windows.Forms.Button();
             this.DelineButton = new System.Windows.Forms.Button();
+            this.EulaText = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -46,23 +47,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Thank you for download!";
             // 
-            // richTextBox1
+            // ButtonAccept
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(13, 80);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(775, 311);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
-            // 
-            // AcceptButton
-            // 
-            this.AcceptButton.Location = new System.Drawing.Point(713, 415);
-            this.AcceptButton.Name = "AcceptButton";
-            this.AcceptButton.Size = new System.Drawing.Size(75, 23);
-            this.AcceptButton.TabIndex = 2;
-            this.AcceptButton.Text = "Accept";
-            this.AcceptButton.UseVisualStyleBackColor = true;
-            this.AcceptButton.Click += new System.EventHandler(this.AcceptButton_Click);
+            this.ButtonAccept.Location = new System.Drawing.Point(713, 415);
+            this.ButtonAccept.Name = "ButtonAccept";
+            this.ButtonAccept.Size = new System.Drawing.Size(75, 23);
+            this.ButtonAccept.TabIndex = 2;
+            this.ButtonAccept.Text = "Accept";
+            this.ButtonAccept.UseVisualStyleBackColor = true;
+            this.ButtonAccept.Click += new System.EventHandler(this.AcceptButton_Click);
             // 
             // DelineButton
             // 
@@ -73,15 +66,24 @@
             this.DelineButton.Text = "Deline";
             this.DelineButton.UseVisualStyleBackColor = true;
             // 
+            // EulaText
+            // 
+            this.EulaText.Location = new System.Drawing.Point(13, 80);
+            this.EulaText.Name = "EulaText";
+            this.EulaText.Size = new System.Drawing.Size(775, 311);
+            this.EulaText.TabIndex = 1;
+            this.EulaText.Text = "";
+            // 
             // EULA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.DelineButton);
-            this.Controls.Add(this.AcceptButton);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.ButtonAccept);
+            this.Controls.Add(this.EulaText);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EULA";
             this.Text = "EULA";
             this.ResumeLayout(false);
@@ -92,8 +94,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button AcceptButton;
+        private System.Windows.Forms.Button ButtonAccept;
         private System.Windows.Forms.Button DelineButton;
+        private System.Windows.Forms.RichTextBox EulaText;
     }
 }

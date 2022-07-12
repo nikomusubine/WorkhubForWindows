@@ -19,7 +19,7 @@ namespace WorkhubForWindows.Properties {
     // または Visual Studio のようなツールを使用して自動生成されました。
     // メンバーを追加または削除するには、.ResX ファイルを編集して、/str オプションと共に
     // ResGen を実行し直すか、または VS プロジェクトをビルドし直します。
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -57,6 +57,21 @@ namespace WorkhubForWindows.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   エンドユーザー使用許諾契約書
+        ///
+        ///このエンドユーザー使用許諾契約書（以下「EULA」とします）は、あなたとその所在地をNikochan（以下「Niko」とします）との間で交わされる契約書です。本ライセンスは、本ソフトウェア製品およびすべての関連文書（マニュアル、パッケージ）に対し、それらが印刷物、ファイル、ダウンロードまたはオンラインでアクセスされたものであるかに関わらず有効であり、ソフトウェアを更新または補足するアップデートもしくはアップグレードに対しても同様とし、個別のライセンスとして配布されないこととします（以下、総称して（「ソフトウェア」とします）。
+        ///本ソフトウェアは販売されるものではなく、使用許諾されるものです。本ソフトウェアをインストールまたは使用することにより、あなたがこのEULAを読み終え、本契約書に定義されているる用語および条件に拘束されることに同意することとします。あなたがこのEULAの条件に同意しない場合、本ソフトウェアをインストールまたは使用することはできません。
+        ///本ソフトウェアは、知的財産権に関する国際条約ならびに国内の著作権法によって保護されています。
+        ///ライセンス
+        ///このE [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string Ja_Jp {
+            get {
+                return ResourceManager.GetString("Ja_Jp", resourceCulture);
             }
         }
     }

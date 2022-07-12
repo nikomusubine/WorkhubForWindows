@@ -910,7 +910,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="FontNames.Size" type="System.Drawing.Size, System.Drawing">
-    <value>429, 23</value>
+    <value>428, 23</value>
   </data>
   <data name="FontNames.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -931,13 +931,13 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="FontSizeBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>641, 4</value>
+    <value>640, 4</value>
   </data>
   <data name="FontSizeBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
   <data name="FontSizeBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 22</value>
+    <value>120, 22</value>
   </data>
   <data name="FontSizeBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -982,7 +982,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="FontLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="FontNames" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="FontSizeBox" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,31.42857,Percent,68.57143,Absolute,126" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="FontLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="FontNames" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="FontSizeBox" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,31.42857,Percent,68.57143,Absolute,127" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>

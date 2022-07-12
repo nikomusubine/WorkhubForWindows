@@ -49,6 +49,8 @@
             this.MoveLbutton = new System.Windows.Forms.Button();
             this.MoveRbutton = new System.Windows.Forms.Button();
             this.Icons = new System.Windows.Forms.ImageList(this.components);
+            this.IconLabel = new System.Windows.Forms.Label();
+            this.IconBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -113,6 +115,8 @@
             this.tableLayoutPanel3.Controls.Add(this.ArgsBox, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.PathBox, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.RunasAdminBox, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.IconLabel, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.IconBox, 1, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             // 
             // RunasLabel
@@ -183,6 +187,16 @@
             resources.ApplyResources(this.Icons, "Icons");
             this.Icons.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // IconLabel
+            // 
+            resources.ApplyResources(this.IconLabel, "IconLabel");
+            this.IconLabel.Name = "IconLabel";
+            // 
+            // IconBox
+            // 
+            resources.ApplyResources(this.IconBox, "IconBox");
+            this.IconBox.Name = "IconBox";
+            // 
             // EditItem
             // 
             resources.ApplyResources(this, "$this");
@@ -219,5 +233,7 @@
         private System.Windows.Forms.Label RunasLabel;
         private System.Windows.Forms.CheckBox RunasAdminBox;
         private System.Windows.Forms.ImageList Icons;
+        private System.Windows.Forms.Label IconLabel;
+        private System.Windows.Forms.TextBox IconBox;
     }
 }

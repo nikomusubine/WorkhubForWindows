@@ -136,8 +136,8 @@ namespace WorkhubForWindows
                             }
                         }
                     }
-                    else//元のConfigが存在しない
-                    {
+                    //元のConfigが存在しない
+                    
                         if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan"))
                         {
                             Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan");
@@ -155,7 +155,7 @@ namespace WorkhubForWindows
                         {
                             return exes;
                         }
-                    }
+                    
 
                     XmlSerializer serializer = new XmlSerializer(typeof(List<Executable>));
                     
@@ -163,7 +163,9 @@ namespace WorkhubForWindows
                     {
                         CheckCharacters = false,
                     };
-                    using (var streamReader = new StreamReader(StaticClasses.ConfigFoldor + "Config\\Applications.xml", Encoding.UTF8))
+
+                    
+                    using (var streamReader = new StreamReader(StaticClasses.ConfigPath + "Config\\Applications.xml", Encoding.UTF8))
                     using (var xmlReader = System.Xml.XmlReader.Create(streamReader, xmlSettings))
                     {
                         exes = (List<Executable>)serializer.Deserialize(xmlReader);
@@ -179,11 +181,11 @@ namespace WorkhubForWindows
                 public static void Save(List<Executable> executables)
                 {
                     XmlSerializer Serialize = new XmlSerializer(typeof(List<Executable>));
-                    if(!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "Config\\"))
+                    if(!Directory.Exists(StaticClasses.ConfigPath + "Config\\"))
                     {
-                        Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + "Config");
+                        Directory.CreateDirectory(StaticClasses.ConfigPath + "Config");
                     }
-                    using (var Streamwriter = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "Config\\Applications.xml", false, new System.Text.UTF8Encoding(false)))
+                    using (var Streamwriter = new StreamWriter(StaticClasses.ConfigPath + "Config\\Applications.xml", false, new System.Text.UTF8Encoding(false)))
                     {
                         Serialize.Serialize(Streamwriter, executables);
                         Streamwriter.Flush();
@@ -196,7 +198,8 @@ namespace WorkhubForWindows
         {
             [DllImport("User32.dll", EntryPoint = "PostMessage")]
             public extern static Int32 PostMessage(Int32 hwnd, Int32 msg, Int32 wParam, Int32 lParam);
-
+            [DllImport("user32.dll")]
+            public static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, int wParam, int lParam);
             public static Icon GetSieldIcon(bool smallSize)
             {
                 return SieldIcon.GetShieldIcon(smallSize);

@@ -223,10 +223,20 @@ namespace WorkhubForWindows
                     StaticClasses.Config.backimgpath = "";
 
                 }
-
-                this.TrayRC_ShowWidget.Checked = StaticClasses.Config.ShowWidget;
-                this.ToolStripShowWidget.Checked = StaticClasses.Config.ShowWidget;
             }
+
+
+            this.BackColor = StaticClasses.Config.MainWindowBackColor;
+            this.Apps.BackColor = StaticClasses.Config.MainWindowBackColor;
+            this.AddItemButton.BackColor = StaticClasses.Config.MainWindowBackColor;
+            this.EditButton.BackColor = StaticClasses.Config.MainWindowBackColor;
+            this.StartButton.BackColor = StaticClasses.Config.MainWindowBackColor;
+            this.Ribbon.BackColor = StaticClasses.Config.MainWindowBackColor;
+            this.ForeColor = StaticClasses.Config.MainWindowForeColor;
+            this.Ribbon.ForeColor = StaticClasses.Config.MainWindowForeColor;
+            this.Apps.ForeColor = StaticClasses.Config.MainWindowForeColor;
+            this.TrayRC_ShowWidget.Checked = StaticClasses.Config.ShowWidget;
+            this.ToolStripShowWidget.Checked = StaticClasses.Config.ShowWidget;
         }
 
         void LoadLanguage()

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HotKeyRegester));
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
@@ -76,7 +77,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(784, 109);
             this.label2.TabIndex = 1;
-            this.label2.Text = "If you want to cancel, push X button...";
+            this.label2.Text = "If you want to cancel? Please close the window...";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HotKeyRegester
@@ -86,6 +87,7 @@
             this.ClientSize = new System.Drawing.Size(814, 242);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HotKeyRegester";
             this.Text = "HotKeyRegester";
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyUpEvent);

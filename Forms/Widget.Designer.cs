@@ -30,34 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Widget));
-            this.applistview = new System.Windows.Forms.ListView();
             this.RCMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.FixWidgetPos = new System.Windows.Forms.ToolStripMenuItem();
             this.RCMenuRunAsAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.applistview = new System.Windows.Forms.ListView();
             this.SettingsTimer = new System.Windows.Forms.Timer(this.components);
             this.RCMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // applistview
-            // 
-            resources.ApplyResources(this.applistview, "applistview");
-            this.applistview.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.applistview.ContextMenuStrip = this.RCMenu;
-            this.applistview.HideSelection = false;
-            this.applistview.MultiSelect = false;
-            this.applistview.Name = "applistview";
-            this.applistview.TileSize = new System.Drawing.Size(50, 50);
-            this.applistview.UseCompatibleStateImageBehavior = false;
-            this.applistview.VirtualListSize = 3;
-            this.applistview.DoubleClick += new System.EventHandler(this.appstartcall);
-            this.applistview.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownEvent);
-            this.applistview.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyUpEvent);
-            this.applistview.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Down);
-            this.applistview.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mouse_Down);
-            this.applistview.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Mouse_Move);
-            this.applistview.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Mouse_Up);
             // 
             // RCMenu
             // 
@@ -87,6 +68,21 @@
             this.panel1.Controls.Add(this.applistview);
             this.panel1.Name = "panel1";
             // 
+            // applistview
+            // 
+            resources.ApplyResources(this.applistview, "applistview");
+            this.applistview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.applistview.ContextMenuStrip = this.RCMenu;
+            this.applistview.HideSelection = false;
+            this.applistview.MultiSelect = false;
+            this.applistview.Name = "applistview";
+            this.applistview.TileSize = new System.Drawing.Size(50, 50);
+            this.applistview.UseCompatibleStateImageBehavior = false;
+            this.applistview.VirtualListSize = 3;
+            this.applistview.DoubleClick += new System.EventHandler(this.appstartcall);
+            this.applistview.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Mouse_Down);
+            this.applistview.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Mouse_Down);
+            // 
             // SettingsTimer
             // 
             this.SettingsTimer.Enabled = true;
@@ -99,7 +95,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "Widget";
+            this.Deactivate += new System.EventHandler(this.DeactivateCalled);
             this.Shown += new System.EventHandler(this.ShowWidget);
             this.DoubleClick += new System.EventHandler(this.appstartcall);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownEvent);
@@ -111,11 +109,11 @@
         }
 
         #endregion
-        public System.Windows.Forms.ListView applistview;
         private System.Windows.Forms.ContextMenuStrip RCMenu;
         private System.Windows.Forms.ToolStripMenuItem FixWidgetPos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer SettingsTimer;
         private System.Windows.Forms.ToolStripMenuItem RCMenuRunAsAdmin;
+        public System.Windows.Forms.ListView applistview;
     }
 }

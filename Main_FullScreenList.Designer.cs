@@ -72,7 +72,7 @@ namespace WorkhubForWindows
             this.RibbonFiles});
             this.Ribbon.Location = new System.Drawing.Point(0, 0);
             this.Ribbon.Name = "Ribbon";
-            this.Ribbon.Size = new System.Drawing.Size(645, 24);
+            this.Ribbon.Size = new System.Drawing.Size(645, 30);
             this.Ribbon.TabIndex = 3;
             // 
             // RibbonFiles
@@ -309,11 +309,15 @@ namespace WorkhubForWindows
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.Ribbon);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.Ribbon;
             this.Name = "Main_FullScreenList";
             this.Text = "WorkhubForWindows";
+            this.Deactivate += new System.EventHandler(this.DeactivatedCalled);
             this.Shown += new System.EventHandler(this.MainWindowShown);
             this.SizeChanged += new System.EventHandler(this.PaintCalled);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownCalled);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyUpCalled);
             this.Ribbon.ResumeLayout(false);
             this.Ribbon.PerformLayout();
             this.TrayRClick.ResumeLayout(false);

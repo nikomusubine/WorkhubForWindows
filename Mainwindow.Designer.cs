@@ -212,7 +212,6 @@ namespace WorkhubForWindows
             this.Apps.AllowColumnReorder = true;
             resources.ApplyResources(this.Apps, "Apps");
             this.Apps.BackColor = System.Drawing.SystemColors.Window;
-            this.Apps.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Apps.ContextMenuStrip = this.ApplistRClick;
             this.Apps.HideSelection = false;
             this.Apps.MultiSelect = false;

@@ -20,6 +20,7 @@ namespace WorkhubForWindows
         public static Widget wg;
         public static SettingsForm sf;
         private Image rawImage;
+        private bool explosed = false;
         public Main_FullScreenList()
         {
 
@@ -34,7 +35,7 @@ namespace WorkhubForWindows
             StaticClasses.WindowHandler.WindowHandlers.Add(new WorkhubWindowHandler((int)this.Handle, "MainForm"));
             this.LoadConfig();
             wg = new Widget();
-            sf=new SettingsForm();
+            sf = new SettingsForm();
             Apps.View = View.LargeIcon;
             this.FormClosing += Form_Closing;
             StaticClasses.AppStatus.Started = true;
@@ -46,6 +47,7 @@ namespace WorkhubForWindows
             }
         }
 
+        #region Events
         private void MainWindowShown(object sender, EventArgs e)
         {
             wg.Show();
@@ -114,7 +116,7 @@ namespace WorkhubForWindows
         {
             for (int i = 0; i != Apps.SelectedItems.Count; i++)
             {
-                Functions.Application.StartProcess(StaticClasses.Executables[Apps.SelectedItems[i].Index],true);
+                Functions.Application.StartProcess(StaticClasses.Executables[Apps.SelectedItems[i].Index], true);
             }
         }
 
@@ -129,7 +131,63 @@ namespace WorkhubForWindows
                 Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.AppListChanged, 0, 0);
             }
         }
+        #region Explosion
+        private const short ExpKeys= 3;
+        bool[] keys = new bool[ExpKeys];
+        private void KeyDownCalled(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.E:
+                    keys[0] = true;
+                    break;
+                case Keys.X:
+                    keys[1] = true;
+                    break;
+                case Keys.P:
+                    keys[2] = true;
+                    break;
+            }
+            bool isExplode = true;
+            for (int i = 0; i != keys.Length; i++)
+            {
+                if (!keys[i])
+                {
+                    isExplode = false;
+                    break;
+                }
+            }
+            if (isExplode)
+            {
+                //Explode
+                MessageBox.Show ("Explode!");
+            }
+        }
 
+        private void KeyUpCalled(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.E:
+                    keys[0] = false;
+                    break;
+                case Keys.X:
+                    keys[1] = false;
+                    break;
+                case Keys.P:
+                    keys[2] = false;
+                    break;
+            }
+        }
+        private void DeactivatedCalled(object sender,EventArgs e)
+        {
+            for(int i = 0; i != keys.Length; i++)
+            {
+                keys[i] = false;
+            }
+        }
+        #endregion
+        #endregion
         #region TrayRClick
 
         private void ShowMainWindow(object sender, EventArgs e)
