@@ -57,18 +57,36 @@ namespace WorkhubForWindows.Forms
             }
             else
             {
-                StaticClasses.Executables.Add
-                    (
-                    new Executable()
-                    {
-                        Name = ItemNameBox.Text,
-                        Path = FilePathBox.Text,
-                        Argments = CmdArgsBox.Text,
-                        RunasAdmin = RunasAdminBox.Checked,
-                        IconPath = IconBox.Text
-                    }
-                    );
-
+                if (CurrentDirBox.Text == "")
+                {
+                    StaticClasses.Executables.Add
+                        (
+                        new Executable()
+                        {
+                            Name = ItemNameBox.Text,
+                            Path = FilePathBox.Text,
+                            CurrentDir=Directory.GetParent(FilePathBox.Text).FullName,
+                            Argments = CmdArgsBox.Text,
+                            RunasAdmin = RunasAdminBox.Checked,
+                            IconPath = IconBox.Text
+                        }
+                        );
+                }
+                else
+                {
+                    StaticClasses.Executables.Add
+                        (
+                        new Executable()
+                        {
+                            Name = ItemNameBox.Text,
+                            Path = FilePathBox.Text,
+                            CurrentDir = CurrentDirBox.Text,
+                            Argments = CmdArgsBox.Text,
+                            RunasAdmin = RunasAdminBox.Checked,
+                            IconPath = IconBox.Text
+                        }
+                        );
+                }
                 Functions.Config.Applications.Save(StaticClasses.Executables);
                 foreach (WorkhubWindowHandler i in StaticClasses.WindowHandler.WindowHandlers)
                 {
@@ -101,6 +119,5 @@ namespace WorkhubForWindows.Forms
             ButtonCancel.Text = StaticClasses.Langs.AddItem.CancelButton;
             ButtonReference.Text = StaticClasses.Langs.AddItem.RefButton;
         }
-
     }
 }

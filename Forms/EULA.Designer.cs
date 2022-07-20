@@ -65,6 +65,7 @@
             this.DelineButton.TabIndex = 3;
             this.DelineButton.Text = "Deline";
             this.DelineButton.UseVisualStyleBackColor = true;
+            this.DelineButton.Click += new System.EventHandler(this.DelineButton_Click);
             // 
             // EulaText
             // 

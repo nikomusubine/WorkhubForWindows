@@ -34,6 +34,7 @@ namespace WorkhubForWindows.Forms
             {
                 NameBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Name;
                 PathBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Path;
+                CurrentDirBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].CurrentDir;
                 ArgsBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].Argments;
                 RunasAdminBox.Checked=StaticClasses.Executables[Applist.SelectedIndices[0]].RunasAdmin;
                 IconBox.Text = StaticClasses.Executables[Applist.SelectedIndices[0]].IconPath;
@@ -49,7 +50,7 @@ namespace WorkhubForWindows.Forms
         {
             if (Applist.SelectedIndices.Count != 0)
             {
-                StaticClasses.Executables[Applist.SelectedIndices[0]] = new Executable(NameBox.Text, PathBox.Text, ArgsBox.Text);
+                StaticClasses.Executables[Applist.SelectedIndices[0]] = new Executable(NameBox.Text, PathBox.Text, CurrentDirBox.Text, ArgsBox.Text);
             }
             this.Close();
         }
@@ -62,7 +63,7 @@ namespace WorkhubForWindows.Forms
             }
             else
             {
-                StaticClasses.Executables[Applist.SelectedIndices[0]] = new Executable(NameBox.Text, PathBox.Text, ArgsBox.Text, IconBox.Text, RunasAdminBox.Checked);
+                StaticClasses.Executables[Applist.SelectedIndices[0]] = new Executable(NameBox.Text, PathBox.Text, CurrentDirBox.Text,ArgsBox.Text, IconBox.Text, RunasAdminBox.Checked);
             }
         }
 
@@ -211,6 +212,5 @@ namespace WorkhubForWindows.Forms
                 this.RunasLabel.Text = StaticClasses.Langs.EditItem.Label_RunasAdmin;
             }
         }
-
     }
 }

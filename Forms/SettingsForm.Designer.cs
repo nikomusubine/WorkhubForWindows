@@ -331,6 +331,7 @@
             // FontNames
             // 
             resources.ApplyResources(this.FontNames, "FontNames");
+            this.FontNames.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.FontNames.FormattingEnabled = true;
             this.FontNames.Name = "FontNames";
             this.FontNames.SelectedIndexChanged += new System.EventHandler(this.FontNames_SelectedIndexChanged);

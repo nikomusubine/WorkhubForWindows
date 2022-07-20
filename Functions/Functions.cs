@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Threading;
 using System.Drawing;
+using System.Security.Cryptography;
 
 namespace WorkhubForWindows
 {
@@ -31,7 +32,7 @@ namespace WorkhubForWindows
                 Prs.StartInfo.FileName = executable.Path;
                 Prs.StartInfo.Arguments = executable.Argments;
                 Prs.StartInfo.UseShellExecute = RunasAdmin;
-                Prs.StartInfo.WorkingDirectory = Path.GetDirectoryName(executable.Path);
+                Prs.StartInfo.WorkingDirectory = executable.CurrentDir;
                 Prs.StartInfo.Verb = "RunAs";
                 try
                 {
@@ -47,7 +48,7 @@ namespace WorkhubForWindows
                 Process Prs = new Process();
                 Prs.StartInfo.FileName = executable.Path;
                 Prs.StartInfo.Arguments = executable.Argments;
-                Prs.StartInfo.WorkingDirectory = Path.GetDirectoryName(executable.Path);
+                Prs.StartInfo.WorkingDirectory = executable.CurrentDir;
                 if (executable.RunasAdmin)
                 {
                     Prs.StartInfo.Verb = "RunAs";
@@ -273,6 +274,30 @@ namespace WorkhubForWindows
             }
         }
 
-       
+        public static class Hash
+        {
+            public static string GetHashString<T>(string text) where T : HashAlgorithm, new()
+            {
+                // 文字列をバイト型配列に変換する
+                byte[] data = Encoding.UTF8.GetBytes(text);
+
+                // ハッシュアルゴリズム生成
+                var algorithm = new T();
+
+                // ハッシュ値を計算する
+                byte[] bs = algorithm.ComputeHash(data);
+
+                // リソースを解放する
+                algorithm.Clear();
+
+                // バイト型配列を16進数文字列に変換
+                var result = new StringBuilder();
+                foreach (byte b in bs)
+                {
+                    result.Append(b.ToString("X2"));
+                }
+                return result.ToString();
+            }
+        }
     }
 }

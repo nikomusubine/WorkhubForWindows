@@ -35,14 +35,10 @@ namespace WorkhubForWindows.Forms
             }
             #endregion
             EulaText.Text = manualFileContent;
+            this.FormClosing += ClosingWnd;
         }
 
 
-        private void DelineClicked(object sender, EventArgs e)
-        {
-
-            this.Close();
-        }
 
         private void AcceptButton_Click(object sender, EventArgs e)
         {
@@ -50,9 +46,24 @@ namespace WorkhubForWindows.Forms
             this.Close();
         }
 
+        private void ClosingWnd(object sender ,FormClosingEventArgs e)
+        {
+            if (!agree && !(MessageBox.Show("利用規約に同意しない場合、あなたは本ソフトウェアを利用できません！\nIf you don't agree this EULA, you CANNOT use this software!", "警告", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK))
+            {
+
+                e.Cancel = true;
+
+            }
+        }
         private void Load_Window(object sender,EventArgs e)
         {
 
+        }
+
+        private void DelineButton_Click(object sender, EventArgs e)
+        {
+                this.Close();
+            
         }
     }
 }

@@ -64,7 +64,7 @@ namespace WorkhubForWindows
 
     public struct Executable
     {
-        public Executable(string name, string path, string args)
+        public Executable(string name, string path, string currentDir, string args)
         {
             Name = name;
             Path = path;
@@ -72,9 +72,10 @@ namespace WorkhubForWindows
             RunasAdmin = false;
             IconPath = "";
             point = new Point(0, 0);
+            CurrentDir = currentDir;
         }
 
-        public Executable(string name, string path, string args, bool runasAdmin, string iconPath)
+        public Executable(string name, string path, string currentDir, string args, bool runasAdmin, string iconPath)
         {
             Name = name;
             Path = path;
@@ -82,9 +83,10 @@ namespace WorkhubForWindows
             RunasAdmin = runasAdmin;
             IconPath = iconPath;
             point = new Point(0, 0);
+            CurrentDir = currentDir;
         }
 
-        public Executable(string name, string path, string args, string iconPath)
+        public Executable(string name, string path, string currentDir, string args, string iconPath)
         {
             Name = name;
             Path = path;
@@ -92,8 +94,9 @@ namespace WorkhubForWindows
             RunasAdmin = false;
             IconPath = iconPath;
             point = new Point(0, 0);
+            CurrentDir = currentDir;
         }
-        public Executable(string name, string path, string args, bool runasAdmin)
+        public Executable(string name, string path, string currentDir, string args, bool runasAdmin)
         {
             Name = name;
             Path = path;
@@ -101,8 +104,9 @@ namespace WorkhubForWindows
             RunasAdmin = runasAdmin;
             IconPath = "";
             point = new Point(0, 0);
+            CurrentDir = currentDir;
         }
-        public Executable(string name, string path, string args, string iconPath,bool runasAdmin)
+        public Executable(string name, string path, string args,string currentDir, string iconPath,bool runasAdmin)
         {
             Name = name;
             Path = path;
@@ -110,6 +114,7 @@ namespace WorkhubForWindows
             RunasAdmin = runasAdmin;
             IconPath = iconPath;
             point = new Point(0, 0);
+            CurrentDir = currentDir;
         }
 
         public Executable(Executable executable)
@@ -120,6 +125,7 @@ namespace WorkhubForWindows
             RunasAdmin = executable.RunasAdmin;
             IconPath = executable.IconPath;
             point = executable.point;
+            CurrentDir = executable.CurrentDir;
         }
 
         /*public Executable()
@@ -130,6 +136,7 @@ namespace WorkhubForWindows
         public string Name;
         public string Path;
         public string Argments;
+        public string CurrentDir;
         public string IconPath;
         public bool RunasAdmin;
         public Point point;
@@ -648,7 +655,7 @@ namespace WorkhubForWindows
                 __Language = value;
             }
         }
-        public int EULA = 0;
+        public string EULA = "";
         //public string LogoffSound;
         //public string ShutdownSound;
 

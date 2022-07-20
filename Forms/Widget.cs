@@ -82,6 +82,7 @@ namespace WorkhubForWindows
                     StaticClasses.Executables[applistview.SelectedItems[0].Index] = new Executable(
                         StaticClasses.Executables[applistview.SelectedItems[0].Index].Name,
                         StaticClasses.Executables[applistview.SelectedItems[0].Index].Path,
+                        StaticClasses.Executables[applistview.SelectedItems[0].Index].CurrentDir,
                         StaticClasses.Executables[applistview.SelectedItems[0].Index].Argments,
                         true
                         );

@@ -45,12 +45,14 @@
             this.ArgsBox = new System.Windows.Forms.TextBox();
             this.PathBox = new System.Windows.Forms.TextBox();
             this.RunasAdminBox = new System.Windows.Forms.CheckBox();
+            this.IconLabel = new System.Windows.Forms.Label();
+            this.IconBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.MoveLbutton = new System.Windows.Forms.Button();
             this.MoveRbutton = new System.Windows.Forms.Button();
             this.Icons = new System.Windows.Forms.ImageList(this.components);
-            this.IconLabel = new System.Windows.Forms.Label();
-            this.IconBox = new System.Windows.Forms.TextBox();
+            this.CurrentPath = new System.Windows.Forms.Label();
+            this.CurrentDirBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -107,16 +109,18 @@
             // tableLayoutPanel3
             // 
             resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
-            this.tableLayoutPanel3.Controls.Add(this.RunasLabel, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.NameBox, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.NameLabel, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.PathLabel, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.ArgsLabel, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.ArgsBox, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.PathBox, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.RunasAdminBox, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.IconLabel, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.IconBox, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.IconLabel, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.IconBox, 1, 5);
+            this.tableLayoutPanel3.Controls.Add(this.RunasLabel, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.RunasAdminBox, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.ArgsLabel, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.ArgsBox, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.CurrentPath, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.CurrentDirBox, 1, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             // 
             // RunasLabel
@@ -160,6 +164,16 @@
             this.RunasAdminBox.Name = "RunasAdminBox";
             this.RunasAdminBox.UseVisualStyleBackColor = true;
             // 
+            // IconLabel
+            // 
+            resources.ApplyResources(this.IconLabel, "IconLabel");
+            this.IconLabel.Name = "IconLabel";
+            // 
+            // IconBox
+            // 
+            resources.ApplyResources(this.IconBox, "IconBox");
+            this.IconBox.Name = "IconBox";
+            // 
             // tableLayoutPanel4
             // 
             resources.ApplyResources(this.tableLayoutPanel4, "tableLayoutPanel4");
@@ -187,15 +201,15 @@
             resources.ApplyResources(this.Icons, "Icons");
             this.Icons.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // IconLabel
+            // CurrentPath
             // 
-            resources.ApplyResources(this.IconLabel, "IconLabel");
-            this.IconLabel.Name = "IconLabel";
+            resources.ApplyResources(this.CurrentPath, "CurrentPath");
+            this.CurrentPath.Name = "CurrentPath";
             // 
-            // IconBox
+            // CurrentDirBox
             // 
-            resources.ApplyResources(this.IconBox, "IconBox");
-            this.IconBox.Name = "IconBox";
+            resources.ApplyResources(this.CurrentDirBox, "CurrentDirBox");
+            this.CurrentDirBox.Name = "CurrentDirBox";
             // 
             // EditItem
             // 
@@ -235,5 +249,7 @@
         private System.Windows.Forms.ImageList Icons;
         private System.Windows.Forms.Label IconLabel;
         private System.Windows.Forms.TextBox IconBox;
+        private System.Windows.Forms.Label CurrentPath;
+        private System.Windows.Forms.TextBox CurrentDirBox;
     }
 }

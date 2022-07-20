@@ -47,6 +47,8 @@
             this.RunasAdminLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.RunasAdminBox = new System.Windows.Forms.CheckBox();
+            this.CurrentLabel = new System.Windows.Forms.Label();
+            this.CurrentDirBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -112,16 +114,18 @@
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.IconLabel, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.RunasAdminLabel, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.ItemnameLabel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.ItemNameBox, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.CmdArgsBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.FilepathLabel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.CmdArgsLabel, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.RunasAdminBox, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.IconLabel, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.RunasAdminBox, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.RunasAdminLabel, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.CmdArgsLabel, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.CmdArgsBox, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.CurrentLabel, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.CurrentDirBox, 1, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // tableLayoutPanel3
@@ -166,6 +170,16 @@
             this.RunasAdminBox.Name = "RunasAdminBox";
             this.RunasAdminBox.UseVisualStyleBackColor = true;
             // 
+            // CurrentLabel
+            // 
+            resources.ApplyResources(this.CurrentLabel, "CurrentLabel");
+            this.CurrentLabel.Name = "CurrentLabel";
+            // 
+            // CurrentDirBox
+            // 
+            resources.ApplyResources(this.CurrentDirBox, "CurrentDirBox");
+            this.CurrentDirBox.Name = "CurrentDirBox";
+            // 
             // AddItemForm
             // 
             this.AcceptButton = this.ButtonApply;
@@ -206,5 +220,7 @@
         private System.Windows.Forms.Button IconRef;
         private System.Windows.Forms.TextBox IconBox;
         private System.Windows.Forms.Label IconLabel;
+        private System.Windows.Forms.Label CurrentLabel;
+        private System.Windows.Forms.TextBox CurrentDirBox;
     }
 }

@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WorkhubForWindows.Forms;
+using System.Security.Cryptography;
 
 namespace WorkhubForWindows
 {
@@ -34,7 +38,22 @@ namespace WorkhubForWindows
             }
             StaticClasses.Config = StaticClasses.Config.LoadConfig();
             //EULA
-            if (StaticClasses.Config.EULA == 0)
+            #region EULA Load
+            var assembly = Assembly.GetExecutingAssembly();
+            var resourceName = "WorkhubForWindows.Resources.EULA.Ja_Jp.txt";
+            string manualFileContent = "";
+            using (var stream = assembly.GetManifestResourceStream(resourceName))
+            {
+                if (stream != null)
+                {
+                    using (var sr = new StreamReader(stream, Encoding.UTF8))
+                    {
+                        manualFileContent = sr.ReadToEnd();
+                    }
+                }
+            }
+            #endregion
+            if (StaticClasses.Config.EULA != Functions.Hash.GetHashString<SHA256CryptoServiceProvider>(manualFileContent))
             {
                 EULA eula = new EULA();
                 eula.ShowDialog();
@@ -42,11 +61,12 @@ namespace WorkhubForWindows
                 {
                     Environment.Exit(-1);
                 }
+                StaticClasses.Config.EULA = Functions.Hash.GetHashString<SHA256CryptoServiceProvider>(manualFileContent);
             }
-            StaticClasses.Config.EULA = 1;
             StaticClasses.IconList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             StaticClasses.IconList.TransparentColor = Color.Transparent;
             StaticClasses.IconList.ImageSize = new Size(32, 32);
+            StaticClasses.Config.SaveConfig();
             switch (StaticClasses.Config.Homemode)
             {
                 case HomeMode.FullScreen:

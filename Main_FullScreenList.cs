@@ -71,6 +71,7 @@ namespace WorkhubForWindows
                     StaticClasses.Executables[Apps.SelectedItems[i].Index] = new Executable(
                         StaticClasses.Executables[Apps.SelectedItems[i].Index].Name,
                         StaticClasses.Executables[Apps.SelectedItems[i].Index].Path,
+                        StaticClasses.Executables[Apps.SelectedItems[i].Index].CurrentDir,
                         StaticClasses.Executables[Apps.SelectedItems[i].Index].Argments,
                         true
                         );
@@ -358,6 +359,7 @@ namespace WorkhubForWindows
                 case StaticClasses.WorkHubMessages.ApplicationQuit:
                     this.FormClosing -= Form_Closing;
                     Quiting = true;
+                    StaticClasses.Config.SaveConfig();
                     this.Dispose();
                     break;
                 case WM_QUERYENDSESSION:

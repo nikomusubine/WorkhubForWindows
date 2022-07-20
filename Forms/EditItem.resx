@@ -282,39 +282,6 @@
   <data name="tableLayoutPanel3.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="RunasLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="RunasLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="RunasLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="RunasLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 246</value>
-  </data>
-  <data name="RunasLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 82</value>
-  </data>
-  <data name="RunasLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="RunasLabel.Text" xml:space="preserve">
-    <value>Run as admin</value>
-  </data>
-  <data name="&gt;&gt;RunasLabel.Name" xml:space="preserve">
-    <value>RunasLabel</value>
-  </data>
-  <data name="&gt;&gt;RunasLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;RunasLabel.Parent" xml:space="preserve">
-    <value>tableLayoutPanel3</value>
-  </data>
-  <data name="&gt;&gt;RunasLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="NameBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -340,7 +307,7 @@
     <value>tableLayoutPanel3</value>
   </data>
   <data name="&gt;&gt;NameBox.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="NameLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -352,7 +319,7 @@
     <value>3, 0</value>
   </data>
   <data name="NameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 82</value>
+    <value>184, 78</value>
   </data>
   <data name="NameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -370,7 +337,7 @@
     <value>tableLayoutPanel3</value>
   </data>
   <data name="&gt;&gt;NameLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="PathLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -379,10 +346,10 @@
     <value>True</value>
   </data>
   <data name="PathLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 82</value>
+    <value>3, 78</value>
   </data>
   <data name="PathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 82</value>
+    <value>184, 78</value>
   </data>
   <data name="PathLabel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -400,70 +367,13 @@
     <value>tableLayoutPanel3</value>
   </data>
   <data name="&gt;&gt;PathLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="ArgsLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="ArgsLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ArgsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 164</value>
-  </data>
-  <data name="ArgsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 82</value>
-  </data>
-  <data name="ArgsLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="ArgsLabel.Text" xml:space="preserve">
-    <value>CommandlineArgs</value>
-  </data>
-  <data name="&gt;&gt;ArgsLabel.Name" xml:space="preserve">
-    <value>ArgsLabel</value>
-  </data>
-  <data name="&gt;&gt;ArgsLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ArgsLabel.Parent" xml:space="preserve">
-    <value>tableLayoutPanel3</value>
-  </data>
-  <data name="&gt;&gt;ArgsLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="ArgsBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="ArgsBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 166</value>
-  </data>
-  <data name="ArgsBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="ArgsBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>185, 22</value>
-  </data>
-  <data name="ArgsBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;ArgsBox.Name" xml:space="preserve">
-    <value>ArgsBox</value>
-  </data>
-  <data name="&gt;&gt;ArgsBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ArgsBox.Parent" xml:space="preserve">
-    <value>tableLayoutPanel3</value>
-  </data>
-  <data name="&gt;&gt;ArgsBox.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="PathBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="PathBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 84</value>
+    <value>193, 80</value>
   </data>
   <data name="PathBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -484,13 +394,94 @@
     <value>tableLayoutPanel3</value>
   </data>
   <data name="&gt;&gt;PathBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="IconLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="IconLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 390</value>
+  </data>
+  <data name="IconLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 15</value>
+  </data>
+  <data name="IconLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="IconLabel.Text" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="&gt;&gt;IconLabel.Name" xml:space="preserve">
+    <value>IconLabel</value>
+  </data>
+  <data name="&gt;&gt;IconLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IconLabel.Parent" xml:space="preserve">
+    <value>tableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;IconLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="IconBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 393</value>
+  </data>
+  <data name="IconBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 22</value>
+  </data>
+  <data name="IconBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;IconBox.Name" xml:space="preserve">
+    <value>IconBox</value>
+  </data>
+  <data name="&gt;&gt;IconBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IconBox.Parent" xml:space="preserve">
+    <value>tableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;IconBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="RunasLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="RunasLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="RunasLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RunasLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 312</value>
+  </data>
+  <data name="RunasLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 78</value>
+  </data>
+  <data name="RunasLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="RunasLabel.Text" xml:space="preserve">
+    <value>Run as admin</value>
+  </data>
+  <data name="&gt;&gt;RunasLabel.Name" xml:space="preserve">
+    <value>RunasLabel</value>
+  </data>
+  <data name="&gt;&gt;RunasLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RunasLabel.Parent" xml:space="preserve">
+    <value>tableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;RunasLabel.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="RunasAdminBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="RunasAdminBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 248</value>
+    <value>193, 314</value>
   </data>
   <data name="RunasAdminBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -513,53 +504,122 @@
   <data name="&gt;&gt;RunasAdminBox.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="IconLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="ArgsLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="ArgsLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="IconLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 328</value>
+  <data name="ArgsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 234</value>
   </data>
-  <data name="IconLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 15</value>
+  <data name="ArgsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 78</value>
   </data>
-  <data name="IconLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="ArgsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="IconLabel.Text" xml:space="preserve">
-    <value>Icon</value>
+  <data name="ArgsLabel.Text" xml:space="preserve">
+    <value>CommandlineArgs</value>
   </data>
-  <data name="&gt;&gt;IconLabel.Name" xml:space="preserve">
-    <value>IconLabel</value>
+  <data name="&gt;&gt;ArgsLabel.Name" xml:space="preserve">
+    <value>ArgsLabel</value>
   </data>
-  <data name="&gt;&gt;IconLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;ArgsLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;IconLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ArgsLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel3</value>
   </data>
-  <data name="&gt;&gt;IconLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ArgsLabel.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="IconBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 331</value>
+  <data name="ArgsBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="IconBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ArgsBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 236</value>
+  </data>
+  <data name="ArgsBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="ArgsBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 22</value>
   </data>
-  <data name="IconBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="ArgsBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;IconBox.Name" xml:space="preserve">
-    <value>IconBox</value>
+  <data name="&gt;&gt;ArgsBox.Name" xml:space="preserve">
+    <value>ArgsBox</value>
   </data>
-  <data name="&gt;&gt;IconBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;ArgsBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;IconBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ArgsBox.Parent" xml:space="preserve">
     <value>tableLayoutPanel3</value>
   </data>
-  <data name="&gt;&gt;IconBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ArgsBox.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="CurrentPath.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="CurrentPath.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CurrentPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="CurrentPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 156</value>
+  </data>
+  <data name="CurrentPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 78</value>
+  </data>
+  <data name="CurrentPath.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="CurrentPath.Text" xml:space="preserve">
+    <value>CurrentDIrectory</value>
+  </data>
+  <data name="&gt;&gt;CurrentPath.Name" xml:space="preserve">
+    <value>CurrentPath</value>
+  </data>
+  <data name="&gt;&gt;CurrentPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CurrentPath.Parent" xml:space="preserve">
+    <value>tableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;CurrentPath.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="CurrentDirBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="CurrentDirBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 158</value>
+  </data>
+  <data name="CurrentDirBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="CurrentDirBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>185, 22</value>
+  </data>
+  <data name="CurrentDirBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;CurrentDirBox.Name" xml:space="preserve">
+    <value>CurrentDirBox</value>
+  </data>
+  <data name="&gt;&gt;CurrentDirBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CurrentDirBox.Parent" xml:space="preserve">
+    <value>tableLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;CurrentDirBox.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="tableLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
     <value>391, 2</value>
@@ -568,7 +628,7 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="tableLayoutPanel3.RowCount" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>381, 412</value>
@@ -589,7 +649,7 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="RunasLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="NameBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="NameLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="PathLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ArgsLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ArgsBox" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="PathBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="RunasAdminBox" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="IconLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="IconBox" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,20,Percent,20,Percent,20,Percent,20,Percent,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="NameBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="NameLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="PathLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="PathBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="IconLabel" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="IconBox" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="RunasLabel" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="RunasAdminBox" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="ArgsLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ArgsBox" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="CurrentPath" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="CurrentDirBox" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,20,Percent,20,Percent,20,Percent,20,Percent,20,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
