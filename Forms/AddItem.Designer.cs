@@ -40,18 +40,18 @@
             this.ButtonCancel = new System.Windows.Forms.Button();
             this.RefDiag = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.IconLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.IconRef = new System.Windows.Forms.Button();
             this.IconBox = new System.Windows.Forms.TextBox();
-            this.IconLabel = new System.Windows.Forms.Label();
-            this.RunasAdminLabel = new System.Windows.Forms.Label();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.RunasAdminBox = new System.Windows.Forms.CheckBox();
+            this.RunasAdminLabel = new System.Windows.Forms.Label();
             this.CurrentLabel = new System.Windows.Forms.Label();
             this.CurrentDirBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // ItemnameLabel
@@ -128,6 +128,18 @@
             this.tableLayoutPanel1.Controls.Add(this.CurrentDirBox, 1, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
+            // tableLayoutPanel2
+            // 
+            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
+            this.tableLayoutPanel2.Controls.Add(this.ButtonReference, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.FilePathBox, 0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            // 
+            // IconLabel
+            // 
+            resources.ApplyResources(this.IconLabel, "IconLabel");
+            this.IconLabel.Name = "IconLabel";
+            // 
             // tableLayoutPanel3
             // 
             resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
@@ -147,28 +159,16 @@
             resources.ApplyResources(this.IconBox, "IconBox");
             this.IconBox.Name = "IconBox";
             // 
-            // IconLabel
-            // 
-            resources.ApplyResources(this.IconLabel, "IconLabel");
-            this.IconLabel.Name = "IconLabel";
-            // 
-            // RunasAdminLabel
-            // 
-            resources.ApplyResources(this.RunasAdminLabel, "RunasAdminLabel");
-            this.RunasAdminLabel.Name = "RunasAdminLabel";
-            // 
-            // tableLayoutPanel2
-            // 
-            resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
-            this.tableLayoutPanel2.Controls.Add(this.ButtonReference, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.FilePathBox, 0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            // 
             // RunasAdminBox
             // 
             resources.ApplyResources(this.RunasAdminBox, "RunasAdminBox");
             this.RunasAdminBox.Name = "RunasAdminBox";
             this.RunasAdminBox.UseVisualStyleBackColor = true;
+            // 
+            // RunasAdminLabel
+            // 
+            resources.ApplyResources(this.RunasAdminLabel, "RunasAdminLabel");
+            this.RunasAdminLabel.Name = "RunasAdminLabel";
             // 
             // CurrentLabel
             // 
@@ -192,10 +192,10 @@
             this.Name = "AddItemForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }

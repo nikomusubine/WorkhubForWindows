@@ -191,6 +191,10 @@ namespace WorkhubForWindows.Forms
             {
                 this.PathLabel.Text = StaticClasses.Langs.EditItem.Label_Path;
             }
+            if (StaticClasses.Langs.EditItem.Label_Current != null)
+            {
+                this.CurrentPath.Text = StaticClasses.Langs.EditItem.Label_Current;
+            }
             if (StaticClasses.Langs.EditItem.Label_Args!=null)
             {
                 this.ArgsLabel.Text = StaticClasses.Langs.EditItem.Label_Args;

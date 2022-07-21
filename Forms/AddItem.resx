@@ -418,7 +418,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonReference" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="FilePathBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,100" /&gt;&lt;Rows Styles="Percent,100,Absolute,62" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonReference" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="FilePathBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,100" /&gt;&lt;Rows Styles="Percent,100,Absolute,33" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="IconLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -535,7 +535,7 @@
     <value>5</value>
   </data>
   <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="IconRef" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="IconBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,257,Absolute,103" /&gt;&lt;Rows Styles="Absolute,29" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="IconRef" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="IconBox" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,257,Absolute,103" /&gt;&lt;Rows Styles="Absolute,33" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="RunasAdminBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

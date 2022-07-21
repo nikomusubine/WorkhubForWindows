@@ -30,6 +30,7 @@
 		<WindowTitle>新規作成</WindowTitle>
 		<Label_Name>名前</Label_Name>
 		<Label_Path>パス</Label_Path>
+		<Label_Current>作業ディレクトリ</Label_Current>
 		<Label_Args>コマンドライン引数</Label_Args>
 		<Label_RunasAdmin>管理者として実行</Label_RunasAdmin>
 		<CancelButton>キャンセル(&amp;C)</CancelButton>
@@ -40,6 +41,7 @@
 		<WindowTitle>編集</WindowTitle>
 		<Label_Name>名前</Label_Name>
 		<Label_Path>パス</Label_Path>
+		<Label_Current>作業ディレクトリ</Label_Current>
 		<Label_Args>引数</Label_Args>
 		<Label_RunasAdmin>管理者として実行</Label_RunasAdmin>
 		<CloseButton>閉じる(&amp;C)</CloseButton>

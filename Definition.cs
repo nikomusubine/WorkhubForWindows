@@ -225,6 +225,7 @@ namespace WorkhubForWindows
             public string WindowTitle;
             public string Label_Name;
             public string Label_Path;
+            public string Label_Current;
             public string Label_Args;
             public string Label_RunasAdmin;
 
@@ -238,6 +239,7 @@ namespace WorkhubForWindows
             public string WindowTitle;
             public string Label_Name;
             public string Label_Path;
+            public string Label_Current;
             public string Label_Args;
             public string Label_RunasAdmin;
 

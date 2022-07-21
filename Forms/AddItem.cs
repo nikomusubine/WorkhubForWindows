@@ -113,6 +113,7 @@ namespace WorkhubForWindows.Forms
             this.Text = StaticClasses.Langs.AddItem.WindowTitle;
             ItemnameLabel.Text = StaticClasses.Langs.AddItem.Label_Name;
             FilepathLabel.Text = StaticClasses.Langs.AddItem.Label_Path;
+            CurrentLabel.Text = StaticClasses.Langs.AddItem.Label_Current;
             CmdArgsLabel.Text = StaticClasses.Langs.AddItem.Label_Args;
 
             ButtonApply.Text = StaticClasses.Langs.AddItem.ApplyButton;

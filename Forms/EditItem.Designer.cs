@@ -37,22 +37,22 @@
             this.okbutton = new System.Windows.Forms.Button();
             this.ApplyButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.RunasLabel = new System.Windows.Forms.Label();
             this.NameBox = new System.Windows.Forms.TextBox();
             this.NameLabel = new System.Windows.Forms.Label();
             this.PathLabel = new System.Windows.Forms.Label();
-            this.ArgsLabel = new System.Windows.Forms.Label();
-            this.ArgsBox = new System.Windows.Forms.TextBox();
             this.PathBox = new System.Windows.Forms.TextBox();
-            this.RunasAdminBox = new System.Windows.Forms.CheckBox();
             this.IconLabel = new System.Windows.Forms.Label();
             this.IconBox = new System.Windows.Forms.TextBox();
+            this.RunasLabel = new System.Windows.Forms.Label();
+            this.RunasAdminBox = new System.Windows.Forms.CheckBox();
+            this.ArgsLabel = new System.Windows.Forms.Label();
+            this.ArgsBox = new System.Windows.Forms.TextBox();
+            this.CurrentPath = new System.Windows.Forms.Label();
+            this.CurrentDirBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.MoveLbutton = new System.Windows.Forms.Button();
             this.MoveRbutton = new System.Windows.Forms.Button();
             this.Icons = new System.Windows.Forms.ImageList(this.components);
-            this.CurrentPath = new System.Windows.Forms.Label();
-            this.CurrentDirBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -123,11 +123,6 @@
             this.tableLayoutPanel3.Controls.Add(this.CurrentDirBox, 1, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             // 
-            // RunasLabel
-            // 
-            resources.ApplyResources(this.RunasLabel, "RunasLabel");
-            this.RunasLabel.Name = "RunasLabel";
-            // 
             // NameBox
             // 
             resources.ApplyResources(this.NameBox, "NameBox");
@@ -143,26 +138,10 @@
             resources.ApplyResources(this.PathLabel, "PathLabel");
             this.PathLabel.Name = "PathLabel";
             // 
-            // ArgsLabel
-            // 
-            resources.ApplyResources(this.ArgsLabel, "ArgsLabel");
-            this.ArgsLabel.Name = "ArgsLabel";
-            // 
-            // ArgsBox
-            // 
-            resources.ApplyResources(this.ArgsBox, "ArgsBox");
-            this.ArgsBox.Name = "ArgsBox";
-            // 
             // PathBox
             // 
             resources.ApplyResources(this.PathBox, "PathBox");
             this.PathBox.Name = "PathBox";
-            // 
-            // RunasAdminBox
-            // 
-            resources.ApplyResources(this.RunasAdminBox, "RunasAdminBox");
-            this.RunasAdminBox.Name = "RunasAdminBox";
-            this.RunasAdminBox.UseVisualStyleBackColor = true;
             // 
             // IconLabel
             // 
@@ -173,6 +152,37 @@
             // 
             resources.ApplyResources(this.IconBox, "IconBox");
             this.IconBox.Name = "IconBox";
+            // 
+            // RunasLabel
+            // 
+            resources.ApplyResources(this.RunasLabel, "RunasLabel");
+            this.RunasLabel.Name = "RunasLabel";
+            // 
+            // RunasAdminBox
+            // 
+            resources.ApplyResources(this.RunasAdminBox, "RunasAdminBox");
+            this.RunasAdminBox.Name = "RunasAdminBox";
+            this.RunasAdminBox.UseVisualStyleBackColor = true;
+            // 
+            // ArgsLabel
+            // 
+            resources.ApplyResources(this.ArgsLabel, "ArgsLabel");
+            this.ArgsLabel.Name = "ArgsLabel";
+            // 
+            // ArgsBox
+            // 
+            resources.ApplyResources(this.ArgsBox, "ArgsBox");
+            this.ArgsBox.Name = "ArgsBox";
+            // 
+            // CurrentPath
+            // 
+            resources.ApplyResources(this.CurrentPath, "CurrentPath");
+            this.CurrentPath.Name = "CurrentPath";
+            // 
+            // CurrentDirBox
+            // 
+            resources.ApplyResources(this.CurrentDirBox, "CurrentDirBox");
+            this.CurrentDirBox.Name = "CurrentDirBox";
             // 
             // tableLayoutPanel4
             // 
@@ -200,16 +210,6 @@
             this.Icons.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
             resources.ApplyResources(this.Icons, "Icons");
             this.Icons.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // CurrentPath
-            // 
-            resources.ApplyResources(this.CurrentPath, "CurrentPath");
-            this.CurrentPath.Name = "CurrentPath";
-            // 
-            // CurrentDirBox
-            // 
-            resources.ApplyResources(this.CurrentDirBox, "CurrentDirBox");
-            this.CurrentDirBox.Name = "CurrentDirBox";
             // 
             // EditItem
             // 

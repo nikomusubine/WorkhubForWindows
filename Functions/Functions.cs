@@ -48,7 +48,14 @@ namespace WorkhubForWindows
                 Process Prs = new Process();
                 Prs.StartInfo.FileName = executable.Path;
                 Prs.StartInfo.Arguments = executable.Argments;
-                Prs.StartInfo.WorkingDirectory = executable.CurrentDir;
+                if (executable.CurrentDir != "")
+                {
+                    Prs.StartInfo.WorkingDirectory = Directory.GetParent(executable.Path).FullName;
+                }
+                else
+                {
+                    Prs.StartInfo.WorkingDirectory = executable.CurrentDir;
+                }
                 if (executable.RunasAdmin)
                 {
                     Prs.StartInfo.Verb = "RunAs";

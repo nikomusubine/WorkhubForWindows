@@ -28,6 +28,7 @@
 	<AddItem>
 		<Label_Name>Name</Label_Name>
 		<Label_Path>Path</Label_Path>
+		<Label_Current>CurrentDir</Label_Current>
 		<Label_Args>Args</Label_Args>
 		<Label_RunasAdmin>Run as admin</Label_RunasAdmin>
 		<CancelButton>Cancel(&amp;C)</CancelButton>
@@ -38,6 +39,7 @@
 		<WindowTitle>Edit</WindowTitle>
 		<Label_Name>Name</Label_Name>
 		<Label_Path>Path</Label_Path>
+		<Label_Current>CurrentDir</Label_Current>
 		<Label_Args>Args</Label_Args>
 		<Label_RunasAdmin>Run as admin</Label_RunasAdmin>
 		<CloseButton>Close(&amp;C)</CloseButton>
