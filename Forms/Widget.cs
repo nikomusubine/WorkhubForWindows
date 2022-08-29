@@ -351,6 +351,14 @@ namespace WorkhubForWindows
             }
         }
 
+        private void Mouse_Up(object sender,MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                StaticClasses.Config.WidgetPosition = this.Location;    
+            }
+        }
+
         #endregion
 
         #region WinMsg

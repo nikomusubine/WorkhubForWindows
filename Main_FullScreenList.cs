@@ -102,6 +102,7 @@ namespace WorkhubForWindows
                 StaticClasses.Config.ShowWidget = false;
                 TrayRC_ShowWidget.Checked = false;
                 ToolStripShowWidget.Checked = false;
+                StaticClasses.Config.SaveConfig();
             }
             else
             {
@@ -110,6 +111,7 @@ namespace WorkhubForWindows
                 TrayRC_ShowWidget.Checked = true;
                 ToolStripShowWidget.Checked = true;
                 wg.Show();
+                StaticClasses.Config.SaveConfig();
             }
         }
 

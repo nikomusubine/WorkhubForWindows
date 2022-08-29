@@ -26,17 +26,22 @@ namespace WorkhubForWindows
             
             string name = Process.GetCurrentProcess().ProcessName;
             Process[] processes = Process.GetProcessesByName(name);
+#if DEBUG
+            goto SkipCheck;  
+#endif
             for (int i = 0; i < processes.Length; i++)
             {
                 Process proc = processes[i];
                 if (proc.ProcessName == name && proc.MainWindowTitle == "WorkhubForWindows")
                 {
-                   // Functions.WinAPIFuncs.PostMessage((int)proc.MainWindowHandle, StaticClasses.WorkHubMessages.ShowMainWindow, 0, 0);
+                    Functions.WinAPIFuncs.PostMessage((int)proc.MainWindowHandle, StaticClasses.WorkHubMessages.ShowMainWindow, 0, 0);
 
-                    //Environment.Exit(1);
+                    Environment.Exit(1);
                 }
             }
             StaticClasses.Config = StaticClasses.Config.LoadConfig();
+            SkipCheck:
+
             //EULA
             #region EULA Load
             var assembly = Assembly.GetExecutingAssembly();
@@ -52,7 +57,7 @@ namespace WorkhubForWindows
                     }
                 }
             }
-            #endregion
+#endregion
             if (StaticClasses.Config.EULA != Functions.Hash.GetHashString<SHA256CryptoServiceProvider>(manualFileContent))
             {
                 EULA eula = new EULA();
