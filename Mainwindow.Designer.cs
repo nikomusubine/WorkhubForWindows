@@ -278,6 +278,7 @@ namespace WorkhubForWindows
             // Mainwindow
             // 
             this.AcceptButton = this.StartButton;
+            this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.HomePanel);
@@ -285,6 +286,8 @@ namespace WorkhubForWindows
             this.MainMenuStrip = this.Ribbon;
             this.Name = "Mainwindow";
             this.Shown += new System.EventHandler(this.MainWindowShown);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.DragAndDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.EnterDragItem);
             this.Ribbon.ResumeLayout(false);
             this.Ribbon.PerformLayout();
             this.TrayRClick.ResumeLayout(false);

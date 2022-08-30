@@ -129,6 +129,49 @@ namespace WorkhubForWindows
                 Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.AppListChanged, 0, 0);
             }
         }
+        private void DragAndDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+            bool CanDrop = true;
+            foreach (string str in files)
+            {
+                string[] tmp = str.Split('\\')[str.Split('\\').Length-1].Split('.');
+                if (tmp[tmp.Length - 1] == "exe")
+                {
+                    AddItemForm additemform = new AddItemForm(str);
+                    if (additemform.ShowDialog() == DialogResult.OK)
+                    {
+                        initalizeApps();
+                    }
+                }
+            }
+
+
+
+        }
+
+        private void EnterDragItem(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+            bool CanDrop = true;
+            foreach (string str in files)
+            {
+                string[] tmp = str.Split('\\')[str.Split('\\').Length-1].Split('.');
+                if (tmp[tmp.Length - 1] != "exe")
+                {
+                    CanDrop = false;
+                }
+            }
+
+            if (e.Data.GetDataPresent(DataFormats.FileDrop) && CanDrop)
+            {
+                e.Effect = DragDropEffects.All;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
 
         #region TrayRClick
 
