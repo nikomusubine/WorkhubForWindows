@@ -20,6 +20,7 @@ namespace WorkhubForWindows.Forms
             this.Font = StaticClasses.Config.font;
             LoadLanguage();
         }
+
         public AddItemForm(string Path)
         {
             InitializeComponent();
