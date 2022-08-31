@@ -26,19 +26,43 @@ namespace WorkhubForWindows
             
             string name = Process.GetCurrentProcess().ProcessName;
             Process[] processes = Process.GetProcessesByName(name);
+
 #if DEBUG
             goto SkipCheck;  
 #endif
-            for (int i = 0; i < processes.Length; i++)
-            {
-                Process proc = processes[i];
-                if (proc.ProcessName == name && proc.MainWindowTitle == "WorkhubForWindows")
-                {
-                    Functions.WinAPIFuncs.PostMessage((int)proc.MainWindowHandle, StaticClasses.WorkHubMessages.ShowMainWindow, 0, 0);
 
-                    Environment.Exit(1);
-                }
-            }
+            bool openWithItem = Environment.GetCommandLineArgs().Length > 1;
+            bool endProgram = false;
+             for (int i = 0; i < processes.Length; i++)
+           {
+               Process proc = processes[i];
+               if (proc.ProcessName.ToLower() == name.ToLower() && proc.MainWindowTitle.ToLower() == "workhubforwindows")
+               {
+                   if (openWithItem)
+                   {
+                       Functions.WinAPIFuncs.COPYDATASTRUCT cds = new Functions.WinAPIFuncs.COPYDATASTRUCT();
+                       StringBuilder sb =new StringBuilder(Environment.GetCommandLineArgs()[1]);
+                       for(int j = 2; j != Environment.GetCommandLineArgs().Length; j++)
+                       {
+                           sb.Append('\t');
+                           sb.Append(Environment.GetCommandLineArgs()[j]);
+                       }
+
+                       cds.dwData = IntPtr.Zero;
+                       cds.lpData = sb.ToString();
+                       cds.cbData = sb.ToString().Length * sizeof(char);
+                       Functions.WinAPIFuncs.SendMessage((IntPtr)proc.MainWindowHandle, StaticClasses.WorkHubMessages.WM_COPYDATA, StaticClasses.WorkHubMessages.OpenAddItem, ref cds);
+                   }
+                   else
+                   {
+                       Functions.WinAPIFuncs.PostMessage((int)proc.MainWindowHandle, StaticClasses.WorkHubMessages.ShowMainWindow, 0, 0);
+                   }
+                   endProgram = true;
+               }
+           }
+            if (endProgram)
+                Environment.Exit(1);
+    
             StaticClasses.Config = StaticClasses.Config.LoadConfig();
             SkipCheck:
 
@@ -72,14 +96,18 @@ namespace WorkhubForWindows
             StaticClasses.IconList.TransparentColor = Color.Transparent;
             StaticClasses.IconList.ImageSize = new Size(32, 32);
             StaticClasses.Config.SaveConfig();
+            
             switch (StaticClasses.Config.Homemode)
             {
                 case HomeMode.FullScreen:
-
-                    Application.Run(new Main_FullScreenList());
+                    Main_FullScreenList mfs = new Main_FullScreenList();
+                        mfs.Text = "WorkhubForWindows";
+                    Application.Run(mfs);
                     break;
                 case HomeMode.HalfHome:
-                    Application.Run(new Mainwindow());
+                    Mainwindow mw = new Mainwindow();
+                    mw.Text = "WorkhubForWindows";
+                    Application.Run(mw);
                     break;
             }
         }
