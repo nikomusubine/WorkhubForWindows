@@ -204,10 +204,20 @@ namespace WorkhubForWindows
         
         public static class WinAPIFuncs
         {
+            [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+            public struct COPYDATASTRUCT
+            {
+                public IntPtr dwData;
+                public int cbData;
+                [MarshalAs(UnmanagedType.LPWStr)]
+                public string lpData;
+            }
             [DllImport("User32.dll", EntryPoint = "PostMessage")]
             public extern static Int32 PostMessage(Int32 hwnd, Int32 msg, Int32 wParam, Int32 lParam);
             [DllImport("user32.dll")]
             public static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, int wParam, int lParam);
+            [DllImport("user32.dll")] 
+            public static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, int wParam, ref COPYDATASTRUCT lParam);
             public static Icon GetSieldIcon(bool smallSize)
             {
                 return SieldIcon.GetShieldIcon(smallSize);

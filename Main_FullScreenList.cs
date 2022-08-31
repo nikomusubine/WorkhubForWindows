@@ -367,6 +367,18 @@ namespace WorkhubForWindows
                     Quiting = true;
                     Functions.WinMsgFuncs.AppClose();
                     break;
+                case WM_COPYDATA:
+                    string[] tmpStrs = getString(m).Split('\t');
+                    foreach (string str in tmpStrs)
+                    {
+                        AddItemForm additem = new AddItemForm(str);
+                        additem.ShowDialog();
+                        if (additem.ShowDialog() == DialogResult.OK)
+                        {
+                            initalizeApps();
+                        }
+                    }
+                    break;
                 default:
                     break;
             }
@@ -374,6 +386,22 @@ namespace WorkhubForWindows
             base.WndProc(ref m);
         }
 
+        private string getString(Message m)
+        {
+            string str = null;
+            try
+            {
+                COPYDATASTRUCT cds = (COPYDATASTRUCT)m.GetLParam(typeof(COPYDATASTRUCT));
+                str = cds.lpData;
+                str = str.Substring(0, cds.cbData / 2);
+
+            }
+            catch (Exception)
+            {
+                str = null;
+            }
+            return str;
+        }
         #endregion
 
         private void PaintCalled(object sender, EventArgs e)

@@ -831,6 +831,8 @@ namespace WorkhubForWindows
         public static string ConfigPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\Nikochan\\WorkhubForWindows\\";
         public static class WorkHubMessages
         {
+            public const int WM_COPYDATA = 0x004A;
+
             public const int ConfigChanged = 0x2500;
             public const int AppListChanged = 0x2501;
             public const int WidgetConfigChanged = 0x2502;
@@ -839,6 +841,7 @@ namespace WorkhubForWindows
             public const int WidgetPositionReset = 0x2505;
             public const int IsWidgetShowChanged = 0x2506;
             public const int ShowMainWindow = 0x2507;
+            public const int OpenAddItem = 0x2508;
             public const int ApplicationQuit = 0x2510;
         }
 
