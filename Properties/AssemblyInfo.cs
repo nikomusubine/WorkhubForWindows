@@ -7,7 +7,11 @@ using System.Runtime.InteropServices;
 // これらの属性値を変更します。
 [assembly: AssemblyTitle("WorkhubForWindows")]
 [assembly: AssemblyDescription("")]
+#if Debug
+[assembly: AssemblyConfiguration("Debug")]
+#else
 [assembly: AssemblyConfiguration("Release")]
+#endif
 [assembly: AssemblyCompany("Nikochan")]
 [assembly: AssemblyProduct("WorkhubForWindows")]
 [assembly: AssemblyCopyright("Copyright© 2022 Niko Musubine")]
@@ -32,5 +36,13 @@ using System.Runtime.InteropServices;
 // すべての値を指定するか、次を使用してビルド番号とリビジョン番号を既定に設定できます
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.0.0.0")]
-[assembly: AssemblyFileVersion("2.0.0.0")]
+
+// WorkhubForWindws バージョン2.0より、命名規則は以下のようになります。
+//
+//      メジャー バージョン
+//      マイナー バージョン
+//      ビルド番号: SnapshotまたはDebugは0、Releaseは1以上の値。AssemblyInfoよりこちらの値が優先されます。
+//      リビジョン: n回目のビルド
+//
+[assembly: AssemblyVersion("2.0.0.1")]
+[assembly: AssemblyFileVersion("2.0.0.1")]
