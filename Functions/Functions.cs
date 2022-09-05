@@ -97,6 +97,65 @@ namespace WorkhubForWindows
                 }
 
             }
+
+            public static async Task StartProcessAsync(WorkhubForWindows.Executable executable)
+            {
+                await Task.Run(() =>
+                {
+                    Process Prs = new Process();
+                    Prs.StartInfo.FileName = executable.Path;
+                    Prs.StartInfo.Arguments = executable.Argments;
+                    if (executable.CurrentDir != "")
+                    {
+                        Prs.StartInfo.WorkingDirectory = Directory.GetParent(executable.Path).FullName;
+                    }
+                    else
+                    {
+                        Prs.StartInfo.WorkingDirectory = executable.CurrentDir;
+                    }
+                    if (executable.RunasAdmin)
+                    {
+                        Prs.StartInfo.Verb = "RunAs";
+                        Prs.StartInfo.UseShellExecute = true;
+                        try
+                        {
+                            Prs.Start();
+                        }
+                        catch (Exception)
+                        {
+
+                        }
+                        return 0;
+                    }
+                    else
+                    {
+                        Prs.StartInfo.UseShellExecute = false;
+                        try
+                        {
+                            Prs.Start();
+                        }
+                        catch (System.ComponentModel.Win32Exception)
+                        {
+                            Prs.StartInfo.Verb = "RunAs";
+                            Prs.StartInfo.UseShellExecute = true;
+                            executable.RunasAdmin = true;
+
+                            try
+                            {
+                                Prs.Start();
+                            }
+                            catch (Exception)
+                            {
+
+                            }
+                        }
+                        return (executable.RunasAdmin) ? 1 : 0;
+
+                    }
+
+                });
+            }
+
         }
 
         public static class Config

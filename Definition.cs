@@ -866,11 +866,12 @@ namespace WorkhubForWindows
                 if (Executables[i].IconPath != "" && Executables[i].IconPath != null)
                 {
                     bmp = (Bitmap)Image.FromFile(StaticClasses.Executables[i].IconPath);
-                }else
+                }
+                else
                 {
                     bmp = Icon.ExtractAssociatedIcon(StaticClasses.Executables[i].Path).ToBitmap();
                 }
-                if (Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "FixedIcon.*").Length!=0)
+                if (Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "FixedIcon.*").Length != 0)
                 {
                     bmp = (Bitmap)Image.FromFile(Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory, "FixedIcon.*")[0]);
                 }
