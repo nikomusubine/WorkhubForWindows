@@ -439,11 +439,28 @@ namespace WorkhubForWindows
         private void DragAndDrop(object sender, DragEventArgs e)
         {
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
-            bool CanDrop = true;
             foreach (string str in files)
             {
-                string[] tmp = str.Split('\\')[str.Split('\\').Length-1].Split('.');
-                if (tmp[tmp.Length - 1] == "exe")
+                string Extention = Path.GetExtension(str);
+                if (Extention == ".lnk")
+                {
+                    IWshRuntimeLibrary.WshShell shell = new IWshRuntimeLibrary.WshShell();
+                    // ショートカットオブジェクトの取得
+                    IWshRuntimeLibrary.IWshShortcut shortcut = (IWshRuntimeLibrary.IWshShortcut)shell.CreateShortcut(str);
+
+                    // ショートカットのリンク先の取得
+                    string targetPath = shortcut.TargetPath.ToString();
+                    if (Path.GetExtension(targetPath) == ".exe")
+                    {
+                        AddItemForm additemform = new AddItemForm(targetPath);
+                        if (additemform.ShowDialog() == DialogResult.OK)
+                        {
+                            initalizeApps();
+                        }
+                    }
+                }
+                else
+                if (Extention == ".exe")
                 {
                     AddItemForm additemform = new AddItemForm(str);
                     if (additemform.ShowDialog() == DialogResult.OK)
@@ -452,25 +469,22 @@ namespace WorkhubForWindows
                     }
                 }
             }
-
-            
-
         }
 
         private void EnterDragItem(object sender,DragEventArgs e)
         {
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
             bool CanDrop = true;
-            foreach(string str in files)
+            foreach (string str in files)
             {
-                string[] tmp = str.Split('\\')[str.Split('\\').Length-1].Split('.');
-                if (tmp[tmp.Length-1]!="exe")
+                string Extention = Path.GetExtension(str);
+                if (Extention != ".exe" && Extention != ".lnk")
                 {
                     CanDrop = false;
                 }
             }
 
-            if (e.Data.GetDataPresent(DataFormats.FileDrop)&&CanDrop)
+            if (e.Data.GetDataPresent(DataFormats.FileDrop) && CanDrop)
             {
                 e.Effect = DragDropEffects.All;
             }
