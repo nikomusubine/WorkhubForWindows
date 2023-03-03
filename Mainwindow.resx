@@ -728,6 +728,63 @@
   <data name="HomePanel.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;ListViewPanel.Name" xml:space="preserve">
+    <value>ListViewPanel</value>
+  </data>
+  <data name="&gt;&gt;ListViewPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ListViewPanel.Parent" xml:space="preserve">
+    <value>HomePanel</value>
+  </data>
+  <data name="&gt;&gt;ListViewPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ListViewPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ButtonsPunel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="Apps" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,100,Absolute,35,Absolute,25" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;HalfModebackimg.Name" xml:space="preserve">
+    <value>HalfModebackimg</value>
+  </data>
+  <data name="&gt;&gt;HalfModebackimg.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HalfModebackimg.Parent" xml:space="preserve">
+    <value>HomePanel</value>
+  </data>
+  <data name="&gt;&gt;HalfModebackimg.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="HomePanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 34</value>
+  </data>
+  <data name="HomePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="HomePanel.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="HomePanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>615, 521</value>
+  </data>
+  <data name="HomePanel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;HomePanel.Name" xml:space="preserve">
+    <value>HomePanel</value>
+  </data>
+  <data name="&gt;&gt;HomePanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HomePanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;HomePanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="HomePanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ListViewPanel" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="HalfModebackimg" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
   <data name="ListViewPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -799,36 +856,6 @@
   </data>
   <data name="&gt;&gt;HalfModebackimg.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="HomePanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 34</value>
-  </data>
-  <data name="HomePanel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="HomePanel.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="HomePanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>615, 521</value>
-  </data>
-  <data name="HomePanel.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;HomePanel.Name" xml:space="preserve">
-    <value>HomePanel</value>
-  </data>
-  <data name="&gt;&gt;HomePanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HomePanel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;HomePanel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="HomePanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="ListViewPanel" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="HalfModebackimg" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Percent,50" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

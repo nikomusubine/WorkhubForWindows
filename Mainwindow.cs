@@ -134,6 +134,7 @@ namespace WorkhubForWindows
         private void DragAndDrop(object sender, DragEventArgs e)
         {
             string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+
             foreach (string str in files)
             {
                 string Extention = Path.GetExtension(str);
@@ -155,6 +156,7 @@ namespace WorkhubForWindows
                     }
                 }else
                 if (Extention == ".exe")
+
                 {
                     AddItemForm additemform = new AddItemForm(str);
                     if (additemform.ShowDialog() == DialogResult.OK)
