@@ -210,6 +210,7 @@ namespace WorkhubForWindows
             // Apps
             // 
             this.Apps.AllowColumnReorder = true;
+            this.Apps.AllowDrop = true;
             resources.ApplyResources(this.Apps, "Apps");
             this.Apps.BackColor = System.Drawing.SystemColors.Window;
             this.Apps.ContextMenuStrip = this.ApplistRClick;
@@ -217,6 +218,8 @@ namespace WorkhubForWindows
             this.Apps.MultiSelect = false;
             this.Apps.Name = "Apps";
             this.Apps.UseCompatibleStateImageBehavior = false;
+            this.Apps.DragDrop += new System.Windows.Forms.DragEventHandler(this.DragAndDrop);
+            this.Apps.DragEnter += new System.Windows.Forms.DragEventHandler(this.EnterDragItem);
             this.Apps.DoubleClick += new System.EventHandler(this.StartPushed);
             // 
             // ApplistRClick
