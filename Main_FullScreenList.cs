@@ -452,7 +452,7 @@ namespace WorkhubForWindows
                     string targetPath = shortcut.TargetPath.ToString();
                     if (Path.GetExtension(targetPath) == ".exe")
                     {
-                        AddItemForm additemform = new AddItemForm(targetPath);
+                        AddItemForm additemform = new AddItemForm(targetPath, Path.GetFileNameWithoutExtension(str));
                         if (additemform.ShowDialog() == DialogResult.OK)
                         {
                             initalizeApps();
