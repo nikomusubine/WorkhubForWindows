@@ -121,6 +121,36 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="Ribbon_Settings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 26</value>
+  </data>
+  <data name="Ribbon_Settings.Text" xml:space="preserve">
+    <value>Settings(&amp;S)</value>
+  </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 6</value>
+  </data>
+  <data name="ToolStripShowWidget.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 26</value>
+  </data>
+  <data name="ToolStripShowWidget.Text" xml:space="preserve">
+    <value>Show Widget(&amp;W)</value>
+  </data>
+  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 6</value>
+  </data>
+  <data name="ToolStripQuit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>205, 26</value>
+  </data>
+  <data name="ToolStripQuit.Text" xml:space="preserve">
+    <value>Quit(&amp;Q)</value>
+  </data>
+  <data name="RibbonFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 24</value>
+  </data>
+  <data name="RibbonFiles.Text" xml:space="preserve">
+    <value>Files(&amp;F)</value>
+  </data>
   <data name="Ribbon.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -150,42 +180,48 @@
   <data name="&gt;&gt;Ribbon.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="RibbonFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 24</value>
-  </data>
-  <data name="RibbonFiles.Text" xml:space="preserve">
-    <value>Files(&amp;F)</value>
-  </data>
-  <data name="Ribbon_Settings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 26</value>
-  </data>
-  <data name="Ribbon_Settings.Text" xml:space="preserve">
-    <value>Settings(&amp;S)</value>
-  </data>
-  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 6</value>
-  </data>
-  <data name="ToolStripShowWidget.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 26</value>
-  </data>
-  <data name="ToolStripShowWidget.Text" xml:space="preserve">
-    <value>Show Widget(&amp;W)</value>
-  </data>
-  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 6</value>
-  </data>
-  <data name="ToolStripQuit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>205, 26</value>
-  </data>
-  <data name="ToolStripQuit.Text" xml:space="preserve">
-    <value>Quit(&amp;Q)</value>
-  </data>
   <metadata name="TrayIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>230, 17</value>
   </metadata>
   <metadata name="TrayRClick.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>344, 17</value>
   </metadata>
+  <data name="TrayRC_ShowMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 24</value>
+  </data>
+  <data name="TrayRC_ShowMain.Text" xml:space="preserve">
+    <value>ShowMainWindow(&amp;M)</value>
+  </data>
+  <data name="TrayRC_ShowWidget.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 24</value>
+  </data>
+  <data name="TrayRC_ShowWidget.Text" xml:space="preserve">
+    <value>Show Widget(&amp;W)</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 6</value>
+  </data>
+  <data name="TrayRC_Settings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 24</value>
+  </data>
+  <data name="TrayRC_Settings.Text" xml:space="preserve">
+    <value>Settings(&amp;S)</value>
+  </data>
+  <data name="TrayRC_AddItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 24</value>
+  </data>
+  <data name="TrayRC_AddItem.Text" xml:space="preserve">
+    <value>Add item(&amp;A)</value>
+  </data>
+  <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 6</value>
+  </data>
+  <data name="TrayRC_Quit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 24</value>
+  </data>
+  <data name="TrayRC_Quit.Text" xml:space="preserve">
+    <value>Quit(&amp;Q)</value>
+  </data>
   <data name="TrayRClick.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 136</value>
   </data>
@@ -488,113 +524,11 @@
   <data name="TrayIcon.Visible" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="TrayRC_ShowMain.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 24</value>
-  </data>
-  <data name="TrayRC_ShowMain.Text" xml:space="preserve">
-    <value>ShowMainWindow(&amp;M)</value>
-  </data>
-  <data name="TrayRC_ShowWidget.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 24</value>
-  </data>
-  <data name="TrayRC_ShowWidget.Text" xml:space="preserve">
-    <value>Show Widget(&amp;W)</value>
-  </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 6</value>
-  </data>
-  <data name="TrayRC_Settings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 24</value>
-  </data>
-  <data name="TrayRC_Settings.Text" xml:space="preserve">
-    <value>Settings(&amp;S)</value>
-  </data>
-  <data name="TrayRC_AddItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 24</value>
-  </data>
-  <data name="TrayRC_AddItem.Text" xml:space="preserve">
-    <value>Add item(&amp;A)</value>
-  </data>
-  <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 6</value>
-  </data>
-  <data name="TrayRC_Quit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>225, 24</value>
-  </data>
-  <data name="TrayRC_Quit.Text" xml:space="preserve">
-    <value>Quit(&amp;Q)</value>
-  </data>
   <data name="ButtonsPunel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left, Right</value>
   </data>
   <data name="ButtonsPunel.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="&gt;&gt;AddItemButton.Name" xml:space="preserve">
-    <value>AddItemButton</value>
-  </data>
-  <data name="&gt;&gt;AddItemButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;AddItemButton.Parent" xml:space="preserve">
-    <value>ButtonsPunel</value>
-  </data>
-  <data name="&gt;&gt;AddItemButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;StartButton.Name" xml:space="preserve">
-    <value>StartButton</value>
-  </data>
-  <data name="&gt;&gt;StartButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;StartButton.Parent" xml:space="preserve">
-    <value>ButtonsPunel</value>
-  </data>
-  <data name="&gt;&gt;StartButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;EditButton.Name" xml:space="preserve">
-    <value>EditButton</value>
-  </data>
-  <data name="&gt;&gt;EditButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EditButton.Parent" xml:space="preserve">
-    <value>ButtonsPunel</value>
-  </data>
-  <data name="&gt;&gt;EditButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ButtonsPunel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 486</value>
-  </data>
-  <data name="ButtonsPunel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="ButtonsPunel.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="ButtonsPunel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 35</value>
-  </data>
-  <data name="ButtonsPunel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;ButtonsPunel.Name" xml:space="preserve">
-    <value>ButtonsPunel</value>
-  </data>
-  <data name="&gt;&gt;ButtonsPunel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ButtonsPunel.Parent" xml:space="preserve">
-    <value>ListViewPanel</value>
-  </data>
-  <data name="&gt;&gt;ButtonsPunel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="ButtonsPunel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="AddItemButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="StartButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="EditButton" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="AddItemButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -695,12 +629,66 @@
   <data name="&gt;&gt;EditButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="ButtonsPunel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 486</value>
+  </data>
+  <data name="ButtonsPunel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ButtonsPunel.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ButtonsPunel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>308, 35</value>
+  </data>
+  <data name="ButtonsPunel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;ButtonsPunel.Name" xml:space="preserve">
+    <value>ButtonsPunel</value>
+  </data>
+  <data name="&gt;&gt;ButtonsPunel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ButtonsPunel.Parent" xml:space="preserve">
+    <value>ListViewPanel</value>
+  </data>
+  <data name="&gt;&gt;ButtonsPunel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ButtonsPunel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="AddItemButton" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="StartButton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="EditButton" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33333,Percent,33.33333,Percent,33.33333" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
   <data name="Apps.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <metadata name="ApplistRClick.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>470, 17</value>
   </metadata>
+  <data name="ApplistRC_Add.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 24</value>
+  </data>
+  <data name="ApplistRC_Add.Text" xml:space="preserve">
+    <value>Add(&amp;A)</value>
+  </data>
+  <data name="ApplistRC_Edit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 24</value>
+  </data>
+  <data name="ApplistRC_Edit.Text" xml:space="preserve">
+    <value>Edit(&amp;E)</value>
+  </data>
+  <data name="ApplistRC_Delete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 24</value>
+  </data>
+  <data name="ApplistRC_Delete.Text" xml:space="preserve">
+    <value>Delete(&amp;D)</value>
+  </data>
+  <data name="ApplistRC_RunAsAdmin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 24</value>
+  </data>
+  <data name="ApplistRC_RunAsAdmin.Text" xml:space="preserve">
+    <value>RunAsAdmin(&amp;R)</value>
+  </data>
   <data name="ApplistRClick.Size" type="System.Drawing.Size, System.Drawing">
     <value>183, 100</value>
   </data>
@@ -733,30 +721,6 @@
   </data>
   <data name="&gt;&gt;Apps.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="ApplistRC_Add.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 24</value>
-  </data>
-  <data name="ApplistRC_Add.Text" xml:space="preserve">
-    <value>Add(&amp;A)</value>
-  </data>
-  <data name="ApplistRC_Edit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 24</value>
-  </data>
-  <data name="ApplistRC_Edit.Text" xml:space="preserve">
-    <value>Edit(&amp;E)</value>
-  </data>
-  <data name="ApplistRC_Delete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 24</value>
-  </data>
-  <data name="ApplistRC_Delete.Text" xml:space="preserve">
-    <value>Delete(&amp;D)</value>
-  </data>
-  <data name="ApplistRC_RunAsAdmin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 24</value>
-  </data>
-  <data name="ApplistRC_RunAsAdmin.Text" xml:space="preserve">
-    <value>RunAsAdmin(&amp;R)</value>
   </data>
   <data name="HomePanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
