@@ -127,6 +127,9 @@ namespace WorkhubForWindows.Forms
             ButtonApply.Text = StaticClasses.Langs.AddItem.ApplyButton;
             ButtonCancel.Text = StaticClasses.Langs.AddItem.CancelButton;
             ButtonReference.Text = StaticClasses.Langs.AddItem.RefButton;
+            RunasAdminLabel.Text = StaticClasses.Langs.AddItem.Label_RunasAdmin;
+            ButtonReference.Text = StaticClasses.Langs.AddItem.RefButton;
+            //iconBox
         }
     }
 }

@@ -279,6 +279,9 @@
   <data name="tableLayoutPanel2.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="Close_Button" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="okbutton" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="ApplyButton" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33.33478,Percent,33.33478,Percent,33.33045" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
+  <data name="tableLayoutPanel3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
   <data name="tableLayoutPanel3.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -286,7 +289,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="NameBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 2</value>
+    <value>194, 2</value>
   </data>
   <data name="NameBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -319,7 +322,7 @@
     <value>3, 0</value>
   </data>
   <data name="NameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 68</value>
+    <value>185, 69</value>
   </data>
   <data name="NameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -346,10 +349,10 @@
     <value>True</value>
   </data>
   <data name="PathLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 68</value>
+    <value>3, 69</value>
   </data>
   <data name="PathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 68</value>
+    <value>185, 69</value>
   </data>
   <data name="PathLabel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -373,7 +376,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="PathBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 70</value>
+    <value>194, 71</value>
   </data>
   <data name="PathBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -400,7 +403,7 @@
     <value>True</value>
   </data>
   <data name="IconLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 340</value>
+    <value>3, 345</value>
   </data>
   <data name="IconLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 15</value>
@@ -424,7 +427,7 @@
     <value>4</value>
   </data>
   <data name="IconBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 343</value>
+    <value>194, 348</value>
   </data>
   <data name="IconBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>185, 22</value>
@@ -454,10 +457,10 @@
     <value>NoControl</value>
   </data>
   <data name="RunasLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 272</value>
+    <value>3, 276</value>
   </data>
   <data name="RunasLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 68</value>
+    <value>185, 69</value>
   </data>
   <data name="RunasLabel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -481,7 +484,7 @@
     <value>True</value>
   </data>
   <data name="RunasAdminBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 274</value>
+    <value>194, 278</value>
   </data>
   <data name="RunasAdminBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -511,10 +514,10 @@
     <value>True</value>
   </data>
   <data name="ArgsLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 204</value>
+    <value>3, 207</value>
   </data>
   <data name="ArgsLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 68</value>
+    <value>185, 69</value>
   </data>
   <data name="ArgsLabel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -538,7 +541,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="ArgsBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 206</value>
+    <value>194, 209</value>
   </data>
   <data name="ArgsBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -571,10 +574,10 @@
     <value>NoControl</value>
   </data>
   <data name="CurrentPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 136</value>
+    <value>3, 138</value>
   </data>
   <data name="CurrentPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 68</value>
+    <value>185, 69</value>
   </data>
   <data name="CurrentPath.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -598,7 +601,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="CurrentDirBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 138</value>
+    <value>194, 140</value>
   </data>
   <data name="CurrentDirBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
@@ -631,7 +634,7 @@
     <value>6</value>
   </data>
   <data name="tableLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>381, 412</value>
+    <value>382, 414</value>
   </data>
   <data name="tableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
