@@ -880,10 +880,10 @@
     <value>3, 2, 3, 2</value>
   </data>
   <data name="FontLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 28</value>
+    <value>192, 28</value>
   </data>
   <data name="FontLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="FontLabel.Text" xml:space="preserve">
     <value>Font:</value>
@@ -904,7 +904,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="FontNames.Location" type="System.Drawing.Point, System.Drawing">
-    <value>203, 4</value>
+    <value>202, 4</value>
   </data>
   <data name="FontNames.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -913,7 +913,7 @@
     <value>427, 23</value>
   </data>
   <data name="FontNames.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;FontNames.Name" xml:space="preserve">
     <value>FontNames</value>
@@ -940,7 +940,7 @@
     <value>122, 22</value>
   </data>
   <data name="FontSizeBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;FontSizeBox.Name" xml:space="preserve">
     <value>FontSizeBox</value>
@@ -982,7 +982,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel3.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="FontLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="FontNames" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="FontSizeBox" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,31.42857,Percent,68.57143,Absolute,129" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="FontLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="FontNames" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="FontSizeBox" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,31.42857,Percent,68.57143,Absolute,131" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -1006,7 +1006,7 @@
     <value>208, 15</value>
   </data>
   <data name="backimglabel.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>0</value>
   </data>
   <data name="backimglabel.Text" xml:space="preserve">
     <value>MainWindow BackGround Image</value>
@@ -1036,7 +1036,7 @@
     <value>495, 22</value>
   </data>
   <data name="backimgpath.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;backimgpath.Name" xml:space="preserve">
     <value>backimgpath</value>
@@ -1063,7 +1063,7 @@
     <value>31, 24</value>
   </data>
   <data name="backimgref.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="backimgref.Text" xml:space="preserve">
     <value>...</value>
@@ -1096,7 +1096,7 @@
     <value>173, 15</value>
   </data>
   <data name="widgetbackimg.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>3</value>
   </data>
   <data name="widgetbackimg.Text" xml:space="preserve">
     <value>Widget BackGround Image</value>
@@ -1126,7 +1126,7 @@
     <value>495, 22</value>
   </data>
   <data name="widgetbackimgpath.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;widgetbackimgpath.Name" xml:space="preserve">
     <value>widgetbackimgpath</value>
@@ -1153,7 +1153,7 @@
     <value>31, 24</value>
   </data>
   <data name="widgetbackimgref.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="widgetbackimgref.Text" xml:space="preserve">
     <value>...</value>
@@ -1216,7 +1216,8 @@
     <value>123, 31</value>
   </data>
   <data name="StartUpbutton.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+
+    <value>1</value>
   </data>
   <data name="StartUpbutton.Text" xml:space="preserve">
     <value>Add start up</value>
@@ -1336,7 +1337,7 @@
     <value>764, 352</value>
   </data>
   <data name="GeneralSettingsPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;GeneralSettingsPanel.Name" xml:space="preserve">
     <value>GeneralSettingsPanel</value>

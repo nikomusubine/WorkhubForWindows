@@ -357,6 +357,7 @@ namespace WorkhubForWindows
                     this.Show();
                     this.TopMost = true;
                     this.TopMost = false;
+                    this.Activate();
                     break;
                 case StaticClasses.WorkHubMessages.ApplicationQuit:
                     this.FormClosing -= Form_Closing;

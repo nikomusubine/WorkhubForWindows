@@ -160,7 +160,7 @@
     <value>354, 22</value>
   </data>
   <data name="ItemNameBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;ItemNameBox.Name" xml:space="preserve">
     <value>ItemNameBox</value>
@@ -271,7 +271,7 @@
     <value>354, 22</value>
   </data>
   <data name="CmdArgsBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;CmdArgsBox.Name" xml:space="preserve">
     <value>CmdArgsBox</value>
@@ -295,7 +295,7 @@
     <value>63, 15</value>
   </data>
   <data name="CmdArgsLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="CmdArgsLabel.Text" xml:space="preserve">
     <value>CmdArgs</value>
@@ -325,7 +325,7 @@
     <value>95, 25</value>
   </data>
   <data name="ButtonApply.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="ButtonApply.Text" xml:space="preserve">
     <value>Apply</value>
@@ -355,7 +355,7 @@
     <value>95, 25</value>
   </data>
   <data name="ButtonCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="ButtonCancel.Text" xml:space="preserve">
     <value>Cancel</value>
@@ -403,7 +403,7 @@
     <value>360, 33</value>
   </data>
   <data name="tableLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel2.Name" xml:space="preserve">
     <value>tableLayoutPanel2</value>
@@ -433,7 +433,7 @@
     <value>64, 15</value>
   </data>
   <data name="IconLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>10</value>
   </data>
   <data name="IconLabel.Text" xml:space="preserve">
     <value>IconPath</value>
@@ -466,7 +466,7 @@
     <value>91, 22</value>
   </data>
   <data name="IconRef.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="IconRef.Text" xml:space="preserve">
     <value>Reference</value>
@@ -496,7 +496,7 @@
     <value>251, 22</value>
   </data>
   <data name="IconBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;IconBox.Name" xml:space="preserve">
     <value>IconBox</value>
@@ -520,7 +520,7 @@
     <value>360, 33</value>
   </data>
   <data name="tableLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+    <value>11</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel3.Name" xml:space="preserve">
     <value>tableLayoutPanel3</value>
@@ -550,7 +550,7 @@
     <value>18, 17</value>
   </data>
   <data name="RunasAdminBox.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;RunasAdminBox.Name" xml:space="preserve">
     <value>RunasAdminBox</value>
@@ -577,7 +577,7 @@
     <value>92, 15</value>
   </data>
   <data name="RunasAdminLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="RunasAdminLabel.Text" xml:space="preserve">
     <value>Run as admin</value>
@@ -607,7 +607,7 @@
     <value>74, 15</value>
   </data>
   <data name="CurrentLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="CurrentLabel.Text" xml:space="preserve">
     <value>CurrentDir</value>
@@ -637,7 +637,7 @@
     <value>354, 22</value>
   </data>
   <data name="CurrentDirBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;CurrentDirBox.Name" xml:space="preserve">
     <value>CurrentDirBox</value>

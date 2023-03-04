@@ -276,6 +276,7 @@ namespace WorkhubForWindows
             public string Label_NeedsRestart;
             public string Tab_General;
             public string Tab_Widget;
+            public string Tab_MainWindow;
             public string Button_HotkeySet;
             public string Button_ResetWidgetPos;
             public string Button_Apply;
