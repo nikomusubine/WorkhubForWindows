@@ -20,6 +20,7 @@ namespace WorkhubForWindows.Forms
             this.Font = StaticClasses.Config.font;
             LoadLanguage();
         }
+
         public AddItemForm(string Path)
         {
             InitializeComponent();
@@ -27,6 +28,15 @@ namespace WorkhubForWindows.Forms
             this.Font = StaticClasses.Config.font;
             LoadLanguage();
             this.FilePathBox.Text = Path;
+        }
+        public AddItemForm(string Path,string Name)
+        {
+            InitializeComponent();
+            this.FormClosed += WindowClosed;
+            this.Font = StaticClasses.Config.font;
+            LoadLanguage();
+            this.FilePathBox.Text = Path;
+            this.ItemNameBox.Text= Name;
         }
         #region Event Handlers
         private void ReferenceButton(object sender,EventArgs e)

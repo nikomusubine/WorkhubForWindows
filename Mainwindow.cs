@@ -131,6 +131,64 @@ namespace WorkhubForWindows
                 Functions.WinAPIFuncs.PostMessage(i.hWnd, StaticClasses.WorkHubMessages.AppListChanged, 0, 0);
             }
         }
+        private void DragAndDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+
+            foreach (string str in files)
+            {
+                string Extention = Path.GetExtension(str);
+                if (Extention == ".lnk")
+                {
+                    IWshRuntimeLibrary.WshShell shell = new IWshRuntimeLibrary.WshShell();
+                    // ショートカットオブジェクトの取得
+                    IWshRuntimeLibrary.IWshShortcut shortcut = (IWshRuntimeLibrary.IWshShortcut)shell.CreateShortcut(str);
+
+                    // ショートカットのリンク先の取得
+                    string targetPath = shortcut.TargetPath.ToString();
+                    if(Path.GetExtension(targetPath) == ".exe")
+                    {
+                        AddItemForm additemform = new AddItemForm(targetPath,Path.GetFileNameWithoutExtension(str));
+                        if (additemform.ShowDialog() == DialogResult.OK)
+                        {
+                            initalizeApps();
+                        }
+                    }
+                }else
+                if (Extention == ".exe")
+
+                {
+                    AddItemForm additemform = new AddItemForm(str);
+                    if (additemform.ShowDialog() == DialogResult.OK)
+                    {
+                        initalizeApps();
+                    }
+                }
+            }
+        }
+
+        private void EnterDragItem(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop, false);
+            bool CanDrop = true;
+            foreach (string str in files)
+            {
+                string Extention = Path.GetExtension(str);
+                if (Extention != ".exe"&&Extention!=".lnk")
+                {
+                    CanDrop = false;
+                }
+            }
+
+            if (e.Data.GetDataPresent(DataFormats.FileDrop) && CanDrop)
+            {
+                e.Effect = DragDropEffects.All;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
 
         #region TrayRClick
 

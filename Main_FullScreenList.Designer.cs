@@ -303,6 +303,7 @@ namespace WorkhubForWindows
             // Main_FullScreenList
             // 
             this.AcceptButton = this.StartButton;
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 570);
@@ -316,6 +317,8 @@ namespace WorkhubForWindows
             this.Deactivate += new System.EventHandler(this.DeactivatedCalled);
             this.Shown += new System.EventHandler(this.MainWindowShown);
             this.SizeChanged += new System.EventHandler(this.PaintCalled);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.DragAndDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.EnterDragItem);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDownCalled);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyUpCalled);
             this.Ribbon.ResumeLayout(false);

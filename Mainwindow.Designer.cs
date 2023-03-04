@@ -210,6 +210,7 @@ namespace WorkhubForWindows
             // Apps
             // 
             this.Apps.AllowColumnReorder = true;
+            this.Apps.AllowDrop = true;
             resources.ApplyResources(this.Apps, "Apps");
             this.Apps.BackColor = System.Drawing.SystemColors.Window;
             this.Apps.ContextMenuStrip = this.ApplistRClick;
@@ -217,6 +218,8 @@ namespace WorkhubForWindows
             this.Apps.MultiSelect = false;
             this.Apps.Name = "Apps";
             this.Apps.UseCompatibleStateImageBehavior = false;
+            this.Apps.DragDrop += new System.Windows.Forms.DragEventHandler(this.DragAndDrop);
+            this.Apps.DragEnter += new System.Windows.Forms.DragEventHandler(this.EnterDragItem);
             this.Apps.DoubleClick += new System.EventHandler(this.StartPushed);
             // 
             // ApplistRClick
@@ -278,6 +281,7 @@ namespace WorkhubForWindows
             // Mainwindow
             // 
             this.AcceptButton = this.StartButton;
+            this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.HomePanel);
@@ -285,6 +289,8 @@ namespace WorkhubForWindows
             this.MainMenuStrip = this.Ribbon;
             this.Name = "Mainwindow";
             this.Shown += new System.EventHandler(this.MainWindowShown);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.DragAndDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.EnterDragItem);
             this.Ribbon.ResumeLayout(false);
             this.Ribbon.PerformLayout();
             this.TrayRClick.ResumeLayout(false);
