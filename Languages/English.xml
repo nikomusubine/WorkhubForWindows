@@ -73,6 +73,8 @@
 		<Button_ResetWidgetPos>Reset Widget Position</Button_ResetWidgetPos>
 		<Button_Apply>Apply(&amp;A)</Button_Apply>
 		<Button_Cancel>Cancel(&amp;C)</Button_Cancel>
+		<Startup_Add>Add to Startup</Startup_Add>
+		<Startup_Remove>Remove Startup</Startup_Remove>
 	</Settings>
 	<HotkeyRegester>
 		<Label_1>Please press some keys...</Label_1>
