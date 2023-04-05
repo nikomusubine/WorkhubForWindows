@@ -4,11 +4,9 @@ E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\bin\Debug\net6.0
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\bin\Debug\net6.0-windows\WorkhubForWindows.dll
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\bin\Debug\net6.0-windows\WorkhubForWindows.pdb
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\WorkhubForWindows.csproj.AssemblyReference.cache
-E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\MainWindow.g.cs
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\App.g.cs
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\WorkhubForWindows_MarkupCompile.cache
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\WorkhubForWindows_MarkupCompile.lref
-E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\MainWindow.baml
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\WorkhubForWindows.g.resources
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\WorkhubForWindows.GeneratedMSBuildEditorConfig.editorconfig
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\WorkhubForWindows.AssemblyInfoInputs.cache
@@ -19,3 +17,10 @@ E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\WorkhubForWindows.pdb
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\WorkhubForWindows.genruntimeconfig.cache
 E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\ref\WorkhubForWindows.dll
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\bin\Debug\net6.0-windows\Microsoft.Win32.SystemEvents.dll
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\bin\Debug\net6.0-windows\System.Drawing.Common.dll
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\Window\MainWindow.g.cs
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\Window\MainWindow.baml
+E:\Nikochan\Github\Nikochan\WorkhubForWindows\WorkhubForWindows\obj\Debug\net6.0-windows\WorkhubForWindows.csproj.CopyComplete

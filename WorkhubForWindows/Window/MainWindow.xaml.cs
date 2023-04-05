@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WorkhubForWindows.WorkhubResource;
 
 namespace WorkhubForWindows
 {
@@ -20,8 +21,11 @@ namespace WorkhubForWindows
     /// </summary>
     public partial class MainWindow : Window
     {
+        CoreResource coreResource;
         public MainWindow()
         {
+            coreResource = new CoreResource();
+            coreResource.Executables = WorkhubMethods.CoreMethods.ExecutableMethods.Load();
             InitializeComponent();
         }
     }
